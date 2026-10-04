@@ -1,0 +1,50 @@
+# Preview build at https://rahullym.github.io/mountwell/
+# mountbell.com itself is not deployed from here.
+name: Pages preview
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      BASE_PATH: /mountwell
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # The site links from the domain root; prefix those links for the sub-path and keep the preview out of search.
+      - name: Rewrite root links for sub-path
+        run: |
+          find dist -name '*.html' -print0 | xargs -0 perl -pi -e '
+            s{\b(href|src|poster|action)=(["\x27])/(?!/|mountwell/)}{$1=$2/mountwell/}g;
+            s{</head>}{<meta name="robots" content="noindex, nofollow"></head>};'
+          touch dist/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
