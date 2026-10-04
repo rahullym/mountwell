@@ -1,0 +1,401 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from './Icon.astro';
+import LeadForm from './LeadForm.astro';
+import Hero from './Hero.astro';
+import { site, countries, professionGroups, services, steps, reasons, reviews, updates, faqs, waLink, photoAlt, teamPhotos } from '../data/site';
+
+const title = 'Immigration Consultants in Kerala | Mount Bell Thrissur';
+const description = 'Mount Bell is a licensed immigration and overseas migration consultancy in Thrissur and Kochi. Jobs and migration to Australia, Canada, Germany, Malta and more.';
+const wa = waLink('Hi Mount Bell, I would like to talk to an expert about working or migrating abroad.');
+const places = countries.map((c) => ({ ...c, slug: c.name.toLowerCase() }));
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const videoSchema = site.heroVideoId
+  ? [{ '@context': 'https://schema.org', '@type': 'VideoObject', name: 'Mount Bell: immigration consultants in Kerala', description, thumbnailUrl: `https://i.ytimg.com/vi/${site.heroVideoId}/maxresdefault.jpg`, embedUrl: `https://www.youtube.com/embed/${site.heroVideoId}` }]
+  : [];
+---
+<Base title={title} description={description} schema={[faqSchema, ...videoSchema]}>
+
+  <!-- 02 Hero -->
+  <Hero />
+
+  <!-- 03 Trust strip -->
+  <section class="trust" aria-label="Why you can trust Mount Bell">
+    <div class="wrap">
+      <ul data-reveal-group>
+        <li>
+          <strong>MEA licensed recruiting agent</strong>
+          <span class="mono">Lic. {site.licence.number}</span>
+        </li>
+        {site.googleRating && (
+          <li>
+            <strong>{site.googleRating.score} <span class="stars" aria-hidden="true">★★★★★</span></strong>
+            <span>{site.googleRating.count} Google reviews</span>
+          </li>
+        )}
+        {site.foundedYear && <li><strong>{new Date().getFullYear() - site.foundedYear}+ years</strong><span>Guiding Kerala since {site.foundedYear}</span></li>}
+        {site.peoplePlaced && <li><strong>{site.peoplePlaced}</strong><span>People placed or migrated</span></li>}
+        <li><strong>8 countries</strong><span>20+ job and migration programmes</span></li>
+        {!site.googleRating && <li><strong>2 offices</strong><span>Thrissur and Kochi, face to face</span></li>}
+        {!site.foundedYear && !site.peoplePlaced && <li><strong>Malayalam · English</strong><span>Free first consultation</span></li>}
+      </ul>
+    </div>
+  </section>
+
+  <!-- 04 Who we are -->
+  <section class="section" id="about">
+    <div class="wrap who">
+      <div class="who-art" data-reveal-group>
+        <img class="p1" src={teamPhotos[0].src} alt={teamPhotos[0].alt} width="400" height="400" loading="lazy" decoding="async" />
+        <img class="p2" src={teamPhotos[2].src} alt={teamPhotos[2].alt} width="400" height="400" loading="lazy" decoding="async" />
+        <img class="p3" src={teamPhotos[1].src} alt={teamPhotos[1].alt} width="400" height="400" loading="lazy" decoding="async" />
+        <div class="who-badge">
+          <Icon name="shield" size={22} />
+          <span><b>MEA licensed recruiting agent</b><span class="mono">{site.licence.number}</span></span>
+        </div>
+      </div>
+
+      <div class="who-body" data-reveal style="--n:1">
+        <h2 class="h2">Mount Bell – Trusted Immigration and Overseas Migration Consultants in Thrissur, Kerala</h2>
+        <p class="who-lead">Mount Bell is a Thrissur-headquartered immigration and migration consultancy that helps professionals from Kerala move to Australia, Canada, Germany, Denmark, Malta, the Maldives, the Netherlands and other European countries through skilled migration, work visa and overseas job programmes.</p>
+        <p class="muted">We work as immigration consultants in Thrissur, with a second office in Kochi. People choose us over other overseas immigration consultants in Kerala for a straight answer about what is possible, a named consultant and fees on paper before any payment.</p>
+        <dl class="who-facts">
+          <div><dt>Head office</dt><dd>Thrissur</dd></div>
+          <div><dt>Branch</dt><dd>Kochi</dd></div>
+          {site.foundedYear && <div><dt>Founded</dt><dd>{site.foundedYear}</dd></div>}
+          {site.founder && <div><dt>{site.founder.role}</dt><dd>{site.founder.name}</dd></div>}
+          <div><dt>We speak</dt><dd>Malayalam, English</dd></div>
+        </dl>
+        <div class="who-links">
+          <a class="btn btn-primary btn-sm" href="/about/">About us <Icon name="arrow" size={17} /></a>
+          <a class="arrow-link" href="/about/our-team/">Meet our team <Icon name="arrow" size={17} /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Find your pathway -->
+  <section class="section section-white" id="pathways">
+    <div class="wrap">
+      <div class="section-head split" data-reveal>
+        <div>
+          <h2 class="h2">Find Your Migration Pathway – By Country or By Profession</h2>
+          <p class="lede">As overseas job consultants in Kerala, we start with you. Pick a destination or your profession.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Browse pathways">
+          <button role="tab" id="tab-country" aria-selected="true" aria-controls="pane-country">By country</button>
+          <button role="tab" id="tab-prof" aria-selected="false" aria-controls="pane-prof" tabindex="-1">By profession</button>
+        </div>
+      </div>
+
+      <div id="pane-country" role="tabpanel" aria-labelledby="tab-country">
+        <div class="pw" data-pw data-reveal>
+          <div class="pw-list" role="tablist" aria-label="Destinations" aria-orientation="vertical">
+            {places.map((c, i) => (
+              <button type="button" role="tab" id={`pw-tab-${i}`} aria-controls={`pw-${i}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
+                <span>{c.name}</span>
+                <em>{c.programmes.length} {c.programmes.length === 1 ? 'programme' : 'programmes'}</em>
+              </button>
+            ))}
+          </div>
+          <div class="pw-panels">
+            {places.map((c, i) => (
+              <article class="pw-panel" id={`pw-${i}`} role="tabpanel" aria-labelledby={`pw-tab-${i}`} hidden={i !== 0}>
+                <a class="pw-photo" href={c.href} tabindex="-1">
+                  <img src={`/img/dest/${c.slug}-wide.webp`} alt={photoAlt[c.slug]} width="1400" height="820" loading="lazy" decoding="async" />
+                  <span class="mono">COK <Icon name="arrow" size={12} /> {c.airport}</span>
+                </a>
+                <div class="pw-body">
+                  <div>
+                    <h3>{c.name}</h3>
+                    <p>{c.text}</p>
+                    <a class="arrow-link" href={c.href}>Explore {c.name} <Icon name="arrow" size={17} /></a>
+                  </div>
+                  <div class="chips">{c.programmes.map((p) => <a class="chip" href={p.href}>{p.label}</a>)}</div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div id="pane-prof" role="tabpanel" aria-labelledby="tab-prof" hidden>
+        <ul class="prof-grid">
+          {professionGroups.map((g) => (
+            <li>
+              <h3 class="h3">{g.name}</h3>
+              <p>{g.text}</p>
+              <div class="chips">{g.links.map((p) => <a class="chip" href={p.href}>{p.label}</a>)}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Services -->
+  <section class="section section-sand" id="services">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2 class="h2">Our Immigration and Migration Services in Kerala</h2>
+      </div>
+      <div class="svc-grid" data-reveal-group>
+        {services.map((s) => (
+          <article class="svc">
+            <h3 class="h3"><a href={s.href}>{s.name}</a></h3>
+            <p>{s.text}</p>
+            <span class="go"><Icon name="arrow" size={18} /></span>
+          </article>
+        ))}
+      </div>
+      <p class="svc-note" data-reveal>Every service includes skills assessment and credential recognition (AHPRA, Anerkennung, Malta registration), IELTS, OET, PTE and German training, documentation, and pre-departure and post-landing support.</p>
+    </div>
+  </section>
+
+  <!-- 07 Eligibility tools -->
+  <section class="section" id="tools">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2 class="h2">Check Your Eligibility in 2 Minutes</h2>
+        <p class="lede">Two free calculators built on the official points test rules.</p>
+      </div>
+      <div class="tools" data-reveal-group>
+        <article class="tool au">
+          <img class="tool-bg" src="/img/dest/australia-wide.webp" alt="" width="1400" height="820" loading="lazy" decoding="async" />
+          <span class="figure" aria-hidden="true" data-count="65">65</span>
+          <span class="label">Australia · skilled migration</span>
+          <h3><a href="/tools/australia-pr-points-calculator/">Australia skilled migration points calculator</a></h3>
+          <p>Score yourself against the 65-point pass mark for skilled visas.</p>
+          <span class="btn btn-light btn-sm">Calculate my points <Icon name="arrow" size={17} /></span>
+        </article>
+        <article class="tool de">
+          <img class="tool-bg" src="/img/dest/germany-wide.webp" alt="" width="1400" height="820" loading="lazy" decoding="async" />
+          <span class="figure" aria-hidden="true" data-count="6">6</span>
+          <span class="label">Germany · Chancenkarte</span>
+          <h3><a href="/tools/germany-opportunity-card-checker/">Germany Opportunity Card points checker</a></h3>
+          <p>See whether you reach the six points needed to job-hunt in Germany.</p>
+          <span class="btn btn-light btn-sm">Check my points <Icon name="arrow" size={17} /></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 Process -->
+  <section class="section section-white" id="process">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2 class="h2">How Our Migration Process Works – Step by Step</h2>
+      </div>
+      <ol class="steps" data-reveal-group>
+        {steps.map((s) => <li><h3>{s.title}</h3><p>{s.text}</p></li>)}
+      </ol>
+      <p class="svc-note" data-reveal>Timelines depend on the country and programme. You get a written, stage-by-stage estimate with your eligibility report.</p>
+    </div>
+  </section>
+
+  <!-- 09 Why choose -->
+  <section class="section" id="why">
+    <div class="wrap why">
+      <div class="why-sticky" data-reveal>
+        <h2 class="h2">Why Choose Mount Bell as Your Overseas Immigration Consultants in Kerala</h2>
+        <a class="arrow-link" href="/about/why-choose-mount-bell/">More about how we work <Icon name="arrow" size={17} /></a>
+      </div>
+      <div>
+        <ul class="reasons" data-reveal-group>
+          {reasons.map((r) => (
+            <li><Icon name="check" size={22} /><div><h3>{r.title}</h3><span>{r.text}</span></div></li>
+          ))}
+        </ul>
+        {site.team.length > 0 && (
+          <div class="experts" data-reveal>
+            <h3 class="h3">Meet Our Experts</h3>
+            <ul class="expert-grid">
+              {site.team.map((m) => (
+                <li class="expert">
+                  <img src={m.photo} alt={`${m.name}, ${m.role} at Mount Bell`} loading="lazy" width="400" height="500" />
+                  <strong>{m.name}</strong>
+                  <span>{m.role} · {m.years}</span>
+                  <span>{m.credentials}</span>
+                  <span>{m.languages}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 Licences -->
+  <section class="section section-sand" id="licence">
+    <div class="wrap lic-grid">
+      <div data-reveal>
+        <h2 class="h2">Licences, Registrations and Partnerships</h2>
+        <p class="lede" style="margin-top:18px">Recruiting for overseas jobs from India is legal only with a licence from the Ministry of External Affairs. Search for ours on the government’s eMigrate portal before you trust anyone with your documents.</p>
+        <p style="margin-top:20px"><a class="arrow-link" href="/resources/how-to-spot-fake-overseas-job-agents/">How to spot fake overseas job agents <Icon name="arrow" size={17} /></a></p>
+      </div>
+      <div class="cert" data-reveal style="--n:2">
+        <div class="cert-in">
+          <div class="cert-top"><Icon name="shield" size={30} /><strong>Government of India<br />Ministry of External Affairs</strong></div>
+          <dl>
+            <div><dt>Licence type</dt><dd>{site.licence.type}</dd></div>
+            <div><dt>Licence no.</dt><dd class="mono"><span data-copy-text>{site.licence.number}</span><button class="copy-btn" type="button" data-copy>Copy</button></dd></div>
+            <div><dt>Issued to</dt><dd>{site.legalName}</dd></div>
+          </dl>
+          <div class="cert-foot">
+            <a class="tlink" href={site.licence.verifyUrl} target="_blank" rel="noopener">Verify on eMigrate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 Success stories -->
+  <section class="section" id="stories">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2 class="h2">Success Stories – From Kerala to Australia, Germany, Malta and Beyond</h2>
+      </div>
+      <div class="stories" data-reveal-group>
+        {reviews.map((r) => (
+          <figure class="story" style="margin:0">
+            <blockquote>{r.text}</blockquote>
+            <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mount Bell client</span></div></figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="stories-foot">
+        <a class="arrow-link" href="/about/success-stories/">Read all success stories <Icon name="arrow" size={17} /></a>
+        {site.googleRating && <a class="tlink" href={site.googleRating.url} target="_blank" rel="noopener">{site.googleRating.score} from {site.googleRating.count} Google reviews</a>}
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 Offices -->
+  <section class="section section-white" id="offices">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2 class="h2">Immigration Consultants in Thrissur and Kochi – Visit Our Offices</h2>
+      </div>
+      <div class="offices" data-reveal-group>
+        {site.offices.map((o) => (
+          <article class="office">
+            <iframe title={`Map of Mount Bell ${o.city} office`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" src={`https://www.google.com/maps?q=${encodeURIComponent(o.mapQuery)}&z=15&output=embed`}></iframe>
+            <div class="office-body">
+              <div class="top"><h3 class="h3" style="font-size:1.6rem">{o.city}</h3><span class="label">{o.label}</span></div>
+              <address>{o.lines.map((l) => <>{l}<br /></>)}</address>
+              {o.hours && <p class="small muted" style="margin:0">{o.hours}</p>}
+              <div class="phones">{o.phones.map((p) => <a href={`tel:${p.tel}`}>{p.display}</a>)}</div>
+              <div class="acts">
+                <a class="btn btn-ghost btn-sm" href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(o.mapQuery)}`} target="_blank" rel="noopener"><Icon name="pin" size={17} /> Directions</a>
+                <a class="btn btn-ghost btn-sm" href={`tel:${o.phones[0].tel}`}><Icon name="phone" size={17} /> Call {o.city}</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p class="svc-note">Our immigration consultants in Thrissur and Kochi serve {site.areasServed.join(', ')} and every other district, with online consultation for people outside Kerala. <a class="tlink" href="/immigration-consultants-thrissur/">More about our Thrissur office</a></p>
+    </div>
+  </section>
+
+  <!-- 13 Latest updates -->
+  <section class="section" id="updates">
+    <div class="wrap">
+      <div class="section-head split" data-reveal>
+        <h2 class="h2">Latest Visa, Migration and Overseas Job Updates</h2>
+        <a class="arrow-link" href="/resources/">All resources <Icon name="arrow" size={17} /></a>
+      </div>
+      <div class="updates" data-reveal-group>
+        {updates.map((u) => (
+          <article class="update">
+            <span class="label">{u.tag}</span>
+            <h3><a href={u.href}>{u.title}</a></h3>
+            <p>{u.excerpt}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 FAQ -->
+  <section class="section section-white" id="faq">
+    <div class="wrap faq-grid">
+      <div data-reveal>
+        <h2 class="h2">Frequently Asked Questions About Immigration from Kerala</h2>
+        <p class="muted" style="margin-top:18px">Something else? <a class="tlink" href={wa} target="_blank" rel="noopener">Ask on WhatsApp</a></p>
+      </div>
+      <div class="faq" data-reveal>
+        {faqs.map((f, i) => (
+          <details open={i === 0}>
+            <summary><h3>{f.q}</h3><i aria-hidden="true"></i></summary>
+            <div class="ans"><p>{f.a}</p><a class="tlink small" href={f.href}>{f.link}</a></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 15 Final CTA -->
+  <section class="final" id="eligibility" data-inview>
+    <svg class="deco" viewBox="0 0 900 260" fill="none" aria-hidden="true">
+      <path pathLength="1" d="M0 250C190 250 250 20 420 20S650 250 840 250" stroke="#8fc267" stroke-width="26" />
+      <path pathLength="1" d="M190 250C380 250 440 20 610 20S840 250 1030 250" stroke="#7fa8cf" stroke-width="26" />
+    </svg>
+    <div class="wrap">
+      <div class="final-copy" data-reveal>
+        <h2 class="h2">Book Your Free Migration Eligibility Assessment Today</h2>
+        <p>Speak to Mount Bell’s immigration consultants in Kerala in person, by phone or on WhatsApp.</p>
+        <div class="contact-lines">
+          <a class="btn btn-light" href={`tel:${site.phone.tel}`}><Icon name="phone" size={18} /> {site.phone.display}</a>
+          <a class="btn btn-ghost" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp" size={20} /> WhatsApp us</a>
+        </div>
+      </div>
+      <LeadForm id="final" compact heading="Check your eligibility" />
+    </div>
+  </section>
+</Base>
+
+<script>
+  // Arrow-key and click handling shared by both tab sets.
+  function wireTabs(tabs: HTMLButtonElement[], hover = false) {
+    const select = (tab: HTMLButtonElement) =>
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')!)!.hidden = !on;
+      });
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(t));
+      if (hover) t.addEventListener('pointerenter', (e) => e.pointerType === 'mouse' && select(t));
+      t.addEventListener('keydown', (e) => {
+        const step = ['ArrowRight', 'ArrowDown'].includes(e.key) ? 1 : ['ArrowLeft', 'ArrowUp'].includes(e.key) ? -1 : 0;
+        if (!step) return;
+        e.preventDefault();
+        const next = tabs[(i + step + tabs.length) % tabs.length];
+        next.focus();
+        select(next);
+      });
+    });
+  }
+  wireTabs([...document.querySelectorAll<HTMLButtonElement>('.tabs [role="tab"]')]);
+  wireTabs([...document.querySelectorAll<HTMLButtonElement>('[data-pw] [role="tab"]')], true);
+
+  // Hero button: scroll to the form at the foot of the page and put the cursor in the first field.
+  document.querySelector('[data-focus-form]')?.addEventListener('click', () => {
+    setTimeout(() => document.querySelector<HTMLInputElement>('#final-name')?.focus({ preventScroll: true }), 900);
+  });
+
+  // Copy licence number
+  document.querySelector('[data-copy]')?.addEventListener('click', async (e) => {
+    const btn = e.currentTarget as HTMLButtonElement;
+    await navigator.clipboard.writeText(document.querySelector('[data-copy-text]')!.textContent!.trim());
+    btn.textContent = 'Copied';
+    setTimeout(() => (btn.textContent = 'Copy'), 1800);
+  });
+</script>

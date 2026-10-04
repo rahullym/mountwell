@@ -1,0 +1,139 @@
+---
+import Icon from './Icon.astro';
+import { site, countries, professions } from '../data/site';
+interface Props { id?: string; compact?: boolean; bar?: boolean; heading?: string; sub?: string }
+const { id = 'lead', compact = false, bar = false, heading = 'Check your eligibility', sub } = Astro.props;
+---
+<div class:list={[compact ? 'mini-form' : 'lead', bar && 'lead-bar']} data-lead data-endpoint={site.formEndpoint} data-wa={site.whatsapp}>
+  <form novalidate aria-labelledby={`${id}-h`}>
+    {compact ? (
+      <p class="lead-title" id={`${id}-h`}>{heading}</p>
+    ) : (
+      <>
+        <div class="lead-head">
+          <p class="lead-title" id={`${id}-h`}>{heading}</p>
+          <span class="free">Free · 2 min</span>
+          {sub && <p class="lead-sub">{sub}</p>}
+        </div>
+      </>
+    )}
+
+    <div class="lead-fields">
+    <div class="field" data-field="name">
+      <label for={`${id}-name`}>Your name</label>
+      <input id={`${id}-name`} name="name" type="text" autocomplete="name" placeholder="Full name" required />
+      <span class="err">Please enter your name.</span>
+    </div>
+
+    <div class="field" data-field="phone">
+      <label for={`${id}-phone`}>Mobile number</label>
+      <div class="phone-wrap">
+        <span>+91</span>
+        <input id={`${id}-phone`} name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="11" placeholder="10-digit number" required />
+      </div>
+      <span class="err">Enter a 10-digit mobile number.</span>
+    </div>
+
+    <div class="field-row">
+      <div class="field" data-field="profession">
+        <label for={`${id}-prof`}>Profession</label>
+        <select id={`${id}-prof`} name="profession" required>
+          <option value="" selected disabled>Select</option>
+          {professions.map((p) => <option>{p}</option>)}
+        </select>
+        <span class="err">Choose your profession.</span>
+      </div>
+      <div class="field" data-field="country">
+        <label for={`${id}-country`}>Preferred country</label>
+        <select id={`${id}-country`} name="country">
+          <option value="Not sure yet">Not sure yet</option>
+          {countries.map((c) => <option>{c.name}</option>)}
+        </select>
+      </div>
+    </div>
+
+    {!compact && (
+      <fieldset class="field" data-field="experience">
+        <legend>Years of experience</legend>
+        <div class="seg">
+          {['0–1', '2–4', '5–7', '8+'].map((y, i) => (
+            <label><input type="radio" name="experience" value={y} checked={i === 1} /><span>{y}</span></label>
+          ))}
+        </div>
+      </fieldset>
+    )}
+
+    <button class="btn btn-primary btn-block" type="submit">Check My Eligibility <Icon name="arrow" size={18} /></button>
+    </div>
+    <p class="lead-note"><Icon name="shield" size={15} /> <span>No fee. Your details stay with Mount Bell.</span></p>
+  </form>
+
+  <div class="lead-done" role="status" aria-live="polite">
+    <div class="tick"><Icon name="check" size={26} /></div>
+    <p class="h3">Thank you, <span data-first-name></span>.</p>
+    <p class="muted" style="margin-top:8px">Your details are ready to send to our consultants on WhatsApp. If WhatsApp did not open, use the button below or call us.</p>
+    <div style="display:grid;gap:10px;margin-top:16px">
+      <a class="btn btn-wa" data-wa-link target="_blank" rel="noopener" href="#"><Icon name="whatsapp" size={20} /> Send on WhatsApp</a>
+      <a class="btn btn-ghost" href={`tel:${site.phone.tel}`}><Icon name="phone" size={18} /> Call {site.phone.display}</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-lead]').forEach((box) => {
+    const form = box.querySelector('form')!;
+    const phone = form.elements.namedItem('phone') as HTMLInputElement;
+
+    const digits = () => phone.value.replace(/\D/g, '').replace(/^(91|0)(?=\d{10}$)/, '');
+    const checks: Record<string, () => boolean> = {
+      name: () => (form.elements.namedItem('name') as HTMLInputElement).value.trim().length > 1,
+      phone: () => /^[6-9]\d{9}$/.test(digits()),
+      profession: () => (form.elements.namedItem('profession') as HTMLSelectElement).value !== '',
+    };
+    const mark = (key: string) => {
+      const ok = checks[key]();
+      form.querySelector(`[data-field="${key}"]`)!.classList.toggle('has-error', !ok);
+      return ok;
+    };
+
+    phone.addEventListener('input', () => {
+      const d = phone.value.replace(/\D/g, '').slice(0, 10);
+      phone.value = d.length > 5 ? `${d.slice(0, 5)} ${d.slice(5)}` : d;
+    });
+    Object.keys(checks).forEach((key) => {
+      const el = form.elements.namedItem(key) as HTMLElement;
+      el.addEventListener('blur', () => (el as HTMLInputElement).value && mark(key));
+      el.addEventListener('input', () => form.querySelector(`[data-field="${key}"]`)!.classList.remove('has-error'));
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const bad = Object.keys(checks).filter((k) => !mark(k));
+      if (bad.length) {
+        (form.elements.namedItem(bad[0]) as HTMLElement).focus();
+        return;
+      }
+      const data = Object.fromEntries(new FormData(form)) as Record<string, string>;
+      data.phone = `+91${digits()}`;
+      data.page = location.pathname;
+
+      const lines = [
+        'Hi Mount Bell, I would like a free eligibility check.',
+        `Name: ${data.name}`,
+        `Phone: ${data.phone}`,
+        `Profession: ${data.profession}`,
+        `Preferred country: ${data.country}`,
+        data.experience ? `Experience: ${data.experience} years` : '',
+      ].filter(Boolean);
+      const url = `https://wa.me/${box.dataset.wa}?text=${encodeURIComponent(lines.join('\n'))}`;
+
+      if (box.dataset.endpoint) {
+        fetch(box.dataset.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data), keepalive: true }).catch(() => {});
+      }
+      box.querySelector('[data-first-name]')!.textContent = data.name.trim().split(/\s+/)[0];
+      box.querySelector<HTMLAnchorElement>('[data-wa-link]')!.href = url;
+      box.classList.add('is-done');
+      window.open(url, '_blank', 'noopener');
+    });
+  });
+</script>

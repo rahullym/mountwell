@@ -1,0 +1,71 @@
+---
+import Base from '../../layouts/Base.astro';
+import PointsTool from '../../components/PointsTool.astro';
+import { site } from '../../data/site';
+
+const title = 'Australia PR Points Calculator for Skilled Migration | Mount Bell';
+const description = 'Free Australia skilled migration points calculator. Score your age, English, work experience and qualifications against the 65-point pass mark in two minutes.';
+
+const questions = [
+  { id: 'age', title: 'Your age', hint: 'Age on the day you are invited to apply.', options: [
+    { label: '18–24', points: 25 }, { label: '25–32', points: 30, checked: true }, { label: '33–39', points: 25 }, { label: '40–44', points: 15 }, { label: '45 or over', points: 0, flag: 'too-old' },
+  ] },
+  { id: 'english', title: 'English level', hint: 'Competent is about IELTS 6 in each band, Proficient IELTS 7, Superior IELTS 8. OET and PTE have equivalent scores.', options: [
+    { label: 'Competent', points: 0, checked: true }, { label: 'Proficient', points: 10 }, { label: 'Superior', points: 20 },
+  ] },
+  { id: 'work-overseas', title: 'Skilled work experience outside Australia', hint: 'In your nominated occupation or a closely related one, within the last 10 years.', options: [
+    { label: 'Under 3 years', points: 0, checked: true }, { label: '3–4 years', points: 5 }, { label: '5–7 years', points: 10 }, { label: '8 years or more', points: 15 },
+  ] },
+  { id: 'work-au', title: 'Skilled work experience in Australia', hint: 'Combined work experience points are capped at 20.', options: [
+    { label: 'Under 1 year', points: 0, checked: true }, { label: '1–2 years', points: 5 }, { label: '3–4 years', points: 10 }, { label: '5–7 years', points: 15 }, { label: '8 years or more', points: 20 },
+  ] },
+  { id: 'education', title: 'Highest qualification', hint: 'As recognised by the assessing authority for your occupation.', options: [
+    { label: 'Doctorate', points: 20 }, { label: 'Bachelor’s or Master’s degree', points: 15, checked: true }, { label: 'Diploma or trade qualification', points: 10 }, { label: 'None of these', points: 0 },
+  ] },
+  { id: 'extras', type: 'check', title: 'Tick any that apply', options: [
+    { label: 'Studied in Australia for 2 academic years', points: 5 },
+    { label: 'That study was in regional Australia', points: 5 },
+    { label: 'Australian research Master’s or PhD in a STEM field', points: 10 },
+    { label: 'Professional Year completed in Australia', points: 5 },
+    { label: 'Accredited community language (NAATI)', points: 5 },
+  ] },
+  { id: 'partner', title: 'Partner', options: [
+    { label: 'Single, or partner is an Australian citizen or PR', points: 10, checked: true },
+    { label: 'Partner has a skills assessment and Competent English', points: 10 },
+    { label: 'Partner has Competent English only', points: 5 },
+    { label: 'None of these', points: 0 },
+  ] },
+  { id: 'nomination', title: 'Visa type', options: [
+    { label: 'Skilled Independent (189)', points: 0, checked: true },
+    { label: 'State nominated (190)', points: 5 },
+    { label: 'Regional nominated or sponsored (491)', points: 15 },
+  ] },
+];
+const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: site.url + '/' },
+  { '@type': 'ListItem', position: 2, name: 'Australia PR points calculator', item: site.url + '/tools/australia-pr-points-calculator/' },
+] };
+---
+<Base title={title} description={description} schema={[crumbs]}>
+  <div class="wrap">
+    <header class="page-head">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/countries/australia/">Australia</a><span>/</span><span>Points calculator</span></nav>
+      <h1 class="display" style="max-width:16em">Australia Skilled Migration Points Calculator</h1>
+      <p class="lede" style="margin-top:18px;max-width:640px">Answer eight questions to see your points for the Skilled Independent (189), Skilled Nominated (190) and Skilled Work Regional (491) visas. The pass mark is 65.</p>
+    </header>
+
+    <PointsTool mode="au" questions={questions} pass={65} max={110} toolName="Australia points calculator" />
+
+    <div class="prose">
+      <h2>How the Australian points test works</h2>
+      <p>Australia’s General Skilled Migration programme awards points for age, English ability, skilled work experience, qualifications, Australian study, partner skills and nomination. You need at least 65 points to submit an expression of interest in SkillSelect.</p>
+      <ul>
+        <li>Your occupation must be on the relevant skilled occupation list.</li>
+        <li>You need a positive skills assessment from the assessing authority for your occupation, such as ANMAC for nurses or TRA for trades.</li>
+        <li>You must be under 45 when you are invited to apply.</li>
+        <li>Meeting the pass mark does not guarantee an invitation. Invitation rounds are competitive.</li>
+      </ul>
+      <p class="notice">This calculator gives an indication only. Points are decided by the Department of Home Affairs on the evidence in your application, and rules change. It is not migration advice. Have your result checked by a consultant before you spend on assessments or exams.</p>
+    </div>
+  </div>
+</Base>

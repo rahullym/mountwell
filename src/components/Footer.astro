@@ -1,0 +1,84 @@
+---
+import Icon from './Icon.astro';
+import { site, countries, services, nav, waLink } from '../data/site';
+const updated = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const jobs = [
+  ['Nurses', '/jobs/nurses/'], ['Physiotherapists', '/jobs/physiotherapists/'], ['Welders', '/jobs/welders/'],
+  ['Mechanics', '/jobs/mechanics/'], ['CNC machinists', '/jobs/cnc-machinists/'], ['Drivers', '/jobs/drivers/'],
+  ['IT professionals', '/jobs/it/'], ['Teachers', '/jobs/teachers/'],
+];
+const company = [...nav.about, { label: 'Contact', href: '/contact/' }, ...nav.tools, { label: 'FAQs', href: '/resources/faqs/' }];
+const socials = [
+  ['facebook', 'Facebook', site.social.facebook], ['instagram', 'Instagram', site.social.instagram],
+  ['linkedin', 'LinkedIn', site.social.linkedin], ['youtube', 'YouTube', site.social.youtube],
+];
+const wa = waLink('Hi Mount Bell, I have a question about working or migrating abroad.');
+---
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" aria-label="Mount Bell home"><img src="/logo-light.png" alt="Mount Bell Global Studies" width="570" height="240" loading="lazy" /></a>
+        <p>Immigration and overseas migration consultants in Thrissur and Kochi, Kerala.</p>
+        <p class="footer-lic"><Icon name="shield" size={18} /><span>Licensed by the {site.licence.authority}<span class="mono">{site.licence.number}</span></span></p>
+        <ul class="footer-social">
+          {socials.map(([icon, label, href]) => <li><a href={href} rel="noopener" aria-label={label}><Icon name={icon} size={19} /></a></li>)}
+        </ul>
+      </div>
+
+      {site.offices.map((o) => (
+        <address class="office-card">
+          <span class="pin"><Icon name="pin" size={20} /></span>
+          <p class="foot-h">{o.label}</p>
+          <p class="city">{o.city}</p>
+          <p class="addr">{o.lines.map((l) => <>{l}<br /></>)}</p>
+          <p class="tel">{o.phones.map((p) => <a href={`tel:${p.tel}`}>{p.display}</a>)}</p>
+          <a class="dir" href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(o.mapQuery)}`} target="_blank" rel="noopener">Get directions <Icon name="arrow" size={15} /></a>
+        </address>
+      ))}
+    </div>
+
+    <div class="footer-cta">
+      <p>Talk to a consultant, in Malayalam or English.</p>
+      <div>
+        <a class="pill solid" href={`tel:${site.phone.tel}`}><Icon name="phone" size={17} /> {site.phone.display}</a>
+        <a class="pill" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp" size={18} /> WhatsApp</a>
+        <a class="pill" href={`mailto:${site.email}`}><Icon name="mail" size={17} /> {site.email}</a>
+      </div>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      <div>
+        <p class="foot-h">Services</p>
+        <ul>{services.map((s) => <li><a href={s.href}>{s.name}</a></li>)}</ul>
+      </div>
+      <div>
+        <p class="foot-h">Countries</p>
+        <ul class="two">{countries.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ul>
+      </div>
+      <div>
+        <p class="foot-h">Jobs by profession</p>
+        <ul class="two">{jobs.map(([l, h]) => <li><a href={h}>{l}</a></li>)}</ul>
+      </div>
+      <div>
+        <p class="foot-h">Company</p>
+        <ul>{company.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+      </div>
+    </nav>
+
+    <div class="footer-legal">
+      <p>Visa and work permit decisions are made by the government of the destination country. Mount Bell does not guarantee any job, visa or permanent residence outcome. Eligibility tools on this site give an indication only and are not legal advice.</p>
+      <div class="row">
+        <span>© {new Date().getFullYear()} {site.legalName} · Last updated {updated}</span>
+        <div class="legal-nav">
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/refund-policy/">Refund Policy</a>
+          <a href="/image-credits/">Image credits</a>
+          <a class="to-top" href="#main" aria-label="Back to top"><Icon name="up" size={16} /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="footer-mark" aria-hidden="true">Mount Bell</p>
+</footer>

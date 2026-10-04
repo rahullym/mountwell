@@ -1,0 +1,54 @@
+---
+// Homepage banner: headline beside four arch windows of destination photos.
+import Icon from './Icon.astro';
+import { site, countries, waLink } from '../data/site';
+const wa = waLink('Hi Mount Bell, I would like to talk to an expert about working or migrating abroad.');
+
+const place = (name: string) => {
+  const c = countries.find((x) => x.name === name)!;
+  return { name, code: c.airport, src: `/img/dest/${name.toLowerCase()}-arch.webp` };
+};
+// Each arch alternates between two destinations, so all eight appear. `h` is the arch height.
+const arches = [
+  { h: 70, a: place('Australia'), b: place('Maldives') },
+  { h: 100, a: place('Germany'), b: place('Europe') },
+  { h: 85, a: place('Malta'), b: place('Denmark') },
+  { h: 62, a: place('Canada'), b: place('Netherlands') },
+];
+---
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="hero-eyebrow"><Icon name="shield" size={16} /> Licensed by the Ministry of External Affairs · Thrissur and Kochi</p>
+      <h1 class="display">Immigration Consultants in Kerala <em>for Jobs and Migration Abroad</em></h1>
+      <p class="lede">Mount Bell’s immigration consultants in Kerala guide nurses, healthcare staff, tradespeople, IT professionals and teachers to jobs and migration in Australia, Canada, Germany and five more destinations.</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="#eligibility" data-focus-form>Check My Eligibility <Icon name="arrow" size={18} /></a>
+        <a class="btn btn-wa-dark" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp" size={21} /> Talk to an Expert on WhatsApp</a>
+      </div>
+      <p class="hero-lang">Free consultation in Malayalam and English <span class="ml" lang="ml">മലയാളത്തിൽ സംസാരിക്കാം</span></p>
+      {site.heroVideoId && (
+        <a class="hero-video" href={`https://www.youtube.com/watch?v=${site.heroVideoId}`} target="_blank" rel="noopener">
+          <span class="play"><Icon name="play" size={18} /></span> Watch: how we work, in 90 seconds
+        </a>
+      )}
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg class="art-arcs" viewBox="0 0 560 520" fill="none" preserveAspectRatio="none">
+        <path pathLength="1" d="M-40 505C110 505 150 40 290 40S470 505 620 505" stroke="#7fb556" />
+        <path pathLength="1" d="M90 505C240 505 280 40 420 40S600 505 750 505" stroke="#5f93c4" />
+      </svg>
+      <div class="arches">
+        {arches.map((x, i) => (
+          <div class="arch" style={`--h:${x.h}%;--d:${i}`}>
+            <img src={x.a.src} alt="" width="360" height="1000" decoding="async" />
+            <img class="alt" src={x.b.src} alt="" width="360" height="1000" fetchpriority="low" decoding="async" />
+            <span class="tag"><b>{x.a.code}</b>{x.a.name}</span>
+            <span class="tag alt"><b>{x.b.code}</b>{x.b.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

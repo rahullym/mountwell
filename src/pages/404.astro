@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { site, waLink } from '../data/site';
+---
+<Base title="Page not found | Mount Bell" description="This page is not available yet." noindex>
+  <div class="wrap" style="padding-block:clamp(64px,10vw,140px);max-width:820px;margin-inline:auto 0">
+    <p class="label" style="margin-bottom:16px">404</p>
+    <h1 class="display">This page is not ready yet.</h1>
+    <p class="lede" style="margin-top:20px;max-width:560px">We are still building this part of the site. A consultant can answer your question today, in Malayalam or English.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/#eligibility">Check My Eligibility <Icon name="arrow" size={18} /></a>
+      <a class="btn btn-wa" href={waLink('Hi Mount Bell, I have a question about working or migrating abroad.')} target="_blank" rel="noopener"><Icon name="whatsapp" size={21} /> Ask on WhatsApp</a>
+      <a class="btn btn-ghost" href={`tel:${site.phone.tel}`}><Icon name="phone" size={18} /> {site.phone.display}</a>
+    </div>
+  </div>
+</Base>

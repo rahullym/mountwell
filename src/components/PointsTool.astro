@@ -1,0 +1,110 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../data/site';
+
+interface Option { label: string; points: number; flag?: string; checked?: boolean }
+interface Question { id: string; title: string; hint?: string; type?: 'radio' | 'check'; options: Option[] }
+interface Props { mode: 'au' | 'de'; questions: Question[]; pass: number; max: number; toolName: string }
+const { mode, questions, pass, max, toolName } = Astro.props;
+---
+<div class="calc" data-tool={mode} data-pass={pass} data-max={max} data-wa={site.whatsapp} data-name={toolName}>
+  <form class="calc-form" aria-label={toolName}>
+    {questions.map((q) => (
+      <fieldset class="q" data-group={q.id}>
+        <legend>{q.title}</legend>
+        {q.hint && <p class="hint">{q.hint}</p>}
+        <div class="opts">
+          {q.options.map((o, i) => (
+            <label>
+              <input
+                type={q.type === 'check' ? 'checkbox' : 'radio'}
+                name={q.type === 'check' ? `${q.id}-${i}` : q.id}
+                data-points={o.points}
+                data-flag={o.flag}
+                checked={o.checked}
+              />
+              <span>{o.label}{o.points > 0 && <em>+{o.points}</em>}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    ))}
+  </form>
+
+  <aside class="result" aria-live="polite">
+    <span class="label">Your indicative score</span>
+    <div class="score"><span data-score>0</span><small>/ {pass} needed</small></div>
+    <div class="meter"><b data-bar></b><i style={`left:${(pass / max) * 100}%`}></i></div>
+    <p class="verdict" data-verdict></p>
+    <p data-detail></p>
+    <a class="btn btn-light btn-block" data-wa-score target="_blank" rel="noopener" href="#"><Icon name="whatsapp" size={20} /> Send my score to a consultant</a>
+    <a class="btn btn-ghost btn-block" style="border-color:rgba(255,255,255,.28);color:#fff" href="/#eligibility">Book a free assessment</a>
+  </aside>
+</div>
+
+<script>
+  const tool = document.querySelector<HTMLElement>('[data-tool]')!;
+  const form = tool.querySelector('form')!;
+  const pass = Number(tool.dataset.pass);
+  const max = Number(tool.dataset.max);
+  const $ = (s: string) => tool.querySelector<HTMLElement>(s)!;
+
+  const groupPoints = (id: string) =>
+    [...form.querySelectorAll<HTMLInputElement>(`[data-group="${id}"] input:checked`)].reduce((n, i) => n + Number(i.dataset.points), 0);
+  const flagged = (flag: string) => !!form.querySelector(`input[data-flag="${flag}"]:checked`);
+
+  function update() {
+    const groups = [...form.querySelectorAll<HTMLElement>('[data-group]')].map((g) => g.dataset.group!);
+    let total = groups.reduce((n, g) => n + groupPoints(g), 0);
+    let verdict = '';
+    let detail = '';
+    let ok = false;
+
+    if (tool.dataset.tool === 'au') {
+      // Overseas and Australian employment points are capped at 20 combined.
+      const work = groupPoints('work-overseas') + groupPoints('work-au');
+      if (work > 20) total -= work - 20;
+      if (flagged('too-old')) {
+        verdict = 'Points-tested skilled visas need you to be under 45 when invited.';
+        detail = 'Employer-sponsored and other routes may still be open. Ask a consultant which ones fit your profile.';
+      } else if (total < pass) {
+        verdict = `You are ${pass - total} points short of the ${pass}-point pass mark.`;
+        detail = 'English scores, state nomination and partner skills are the quickest ways to add points. We can show you which apply to you.';
+      } else {
+        ok = true;
+        verdict = total >= 80 ? `You are well above the ${pass}-point pass mark.` : `You meet the ${pass}-point pass mark.`;
+        detail = 'The pass mark lets you lodge an expression of interest. Invitations are competitive and depend on your occupation, so a higher score helps.';
+      }
+    } else {
+      const baseline = [...form.querySelectorAll<HTMLInputElement>('[data-group="baseline"] input')];
+      const baseOk = baseline.every((i) => i.checked);
+      total -= groupPoints('baseline');
+      if (!baseOk) {
+        verdict = 'Tick all three basic requirements first.';
+        detail = 'A recognised qualification, basic German or good English, and proof of funds are needed before points are counted.';
+      } else if (flagged('full')) {
+        ok = true;
+        verdict = 'With full recognition you do not need the points test.';
+        detail = 'You can apply for the Opportunity Card as a skilled worker. Your score below is shown for reference only.';
+      } else if (total < pass) {
+        verdict = `You are ${pass - total} point${pass - total === 1 ? '' : 's'} short of the ${pass} needed.`;
+        detail = 'German language level is the fastest way to add points: A2 adds one, B1 two and B2 three.';
+      } else {
+        ok = true;
+        verdict = `You reach the ${pass} points needed for the Opportunity Card.`;
+        detail = 'Next come document checks, the qualification statement and proof of funds. A consultant can review these with you.';
+      }
+    }
+
+    $('[data-score]').textContent = String(total);
+    const bar = $('[data-bar]');
+    bar.style.width = `${Math.min(100, (total / max) * 100)}%`;
+    bar.style.background = ok ? '#8fc267' : '#e2b25a';
+    $('[data-verdict]').textContent = verdict;
+    $('[data-detail]').textContent = detail;
+    const msg = `Hi Mount Bell, I used the ${tool.dataset.name} and scored ${total} points. Could a consultant review my profile?`;
+    tool.querySelector<HTMLAnchorElement>('[data-wa-score]')!.href = `https://wa.me/${tool.dataset.wa}?text=${encodeURIComponent(msg)}`;
+  }
+  form.addEventListener('change', update);
+  update();
+</script>

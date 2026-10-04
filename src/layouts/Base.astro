@@ -1,0 +1,125 @@
+---
+import '@fontsource-variable/newsreader';
+import '@fontsource-variable/newsreader/wght-italic.css';
+import '@fontsource-variable/hanken-grotesk';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '@fontsource-variable/anek-malayalam';
+import '../styles/global.css';
+import '../styles/hero.css';
+import '../styles/responsive.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import EligibilityPopup from '../components/EligibilityPopup.astro';
+import Icon from '../components/Icon.astro';
+import { site, waLink } from '../data/site';
+
+interface Props { title: string; description: string; schema?: object[]; noindex?: boolean }
+const { title, description, schema = [], noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+
+const org = {
+  '@context': 'https://schema.org',
+  '@type': 'EmploymentAgency',
+  '@id': `${site.url}/#organization`,
+  name: site.name,
+  legalName: site.legalName,
+  url: site.url,
+  logo: `${site.url}/logo.png`,
+  email: site.email,
+  telephone: site.phone.tel,
+  ...(site.foundedYear ? { foundingDate: String(site.foundedYear) } : {}),
+  ...(site.founder ? { founder: { '@type': 'Person', name: site.founder.name, jobTitle: site.founder.role } } : {}),
+  knowsLanguage: ['ml', 'en'],
+  areaServed: { '@type': 'State', name: 'Kerala' },
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: site.licence.type,
+    identifier: site.licence.number,
+    recognizedBy: { '@type': 'GovernmentOrganization', name: site.licence.authority },
+  },
+  sameAs: Object.values(site.social),
+  location: site.offices.map((o) => ({
+    '@type': 'Place',
+    name: `${site.name} ${o.city}`,
+    telephone: o.phones[0].tel,
+    address: { '@type': 'PostalAddress', streetAddress: o.street, addressLocality: o.city, addressRegion: 'Kerala', postalCode: o.postalCode, addressCountry: 'IN' },
+  })),
+};
+const website = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${site.url}/#website`, url: site.url, name: site.name, publisher: { '@id': `${site.url}/#organization` }, inLanguage: 'en-IN' };
+---
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="theme-color" content="#111a33" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${site.url}/logo.png`} />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary" />
+    {[org, website, ...schema].map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <Header />
+    <main id="main"><slot /></main>
+    <Footer />
+    <EligibilityPopup />
+    <nav class="mbar" aria-label="Quick contact">
+      <a href={`tel:${site.phone.tel}`}><Icon name="phone" size={18} /> Call</a>
+      <a class="go" href="/#eligibility">Check Eligibility</a>
+    </nav>
+    <a class="wa-fab" href={waLink('Hi Mount Bell, I would like to talk to a consultant about working or migrating abroad.')} target="_blank" rel="noopener" aria-label="Chat with Mount Bell on WhatsApp">
+      <Icon name="whatsapp" size={32} />
+      <span aria-hidden="true">Chat on WhatsApp</span>
+    </a>
+    <script>
+      // Scroll reveal: mark elements as they enter the viewport.
+      const targets = document.querySelectorAll('[data-reveal], [data-reveal-group], [data-inview], [data-count]');
+      const countUp = (el: HTMLElement) => {
+        const end = Number(el.dataset.count);
+        const start = performance.now();
+        const tick = (now: number) => {
+          const t = Math.min(1, (now - start) / 1100);
+          el.textContent = String(Math.round(end * (1 - Math.pow(1 - t, 3))));
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+      const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!('IntersectionObserver' in window)) {
+        targets.forEach((el) => el.classList.add('in'));
+      } else {
+        const io = new IntersectionObserver(
+          (entries) =>
+            entries.forEach((e) => {
+              if (!e.isIntersecting) return;
+              const el = e.target as HTMLElement;
+              el.classList.add('in');
+              if (el.dataset.count && !still) countUp(el);
+              io.unobserve(el);
+            }),
+          { rootMargin: '0px 0px -8% 0px', threshold: 0.08 },
+        );
+        targets.forEach((el) => io.observe(el));
+      }
+
+      const header = document.querySelector('[data-header]');
+      const onScroll = () => header?.classList.toggle('is-scrolled', window.scrollY > 8);
+      addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    </script>
+  </body>
+</html>

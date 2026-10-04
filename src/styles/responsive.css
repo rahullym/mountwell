@@ -1,0 +1,93 @@
+/* Floating WhatsApp button and screen-size fixes. Loaded last, after global.css and hero.css. */
+
+/* ---------- Floating WhatsApp button ---------- */
+.wa-fab { position: fixed; right: max(22px, env(safe-area-inset-right)); bottom: calc(22px + env(safe-area-inset-bottom)); z-index: 110; display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #fff; box-shadow: 0 12px 26px -10px rgba(14, 120, 60, 0.75), 0 2px 6px rgba(19, 28, 51, 0.2); transition: background .18s, transform .18s cubic-bezier(.2, .7, .2, 1); animation: rise .5s .6s cubic-bezier(.2, .7, .2, 1) both; }
+.wa-fab:hover { background: #1fbd5a; transform: translateY(-3px); }
+.wa-fab:active { transform: translateY(0); }
+.wa-fab:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 50%; }
+.wa-fab span { position: absolute; right: calc(100% + 12px); top: 50%; padding: 9px 14px; border-radius: var(--r); background: var(--ink); color: #fff; font-size: 0.88rem; font-weight: 600; white-space: nowrap; opacity: 0; transform: translate(6px, -50%); pointer-events: none; transition: opacity .18s, transform .18s; }
+.wa-fab:hover span, .wa-fab:focus-visible span { opacity: 1; transform: translate(0, -50%); }
+/* The button stays out of the way while the menu or the eligibility form is open. */
+body:has(.drawer.is-open) .wa-fab, html:has(.pop[open]) .wa-fab { display: none; }
+@media (hover: none) { .wa-fab span { display: none; } }
+
+/* ---------- Grid and flex children may shrink below their content ---------- */
+.calc > *, .who > *, .why > *, .lic-grid > *, .faq-grid > *, .final .wrap > *, .hero-grid > *, .pw > *, .pw-body > *, .footer-top > * { min-width: 0; }
+.prose, .cert dd, .office address, .office-card .addr, .footer-cta .pill { overflow-wrap: anywhere; }
+.result .btn { white-space: normal; text-align: center; line-height: 1.25; padding-block: 12px; }
+.who-badge .mono { white-space: normal; overflow-wrap: anywhere; }
+.tool .label { max-width: calc(100% - 6.5rem); }
+
+/* ---------- Large desktops ---------- */
+@media (min-width: 1800px) {
+  :root { --wrap: 1320px; }
+  body { font-size: 18px; }
+}
+@media (min-width: 2300px) {
+  html { font-size: 112.5%; }
+  :root { --wrap: 1500px; --header-h: 82px; }
+  body { font-size: 19.5px; }
+  .brand img { height: 54px; }
+  .hero-art { height: 540px; }
+  .who-art { max-width: 620px; }
+  .pw { grid-template-columns: 360px minmax(0, 1fr); }
+}
+
+/* ---------- Small laptops and landscape tablets ---------- */
+@media (max-width: 1120px) {
+  .who-badge { max-width: 64%; }
+}
+
+/* ---------- Tablets ---------- */
+@media (min-width: 700px) and (max-width: 900px) {
+  .tools, .offices { grid-template-columns: 1fr 1fr; }
+  .tool h3 { font-size: 1.45rem; }
+  .office-body { padding: 22px 20px 24px; }
+  .updates { grid-template-columns: 1fr 1fr; gap: 0 28px; }
+}
+@media (max-width: 900px) {
+  body { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
+  .who-art { margin-inline: auto; }
+  .mbar { grid-template-columns: 1fr 1.7fr; }
+  .wa-fab { right: 14px; bottom: calc(82px + env(safe-area-inset-bottom)); width: 54px; height: 54px; }
+  .wa-fab svg { width: 29px; height: 29px; }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 560px) {
+  .who-facts { display: grid; grid-template-columns: 1fr 1fr; }
+  .who-facts div { min-width: 0; margin: 0; padding: 13px 12px 13px 0; border-right: 0; border-top: 1px solid var(--line); }
+  .who-facts div:nth-child(-n + 2) { border-top: 0; }
+  .who-facts div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .who-badge { max-width: 66%; padding: 11px 12px; gap: 9px; }
+  .office-body .top { flex-wrap: wrap; }
+  .stories-foot { justify-content: flex-start; }
+  .legal-nav { gap: 8px 16px; }
+}
+@media (max-width: 400px) {
+  .btn { white-space: normal; text-align: center; line-height: 1.2; padding: 10px 16px; }
+  .btn svg { flex: none; }
+  .arch .tag { left: 2px; right: 2px; font-size: 0.64rem; }
+  .arch .tag b { font-size: 0.6rem; letter-spacing: 0.06em; }
+  .hero-art { height: 220px; }
+  .tabs { display: flex; }
+  .tabs button { flex: 1; padding: 0 12px; }
+  .tool .figure { font-size: 3.4rem; right: 18px; top: 18px; }
+  .tool .label { max-width: calc(100% - 4.4rem); }
+  .lead, .mini-form, .calc-form, .result, .fees, .story { padding: 20px 18px; }
+  .office-body { padding: 22px 18px 24px; }
+  .office-card { padding: 22px 20px 20px; }
+  .opts span { padding: 8px 12px; }
+  .result .score { font-size: 4.2rem; }
+}
+
+/* ---------- Short screens: phones held sideways ---------- */
+@media (max-width: 900px) and (max-height: 480px) {
+  body { padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
+  .mbar { padding-block: 6px calc(6px + env(safe-area-inset-bottom)); }
+  .mbar a { min-height: 42px; }
+  .wa-fab { bottom: calc(66px + env(safe-area-inset-bottom)); width: 48px; height: 48px; }
+  .wa-fab svg { width: 26px; height: 26px; }
+  .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); align-items: center; }
+  .hero-art { height: 240px; }
+}

@@ -1,0 +1,34 @@
+---
+// The eligibility form in a modal dialog. Any element with data-open-eligibility opens it.
+import Icon from './Icon.astro';
+import LeadForm from './LeadForm.astro';
+import { site, waLink } from '../data/site';
+---
+<dialog class="pop" aria-labelledby="pop-h" data-eligibility-pop>
+  <button class="pop-close" type="button" aria-label="Close" data-close-pop><Icon name="close" size={20} /></button>
+  <LeadForm id="pop" sub="We review your profile and tell you plainly where you qualify." />
+  <p class="pop-foot">
+    <span>Prefer to talk?</span>
+    <a href={`tel:${site.phone.tel}`}><Icon name="phone" size={16} /> {site.phone.display}</a>
+    <a class="wa" href={waLink('Hi Mount Bell, I would like a free eligibility check.')} target="_blank" rel="noopener"><Icon name="whatsapp" size={17} /> WhatsApp</a>
+  </p>
+</dialog>
+
+<script>
+  const pop = document.querySelector<HTMLDialogElement>('[data-eligibility-pop]')!;
+
+  // Openers are links to the form on the homepage, so they still work without JavaScript.
+  document.querySelectorAll('[data-open-eligibility]').forEach((el) =>
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      pop.showModal();
+    }),
+  );
+  pop.querySelector('[data-close-pop]')!.addEventListener('click', () => pop.close());
+
+  // A click on the backdrop lands on the dialog itself. Only close when the press also
+  // started there, so dragging a text selection out of a field does not dismiss the form.
+  let pressedBackdrop = false;
+  pop.addEventListener('pointerdown', (e) => (pressedBackdrop = e.target === pop));
+  pop.addEventListener('click', (e) => pressedBackdrop && e.target === pop && pop.close());
+</script>
