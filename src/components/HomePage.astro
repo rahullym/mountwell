@@ -3,12 +3,17 @@ import Base from '../layouts/Base.astro';
 import Icon from './Icon.astro';
 import LeadForm from './LeadForm.astro';
 import Hero from './Hero.astro';
-import { site, countries, professionGroups, services, steps, reasons, reviews, updates, faqs, waLink, photoAlt, teamPhotos } from '../data/site';
+import { site, countries, goals, professionGroups, professions, services, featured, exams, steps, reasons, reviews, updates, faqs, waLink, photoAlt, teamPhotos, galleryPhotos } from '../data/site';
 
 const title = 'Immigration Consultants in Kerala | Mount Bell Thrissur';
 const description = 'Mount Bell is a licensed immigration and overseas migration consultancy in Thrissur and Kochi. Jobs and migration to Australia, Canada, Germany, Malta and more.';
 const wa = waLink('Hi Mount Bell, I would like to talk to an expert about working or migrating abroad.');
+const waCoaching = waLink('Hi Mount Bell, I would like to know about IELTS, OET, PTE or German coaching.');
+// One accent colour per destination, used by the pathway explorer and the programme cards.
+const accent: Record<string, string> = { australia: 'var(--coral)', canada: 'var(--err)', germany: 'var(--amber-deep)', denmark: 'var(--sky)', malta: 'var(--teal)', maldives: 'var(--green-deep)', netherlands: 'var(--blue)', europe: 'var(--plum)' };
 const places = countries.map((c) => ({ ...c, slug: c.name.toLowerCase() }));
+const byGoal = goals.map((g) => ({ ...g, places: countries.filter((c) => c.goals.includes(g.id)) }));
+const jobs = professions.filter((p) => p !== 'Other');
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -79,8 +84,28 @@ const videoSchema = site.heroVideoId
     </div>
   </section>
 
+  <!-- Goals -->
+  <section class="section section-white" id="goals">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2 class="h2">What Do You Want to Do Abroad?</h2>
+        <p class="lede">Four kinds of move, and the countries where Mount Bell runs each one.</p>
+      </div>
+      <div class="goal-grid" data-reveal-group>
+        {byGoal.map((g) => (
+          <article class={`goal ${g.id}`}>
+            <h3><a href={g.href}>{g.label}</a></h3>
+            <p>{g.text}</p>
+            <ul>{g.places.map((c) => <li>{c.name}</li>)}</ul>
+            <span class="go"><Icon name="arrow" size={18} /></span>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- 05 Find your pathway -->
-  <section class="section section-white" id="pathways">
+  <section class="section" id="pathways">
     <div class="wrap">
       <div class="section-head split" data-reveal>
         <div>
@@ -97,7 +122,7 @@ const videoSchema = site.heroVideoId
         <div class="pw" data-pw data-reveal>
           <div class="pw-list" role="tablist" aria-label="Destinations" aria-orientation="vertical">
             {places.map((c, i) => (
-              <button type="button" role="tab" id={`pw-tab-${i}`} aria-controls={`pw-${i}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
+              <button type="button" role="tab" style={`--c:${accent[c.slug]}`} id={`pw-tab-${i}`} aria-controls={`pw-${i}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
                 <span>{c.name}</span>
                 <em>{c.programmes.length} {c.programmes.length === 1 ? 'programme' : 'programmes'}</em>
               </button>
@@ -105,7 +130,7 @@ const videoSchema = site.heroVideoId
           </div>
           <div class="pw-panels">
             {places.map((c, i) => (
-              <article class="pw-panel" id={`pw-${i}`} role="tabpanel" aria-labelledby={`pw-tab-${i}`} hidden={i !== 0}>
+              <article class="pw-panel" style={`--c:${accent[c.slug]}`} id={`pw-${i}`} role="tabpanel" aria-labelledby={`pw-tab-${i}`} hidden={i !== 0}>
                 <a class="pw-photo" href={c.href} tabindex="-1">
                   <img src={`/img/dest/${c.slug}-wide.webp`} alt={photoAlt[c.slug]} width="1400" height="820" loading="lazy" decoding="async" />
                   <span class="mono">COK <Icon name="arrow" size={12} /> {c.airport}</span>
@@ -138,6 +163,14 @@ const videoSchema = site.heroVideoId
     </div>
   </section>
 
+  <!-- Professions band -->
+  <div class="ticker">
+    <p class="vh">Professions we place: {jobs.join(', ')}.</p>
+    <div class="ticker-track" aria-hidden="true">
+      {[0, 1].map(() => <ul>{jobs.map((p) => <li>{p}</li>)}</ul>)}
+    </div>
+  </div>
+
   <!-- 06 Services -->
   <section class="section section-sand" id="services">
     <div class="wrap">
@@ -154,6 +187,31 @@ const videoSchema = site.heroVideoId
         ))}
       </div>
       <p class="svc-note" data-reveal>Every service includes skills assessment and credential recognition (AHPRA, Anerkennung, Malta registration), IELTS, OET, PTE and German training, documentation, and pre-departure and post-landing support.</p>
+    </div>
+  </section>
+
+  <!-- Featured programmes -->
+  <section class="section section-ink" id="programmes">
+    <div class="wrap">
+      <div class="section-head split" data-reveal>
+        <div>
+          <h2 class="h2">Overseas Job and Migration Programmes from Kerala</h2>
+          <p class="lede">Six of the programmes our consultants handle from Thrissur and Kochi.</p>
+        </div>
+        <a class="arrow-link" href="#pathways">All eight destinations <Icon name="arrow" size={17} /></a>
+      </div>
+      <div class="prog-grid" data-reveal-group>
+        {featured.map((f, i) => (
+          <article class="prog" style={`--c:${accent[f.img]}`}>
+            <img src={`/img/dest/${f.img}-${i % 5 === 0 ? 'wide' : 'card'}.webp`} alt={photoAlt[f.img]} width={i % 5 === 0 ? 1400 : 520} height={i % 5 === 0 ? 820 : 650} loading="lazy" decoding="async" />
+            <span class="prog-place">{f.place}</span>
+            <div class="prog-body">
+              <h3><a href={f.href}>{f.title}</a></h3>
+              <p>{f.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -186,15 +244,35 @@ const videoSchema = site.heroVideoId
   </section>
 
   <!-- 08 Process -->
-  <section class="section section-white" id="process">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <h2 class="h2">How Our Migration Process Works – Step by Step</h2>
+  <section class="section section-sky" id="process">
+    <div class="wrap proc">
+      <figure class="proc-art" data-reveal>
+        <img src="/img/dest/kerala-tall.webp" alt={photoAlt.kerala} width="1100" height="1160" loading="lazy" decoding="async" />
+        <figcaption class="mono">Kerala <Icon name="arrow" size={12} /> 8 countries</figcaption>
+      </figure>
+      <div>
+        <div class="section-head" data-reveal>
+          <h2 class="h2">How Our Migration Process Works – Step by Step</h2>
+        </div>
+        <ol class="steps" data-reveal-group>
+          {steps.map((s) => <li><h3>{s.title}</h3><p>{s.text}</p></li>)}
+        </ol>
+        <p class="svc-note" data-reveal>Timelines depend on the country and programme. You get a written, stage-by-stage estimate with your eligibility report.</p>
       </div>
-      <ol class="steps" data-reveal-group>
-        {steps.map((s) => <li><h3>{s.title}</h3><p>{s.text}</p></li>)}
-      </ol>
-      <p class="svc-note" data-reveal>Timelines depend on the country and programme. You get a written, stage-by-stage estimate with your eligibility report.</p>
+    </div>
+  </section>
+
+  <!-- Language and exam coaching -->
+  <section class="section section-teal" id="coaching">
+    <div class="wrap coach">
+      <div data-reveal>
+        <h2 class="h2">IELTS, OET, PTE and German Coaching Alongside Your File</h2>
+        <p class="lede">Language preparation is arranged by the same team that handles your paperwork, so the exam and the application move together. We confirm the exact requirement for your country during the free assessment.</p>
+        <a class="btn btn-light" href={waCoaching} target="_blank" rel="noopener"><Icon name="whatsapp" size={20} /> Ask about coaching</a>
+      </div>
+      <ul class="exams" data-reveal-group>
+        {exams.map((e) => <li><strong>{e.name}</strong><span>{e.text}</span></li>)}
+      </ul>
     </div>
   </section>
 
@@ -204,6 +282,7 @@ const videoSchema = site.heroVideoId
       <div class="why-sticky" data-reveal>
         <h2 class="h2">Why Choose Mount Bell as Your Overseas Immigration Consultants in Kerala</h2>
         <a class="arrow-link" href="/about/why-choose-mount-bell/">More about how we work <Icon name="arrow" size={17} /></a>
+        <img class="why-photo" src={teamPhotos[3].src} alt={teamPhotos[3].alt} width="400" height="400" loading="lazy" decoding="async" />
       </div>
       <div>
         <ul class="reasons" data-reveal-group>
@@ -232,7 +311,7 @@ const videoSchema = site.heroVideoId
   </section>
 
   <!-- 10 Licences -->
-  <section class="section section-sand" id="licence">
+  <section class="section section-green" id="licence">
     <div class="wrap lic-grid">
       <div data-reveal>
         <h2 class="h2">Licences, Registrations and Partnerships</h2>
@@ -261,6 +340,10 @@ const videoSchema = site.heroVideoId
       <div class="section-head" data-reveal>
         <h2 class="h2">Success Stories – From Kerala to Australia, Germany, Malta and Beyond</h2>
       </div>
+      <ul class="snaps" data-reveal-group>
+        {galleryPhotos.map((p) => <li><img src={p.src} alt={p.alt} width="400" height="400" loading="lazy" decoding="async" /></li>)}
+      </ul>
+      <p class="snaps-cap">From the Mount Bell gallery.</p>
       <div class="stories" data-reveal-group>
         {reviews.map((r) => (
           <figure class="story" style="margin:0">
@@ -313,6 +396,7 @@ const videoSchema = site.heroVideoId
       <div class="updates" data-reveal-group>
         {updates.map((u) => (
           <article class="update">
+            <img src={`/img/dest/${u.img}-mid.webp`} alt="" width="640" height="440" loading="lazy" decoding="async" />
             <span class="label">{u.tag}</span>
             <h3><a href={u.href}>{u.title}</a></h3>
             <p>{u.excerpt}</p>
@@ -342,6 +426,7 @@ const videoSchema = site.heroVideoId
 
   <!-- 15 Final CTA -->
   <section class="final" id="eligibility" data-inview>
+    <img class="final-bg" src="/img/dest/kerala-wide.webp" alt="" width="1400" height="820" loading="lazy" decoding="async" />
     <svg class="deco" viewBox="0 0 900 260" fill="none" aria-hidden="true">
       <path pathLength="1" d="M0 250C190 250 250 20 420 20S650 250 840 250" stroke="#8fc267" stroke-width="26" />
       <path pathLength="1" d="M190 250C380 250 440 20 610 20S840 250 1030 250" stroke="#7fa8cf" stroke-width="26" />

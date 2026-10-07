@@ -17,18 +17,6 @@ import { site, countries, professionGroups, services, nav } from '../data/site';
 
     <nav aria-label="Main">
       <ul class="nav">
-        <li class="has-drop">
-          <button class="nav-link" aria-expanded="false" aria-controls="drop-about">About <Icon name="chevron" size={14} /></button>
-          <div class="drop" id="drop-about">
-            {nav.about.map((l) => <a href={l.href}>{l.label}</a>)}
-          </div>
-        </li>
-        <li class="has-drop">
-          <button class="nav-link" aria-expanded="false" aria-controls="drop-services">Services <Icon name="chevron" size={14} /></button>
-          <div class="drop" id="drop-services">
-            {services.map((s) => <a href={s.href}>{s.name}</a>)}
-          </div>
-        </li>
         <li>
           <button class="nav-link" aria-expanded="false" aria-controls="panel-countries">Countries <Icon name="chevron" size={14} /></button>
           <div class="panel" id="panel-countries">
@@ -60,10 +48,22 @@ import { site, countries, professionGroups, services, nav } from '../data/site';
           </div>
         </li>
         <li class="has-drop">
+          <button class="nav-link" aria-expanded="false" aria-controls="drop-services">Services <Icon name="chevron" size={14} /></button>
+          <div class="drop" id="drop-services">
+            {services.map((s) => <a href={s.href}>{s.name}</a>)}
+          </div>
+        </li>
+        <li class="has-drop">
           <button class="nav-link" aria-expanded="false" aria-controls="drop-resources">Resources <Icon name="chevron" size={14} /></button>
           <div class="drop" id="drop-resources">
             {nav.resources.map((l) => <a href={l.href}>{l.label}</a>)}
             {nav.tools.map((l) => <a href={l.href}>{l.label}</a>)}
+          </div>
+        </li>
+        <li class="has-drop">
+          <button class="nav-link" aria-expanded="false" aria-controls="drop-about">About <Icon name="chevron" size={14} /></button>
+          <div class="drop" id="drop-about">
+            {nav.about.map((l) => <a href={l.href}>{l.label}</a>)}
           </div>
         </li>
         <li><a class="nav-link" href="/contact/">Contact</a></li>
@@ -71,7 +71,7 @@ import { site, countries, professionGroups, services, nav } from '../data/site';
     </nav>
 
     <div class="header-cta">
-      <a class="header-phone" href={`tel:${site.phone.tel}`} aria-label={`Call ${site.phone.display}`} title={`Call ${site.phone.display}`}><Icon name="phone" size={18} /></a>
+      <a class="btn btn-primary btn-sm" href="/#eligibility" aria-haspopup="dialog" data-open-eligibility>Check Eligibility <Icon name="arrow" size={17} /></a>
       <button class="icon-btn burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer" data-open-drawer><Icon name="menu" size={22} /></button>
     </div>
   </div>

@@ -71,11 +71,11 @@ export const site = {
 
 export type Goal = 'pr' | 'work' | 'train' | 'seeker';
 
-export const goals: { id: Goal; label: string }[] = [
-  { id: 'pr', label: 'Migrate / PR' },
-  { id: 'work', label: 'Work visa' },
-  { id: 'train', label: 'Study and train' },
-  { id: 'seeker', label: 'Job seeker route' },
+export const goals: { id: Goal; label: string; text: string; href: string }[] = [
+  { id: 'pr', label: 'Migrate / PR', text: 'Permanent residence through points-tested skilled migration, planned for you and your family.', href: '/services/skilled-migration/' },
+  { id: 'work', label: 'Work visa', text: 'An employer-sponsored job and work permit in healthcare, skilled trades or general category roles.', href: '/services/work-visa/' },
+  { id: 'train', label: 'Study and train', text: 'Training that leads to work: Ausbildung in Germany, or the bridging programme for nurses in Malta.', href: '/countries/germany/ausbildung/' },
+  { id: 'seeker', label: 'Job seeker route', text: 'Travel first and look for work on the ground with Germany’s Opportunity Card.', href: '/countries/germany/opportunity-card/' },
 ];
 
 export const countries: {
@@ -218,6 +218,23 @@ export const services = [
   { name: 'Visa Guidance', href: '/services/visa-guidance/', text: 'Checklists, forms, appointments and interview preparation from visa consultants in Kerala who file these applications every week.' },
 ];
 
+// Programmes shown as photo cards on the homepage. `img` is a file slug in /public/img/dest.
+export const featured = [
+  { img: 'australia', place: 'Australia', title: 'Nursing in Australia', text: 'Skills assessment, AHPRA registration and the visa application, managed from Kerala.', href: '/countries/australia/nurses/' },
+  { img: 'germany', place: 'Germany', title: 'Opportunity Card', text: 'Six points to job-hunt in Germany.', href: '/countries/germany/opportunity-card/' },
+  { img: 'malta', place: 'Malta', title: 'Bridging programme', text: 'For nurses trained outside the EU.', href: '/countries/malta/bridging-programme/' },
+  { img: 'denmark', place: 'Denmark', title: 'Dentists and nurses', text: 'Danish authorisation, language and employer matching.', href: '/countries/denmark/' },
+  { img: 'maldives', place: 'Maldives', title: 'Hospital and clinic jobs', text: 'Employer-sponsored work visas, a short flight from Kerala.', href: '/countries/maldives/' },
+  { img: 'europe', place: 'Europe', title: 'Skilled trades in Europe', text: 'Welders, CNC machinists, electricians, drivers and more, in Latvia, Poland, Lithuania and Bulgaria.', href: '/countries/europe/' },
+];
+
+export const exams = [
+  { name: 'IELTS', text: 'English test accepted for Australian skilled visas.' },
+  { name: 'OET', text: 'English test built for nurses and other healthcare professionals.' },
+  { name: 'PTE', text: 'Computer-based English test, also accepted for Australia.' },
+  { name: 'German', text: 'For healthcare roles in Germany. The Opportunity Card accepts basic German or good English.' },
+];
+
 export const supportChips = [
   'Skills assessment', 'AHPRA registration', 'Anerkennung (Germany)', 'Malta council registration',
   'IELTS, OET and PTE', 'German language training', 'Documentation', 'Pre-departure briefing', 'Post-landing support',
@@ -249,9 +266,9 @@ export const reviews = [
 ];
 
 export const updates = [
-  { tag: 'Guide', title: 'How to spot fake overseas job agents', excerpt: 'Seven checks to run before you pay any recruiter, starting with the eMigrate licence search.', href: '/resources/how-to-spot-fake-overseas-job-agents/' },
-  { tag: 'Germany', title: 'Opportunity Card: who qualifies and how the points work', excerpt: 'The six-point rule explained with worked examples for nurses and technicians from Kerala.', href: '/resources/germany-opportunity-card-guide/' },
-  { tag: 'Malta', title: 'The bridging programme for nurses, step by step', excerpt: 'What the course covers, how registration follows, and what to arrange before you travel.', href: '/resources/malta-bridging-programme-guide/' },
+  { tag: 'Guide', img: 'kerala', title: 'How to spot fake overseas job agents', excerpt: 'Seven checks to run before you pay any recruiter, starting with the eMigrate licence search.', href: '/resources/how-to-spot-fake-overseas-job-agents/' },
+  { tag: 'Germany', img: 'germany', title: 'Opportunity Card: who qualifies and how the points work', excerpt: 'The six-point rule explained with worked examples for nurses and technicians from Kerala.', href: '/resources/germany-opportunity-card-guide/' },
+  { tag: 'Malta', img: 'malta', title: 'The bridging programme for nurses, step by step', excerpt: 'What the course covers, how registration follows, and what to arrange before you travel.', href: '/resources/malta-bridging-programme-guide/' },
 ];
 
 export const faqs = [
@@ -341,6 +358,7 @@ export const teamPhotos = [
   { src: '/img/gallery/mount8.webp', alt: 'Mount Bell team in traditional Kerala dress at an office celebration' },
   { src: '/img/gallery/mount6.webp', alt: 'Mount Bell team gathered at the office' },
   { src: '/img/gallery/mount10.webp', alt: 'Mount Bell team lighting a traditional lamp' },
+  { src: '/img/gallery/mount2.webp', alt: 'Mount Bell team seated together at the office' },
 ];
 export const galleryPhotos = [
   { src: '/img/gallery/mount3.webp', alt: 'Four women with luggage on a travel day' },

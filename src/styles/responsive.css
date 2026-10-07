@@ -36,6 +36,7 @@ body:has(.drawer.is-open) .wa-fab, html:has(.pop[open]) .wa-fab { display: none;
 /* ---------- Small laptops and landscape tablets ---------- */
 @media (max-width: 1120px) {
   .who-badge { max-width: 64%; }
+  .arch .tag { left: 2px; right: 2px; font-size: 0.74rem; }
 }
 
 /* ---------- Tablets ---------- */
@@ -71,7 +72,7 @@ body:has(.drawer.is-open) .wa-fab, html:has(.pop[open]) .wa-fab { display: none;
   .arch .tag b { font-size: 0.6rem; letter-spacing: 0.06em; }
   .hero-art { height: 220px; }
   .tabs { display: flex; }
-  .tabs button { flex: 1; padding: 0 12px; }
+  .tabs button { flex: 1; padding: 0 8px; font-size: 0.9rem; white-space: nowrap; }
   .tool .figure { font-size: 3.4rem; right: 18px; top: 18px; }
   .tool .label { max-width: calc(100% - 4.4rem); }
   .lead, .mini-form, .calc-form, .result, .fees, .story { padding: 20px 18px; }
@@ -90,4 +91,6 @@ body:has(.drawer.is-open) .wa-fab, html:has(.pop[open]) .wa-fab { display: none;
   .wa-fab svg { width: 26px; height: 26px; }
   .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); align-items: center; }
   .hero-art { height: 240px; }
+  .arch .tag { font-size: 0.62rem; }
+  .arch .tag b { font-size: 0.58rem; letter-spacing: 0.06em; }
 }
