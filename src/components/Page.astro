@@ -1,0 +1,224 @@
+---
+// One template for every inner page. Content comes from src/data/pages.
+import Base from '../layouts/Base.astro';
+import Icon from './Icon.astro';
+import LeadForm from './LeadForm.astro';
+import FinalCta from './FinalCta.astro';
+import { site, waLink, photoAlt, reviews, teamPhotos, galleryPhotos } from '../data/site';
+import { pageAt, trail } from '../data/pages';
+import type { Page } from '../data/pages/types';
+
+interface Props { page: Page }
+const { page } = Astro.props;
+const crumbs = trail(page);
+const wa = waLink(page.wa ?? `Hi Mountbell, I have a question about ${page.crumb.toLowerCase()}.`);
+const photo = page.photo ?? (page.img ? { src: `/img/dest/${page.img}-wide.webp`, alt: photoAlt[page.img], w: 1400, h: 820 } : null);
+const related = (page.related ?? []).map(pageAt);
+const hasForm = page.blocks.some((b) => b.type === 'form');
+
+const schema: object[] = [{
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [{ name: 'Home', path: '/' }, ...crumbs.map((c) => ({ name: c.crumb, path: c.path })), { name: page.crumb, path: page.path }]
+    .map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: site.url + c.path })),
+}];
+const faqItems = page.blocks.flatMap((b) => (b.type === 'faq' ? b.items : []));
+if (faqItems.length) schema.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]+>/g, '') } })) });
+---
+<Base title={page.title} description={page.description} schema={schema} noindex={page.noindex}>
+  <div class="wrap">
+    <header class:list={['page-head', photo && 'has-photo']} style={page.accent ? `--c:${page.accent}` : undefined}>
+      <div>
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a><span>/</span>
+          {crumbs.map((c) => <><a href={c.path}>{c.crumb}</a><span>/</span></>)}
+          <span>{page.crumb}</span>
+        </nav>
+        {page.label && <p class="label page-label">{page.label}</p>}
+        <h1 class="page-title">{page.h1}</h1>
+        <p class="lede" set:html={page.lede} />
+        {!hasForm && (
+          <div class="page-acts">
+            <a class="btn btn-primary" href="/free-immigration-assessment/" aria-haspopup="dialog" data-open-eligibility>Book a Free Consultation <Icon name="arrow" size={18} /></a>
+            <a class="btn btn-wa" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp" size={20} /> Ask on WhatsApp</a>
+          </div>
+        )}
+      </div>
+      {photo && <figure class="page-photo"><img src={photo.src} alt={photo.alt} width={photo.w} height={photo.h} decoding="async" /></figure>}
+    </header>
+
+    <div class:list={['doc', page.wide && 'wide']}>
+      <div class="doc-main">
+        {page.blocks.map((b) => (
+          <section class="blk">
+            {'h2' in b && b.h2 && <h2>{b.h2}</h2>}
+            {'intro' in b && b.intro && <p class="intro" set:html={b.intro} />}
+
+            {b.type === 'prose' && (
+              <>
+                {b.body.map((p) => <p set:html={p} />)}
+                {b.list && <ul class="dots">{b.list.map((l) => <li set:html={l} />)}</ul>}
+              </>
+            )}
+
+            {b.type === 'facts' && (
+              <dl class="facts">{b.rows.map(([k, v]) => <div><dt>{k}</dt><dd set:html={v} /></div>)}</dl>
+            )}
+
+            {b.type === 'steps' && (
+              <ol class="steps in">{b.items.map((s) => <li><h3>{s.title}</h3><p set:html={s.text} /></li>)}</ol>
+            )}
+
+            {b.type === 'checks' && (
+              <ul class="reasons">
+                {b.items.map((r) => <li><Icon name="check" size={22} /><div><h3>{r.title}</h3><span set:html={r.text} /></div></li>)}
+              </ul>
+            )}
+
+            {b.type === 'links' && (
+              <ul class="hub">
+                {b.items.map((l) => (
+                  <li id={l.id} class:list={[l.href && 'is-link']}>
+                    <h3>{l.href ? <a href={l.href}>{l.title}</a> : l.title}{l.meta && <small>{l.meta}</small>}</h3>
+                    <div>
+                      <p set:html={l.text} />
+                      {l.tags && <div class="chips">{l.tags.map((t) => <span class="chip">{t}</span>)}</div>}
+                    </div>
+                    {l.href && <span class="go"><Icon name="arrow" size={18} /></span>}
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {b.type === 'table' && (
+              <>
+                <div class="cmp-wrap" tabindex="0" role="region" aria-label={b.h2 ?? 'Comparison table'}>
+                  <table class:list={['cmp', b.head.length <= 2 && 'narrow']}>
+                    <thead><tr>{b.head.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+                    <tbody>
+                      {b.rows.map((r) => <tr>{r.map((c, i) => (i === 0 ? <th scope="row" set:html={c} /> : <td set:html={c} />))}</tr>)}
+                    </tbody>
+                  </table>
+                </div>
+                {b.note && <p class="cmp-note">{b.note}</p>}
+              </>
+            )}
+
+            {b.type === 'faq' && (
+              <div class="faq">
+                {b.items.map((f) => (
+                  <details>
+                    <summary><h3>{f.q}</h3><i aria-hidden="true"></i></summary>
+                    <div class="ans"><p set:html={f.a} /></div>
+                  </details>
+                ))}
+              </div>
+            )}
+
+            {b.type === 'note' && <div class="blk-note"><p set:html={b.text} /></div>}
+
+            {b.type === 'cert' && (
+              <div class="cert">
+                <div class="cert-in">
+                  <div class="cert-top"><Icon name="shield" size={30} /><strong>Government of India<br />Ministry of External Affairs</strong></div>
+                  <dl>
+                    <div><dt>Licence type</dt><dd>{site.licence.type}</dd></div>
+                    <div><dt>Licence no.</dt><dd class="mono">{site.licence.number}</dd></div>
+                    <div><dt>Issued to</dt><dd>{site.legalName}</dd></div>
+                  </dl>
+                  <div class="cert-foot"><a class="tlink" href={site.licence.verifyUrl} target="_blank" rel="noopener">Verify on eMigrate</a></div>
+                </div>
+              </div>
+            )}
+
+            {b.type === 'offices' && (
+              <div class="offices" style={b.city ? 'grid-template-columns:1fr' : undefined}>
+                {site.offices.filter((o) => !b.city || o.city === b.city).map((o) => (
+                  <article class="office">
+                    <iframe title={`Map of Mountbell ${o.city} office`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" src={`https://www.google.com/maps?q=${encodeURIComponent(o.mapQuery)}&z=15&output=embed`}></iframe>
+                    <div class="office-body">
+                      <div class="top"><h3 class="h3" style="font-size:1.6rem">{o.city}</h3><span class="label">{o.label}</span></div>
+                      <address>{o.lines.map((l) => <>{l}<br /></>)}</address>
+                      {o.hours && <p class="small muted" style="margin:0">{o.hours}</p>}
+                      <div class="phones">{o.phones.map((p) => <a href={`tel:${p.tel}`}>{p.display}</a>)}</div>
+                      <div class="acts">
+                        <a class="btn btn-ghost btn-sm" href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(o.mapQuery)}`} target="_blank" rel="noopener"><Icon name="pin" size={17} /> Directions</a>
+                        <a class="btn btn-ghost btn-sm" href={`tel:${o.phones[0].tel}`}><Icon name="phone" size={17} /> Call {o.city}</a>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+
+            {b.type === 'reviews' && (
+              <div class="stories">
+                {reviews.map((r) => (
+                  <figure class="story" style="margin:0">
+                    <blockquote>{r.text}</blockquote>
+                    <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mountbell client</span></div></figcaption>
+                  </figure>
+                ))}
+              </div>
+            )}
+
+            {b.type === 'gallery' && (
+              <>
+                <ul class="snaps">{galleryPhotos.map((p) => <li><img src={p.src} alt={p.alt} width="400" height="400" loading="lazy" decoding="async" /></li>)}</ul>
+                {b.caption && <p class="snaps-cap" style="margin-bottom:0">{b.caption}</p>}
+              </>
+            )}
+
+            {b.type === 'team' && (
+              site.team.length > 0 ? (
+                <ul class="expert-grid">
+                  {site.team.map((m) => (
+                    <li class="expert">
+                      <img src={m.photo} alt={`${m.name}, ${m.role} at Mountbell`} loading="lazy" width="400" height="500" />
+                      <strong>{m.name}</strong>
+                      <span>{m.role} · {m.years}</span>
+                      <span>{m.credentials}</span>
+                      <span>{m.languages}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <div class="team-strip">
+                  {[teamPhotos[0], teamPhotos[3], teamPhotos[1]].map((p) => <img src={p.src} alt={p.alt} width={p.w} height={p.h} loading="lazy" decoding="async" />)}
+                </div>
+              )
+            )}
+
+            {b.type === 'form' && <LeadForm id="assess" heading="Book a free consultation" sub="We review your profile and tell you plainly where you qualify." />}
+          </section>
+        ))}
+
+        {related.length > 0 && (
+          <section class="blk">
+            <h2>Related pages</h2>
+            <ul class="hub">
+              {related.map((r) => (
+                <li class="is-link">
+                  <h3><a href={r.path}>{r.crumb}</a></h3>
+                  <div><p>{r.description}</p></div>
+                  <span class="go"><Icon name="arrow" size={18} /></span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </div>
+
+      {!page.wide && (
+        <aside class="advise" aria-labelledby="advise-h">
+          <h2 id="advise-h">Talk to an adviser</h2>
+          <p>Free first consultation at our Thrissur and Kochi offices, by phone or by video call, in Malayalam or English.</p>
+          <a class="tel" href={`tel:${site.phone.tel}`}>{site.phone.display}</a>
+          <a class="btn btn-primary btn-block" href="/free-immigration-assessment/" aria-haspopup="dialog" data-open-eligibility>Book a Free Consultation</a>
+          <a class="btn btn-wa btn-block" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp" size={20} /> Ask on WhatsApp</a>
+          <p class="lic"><Icon name="shield" size={16} /><span>MEA licensed recruiting agent<span class="mono">{site.licence.number}</span></span></p>
+        </aside>
+      )}
+    </div>
+  </div>
+  {page.cta !== false && !hasForm && <FinalCta heading={page.cta?.heading} text={page.cta?.text} />}
+</Base>

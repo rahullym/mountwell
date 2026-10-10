@@ -8,6 +8,7 @@ import '@fontsource-variable/anek-malayalam';
 import '../styles/global.css';
 import '../styles/hero.css';
 import '../styles/colour.css';
+import '../styles/pages.css';
 import '../styles/responsive.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -24,6 +25,7 @@ const org = {
   '@type': 'EmploymentAgency',
   '@id': `${site.url}/#organization`,
   name: site.name,
+  alternateName: site.legalName,
   legalName: site.legalName,
   url: site.url,
   logo: `${site.url}/logo.png`,
@@ -80,9 +82,9 @@ const website = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `
     <EligibilityPopup />
     <nav class="mbar" aria-label="Quick contact">
       <a href={`tel:${site.phone.tel}`}><Icon name="phone" size={18} /> Call</a>
-      <a class="go" href="/#eligibility">Check Eligibility</a>
+      <a class="go" href="/free-immigration-assessment/" aria-haspopup="dialog" data-open-eligibility>Free Consultation</a>
     </nav>
-    <a class="wa-fab" href={waLink('Hi Mount Bell, I would like to talk to a consultant about working or migrating abroad.')} target="_blank" rel="noopener" aria-label="Chat with Mount Bell on WhatsApp">
+    <a class="wa-fab" href={waLink('Hi Mountbell, I would like to talk to a consultant about working or migrating abroad.')} target="_blank" rel="noopener" aria-label="Chat with Mountbell on WhatsApp">
       <Icon name="whatsapp" size={32} />
       <span aria-hidden="true">Chat on WhatsApp</span>
     </a>

@@ -3,8 +3,8 @@ import Base from '../../layouts/Base.astro';
 import PointsTool from '../../components/PointsTool.astro';
 import { site } from '../../data/site';
 
-const title = 'Germany Opportunity Card Points Checker (Chancenkarte) | Mount Bell';
-const description = 'Free Germany Opportunity Card points checker. See whether you reach the six points needed for the Chancenkarte job seeker visa from India.';
+const title = 'Germany Opportunity Card Points Calculator | Mountbell';
+const description = 'Free Germany Opportunity Card points calculator. See whether you reach the six points needed for the Chancenkarte job seeker visa from India.';
 
 const questions = [
   { id: 'baseline', type: 'check', title: 'Basic requirements', hint: 'All three are needed before points are counted.', options: [
@@ -37,18 +37,19 @@ const questions = [
 ];
 const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Home', item: site.url + '/' },
-  { '@type': 'ListItem', position: 2, name: 'Germany Opportunity Card checker', item: site.url + '/tools/germany-opportunity-card-checker/' },
+  { '@type': 'ListItem', position: 2, name: 'Tools', item: site.url + '/tools/' },
+  { '@type': 'ListItem', position: 3, name: 'Germany Opportunity Card points calculator', item: site.url + '/tools/opportunity-card-points-calculator/' },
 ] };
 ---
 <Base title={title} description={description} schema={[crumbs]}>
   <div class="wrap">
     <header class="page-head">
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/countries/germany/">Germany</a><span>/</span><span>Opportunity Card checker</span></nav>
-      <h1 class="display" style="max-width:15em">Germany Opportunity Card Points Checker</h1>
-      <p class="lede" style="margin-top:18px;max-width:640px">The Opportunity Card (Chancenkarte) lets qualified people enter Germany and look for work for up to one year. Without full recognition of your qualification, you need six points.</p>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/tools/">Tools</a><span>/</span><span>Opportunity Card points calculator</span></nav>
+      <h1 class="page-title">Germany Opportunity Card Points Calculator</h1>
+      <p class="lede">The Opportunity Card (Chancenkarte) lets qualified people enter Germany and look for work for up to one year. Without full recognition of your qualification, you need six points.</p>
     </header>
 
-    <PointsTool mode="de" questions={questions} pass={6} max={14} toolName="Germany Opportunity Card checker" />
+    <PointsTool mode="de" questions={questions} pass={6} max={14} toolName="Germany Opportunity Card points calculator" />
 
     <div class="prose">
       <h2>How the Opportunity Card works</h2>
@@ -59,7 +60,8 @@ const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', it
         <li>You must show you can support yourself, usually through a blocked account. The required amount is set by the German authorities and revised each year.</li>
         <li>Nurses, physiotherapists and other regulated professions still need recognition (Anerkennung) before they can practise.</li>
       </ul>
-      <p class="notice">This checker gives an indication only. The German mission decides each application on its documents, and rules change. It is not legal advice. Have your result checked by a consultant before you open a blocked account or pay any fee.</p>
+      <p>The full requirements are on the <a class="tlink" href="/countries/germany/opportunity-card/">Germany Opportunity Card page</a>.</p>
+      <p class="notice">This calculator gives an indication only. The German mission decides each application on its documents, and rules change. It is not legal advice. Have your result checked by a consultant before you open a blocked account or pay any fee.</p>
     </div>
   </div>
 </Base>

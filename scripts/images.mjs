@@ -34,8 +34,28 @@ for (const file of readdirSync('assets-src/destinations')) {
 for (const w of [2000, 1400, 900]) {
   await sharp('assets-src/hero/kochi.jpg').resize(w, Math.round(w * 0.56), { fit: 'cover', position: 'bottom' }).webp({ quality: w > 1000 ? 62 : 72 }).toFile(`public/img/hero/kochi-${w}.webp`);
 }
-for (const file of readdirSync('assets-src/gallery')) {
-  const slug = basename(file, extname(file));
-  await sharp(`assets-src/gallery/${file}`).resize(400, 400, { fit: 'cover' }).webp({ quality: 84 }).toFile(`public/img/gallery/${slug}.webp`);
+// Mount Bell's own team, office and candidate photos. Each is cut to the shape of its slot
+// on the homepage; `cx` and `cy` are where the subject sits (0 = left or top, 1 = right or bottom).
+const photos = {
+  'team-kerala-dress': { w: 800, h: 800, cx: 0.5, cy: 0.5 },
+  'office-reception': { w: 420, h: 496, cx: 0.5, cy: 0.3 },
+  'office-briefing': { w: 600, h: 600, cx: 0.5, cy: 0.6 },
+  'team-celebration': { w: 800, h: 600, cx: 0.5, cy: 0.6 },
+  'office-consultation': { w: 1000, h: 1120, cx: 0.47, cy: 0.5 },
+  'candidates-departure-gate': { w: 480, h: 480, cx: 0.5, cy: 0.7 },
+  'candidates-trolleys': { w: 480, h: 480, cx: 0.5, cy: 0.5 },
+  'candidates-terminal': { w: 480, h: 480, cx: 0.5, cy: 0.5 },
+  'candidates-seafront': { w: 480, h: 480, cx: 0.5, cy: 0.5 },
+  'candidates-night': { w: 480, h: 480, cx: 0.5, cy: 0.5 },
+};
+for (const [slug, { w, h, cx, cy }] of Object.entries(photos)) {
+  // Phone photos carry their rotation in EXIF, so apply it before measuring.
+  const upright = await sharp(`assets-src/photos/${slug}.jpg`).rotate().toBuffer();
+  const { width, height } = await sharp(upright).metadata();
+  const boxW = Math.min(width, Math.round(height * (w / h)));
+  const boxH = Math.min(height, Math.round(width * (h / w)));
+  const left = Math.max(0, Math.min(width - boxW, Math.round(width * cx - boxW / 2)));
+  const top = Math.max(0, Math.min(height - boxH, Math.round(height * cy - boxH / 2)));
+  await sharp(upright).extract({ left, top, width: boxW, height: boxH }).resize(w, h).webp({ quality: 78 }).toFile(`public/img/photos/${slug}.webp`);
 }
 console.log('images built');

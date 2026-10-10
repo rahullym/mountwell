@@ -3,8 +3,8 @@ import Base from '../../layouts/Base.astro';
 import PointsTool from '../../components/PointsTool.astro';
 import { site } from '../../data/site';
 
-const title = 'Australia PR Points Calculator for Skilled Migration | Mount Bell';
-const description = 'Free Australia skilled migration points calculator. Score your age, English, work experience and qualifications against the 65-point pass mark in two minutes.';
+const title = 'Australia PR Points Calculator | Mountbell';
+const description = 'Free Australia PR points calculator. Score your age, English, work experience and qualifications against the 65-point pass mark in two minutes.';
 
 const questions = [
   { id: 'age', title: 'Your age', hint: 'Age on the day you are invited to apply.', options: [
@@ -43,18 +43,19 @@ const questions = [
 ];
 const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Home', item: site.url + '/' },
-  { '@type': 'ListItem', position: 2, name: 'Australia PR points calculator', item: site.url + '/tools/australia-pr-points-calculator/' },
+  { '@type': 'ListItem', position: 2, name: 'Tools', item: site.url + '/tools/' },
+  { '@type': 'ListItem', position: 3, name: 'Australia PR points calculator', item: site.url + '/tools/australia-pr-points-calculator/' },
 ] };
 ---
 <Base title={title} description={description} schema={[crumbs]}>
   <div class="wrap">
     <header class="page-head">
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/countries/australia/">Australia</a><span>/</span><span>Points calculator</span></nav>
-      <h1 class="display" style="max-width:16em">Australia Skilled Migration Points Calculator</h1>
-      <p class="lede" style="margin-top:18px;max-width:640px">Answer eight questions to see your points for the Skilled Independent (189), Skilled Nominated (190) and Skilled Work Regional (491) visas. The pass mark is 65.</p>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/tools/">Tools</a><span>/</span><span>Australia PR points calculator</span></nav>
+      <h1 class="page-title">Australia PR Points Calculator</h1>
+      <p class="lede">Answer eight questions to see your points for the Skilled Independent (189), Skilled Nominated (190) and Skilled Work Regional (491) visas. The pass mark is 65.</p>
     </header>
 
-    <PointsTool mode="au" questions={questions} pass={65} max={110} toolName="Australia points calculator" />
+    <PointsTool mode="au" questions={questions} pass={65} max={110} toolName="Australia PR points calculator" />
 
     <div class="prose">
       <h2>How the Australian points test works</h2>
@@ -65,6 +66,7 @@ const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', it
         <li>You must be under 45 when you are invited to apply.</li>
         <li>Meeting the pass mark does not guarantee an invitation. Invitation rounds are competitive.</li>
       </ul>
+      <p>Read more about the visas on the <a class="tlink" href="/countries/australia/">Australia immigration page</a>, or about <a class="tlink" href="/nursing-careers/australia/">nurse migration to Australia</a>.</p>
       <p class="notice">This calculator gives an indication only. Points are decided by the Department of Home Affairs on the evidence in your application, and rules change. It is not migration advice. Have your result checked by a consultant before you spend on assessments or exams.</p>
     </div>
   </div>

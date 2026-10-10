@@ -1,0 +1,30 @@
+---
+// Closing band on every page: phone and WhatsApp beside the short consultation form.
+import Icon from './Icon.astro';
+import LeadForm from './LeadForm.astro';
+import { site, waLink } from '../data/site';
+interface Props { heading?: string; text?: string }
+const {
+  heading = 'Book Your Free Immigration Consultation Today',
+  text = 'Speak to Mountbell’s immigration consultants in Kerala in person, by phone or on WhatsApp.',
+} = Astro.props;
+const wa = waLink('Hi Mountbell, I would like to talk to an expert about working or migrating abroad.');
+---
+<section class="final" id="eligibility" data-inview>
+  <img class="final-bg" src="/img/dest/kerala-wide.webp" alt="" width="1400" height="820" loading="lazy" decoding="async" />
+  <svg class="deco" viewBox="0 0 900 260" fill="none" aria-hidden="true">
+    <path pathLength="1" d="M0 250C190 250 250 20 420 20S650 250 840 250" stroke="#8fc267" stroke-width="26" />
+    <path pathLength="1" d="M190 250C380 250 440 20 610 20S840 250 1030 250" stroke="#7fa8cf" stroke-width="26" />
+  </svg>
+  <div class="wrap">
+    <div class="final-copy" data-reveal>
+      <h2 class="h2">{heading}</h2>
+      <p>{text}</p>
+      <div class="contact-lines">
+        <a class="btn btn-light" href={`tel:${site.phone.tel}`}><Icon name="phone" size={18} /> {site.phone.display}</a>
+        <a class="btn btn-ghost" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp" size={20} /> WhatsApp us</a>
+      </div>
+    </div>
+    <LeadForm id="final" compact heading="Book a free consultation" />
+  </div>
+</section>

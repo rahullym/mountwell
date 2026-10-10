@@ -1,0 +1,157 @@
+import type { Page } from './types';
+
+export const services: Page[] = [
+  {
+    path: '/services/', crumb: 'Services', wide: true,
+    title: 'Mountbell Immigration Services | All Services in One Place',
+    description: 'All Mountbell immigration services in one place: PR and skilled migration, work visas, visa documentation, nursing careers and overseas recruitment.',
+    h1: 'Mountbell Immigration Services',
+    lede: 'Everything we do, in one list. Pick the service that matches what you want to achieve, or start with a free consultation and we will point you to the right one.',
+    blocks: [
+      { type: 'links', h2: 'Core services', items: [
+        { title: 'PR visa and skilled migration', text: 'Points-tested permanent residence, mainly for Australia and Canada: skills assessment, expression of interest, nomination and the visa application.', href: '/services/pr-visa/' },
+        { title: 'Work visa', text: 'Employer-sponsored visas and work permits for healthcare, trade and general category roles, with the job offer checked before your file is prepared.', href: '/services/work-visa/' },
+        { title: 'Visa documentation', text: 'Checklists, forms, police clearance, medicals and interview preparation, reviewed before anything reaches an authority.', href: '/services/visa-documentation/' },
+        { title: 'Nursing careers', text: 'Registration, language exams and placement for nurses, country by country.', href: '/nursing-careers/' },
+        { title: 'Overseas jobs', text: 'Recruitment for employers abroad under our MEA licence, for healthcare staff other than nurses, tradespeople, drivers, IT professionals and teachers.', href: '/overseas-jobs/' },
+        { title: 'Free immigration consultation', text: 'A one-to-one review of your profile: where you qualify, the route, the cost and the timeline.', href: '/free-immigration-assessment/' },
+      ] },
+      { type: 'links', h2: 'Also part of your file', intro: 'These are handled by the same team as part of the services above. Ask your consultant about any of them.', items: [
+        { title: 'Skills assessment', text: 'Preparing and lodging your application with the assessing authority for your occupation, and credential recognition for regulated professions.' },
+        { title: 'Dependent and family visas', text: 'Including your spouse and children in your application, or bringing them to join you later.' },
+        { title: 'Language and test preparation', text: 'IELTS, OET, PTE and German coaching arranged alongside your paperwork.' },
+      ] },
+    ],
+    related: ['/countries/', '/how-it-works/', '/fees/'],
+  },
+  {
+    path: '/services/pr-visa/', crumb: 'PR visa and skilled migration',
+    title: 'PR Visa Consultants in Kerala | Skilled Migration | Mountbell',
+    description: 'PR visa consultants in Kerala for points-based skilled migration. Compare Australia and Canada, check your points and get an honest view of your chances.',
+    label: 'Service',
+    h1: 'PR Visa Consultants in Kerala',
+    lede: 'Permanent residence is a points game with strict evidence rules. Our skilled migration consultants tell you your score, the gap, and whether an invitation is realistic before you spend on assessments.',
+    blocks: [
+      { type: 'prose', h2: 'What permanent residence means', body: [
+        'A PR visa lets you live and work in a country without a fixed end date, bring your immediate family, and in time apply for citizenship. You do not need a job offer for the main points-tested routes. Instead the government ranks applicants on age, language scores, qualifications and skilled work experience, and invites the highest ranked.',
+      ] },
+      { type: 'table', h2: 'Which countries offer points-based PR', head: ['Country', 'How selection works', 'What you need first', 'Read more'], rows: [
+        ['Australia', 'Points test with a 65-point pass mark. You lodge an expression of interest in SkillSelect and wait for an invitation. State nomination adds points.', 'An occupation on the skilled list, a positive skills assessment and an English test. You must be under 45 when invited.', '<a href="/countries/australia/">Australia PR</a>'],
+        ['Canada', 'Express Entry ranks candidates by Comprehensive Ranking System score. Provinces can also nominate candidates.', 'A language test, an educational credential assessment and proof of settlement funds.', '<a href="/countries/#canada">Canada</a>'],
+        ['Germany', 'No points-tested PR. You enter on a work, training or job-seeker route and can apply for a settlement permit after a period of residence and employment.', 'A recognised qualification and, for most routes, German.', '<a href="/countries/germany/">Germany</a>'],
+      ], note: 'Rules and pass marks are set by each government and change. We confirm the current position during your assessment.' },
+      { type: 'steps', h2: 'How we handle a PR file', items: [
+        { title: 'Points estimate', text: 'We score you conservatively, on evidence you can actually produce. Try it yourself with the <a href="/tools/australia-pr-points-calculator/">Australia PR points calculator</a>.' },
+        { title: 'Skills assessment', text: 'We prepare your application to the assessing authority for your occupation, including employment evidence in the format they accept.' },
+        { title: 'Language test plan', text: 'English scores are the quickest way to add points. We set a target score and arrange coaching.' },
+        { title: 'Expression of interest', text: 'We lodge your profile, and pursue state or provincial nomination where it improves your chances.' },
+        { title: 'Visa application', text: 'After an invitation, we assemble and check the full application, including police clearance and medicals.' },
+        { title: 'Before you fly', text: 'A pre-departure briefing on arrival formalities, accommodation and your first weeks.' },
+      ] },
+      { type: 'prose', h2: 'Who PR suits, and who it does not', body: [
+        'PR works best for people in their late twenties to late thirties with a degree or trade qualification, a few years of skilled experience and strong English. If your score is well short and cannot be improved, we will say so and show you the work visa routes instead.',
+        'Not sure where you stand? The <a href="/tools/immigration-eligibility-checker/">immigration eligibility calculator</a> lists the routes that fit your profile.',
+      ] },
+      { type: 'faq', h2: 'PR visa questions', items: [
+        { q: 'Do I need a job offer to apply for PR?', a: 'Not for the main points-tested routes in Australia and Canada. A job offer or nomination can add points, but selection is based on your profile.' },
+        { q: 'Does meeting the pass mark guarantee an invitation?', a: 'No. The pass mark only lets you enter the pool. Invitations go to the highest-ranked candidates in each occupation, so the score you need in practice is often higher.' },
+        { q: 'Can my family come with me?', a: 'Yes. Your spouse and dependent children can be included in a PR application, and a skilled spouse can add points to it.' },
+      ] },
+    ],
+    related: ['/countries/australia/', '/tools/australia-pr-points-calculator/', '/services/work-visa/'],
+  },
+  {
+    path: '/services/work-visa/', crumb: 'Work visa',
+    title: 'Work Visa Consultants in Kerala | Mountbell',
+    description: 'Work visa consultants in Kerala for employer-sponsored jobs and work permits in Germany, Malta, the Maldives, Australia and Europe, under an MEA licence.',
+    label: 'Service',
+    h1: 'Work Visa Consultants in Kerala',
+    lede: 'A work visa starts with a real job from a real employer. We find or verify the offer, check the contract, and only then prepare your permit and visa file.',
+    blocks: [
+      { type: 'prose', h2: 'How employer-sponsored visas work', body: [
+        'Unlike PR, a work visa is tied to an employer. The employer offers you a contract, and in most countries applies for or supports your work permit. Your visa is granted on the strength of that offer, your qualification and, for regulated professions, your registration or recognition in that country.',
+        'Because the job comes first, this is also where most fraud happens. Mountbell recruits under a licence from the Ministry of External Affairs, and you see the employer, salary and contract in writing before you pay for anything.',
+      ] },
+      { type: 'table', h2: 'Where we arrange work visas', head: ['Country', 'Typical roles', 'What the route involves'], rows: [
+        ['<a href="/countries/germany/">Germany</a>', 'Nurses, physiotherapists, vehicle mechanics, drivers', 'Recognition of your qualification, German language, then a skilled worker visa.'],
+        ['<a href="/countries/malta/">Malta</a>', 'Nurses, physiotherapists, occupational and assistant therapists, radiographers', 'Registration with the relevant council and a single work and residence permit.'],
+        ['<a href="/countries/#maldives">Maldives</a>', 'Nurses, speech and occupational therapists, lab technicians', 'An employer contract and an employer-sponsored work visa.'],
+        ['<a href="/countries/#denmark">Denmark</a>', 'Dentists, nurses', 'Danish authorisation and Danish language before employment.'],
+        ['<a href="/countries/australia/">Australia</a>', 'Healthcare, trades, IT, teaching', 'An approved sponsor and the Skills in Demand visa, as an alternative to points-tested PR.'],
+        ['<a href="/countries/#europe">Latvia, Poland, Lithuania, Bulgaria</a>', 'Welders, CNC machinists, electricians, HVAC technicians, fitters, drivers', 'An employer-led work permit, then a national visa.'],
+        ['<a href="/countries/#netherlands">Netherlands</a>', 'General category roles', 'An offer from a Dutch employer and a combined work and residence permit.'],
+      ] },
+      { type: 'checks', h2: 'What we check before your file is prepared', items: [
+        { title: 'The employer exists and is hiring', text: 'We confirm the employer and the vacancy before your name is put forward.' },
+        { title: 'The contract is in writing', text: 'Role, salary, working hours, contract length and who pays for what are stated before you commit.' },
+        { title: 'You meet the permit rules', text: 'Qualification, experience and language level are checked against what the country actually requires.' },
+        { title: 'The right visa is used', text: 'We do not send anyone abroad to work on a visit visa.' },
+      ] },
+      { type: 'faq', h2: 'Work visa questions', items: [
+        { q: 'Can a work visa lead to permanent residence?', a: 'In many countries, yes. Germany, Malta and other EU states allow long-term or permanent residence after several years of legal work and residence, and Australia has employer-sponsored pathways to PR. The rules differ by country.' },
+        { q: 'Do I need to know the local language?', a: 'For healthcare jobs in Germany and Denmark, yes. Malta and the Maldives work in English. For trade jobs in Europe the requirement depends on the employer.' },
+        { q: 'Can I change employer after I arrive?', a: 'Usually only with a new permit or the authority’s approval, because the visa is tied to the job. We explain the conditions for your country before you sign.' },
+      ] },
+    ],
+    related: ['/overseas-jobs/', '/nursing-careers/', '/resources/avoid-visa-fraud/'],
+  },
+  {
+    path: '/services/visa-documentation/', crumb: 'Visa documentation',
+    title: 'Visa Documentation Services in Kerala | Mountbell',
+    description: 'Visa documentation services in Kerala: document checklists, form filling, police clearance, medicals and embassy interview preparation, checked before filing.',
+    label: 'Service',
+    h1: 'Visa Documentation Services in Kerala',
+    lede: 'Most refusals and delays come from paperwork: a missing letter, a mismatched date, a translation nobody certified. We build your file once and check it before it goes anywhere.',
+    blocks: [
+      { type: 'checks', h2: 'What we prepare with you', items: [
+        { title: 'A checklist for your visa', text: 'The exact documents for your country, visa type and family situation, not a generic list.' },
+        { title: 'Identity and civil documents', text: 'Passport validity, birth and marriage certificates, and name or date corrections where records disagree.' },
+        { title: 'Education and employment evidence', text: 'Certificates, mark lists, experience letters and payslips in the form the authority accepts.' },
+        { title: 'Attestation and translation', text: 'Apostille or attestation of certificates, and certified translations where the country requires them.' },
+        { title: 'Police clearance and medicals', text: 'When to apply for your Police Clearance Certificate and how to book the visa medical with an approved clinic.' },
+        { title: 'Forms, appointments and interview', text: 'Application forms completed and reviewed, the biometrics or embassy appointment booked, and a practice interview where one is required.' },
+      ] },
+      { type: 'prose', h2: 'Documents most applicants need', body: ['Your own checklist will be more specific, but nearly every file includes these.'], list: [
+        'Passport valid well beyond your intended travel date',
+        'Degree, diploma or trade certificates with mark lists',
+        'Professional registration, where your occupation is regulated',
+        'Experience letters on company letterhead, stating duties, dates and hours',
+        'Language test result',
+        'Police Clearance Certificate',
+        'Proof of funds or a sponsor’s commitment, where the visa requires it',
+        'Photographs to the specification of the visa office',
+      ] },
+      { type: 'note', text: 'We prepare and check documents. We do not create, alter or “arrange” them. A false document can mean a refusal and a ban of several years, and we will not file one.' },
+      { type: 'faq', h2: 'Documentation questions', items: [
+        { q: 'Can I use this service if I am applying on my own?', a: 'Yes. If you already have a job offer or an invitation and want your file prepared and checked, ask for documentation support on its own.' },
+        { q: 'My names differ between certificates. Is that a problem?', a: 'It can be. Visa offices compare every document. We identify mismatches early and tell you which affidavit, gazette notification or corrected record will resolve them.' },
+        { q: 'How long is a Police Clearance Certificate valid?', a: 'Each country sets its own rule, and many will not accept one issued too long before the application. We time your application so it is still valid when the visa office looks at it.' },
+      ] },
+    ],
+    related: ['/how-it-works/', '/services/pr-visa/', '/services/work-visa/'],
+  },
+  {
+    path: '/free-immigration-assessment/', parent: '/services/', crumb: 'Free immigration consultation',
+    title: 'Book a Free Immigration Consultation | Mountbell',
+    description: 'Book a free immigration consultation with Mountbell in Thrissur, Kochi or by video call. A free profile evaluation, in Malayalam or English.',
+    h1: 'Book a Free Immigration Consultation',
+    lede: 'Send us four details and a consultant will contact you to arrange a time. The consultation is free and ends with a clear answer on where you qualify.',
+    blocks: [
+      { type: 'form' },
+      { type: 'steps', h2: 'What happens next', items: [
+        { title: 'We call you', text: 'A consultant phones or messages you to fix a time, at our Thrissur or Kochi office or by video call.' },
+        { title: 'We review your profile', text: 'Qualification, experience, age, language level and what you want: PR, a work contract or training.' },
+        { title: 'You get a shortlist', text: 'The countries and programmes that fit, what each one requires, and the ones we would rule out.' },
+        { title: 'You decide', text: 'If you want to go ahead, you receive a written fee schedule first. There is no obligation.' },
+      ] },
+      { type: 'prose', h2: 'Have these to hand', body: ['Copies or photos are fine. Nothing is filed at this stage.'], list: [
+        'Your highest qualification and the year you completed it',
+        'Your current job and total years of experience',
+        'Any language test score, or the date you plan to sit one',
+        'Your passport expiry date',
+      ] },
+      { type: 'note', text: 'Prefer to check for yourself first? The <a href="/tools/immigration-eligibility-checker/">immigration eligibility calculator</a> takes two minutes and needs no contact details.' },
+    ],
+    related: ['/how-it-works/', '/fees/', '/contact/'],
+  },
+];

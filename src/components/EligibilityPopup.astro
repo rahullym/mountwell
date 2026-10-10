@@ -1,5 +1,5 @@
 ---
-// The eligibility form in a modal dialog. Any element with data-open-eligibility opens it.
+// The free consultation form in a modal dialog. Any element with data-open-eligibility opens it.
 import Icon from './Icon.astro';
 import LeadForm from './LeadForm.astro';
 import { site, waLink } from '../data/site';
@@ -10,14 +10,14 @@ import { site, waLink } from '../data/site';
   <p class="pop-foot">
     <span>Prefer to talk?</span>
     <a href={`tel:${site.phone.tel}`}><Icon name="phone" size={16} /> {site.phone.display}</a>
-    <a class="wa" href={waLink('Hi Mount Bell, I would like a free eligibility check.')} target="_blank" rel="noopener"><Icon name="whatsapp" size={17} /> WhatsApp</a>
+    <a class="wa" href={waLink('Hi Mountbell, I would like to book a free consultation.')} target="_blank" rel="noopener"><Icon name="whatsapp" size={17} /> WhatsApp</a>
   </p>
 </dialog>
 
 <script>
   const pop = document.querySelector<HTMLDialogElement>('[data-eligibility-pop]')!;
 
-  // Openers are links to the form on the homepage, so they still work without JavaScript.
+  // Openers are links to /free-immigration-assessment/, so they still work without JavaScript.
   document.querySelectorAll('[data-open-eligibility]').forEach((el) =>
     el.addEventListener('click', (e) => {
       e.preventDefault();

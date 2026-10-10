@@ -2,7 +2,7 @@
 // Homepage banner: headline beside four arch windows of destination photos.
 import Icon from './Icon.astro';
 import { site, countries, waLink } from '../data/site';
-const wa = waLink('Hi Mount Bell, I would like to talk to an expert about working or migrating abroad.');
+const wa = waLink('Hi Mountbell, I would like to talk to an expert about working or migrating abroad.');
 
 const place = (name: string) => {
   const c = countries.find((x) => x.name === name)!;
@@ -20,10 +20,10 @@ const arches = [
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="hero-eyebrow"><Icon name="shield" size={16} /> Licensed by the Ministry of External Affairs · Thrissur and Kochi</p>
-      <h1 class="display">Immigration Consultants in Kerala <em>for Jobs and Migration Abroad</em></h1>
-      <p class="lede">Mount Bell’s immigration consultants in Kerala guide nurses, healthcare staff, tradespeople, IT professionals and teachers to jobs and migration in Australia, Canada, Germany and five more destinations.</p>
+      <h1 class="display">Immigration Consultancy in Kerala <em>for Jobs and Migration Abroad</em></h1>
+      <p class="lede">Mountbell’s immigration consultants in Kerala guide nurses, healthcare staff, tradespeople, IT professionals and teachers to jobs and migration in Australia, Canada, Germany and five more destinations.</p>
       <div class="hero-actions">
-        <a class="btn btn-light" href="#eligibility" data-focus-form>Check My Eligibility <Icon name="arrow" size={18} /></a>
+        <a class="btn btn-light" href="#eligibility" data-focus-form>Book a Free Consultation <Icon name="arrow" size={18} /></a>
         <a class="btn btn-wa-dark" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp" size={21} /> Talk to an Expert on WhatsApp</a>
       </div>
       <p class="hero-lang">Free consultation in Malayalam and English <span class="ml" lang="ml">മലയാളത്തിൽ സംസാരിക്കാം</span></p>

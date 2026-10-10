@@ -57,6 +57,23 @@
 .pw-panel .chip { background: color-mix(in srgb, var(--c) 8%, var(--white)); border-color: color-mix(in srgb, var(--c) 34%, var(--white)); }
 .pw-panel a.chip:hover { border-color: var(--c); color: var(--ink); }
 
+/* ---------- Nursing careers ---------- */
+.nurse { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
+.nurse > * { min-width: 0; }
+.nurse-copy .label { display: inline-block; margin: 0 0 18px; padding: 6px 11px; border-radius: 6px; background: var(--coral-tint); color: var(--coral); font-weight: 500; }
+.nurse-copy .h2 { font-size: clamp(2rem, 2.6vw + 1rem, 3.1rem); line-height: 1.06; }
+.nurse-copy .lede { margin: 20px 0 0; max-width: 480px; }
+.nurse-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin-top: 30px; }
+.nurse-list li { position: relative; display: grid; grid-template-columns: 68px minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 16px 14px 16px 6px; border-bottom: 1px solid var(--line); transition: background .18s, padding .25s cubic-bezier(.2, .7, .2, 1); }
+.nurse-list li:first-child { border-top: 1px solid var(--line); }
+.nurse-list li:hover { padding-left: 16px; background: color-mix(in srgb, var(--c) 7%, var(--white)); }
+.nurse-list img { width: 68px; height: 68px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--c); }
+.nurse-list h3 { font-family: var(--serif); font-size: 1.3rem; line-height: 1.2; font-weight: 520; }
+.nurse-list h3 a::after { content: ''; position: absolute; inset: 0; }
+.nurse-list p { margin: 3px 0 0; font-size: 0.94rem; color: var(--ink-2); }
+.nurse-list .go { display: inline-flex; color: var(--c); transition: transform .18s; }
+.nurse-list li:hover .go { transform: translateX(4px); }
+
 /* ---------- Professions band ---------- */
 .ticker { position: relative; overflow: hidden; padding-block: 15px; background: var(--green-deep); color: #fff; }
 .ticker-track { display: flex; width: max-content; animation: ticker 70s linear infinite; }
@@ -152,7 +169,7 @@
 @media (max-width: 900px) {
   .trust li, .trust li:nth-child(odd) { padding: 14px 16px 16px; border-top: 4px solid var(--c); }
   .pw-photo { margin: 0 6px 6px 0; box-shadow: 6px 6px 0 var(--c, var(--green)); }
-  .proc, .coach { grid-template-columns: 1fr; }
+  .proc, .coach, .nurse { grid-template-columns: 1fr; }
   .proc-art { position: relative; top: 0; max-width: 560px; }
   .proc-art img { aspect-ratio: 16 / 10; }
   .ticker li { font-size: 1.08rem; }
@@ -163,6 +180,9 @@
 @media (max-width: 560px) {
   .goal-grid { grid-template-columns: 1fr; }
   .goal { min-height: 0; }
+  .nurse-list li { grid-template-columns: 54px minmax(0, 1fr) auto; gap: 14px; }
+  .nurse-list img { width: 54px; height: 54px; }
+  .nurse-acts .btn { width: 100%; }
   .prog, .prog:nth-child(5n + 1) { grid-column: span 12; height: 280px; }
   .proc .steps { grid-template-columns: 1fr; }
   .section-green .cert { box-shadow: 6px 6px 0 var(--green); }

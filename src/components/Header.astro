@@ -1,77 +1,54 @@
 ---
 import Icon from './Icon.astro';
-import { site, countries, professionGroups, services, nav } from '../data/site';
+import { countries, menu } from '../data/site';
 ---
 <div class="topbar">
   <div class="wrap">
-    <p>Not sure which country you qualify for? <span>A free assessment gives you a shortlist that fits your profile.</span></p>
-    <a class="topbar-cta" href="/#eligibility" aria-haspopup="dialog" data-open-eligibility>Free eligibility check <Icon name="arrow" size={15} /></a>
+    <p>Not sure which country you qualify for? <span>Answer five questions and see the routes that fit your profile.</span></p>
+    <a class="topbar-cta" href="/tools/immigration-eligibility-checker/">Check your eligibility <Icon name="arrow" size={15} /></a>
   </div>
 </div>
 
 <header class="header" data-header>
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Mount Bell home">
-      <img src="/logo.png" alt="Mount Bell Global Studies" width="570" height="240" />
+    <a class="brand" href="/" aria-label="Mountbell home">
+      <img src="/logo.png" alt="Mountbell" width="570" height="240" />
     </a>
 
     <nav aria-label="Main">
       <ul class="nav">
-        <li>
-          <button class="nav-link" aria-expanded="false" aria-controls="panel-countries">Countries <Icon name="chevron" size={14} /></button>
-          <div class="panel" id="panel-countries">
-            <div class="wrap">
-              <div class="mega">
-                {countries.map((c) => (
-                  <div>
-                    <p class="mega-h"><a href={c.href}>{c.name}</a> <span class="mono">{c.code}</span></p>
-                    <ul>{c.programmes.map((p) => <li><a href={p.href}>{p.label}</a></li>)}</ul>
-                  </div>
-                ))}
+        {menu.map((m) => m.id === 'countries' ? (
+          <li>
+            <button class="nav-link" aria-expanded="false" aria-controls="panel-countries">{m.label} <Icon name="chevron" size={13} /></button>
+            <div class="panel" id="panel-countries">
+              <div class="wrap">
+                <div class="mega">
+                  {countries.map((c) => (
+                    <div>
+                      <p class="mega-h"><a href={c.href}>{c.name}</a> <span class="mono">{c.code}</span></p>
+                      <ul>{c.programmes.filter((p) => p.href && p.href !== c.href).map((p) => <li><a href={p.href}>{p.label}</a></li>)}</ul>
+                    </div>
+                  ))}
+                </div>
+                <a class="arrow-link mega-all" href={m.href}>Compare all eight countries <Icon name="arrow" size={17} /></a>
               </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <button class="nav-link" aria-expanded="false" aria-controls="panel-jobs">Jobs by Profession <Icon name="chevron" size={14} /></button>
-          <div class="panel" id="panel-jobs">
-            <div class="wrap">
-              <div class="mega">
-                {professionGroups.map((g) => (
-                  <div>
-                    <p class="mega-h">{g.name}</p>
-                    <ul>{g.links.map((p) => <li><a href={p.href}>{p.label}</a></li>)}</ul>
-                  </div>
-                ))}
-              </div>
+          </li>
+        ) : m.items ? (
+          <li class="has-drop">
+            <button class="nav-link" aria-expanded="false" aria-controls={`drop-${m.id}`}>{m.label} <Icon name="chevron" size={13} /></button>
+            <div class="drop" id={`drop-${m.id}`}>
+              {m.items.map((l) => <a href={l.href}>{l.label}</a>)}
             </div>
-          </div>
-        </li>
-        <li class="has-drop">
-          <button class="nav-link" aria-expanded="false" aria-controls="drop-services">Services <Icon name="chevron" size={14} /></button>
-          <div class="drop" id="drop-services">
-            {services.map((s) => <a href={s.href}>{s.name}</a>)}
-          </div>
-        </li>
-        <li class="has-drop">
-          <button class="nav-link" aria-expanded="false" aria-controls="drop-resources">Resources <Icon name="chevron" size={14} /></button>
-          <div class="drop" id="drop-resources">
-            {nav.resources.map((l) => <a href={l.href}>{l.label}</a>)}
-            {nav.tools.map((l) => <a href={l.href}>{l.label}</a>)}
-          </div>
-        </li>
-        <li class="has-drop">
-          <button class="nav-link" aria-expanded="false" aria-controls="drop-about">About <Icon name="chevron" size={14} /></button>
-          <div class="drop" id="drop-about">
-            {nav.about.map((l) => <a href={l.href}>{l.label}</a>)}
-          </div>
-        </li>
-        <li><a class="nav-link" href="/contact/">Contact</a></li>
+          </li>
+        ) : (
+          <li><a class="nav-link" href={m.href}>{m.label}</a></li>
+        ))}
       </ul>
     </nav>
 
     <div class="header-cta">
-      <a class="btn btn-primary btn-sm" href="/#eligibility" aria-haspopup="dialog" data-open-eligibility>Check Eligibility <Icon name="arrow" size={17} /></a>
+      <a class="btn btn-primary btn-sm" href="/free-immigration-assessment/" aria-haspopup="dialog" data-open-eligibility>Free Consultation <Icon name="arrow" size={17} /></a>
       <button class="icon-btn burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer" data-open-drawer><Icon name="menu" size={22} /></button>
     </div>
   </div>
@@ -79,46 +56,32 @@ import { site, countries, professionGroups, services, nav } from '../data/site';
 
 <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
   <div class="drawer-head">
-    <a class="brand" href="/"><img src="/logo.png" alt="Mount Bell" width="570" height="240" /></a>
+    <a class="brand" href="/"><img src="/logo.png" alt="Mountbell" width="570" height="240" /></a>
     <button class="icon-btn" aria-label="Close menu" data-close-drawer><Icon name="close" size={22} /></button>
   </div>
   <div class="drawer-body">
-    <details>
-      <summary>Countries <Icon name="chevron" size={18} /></summary>
-      <ul>
-        {countries.map((c) => (
-          <>
-            <li class="grp">{c.name}</li>
-            <li><a href={c.href}>{c.name} overview</a></li>
-            {c.programmes.filter((p) => p.href !== c.href).map((p) => <li><a href={p.href}>{p.label}</a></li>)}
-          </>
-        ))}
-      </ul>
-    </details>
-    <details>
-      <summary>Jobs by Profession <Icon name="chevron" size={18} /></summary>
-      <ul>
-        {professionGroups.map((g) => (
-          <>
-            <li class="grp">{g.name}</li>
-            {g.links.map((p) => <li><a href={p.href}>{p.label}</a></li>)}
-          </>
-        ))}
-      </ul>
-    </details>
-    <details>
-      <summary>Services <Icon name="chevron" size={18} /></summary>
-      <ul>{services.map((s) => <li><a href={s.href}>{s.name}</a></li>)}</ul>
-    </details>
-    <details>
-      <summary>Resources <Icon name="chevron" size={18} /></summary>
-      <ul>{[...nav.tools, ...nav.resources].map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
-    </details>
-    <details>
-      <summary>About <Icon name="chevron" size={18} /></summary>
-      <ul>{nav.about.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
-    </details>
-    <a href="/contact/">Contact <Icon name="arrow" size={18} /></a>
+    {menu.map((m) => m.id === 'countries' ? (
+      <details>
+        <summary>{m.label} <Icon name="chevron" size={18} /></summary>
+        <ul>
+          <li><a href={m.href}>Compare all countries</a></li>
+          {countries.map((c) => (
+            <>
+              <li class="grp">{c.name}</li>
+              <li><a href={c.href}>{c.name} overview</a></li>
+              {c.programmes.filter((p) => p.href && p.href !== c.href).map((p) => <li><a href={p.href}>{p.label}</a></li>)}
+            </>
+          ))}
+        </ul>
+      </details>
+    ) : m.items ? (
+      <details>
+        <summary>{m.label} <Icon name="chevron" size={18} /></summary>
+        <ul>{m.items.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+      </details>
+    ) : (
+      <a href={m.href}>{m.label} <Icon name="arrow" size={18} /></a>
+    ))}
   </div>
 </div>
 

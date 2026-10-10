@@ -38,7 +38,7 @@ const { mode, questions, pass, max, toolName } = Astro.props;
     <p class="verdict" data-verdict></p>
     <p data-detail></p>
     <a class="btn btn-light btn-block" data-wa-score target="_blank" rel="noopener" href="#"><Icon name="whatsapp" size={20} /> Send my score to a consultant</a>
-    <a class="btn btn-ghost btn-block" style="border-color:rgba(255,255,255,.28);color:#fff" href="/#eligibility">Book a free assessment</a>
+    <a class="btn btn-ghost btn-block" style="border-color:rgba(255,255,255,.28);color:#fff" href="/free-immigration-assessment/" aria-haspopup="dialog" data-open-eligibility>Book a free consultation</a>
   </aside>
 </div>
 
@@ -102,7 +102,7 @@ const { mode, questions, pass, max, toolName } = Astro.props;
     bar.style.background = ok ? '#8fc267' : '#e2b25a';
     $('[data-verdict]').textContent = verdict;
     $('[data-detail]').textContent = detail;
-    const msg = `Hi Mount Bell, I used the ${tool.dataset.name} and scored ${total} points. Could a consultant review my profile?`;
+    const msg = `Hi Mountbell, I used the ${tool.dataset.name} and scored ${total} points. Could a consultant review my profile?`;
     tool.querySelector<HTMLAnchorElement>('[data-wa-score]')!.href = `https://wa.me/${tool.dataset.wa}?text=${encodeURIComponent(msg)}`;
   }
   form.addEventListener('change', update);

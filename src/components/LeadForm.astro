@@ -2,7 +2,7 @@
 import Icon from './Icon.astro';
 import { site, countries, professions } from '../data/site';
 interface Props { id?: string; compact?: boolean; bar?: boolean; heading?: string; sub?: string }
-const { id = 'lead', compact = false, bar = false, heading = 'Check your eligibility', sub } = Astro.props;
+const { id = 'lead', compact = false, bar = false, heading = 'Book a free consultation', sub } = Astro.props;
 ---
 <div class:list={[compact ? 'mini-form' : 'lead', bar && 'lead-bar']} data-lead data-endpoint={site.formEndpoint} data-wa={site.whatsapp}>
   <form novalidate aria-labelledby={`${id}-h`}>
@@ -63,9 +63,9 @@ const { id = 'lead', compact = false, bar = false, heading = 'Check your eligibi
       </fieldset>
     )}
 
-    <button class="btn btn-primary btn-block" type="submit">Check My Eligibility <Icon name="arrow" size={18} /></button>
+    <button class="btn btn-primary btn-block" type="submit">Book My Free Consultation <Icon name="arrow" size={18} /></button>
     </div>
-    <p class="lead-note"><Icon name="shield" size={15} /> <span>No fee. Your details stay with Mount Bell.</span></p>
+    <p class="lead-note"><Icon name="shield" size={15} /> <span>No fee. Your details stay with Mountbell.</span></p>
   </form>
 
   <div class="lead-done" role="status" aria-live="polite">
@@ -118,7 +118,7 @@ const { id = 'lead', compact = false, bar = false, heading = 'Check your eligibi
       data.page = location.pathname;
 
       const lines = [
-        'Hi Mount Bell, I would like a free eligibility check.',
+        'Hi Mountbell, I would like to book a free consultation.',
         `Name: ${data.name}`,
         `Phone: ${data.phone}`,
         `Profession: ${data.profession}`,

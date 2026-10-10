@@ -1,0 +1,154 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import FinalCta from '../../components/FinalCta.astro';
+import { site, professions } from '../../data/site';
+
+const title = 'Immigration Eligibility Calculator | Mountbell';
+const description = 'Free immigration eligibility calculator. Answer five questions and see which countries and routes fit your profession, age, qualification and languages.';
+
+// qual: 0 below Plus Two, 1 Plus Two, 2 diploma or trade certificate, 3 degree.
+// lang: the language a route depends on, used to suggest the next step.
+const healthcare = ['Nurse', 'Physiotherapist', 'Dentist', 'Occupational therapist', 'Speech therapist', 'Lab technician', 'Radiographer / allied health'];
+const auList = ['Nurse', 'Welder', 'CNC machinist', 'Mechanic', 'IT professional', 'Teacher'];
+const nurseOr = (nurse: string, other: string) => ({ Nurse: nurse, '*': other });
+const routes = [
+  { name: 'Australia: points-tested PR', profs: auList, goals: ['pr'], qual: 2, maxAge: 44, lang: 'en', needs: 'A positive skills assessment, an English test and at least 65 points.', href: nurseOr('/nursing-careers/australia/', '/countries/australia/') },
+  { name: 'Australia: employer-sponsored visa', profs: auList, goals: ['work'], qual: 2, lang: 'en', needs: 'An approved employer to sponsor you, relevant experience and an English test.', href: nurseOr('/nursing-careers/australia/', '/countries/australia/') },
+  { name: 'Canada: Express Entry and provincial nomination', profs: [...healthcare, 'Welder', 'CNC machinist', 'Mechanic', 'Electrician', 'HVAC technician', 'Fitter', 'IT professional', 'Teacher', 'Other'], goals: ['pr'], qual: 2, lang: 'en', needs: 'A language test, an educational credential assessment and a competitive CRS score.', href: { '*': '/countries/#canada' } },
+  { name: 'Germany: nurse recognition', profs: ['Nurse'], goals: ['work'], qual: 2, lang: 'de', needs: 'Recognition of your qualification and German, usually to B2.', href: { '*': '/nursing-careers/germany/' } },
+  { name: 'Germany: physiotherapist recognition', profs: ['Physiotherapist'], goals: ['work'], qual: 2, lang: 'de', needs: 'State recognition of your qualification and German.', href: { '*': '/countries/germany/' } },
+  { name: 'Germany: vehicle mechanics and drivers', profs: ['Mechanic', 'Driver'], goals: ['work'], qual: 1, lang: 'de', needs: 'Recognition of your training or licence, and workplace German.', href: { '*': '/countries/germany/' } },
+  { name: 'Germany: Opportunity Card', profs: ['*'], goals: ['seeker'], qual: 2, lang: 'de', needs: 'German at A1 or English at B2, proof of funds and six points.', href: { '*': '/countries/germany/opportunity-card/' } },
+  { name: 'Germany: Ausbildung', profs: ['*'], goals: ['train'], qual: 1, maxAge: 39, lang: 'de', needs: 'German to about B1 and a training contract with a German company.', href: { '*': '/countries/germany/ausbildung/' } },
+  { name: 'Malta: nurse bridging programme', profs: ['Nurse'], goals: ['work', 'train'], qual: 2, lang: 'en', needs: 'Admission to the programme, then registration with the nursing council.', href: { '*': '/nursing-careers/malta/' } },
+  { name: 'Malta: healthcare jobs', profs: ['Physiotherapist', 'Occupational therapist', 'Radiographer / allied health'], goals: ['work'], qual: 2, lang: 'en', needs: 'Registration with the relevant council and an employer offer.', href: { '*': '/countries/malta/' } },
+  { name: 'Maldives: hospital and clinic jobs', profs: ['Nurse', 'Speech therapist', 'Occupational therapist', 'Lab technician'], goals: ['work'], qual: 2, needs: 'An employer contract and an employer-sponsored work visa.', href: nurseOr('/nursing-careers/maldives/', '/countries/#maldives') },
+  { name: 'Denmark: authorisation route', profs: ['Dentist', 'Nurse'], goals: ['work'], qual: 2, needs: 'Danish authorisation and Danish language before employment.', href: nurseOr('/nursing-careers/#denmark', '/countries/#denmark') },
+  { name: 'Europe: skilled trade jobs', profs: ['Welder', 'CNC machinist', 'Electrician', 'HVAC technician', 'Fitter', 'Spray painter', 'Driver', 'Delivery / general category'], goals: ['work'], qual: 0, needs: 'Documented hands-on experience and an offer from an employer in Latvia, Poland, Lithuania or Bulgaria.', href: { '*': '/countries/#europe' } },
+  { name: 'Netherlands: general category', profs: ['Driver', 'Delivery / general category', 'Other'], goals: ['work'], qual: 0, needs: 'An offer from a Dutch employer.', href: { '*': '/countries/#netherlands' } },
+];
+
+const questions = [
+  { id: 'goal', title: 'What do you want to do?', options: [['any', 'Not sure yet'], ['pr', 'Settle permanently (PR)'], ['work', 'Work on a job contract'], ['train', 'Train and earn'], ['seeker', 'Go and look for a job']] },
+  { id: 'age', title: 'Your age', options: [['25', 'Under 30'], ['35', '30–39'], ['42', '40–44'], ['50', '45 or over']] },
+  { id: 'qual', title: 'Highest qualification', hint: 'GNM and other diplomas of two years or more count as a diploma.', options: [['3', 'Degree'], ['2', 'Diploma or trade certificate'], ['1', 'Plus Two'], ['0', 'Below Plus Two']] },
+  { id: 'en', title: 'English test', hint: 'IELTS, OET or PTE.', options: [['0', 'Not taken yet'], ['1', 'Taken']] },
+  { id: 'de', title: 'German', options: [['0', 'None'], ['1', 'A1 or A2'], ['2', 'B1 or higher']] },
+];
+const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: site.url + '/' },
+  { '@type': 'ListItem', position: 2, name: 'Tools', item: site.url + '/tools/' },
+  { '@type': 'ListItem', position: 3, name: 'Immigration eligibility calculator', item: site.url + '/tools/immigration-eligibility-checker/' },
+] };
+---
+<Base title={title} description={description} schema={[crumbs]}>
+  <div class="wrap">
+    <header class="page-head">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/tools/">Tools</a><span>/</span><span>Immigration eligibility calculator</span></nav>
+      <h1 class="page-title">Immigration Eligibility Calculator</h1>
+      <p class="lede">Check your eligibility to migrate in two minutes. Tell us your profession and four other details, and see which of Mountbell’s routes are worth a conversation.</p>
+    </header>
+
+    <div class="calc" data-checker data-routes={JSON.stringify(routes)} data-wa={site.whatsapp}>
+      <form class="calc-form" aria-label="Immigration eligibility calculator">
+        <fieldset class="q">
+          <legend>Your profession</legend>
+          <div class="opts">
+            <div class="field">
+              <label class="vh" for="chk-prof">Profession</label>
+              <select id="chk-prof" name="prof">
+                {professions.map((p) => <option selected={p === 'Nurse'}>{p}</option>)}
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        {questions.map((q) => (
+          <fieldset class="q">
+            <legend>{q.title}</legend>
+            {q.hint && <p class="hint">{q.hint}</p>}
+            <div class="opts">
+              {q.options.map(([value, label], i) => (
+                <label><input type="radio" name={q.id} value={value} checked={i === 0} /><span>{label}</span></label>
+              ))}
+            </div>
+          </fieldset>
+        ))}
+      </form>
+
+      <aside class="result" aria-live="polite">
+        <span class="label">Routes that fit your answers</span>
+        <div class="score"><span data-count>0</span><small data-count-word>routes</small></div>
+        <p class="verdict" data-verdict></p>
+        <ul class="routes" data-list></ul>
+        <p data-note></p>
+        <a class="btn btn-light btn-block" data-wa-link target="_blank" rel="noopener" href="#"><Icon name="whatsapp" size={20} /> Send my answers to a consultant</a>
+        <a class="btn btn-ghost btn-block" style="border-color:rgba(255,255,255,.28);color:#fff" href="/free-immigration-assessment/" aria-haspopup="dialog" data-open-eligibility>Book a free consultation</a>
+      </aside>
+    </div>
+
+    <div class="prose">
+      <h2>How this calculator works</h2>
+      <p>It matches your answers against the entry conditions of the programmes Mountbell runs: the professions each one recruits, the minimum qualification, age limits where they exist, and the language each route depends on. It lists the routes that are open in principle and what each one would need from you next.</p>
+      <ul>
+        <li>For Australia, follow up with the <a class="tlink" href="/tools/australia-pr-points-calculator/">Australia PR points calculator</a>.</li>
+        <li>For Germany’s job seeker route, use the <a class="tlink" href="/tools/opportunity-card-points-calculator/">Opportunity Card points calculator</a>.</li>
+        <li>To compare the destinations, see <a class="tlink" href="/countries/">best countries to migrate to from India</a>.</li>
+      </ul>
+      <p class="notice">This calculator gives an indication only. It does not assess your documents, your occupation code or current quotas, and it is not legal advice. Eligibility is decided by the authorities of the destination country. Have your result checked in a free consultation before you spend on exams or assessments.</p>
+    </div>
+  </div>
+  <FinalCta />
+</Base>
+
+<script>
+  interface Route { name: string; profs: string[]; goals: string[]; qual: number; maxAge?: number; lang?: 'en' | 'de'; needs: string; href: Record<string, string> }
+  const tool = document.querySelector<HTMLElement>('[data-checker]')!;
+  const form = tool.querySelector('form')!;
+  const routes: Route[] = JSON.parse(tool.dataset.routes!);
+  const $ = (s: string) => tool.querySelector<HTMLElement>(s)!;
+  // The preview build is served from a sub-path; the logo link carries it.
+  const root = document.querySelector('.brand')!.getAttribute('href')!.replace(/\/$/, '');
+  const label = (name: string) => form.querySelector<HTMLInputElement>(`input[name="${name}"]:checked`)!.nextElementSibling!.textContent!;
+
+  function update() {
+    const a = Object.fromEntries(new FormData(form)) as Record<string, string>;
+    const age = Number(a.age);
+    const fits = (r: Route) => (r.profs.includes('*') || r.profs.includes(a.prof)) && (a.goal === 'any' || r.goals.includes(a.goal)) && Number(a.qual) >= r.qual;
+    const open = routes.filter((r) => fits(r) && (!r.maxAge || age <= r.maxAge));
+    const aged = routes.filter((r) => fits(r) && r.maxAge && age > r.maxAge);
+
+    $('[data-count]').textContent = String(open.length);
+    $('[data-count-word]').textContent = open.length === 1 ? 'route' : 'routes';
+    $('[data-verdict]').textContent = open.length
+      ? 'Open in principle. A consultant can confirm each one against your documents.'
+      : 'No standard route matches these answers. That is not a final no: talk to a consultant about your case.';
+
+    const list = $('[data-list]');
+    list.replaceChildren(...open.map((r) => {
+      const li = document.createElement('li');
+      const next = r.lang === 'en' && a.en === '0' ? ' Your next step is an English test.' : r.lang === 'de' && a.de === '0' ? ' Your next step is to start German.' : '';
+      const strong = document.createElement('strong');
+      const link = document.createElement('a');
+      link.href = root + (r.href[a.prof] ?? r.href['*']);
+      link.textContent = r.name;
+      strong.append(link);
+      const span = document.createElement('span');
+      span.textContent = r.needs + next;
+      li.append(strong, span);
+      return li;
+    }));
+    $('[data-note]').textContent = aged.length ? `Not shown because of age: ${aged.map((r) => r.name).join('; ')}.` : '';
+
+    const msg = [
+      'Hi Mountbell, I used the immigration eligibility calculator.',
+      `Profession: ${a.prof}`, `Goal: ${label('goal')}`, `Age: ${label('age')}`, `Qualification: ${label('qual')}`,
+      `English test: ${label('en')}`, `German: ${label('de')}`,
+      `Routes shown: ${open.map((r) => r.name).join('; ') || 'none'}`,
+      'Could a consultant review my profile?',
+    ].join('\n');
+    tool.querySelector<HTMLAnchorElement>('[data-wa-link]')!.href = `https://wa.me/${tool.dataset.wa}?text=${encodeURIComponent(msg)}`;
+  }
+  form.addEventListener('change', update);
+  update();
+</script>
