@@ -42,6 +42,7 @@ const photos = {
   'office-briefing': { w: 600, h: 600, cx: 0.5, cy: 0.6 },
   'team-celebration': { w: 800, h: 600, cx: 0.5, cy: 0.6 },
   'office-consultation': { w: 1000, h: 1120, cx: 0.47, cy: 0.5 },
+  'nurses-corridor': { w: 1040, h: 780, cx: 0.5, cy: 0.63 },
   'candidates-departure-gate': { w: 480, h: 480, cx: 0.5, cy: 0.7 },
   'candidates-trolleys': { w: 480, h: 480, cx: 0.5, cy: 0.5 },
   'candidates-terminal': { w: 480, h: 480, cx: 0.5, cy: 0.5 },

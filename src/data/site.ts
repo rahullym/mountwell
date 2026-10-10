@@ -382,9 +382,9 @@ export const teamPhotos = [
   { src: '/img/photos/team-celebration.webp', w: 800, h: 600, alt: 'Mountbell team at an office celebration with blue and green balloons' },
 ];
 export const processPhoto = { src: '/img/photos/office-consultation.webp', w: 1000, h: 1120, alt: 'Two women going through details on a laptop in the Mountbell office lounge' };
-// Photo of nurses for the Nursing Careers section. null = the section shows without a photo.
-// Add the original to assets-src/photos and its crop to scripts/images.mjs, then set this.
-export const nursingPhoto = null as { src: string; w: number; h: number; alt: string } | null;
+// Photo of nurses for the Nursing Careers section (stock, credited on /image-credits/).
+// null = the section shows without a photo.
+export const nursingPhoto = { src: '/img/photos/nurses-corridor.webp', w: 1040, h: 780, alt: 'Two nurses in teal scrubs going through patient notes in a hospital corridor in Kerala' } as { src: string; w: number; h: number; alt: string } | null;
 export const galleryPhotos = [
   { src: '/img/photos/candidates-departure-gate.webp', alt: 'Group of women with luggage at an airport departure gate' },
   { src: '/img/photos/candidates-trolleys.webp', alt: 'Four travellers with loaded luggage trolleys at an airport' },
