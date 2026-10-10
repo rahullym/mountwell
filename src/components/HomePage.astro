@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Icon from './Icon.astro';
 import Hero from './Hero.astro';
 import FinalCta from './FinalCta.astro';
-import { site, countries, goals, professionGroups, professions, services, featured, nursing, exams, steps, reasons, reviews, updates, faqs, waLink, photoAlt, teamPhotos, processPhoto, galleryPhotos } from '../data/site';
+import { site, countries, goals, professionGroups, professions, services, featured, nursing, exams, steps, reasons, reviews, updates, faqs, waLink, photoAlt, teamPhotos, processPhoto, nursingPhoto, galleryPhotos } from '../data/site';
 
 const title = 'Immigration Consultancy in Kerala | Mountbell, Thrissur and Kochi';
 const description = 'Mountbell is a licensed immigration consultancy in Kerala, with offices in Thrissur and Kochi. Jobs and migration to Australia, Canada, Germany, Malta and more.';
@@ -168,13 +168,14 @@ const videoSchema = site.heroVideoId
   <section class="section section-white" id="nursing">
     <div class="wrap nurse">
       <div class="nurse-copy" data-reveal>
-        <p class="label">Nursing Careers</p>
-        <h2 class="h2">Your Nursing Career Starts Here.</h2>
+        <h2 class="h2"><span>Nursing Careers</span></h2>
+        <p class="nurse-sub">Your nursing career starts here.</p>
         <p class="lede">Explore trusted international opportunities for nurses and take the next step towards a rewarding global career.</p>
         <div class="nurse-acts">
           <a class="btn btn-primary" href="/free-immigration-assessment/" aria-haspopup="dialog" data-open-eligibility>Book a Free Consultation <Icon name="arrow" size={18} /></a>
           <a class="arrow-link" href="/nursing-careers/">Nursing careers abroad <Icon name="arrow" size={17} /></a>
         </div>
+        {nursingPhoto && <img class="nurse-photo" src={nursingPhoto.src} alt={nursingPhoto.alt} width={nursingPhoto.w} height={nursingPhoto.h} loading="lazy" decoding="async" />}
       </div>
       <ul class="nurse-list" data-reveal-group>
         {nursing.map((n) => (
