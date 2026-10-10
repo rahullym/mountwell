@@ -18,6 +18,7 @@
 .page-title::before { content: ''; display: block; width: 52px; height: 4px; margin-bottom: 20px; border-radius: 2px; background: linear-gradient(90deg, var(--green) 0 50%, var(--sky) 50% 100%); }
 .page-label + .page-title::before { display: none; }
 .page-head .lede { margin: 18px 0 0; max-width: 640px; }
+.page-tag { margin: 14px 0 0; font-family: var(--serif); font-size: clamp(1.2rem, 0.8vw + 1rem, 1.5rem); line-height: 1.25; color: var(--c); }
 .page-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin-top: 28px; }
 .page-photo { position: relative; margin: 0 12px 12px 0; }
 .page-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; box-shadow: 12px 12px 0 var(--c); }
@@ -34,6 +35,11 @@
 .blk p a:hover, .blk li a:not(.chip):not(.btn):hover, .cmp a:hover { text-decoration-color: var(--blue); }
 .blk > ul.dots { list-style: disc; padding-left: 1.2em; display: grid; gap: 8px; margin-top: 14px; }
 .blk .intro { margin-bottom: 20px; }
+.blk > h3 { font-family: var(--serif); font-size: 1.3rem; line-height: 1.2; font-weight: 520; margin-bottom: 4px; }
+.blk + .blk-sub { margin-top: 30px; }
+.blk > .after { margin: 18px 0 0; }
+.blk > .after + .after { margin-top: 12px; }
+.blk .steps p::first-letter { text-transform: uppercase; }
 .blk .facts { margin-top: 0; max-width: none; }
 .blk .facts div { grid-template-columns: minmax(120px, 0.34fr) 1fr; }
 .blk .steps, .blk .proc .steps { grid-template-columns: 1fr 1fr; gap: 0 32px; margin-top: 24px; }

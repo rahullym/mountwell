@@ -119,7 +119,7 @@ export const countries: {
     text: 'Authorisation and employment routes for dentists and nurses. We guide you through Danish authorisation, the language requirement and employer matching, with a realistic view of how long each stage takes.',
     programmes: [
       { label: 'Dentists' },
-      { label: 'Nurses', href: '/nursing-careers/#denmark' },
+      { label: 'Nurses', href: '/nursing-careers/denmark/' },
     ],
   },
   {
@@ -214,7 +214,7 @@ export const featured = [
 export const nursing = [
   { img: 'australia', place: 'Australia', text: 'AHPRA registration, skills assessment and a skilled visa.', href: '/nursing-careers/australia/' },
   { img: 'germany', place: 'Germany', text: 'Recognition of your qualification, with German language training.', href: '/nursing-careers/germany/' },
-  { img: 'denmark', place: 'Denmark', text: 'Danish authorisation, the language requirement and employer matching.', href: '/nursing-careers/#denmark' },
+  { img: 'denmark', place: 'Denmark', text: 'Danish authorisation, the language requirement and employer matching.', href: '/nursing-careers/denmark/' },
   { img: 'malta', place: 'Malta', text: 'Council registration and the bridging programme, in an English-speaking EU country.', href: '/nursing-careers/malta/' },
   { img: 'maldives', place: 'Maldives', text: 'Hospital and clinic jobs a short flight from Kerala.', href: '/nursing-careers/maldives/' },
 ];
@@ -326,6 +326,7 @@ export const menu: { label: string; href: string; id: string; items?: { label: s
     { label: 'Nurses in Germany', href: '/nursing-careers/germany/' },
     { label: 'Nurses in Malta', href: '/nursing-careers/malta/' },
     { label: 'Nurses in the Maldives', href: '/nursing-careers/maldives/' },
+    { label: 'Nurses in Denmark', href: '/nursing-careers/denmark/' },
   ] },
   { label: 'Countries', id: 'countries', href: '/countries/' },
   { label: 'Overseas Jobs', id: 'jobs', href: '/overseas-jobs/', items: [

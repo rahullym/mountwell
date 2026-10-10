@@ -35,11 +35,13 @@ if (faqItems.length) schema.push({ '@context': 'https://schema.org', '@type': 'F
         </nav>
         {page.label && <p class="label page-label">{page.label}</p>}
         <h1 class="page-title">{page.h1}</h1>
+        {page.tagline && <p class="page-tag">{page.tagline}</p>}
         <p class="lede" set:html={page.lede} />
         {!hasForm && (
           <div class="page-acts">
-            <a class="btn btn-primary" href="/free-immigration-assessment/" aria-haspopup="dialog" data-open-eligibility>Book a Free Consultation <Icon name="arrow" size={18} /></a>
-            <a class="btn btn-wa" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp" size={20} /> Ask on WhatsApp</a>
+            <a class="btn btn-primary" href="/free-immigration-assessment/" aria-haspopup="dialog" data-open-eligibility>{page.acts?.check ?? 'Book a Free Consultation'} <Icon name="arrow" size={18} /></a>
+            {page.acts && <a class="btn btn-ghost" href={`tel:${site.phone.tel}`}><Icon name="phone" size={18} /> Call {site.phone.display}</a>}
+            <a class="btn btn-wa" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp" size={20} /> {page.acts?.wa ?? 'Ask on WhatsApp'}</a>
           </div>
         )}
       </div>
@@ -49,12 +51,13 @@ if (faqItems.length) schema.push({ '@context': 'https://schema.org', '@type': 'F
     <div class:list={['doc', page.wide && 'wide']}>
       <div class="doc-main">
         {page.blocks.map((b) => (
-          <section class="blk">
+          <section class:list={['blk', b.type === 'prose' && b.h3 && !b.h2 && 'blk-sub']}>
             {'h2' in b && b.h2 && <h2>{b.h2}</h2>}
             {'intro' in b && b.intro && <p class="intro" set:html={b.intro} />}
 
             {b.type === 'prose' && (
               <>
+                {b.h3 && <h3>{b.h3}</h3>}
                 {b.body.map((p) => <p set:html={p} />)}
                 {b.list && <ul class="dots">{b.list.map((l) => <li set:html={l} />)}</ul>}
               </>
@@ -187,6 +190,8 @@ if (faqItems.length) schema.push({ '@context': 'https://schema.org', '@type': 'F
                 </div>
               )
             )}
+
+            {'after' in b && b.after?.map((p) => <p class="after" set:html={p} />)}
 
             {b.type === 'form' && <LeadForm id="assess" heading="Book a free consultation" sub="We review your profile and tell you plainly where you qualify." />}
           </section>
