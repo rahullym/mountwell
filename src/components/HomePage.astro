@@ -171,12 +171,13 @@ const videoSchema = site.heroVideoId
         <h2 class="h2"><span>Nursing Careers</span></h2>
         <p class="nurse-sub">Your nursing career starts here.</p>
         <p class="lede">Explore trusted international opportunities for nurses and take the next step towards a rewarding global career.</p>
-        <div class="nurse-acts">
-          <a class="btn btn-primary" href="/free-immigration-assessment/" aria-haspopup="dialog" data-open-eligibility>Book a Free Consultation <Icon name="arrow" size={18} /></a>
-          <a class="arrow-link" href="/nursing-careers/">Nursing careers abroad <Icon name="arrow" size={17} /></a>
-        </div>
-        {nursingPhoto && <img class="nurse-photo" src={nursingPhoto.src} alt={nursingPhoto.alt} width={nursingPhoto.w} height={nursingPhoto.h} loading="lazy" decoding="async" />}
       </div>
+      {nursingPhoto && (
+        <figure class="nurse-art" data-reveal>
+          <img src={nursingPhoto.src} alt={nursingPhoto.alt} width={nursingPhoto.w} height={nursingPhoto.h} loading="lazy" decoding="async" />
+          <figcaption><b>{nursing.length} countries</b><span>{nursing.map((n) => n.place).join(' · ')}</span></figcaption>
+        </figure>
+      )}
       <ul class="nurse-list" data-reveal-group>
         {nursing.map((n) => (
           <li style={`--c:${accent[n.img]}`}>
@@ -189,6 +190,10 @@ const videoSchema = site.heroVideoId
           </li>
         ))}
       </ul>
+      <div class="nurse-acts" data-reveal>
+        <a class="btn btn-primary" href="/free-immigration-assessment/" aria-haspopup="dialog" data-open-eligibility>Book a Free Consultation <Icon name="arrow" size={18} /></a>
+        <a class="arrow-link" href="/nursing-careers/">Nursing careers abroad <Icon name="arrow" size={17} /></a>
+      </div>
     </div>
   </section>
 
