@@ -34,25 +34,11 @@
 .who-art::after { content: ''; position: absolute; right: -5%; bottom: 10%; width: 30%; aspect-ratio: 1; border-radius: 50%; background: var(--amber-tint); z-index: 0; }
 
 /* ---------- Goals ---------- */
-.goal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.goal { --c: var(--blue); position: relative; overflow: hidden; display: grid; grid-template-rows: auto auto 1fr auto; gap: 14px; min-height: 310px; padding: 28px 26px 24px; border-radius: 14px; background: var(--c); color: #fff; }
-.goal.work { --c: var(--green-deep); }
-.goal.train { --c: var(--coral); }
-.goal.seeker { --c: var(--teal); }
 /* One arc from the logo, cropped by the corner of the card. */
-.goal::after { content: ''; position: absolute; right: -80px; bottom: -100px; width: 230px; height: 230px; border-radius: 50%; border: 26px solid rgba(255, 255, 255, 0.1); transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
-.goal:hover::after { transform: scale(1.12); }
-.goal h3 { font-family: var(--serif); font-size: 1.62rem; line-height: 1.12; letter-spacing: -0.012em; }
-.goal h3 a::after { content: ''; position: absolute; inset: 0; z-index: 1; }
-.goal p { margin: 0; font-size: 0.96rem; color: rgba(255, 255, 255, 0.88); }
-.goal ul { display: flex; flex-wrap: wrap; gap: 6px; align-content: start; }
-.goal li { padding: 4px 11px; border-radius: 999px; background: rgba(255, 255, 255, 0.17); font-size: 0.82rem; font-weight: 600; }
-.goal .go { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: #fff; color: var(--c); }
-.goal .go svg { transition: transform .18s; }
-.goal:hover .go svg { transform: translateX(3px); }
 
 /* ---------- Pathway explorer ---------- */
 .pw-list button::before { background: var(--c, var(--green)); }
+.pw-list button[hidden] { display: none; }
 .pw-photo { margin: 0 10px 10px 0; box-shadow: 10px 10px 0 var(--c, var(--green)); }
 .pw-panel .chip { background: color-mix(in srgb, var(--c) 8%, var(--white)); border-color: color-mix(in srgb, var(--c) 34%, var(--white)); }
 .pw-panel a.chip:hover { border-color: var(--c); color: var(--ink); }
@@ -86,13 +72,6 @@
 .nurse-list li:hover .go { transform: translateX(4px); }
 
 /* ---------- Professions band ---------- */
-.ticker { position: relative; overflow: hidden; padding-block: 15px; background: var(--green-deep); color: #fff; }
-.ticker-track { display: flex; width: max-content; animation: ticker 70s linear infinite; }
-.ticker:hover .ticker-track { animation-play-state: paused; }
-.ticker ul { display: flex; flex: none; }
-.ticker li { display: flex; align-items: center; font-family: var(--serif); font-style: italic; font-size: 1.24rem; white-space: nowrap; }
-.ticker li::after { content: ''; width: 7px; height: 7px; margin-inline: 22px; border-radius: 50%; background: #c6e6ad; }
-@keyframes ticker { to { transform: translateX(-50%); } }
 
 /* ---------- Services ---------- */
 .svc-grid { counter-reset: svc; gap: 14px; border: 0; background: none; }
@@ -105,23 +84,15 @@
 .svc:nth-child(4), .steps li:nth-child(4), .reasons li:nth-child(4) { --c: var(--teal); }
 .svc:nth-child(5), .steps li:nth-child(5), .reasons li:nth-child(5) { --c: var(--amber-deep); }
 .svc:nth-child(6), .steps li:nth-child(6), .reasons li:nth-child(6) { --c: var(--plum); }
+.svc:nth-child(8) { --c: var(--green-deep); }
+.svc:not(:has(a)):hover { background: var(--white); }
+@media (min-width: 1180px) { .svc-grid.eight { grid-template-columns: repeat(4, 1fr); } .svc-grid.eight .svc { padding: 28px 24px 26px; } }
 
 /* ---------- Featured programmes ---------- */
-.prog-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-.prog { position: relative; isolation: isolate; overflow: hidden; grid-column: span 3; height: 360px; border-radius: 14px; background: #16214f; }
-.prog:nth-child(5n + 1) { grid-column: span 6; }
-.prog img { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(.2, .7, .2, 1); }
-.prog:hover img { transform: scale(1.06); }
-.prog::after { content: ''; position: absolute; inset: 30% 0 0; z-index: -1; background: linear-gradient(180deg, rgba(8, 13, 32, 0) 0%, rgba(8, 13, 32, 0.88) 100%); }
-.prog-place { position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 6px; background: var(--c); color: #fff; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
-.prog-body { position: absolute; inset: auto 0 0; padding: 20px 20px 18px; border-bottom: 5px solid var(--c); }
-.prog h3 { font-family: var(--serif); font-size: 1.42rem; line-height: 1.15; letter-spacing: -0.01em; color: #fff; }
-.prog h3 a::after { content: ''; position: absolute; inset: 0; }
-.prog p { margin: 6px 0 0; max-width: 34em; font-size: 0.92rem; line-height: 1.45; color: rgba(255, 255, 255, 0.86); }
 
 /* ---------- Process ---------- */
 .proc { display: grid; grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr); gap: clamp(36px, 6vw, 84px); align-items: start; }
-.proc > *, .coach > * { min-width: 0; }
+.proc > * { min-width: 0; }
 .proc-art { position: sticky; top: calc(var(--header-h) + 32px); margin: 0 14px 14px 0; }
 .proc-art::before { content: ''; position: absolute; inset: 18px -14px -14px 18px; border-radius: 16px; background: var(--sky); }
 .proc-art img { position: relative; width: 100%; height: auto; aspect-ratio: 1 / 1.12; object-fit: cover; border-radius: 16px; }
@@ -130,16 +101,6 @@
 .steps li { --c: var(--blue); }
 .steps li::after { height: 2px; background: var(--c); }
 .steps li::before { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--c); color: #fff; letter-spacing: 0; }
-
-/* ---------- Language and exam coaching ---------- */
-.coach { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: clamp(32px, 6vw, 80px); align-items: center; }
-.coach .lede { margin: 18px 0 28px; }
-.exams { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.exams li { display: grid; gap: 10px; align-content: start; padding: 24px 22px; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.1); }
-.exams li:nth-child(1), .exams li:nth-child(4) { border-color: #fff; background: #fff; color: var(--ink); }
-.exams strong { font-family: var(--serif); font-size: 2.1rem; font-weight: 500; line-height: 1; letter-spacing: -0.02em; }
-.exams li:nth-child(1) strong, .exams li:nth-child(4) strong { color: var(--teal); }
-.exams span { font-size: 0.93rem; line-height: 1.45; opacity: 0.88; }
 
 /* ---------- Why ---------- */
 .why-photo { width: calc(100% - 12px); max-width: 380px; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 100%; margin-top: 8px; border-radius: 16px; box-shadow: 12px 12px 0 var(--green); }
@@ -172,35 +133,25 @@
 .final-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.26; mix-blend-mode: luminosity; -webkit-mask-image: linear-gradient(90deg, #000 0%, transparent 72%); mask-image: linear-gradient(90deg, #000 0%, transparent 72%); }
 
 @media (max-width: 1120px) {
-  .goal-grid { grid-template-columns: 1fr 1fr; }
-  .goal { min-height: 250px; }
-  .prog { grid-column: span 6; height: 320px; }
-  .prog:nth-child(5n + 1) { grid-column: span 12; }
 }
 @media (max-width: 900px) {
   .trust li, .trust li:nth-child(odd) { padding: 14px 16px 16px; border-top: 4px solid var(--c); }
   .pw-photo { margin: 0 6px 6px 0; box-shadow: 6px 6px 0 var(--c, var(--green)); }
-  .proc, .coach { grid-template-columns: 1fr; }
+  .proc { grid-template-columns: 1fr; }
   .nurse { grid-template-columns: 1fr; grid-template-areas: 'copy' 'art' 'list' 'acts'; }
   .nurse-art { margin-top: 28px; min-height: 0; aspect-ratio: 4 / 3.4; max-width: 560px; }
   .proc-art { position: relative; top: 0; max-width: 560px; }
   .proc-art img { aspect-ratio: 16 / 10; }
-  .ticker li { font-size: 1.08rem; }
-  .ticker li::after { margin-inline: 16px; }
   .why-photo { max-width: 320px; }
   .final-bg { -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 60%); mask-image: linear-gradient(180deg, #000 0%, transparent 60%); }
 }
 @media (max-width: 560px) {
-  .goal-grid { grid-template-columns: 1fr; }
-  .goal { min-height: 0; }
   .nurse-list li { grid-template-columns: 54px minmax(0, 1fr) auto; gap: 14px; }
   .nurse-art { min-height: 0; aspect-ratio: 4 / 4.2; }
   .nurse-list img { width: 54px; height: 54px; }
   .nurse-acts .btn { width: 100%; }
-  .prog, .prog:nth-child(5n + 1) { grid-column: span 12; height: 280px; }
   .proc .steps { grid-template-columns: 1fr; }
   .section-green .cert { box-shadow: 6px 6px 0 var(--green); }
 }
 @media (max-width: 400px) {
-  .exams { grid-template-columns: 1fr; }
 }

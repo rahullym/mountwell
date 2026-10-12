@@ -73,9 +73,9 @@ export type Goal = 'pr' | 'work' | 'train' | 'seeker';
 
 export const goals: { id: Goal; label: string; text: string; href: string }[] = [
   { id: 'pr', label: 'Migrate / PR', text: 'Permanent residence through points-tested skilled migration, planned for you and your family.', href: '/services/pr-visa/' },
-  { id: 'work', label: 'Work visa', text: 'An employer-sponsored job and work permit in healthcare, skilled trades or general category roles.', href: '/services/work-visa/' },
-  { id: 'train', label: 'Study and train', text: 'Training that leads to work: Ausbildung in Germany, or the bridging programme for nurses in Malta.', href: '/countries/germany/ausbildung/' },
-  { id: 'seeker', label: 'Job seeker route', text: 'Travel first and look for work on the ground with Germany’s Opportunity Card.', href: '/countries/germany/opportunity-card/' },
+  { id: 'work', label: 'Work Visa', text: 'An employer-sponsored job and work permit in healthcare, skilled trades or general category roles.', href: '/services/work-visa/' },
+  { id: 'train', label: 'Study and Train', text: 'Training that leads to work: Ausbildung in Germany, or the bridging programme for nurses in Malta.', href: '/countries/germany/ausbildung/' },
+  { id: 'seeker', label: 'Job Seeker Route', text: 'Travel first and look for work on the ground with Germany’s Opportunity Card.', href: '/countries/germany/opportunity-card/' },
 ];
 
 // A country without its own page yet links to its row on the countries hub (/countries/#slug).
@@ -87,7 +87,7 @@ export const countries: {
 }[] = [
   {
     name: 'Australia', code: 'AU', airport: 'SYD', href: '/countries/australia/', goals: ['pr', 'work'],
-    text: 'Points-tested skilled visas and employer-sponsored routes for healthcare, trade, IT and teaching professionals. We manage your skills assessment, professional registration, expression of interest and visa application from Kerala, start to finish.',
+    text: 'Points-tested skilled visas and employer-sponsored routes for healthcare, trade, IT and teaching professionals. We manage your skills assessment, registration, expression of interest and visa application from Kerala.',
     programmes: [
       { label: 'PR and skilled migration', href: '/countries/australia/' },
       { label: 'Nurses', href: '/nursing-careers/australia/' },
@@ -100,23 +100,24 @@ export const countries: {
   },
   {
     name: 'Canada', code: 'CA', airport: 'YYZ', href: '/countries/#canada', goals: ['pr'],
-    text: 'Migration and immigration pathways to permanent residence for skilled workers and their families. We check your score, plan your language tests and credential assessment, and prepare a complete, accurate application.',
-    programmes: [{ label: 'PR and immigration' }],
+    text: 'Permanent residence pathways for skilled workers through federal and provincial programmes. We check your profile against current draw scores before you spend on tests or credential evaluation.',
+    programmes: [{ label: 'Migration and PR' }],
   },
   {
     name: 'Germany', code: 'DE', airport: 'FRA', href: '/countries/germany/', goals: ['work', 'train', 'seeker'],
-    text: 'The Opportunity Card for job seekers, Ausbildung vocational training, and recognition routes for healthcare and technical staff. German language training runs alongside your paperwork, so no time is lost.',
+    text: 'The Opportunity Card for job seekers, Ausbildung paid training, and recognised jobs for physiotherapists, vehicle mechanics and drivers. German coaching is arranged alongside your file, so the exam and the paperwork move together.',
     programmes: [
       { label: 'Opportunity Card', href: '/countries/germany/opportunity-card/' },
       { label: 'Ausbildung', href: '/countries/germany/ausbildung/' },
       { label: 'Nurses', href: '/nursing-careers/germany/' },
       { label: 'Physiotherapists' },
-      { label: 'Vehicle mechanics and drivers' },
+      { label: 'Vehicle mechanics' },
+      { label: 'Drivers' },
     ],
   },
   {
     name: 'Denmark', code: 'DK', airport: 'CPH', href: '/countries/#denmark', goals: ['work'],
-    text: 'Authorisation and employment routes for dentists and nurses. We guide you through Danish authorisation, the language requirement and employer matching, with a realistic view of how long each stage takes.',
+    text: 'Programmes for dentists, covering Danish authorisation, the language requirement and employer matching. We explain how long authorisation takes and what to expect while you complete it.',
     programmes: [
       { label: 'Dentists' },
       { label: 'Nurses', href: '/nursing-careers/denmark/' },
@@ -124,17 +125,18 @@ export const countries: {
   },
   {
     name: 'Malta', code: 'MT', airport: 'MLA', href: '/countries/malta/', goals: ['work', 'train'],
-    text: 'Healthcare roles in an English-speaking EU country, including the bridging programme for nurses trained outside the EU. We handle council registration, employer placement and the work permit.',
+    text: 'An English-speaking EU country with work routes for care workers, physiotherapists, AT and OT staff, allied health and radiology professionals, including the bridging programme that leads to council registration.',
     programmes: [
       { label: 'Nurses and bridging programme', href: '/nursing-careers/malta/' },
       { label: 'Physiotherapists' },
       { label: 'AT and OT' },
+      { label: 'Allied health' },
       { label: 'Radiology' },
     ],
   },
   {
     name: 'Maldives', code: 'MV', airport: 'MLE', href: '/countries/#maldives', goals: ['work'],
-    text: 'Hospital and clinic jobs a short flight from Kerala, with employer-sponsored work visas. A practical first overseas posting for healthcare professionals who want international experience close to home.',
+    text: 'Employer-sponsored work visas for speech therapists, occupational therapists and lab technicians in hospitals and clinics, a short flight from Kerala.',
     programmes: [
       { label: 'Registered nurses', href: '/nursing-careers/maldives/' },
       { label: 'Speech therapists' },
@@ -144,12 +146,12 @@ export const countries: {
   },
   {
     name: 'Netherlands', code: 'NL', airport: 'AMS', href: '/countries/#netherlands', goals: ['work'],
-    text: 'General category work opportunities with Dutch employers. We compare your profile with current openings, explain the permit conditions in plain language and prepare your documents for the employer and the visa.',
+    text: 'General category jobs with a Dutch work permit. We explain the contract, accommodation and real cost of living before you commit.',
     programmes: [{ label: 'General category' }],
   },
   {
     name: 'Europe', code: 'EU', airport: 'RIX', href: '/countries/#europe', goals: ['work'],
-    text: 'Skilled trade and general category jobs in Latvia, Poland, Lithuania and Bulgaria. Good entry routes into Europe for technicians and tradespeople with hands-on experience and a clean record.',
+    text: 'Skilled trade and general jobs in Latvia, Poland, Lithuania and Bulgaria for welders, CNC machinists, drivers, electricians, HVAC technicians, fitters, spray painters and delivery staff, with every employer and contract verified first.',
     programmes: [
       { label: 'CNC machinists' }, { label: 'Welders' }, { label: 'Drivers' }, { label: 'Electricians' },
       { label: 'HVAC' }, { label: 'Fitters' }, { label: 'Spray painters' }, { label: 'Delivery' },
@@ -161,7 +163,7 @@ export const countries: {
 export const professionGroups: { id: string; name: string; text: string; links: { label: string; href?: string }[] }[] = [
   {
     id: 'healthcare', name: 'Healthcare and Allied Health',
-    text: 'For nurses, physiotherapists, dentists, radiographers, occupational and speech therapists and lab technicians. We match your qualification and experience to Australia, Germany, Denmark, Malta or the Maldives, then manage registration, language exams and the employer or visa process.',
+    text: 'For physiotherapists, dentists, occupational and speech therapists, radiographers and lab technicians. Each country has its own registration body and language test, so we match you to a registration route you can realistically clear, then plan the exam, documents and job together.',
     links: [
       { label: 'Nurses', href: '/nursing-careers/' },
       { label: 'Physiotherapists' }, { label: 'Dentists' }, { label: 'Occupational therapists' },
@@ -170,7 +172,7 @@ export const professionGroups: { id: string; name: string; text: string; links: 
   },
   {
     id: 'trades', name: 'Skilled Trades and Technical',
-    text: 'For welders, CNC machinists, mechanics, electricians, HVAC technicians, fitters and spray painters. Australia assesses trade skills formally, while Germany and several European countries hire experienced tradespeople directly. We tell you which route fits your certificates and experience.',
+    text: 'For welders, CNC machinists, mechanics, electricians, HVAC technicians, fitters and spray painters. Australia assesses trade skills formally, while Germany and several European countries hire experienced tradespeople directly. We tell you which route fits your certificates and experience before you apply.',
     links: [
       { label: 'Welders' }, { label: 'CNC machinists' }, { label: 'Mechanics' }, { label: 'Electricians' },
       { label: 'HVAC technicians' }, { label: 'Fitters' }, { label: 'Spray painters' },
@@ -200,14 +202,16 @@ export const services = [
   { name: 'Free Immigration Consultation', href: '/free-immigration-assessment/', text: 'A one-to-one review of your profile against current rules: where you qualify, the route, the cost and the timeline.' },
 ];
 
-// Programmes shown as photo cards on the homepage. `img` is a file slug in /public/img/dest.
-export const featured = [
-  { img: 'australia', place: 'Australia', title: 'Nursing in Australia', text: 'Skills assessment, AHPRA registration and the visa application, managed from Kerala.', href: '/nursing-careers/australia/' },
-  { img: 'germany', place: 'Germany', title: 'Opportunity Card', text: 'Six points to job-hunt in Germany.', href: '/countries/germany/opportunity-card/' },
-  { img: 'malta', place: 'Malta', title: 'Bridging programme', text: 'For nurses trained outside the EU.', href: '/nursing-careers/malta/' },
-  { img: 'denmark', place: 'Denmark', title: 'Dentists and nurses', text: 'Danish authorisation, language and employer matching.', href: '/countries/#denmark' },
-  { img: 'maldives', place: 'Maldives', title: 'Hospital and clinic jobs', text: 'Employer-sponsored work visas, a short flight from Kerala.', href: '/countries/#maldives' },
-  { img: 'europe', place: 'Europe', title: 'Skilled trades in Europe', text: 'Welders, CNC machinists, electricians, drivers and more, in Latvia, Poland, Lithuania and Bulgaria.', href: '/countries/#europe' },
+// Service cards on the homepage, in the order of the homepage content brief. A card without `href` has no page yet.
+export const homeServices: { name: string; text: string; href?: string }[] = [
+  { name: 'PR Visa and Skilled Migration', href: '/services/pr-visa/', text: 'Points-based permanent residence for you and your family, from skills assessment and expression of interest to state nomination and the final visa, with a skilled migration consultant in Kerala managing each stage.' },
+  { name: 'Work Visa', href: '/services/work-visa/', text: 'Employer-sponsored visas and work permits. We verify the job offer, the employer and the contract in writing before your file is prepared, so you never pay for a job that does not exist.' },
+  { name: 'Skills Assessment', text: 'Credential recognition with the right body, such as AHPRA, Anerkennung or Malta registration, so your qualification and experience count abroad.' },
+  { name: 'Visa Documentation', href: '/services/visa-documentation/', text: 'Checklists, forms, medicals, appointments and embassy interview preparation from visa consultants in Kerala who file these applications every week.' },
+  { name: 'Dependent and Family Visa', text: 'Spouse and children visas planned with your main application, so your family can join you without avoidable delays or a second round of paperwork.' },
+  { name: 'Visitor Visa', text: 'Tourist and business visit visas with a full document check before you apply, to reduce the risk of a refusal on your record.' },
+  { name: 'Language and Test Preparation', text: 'OET, IELTS, PTE and German coaching run by the same team that handles your paperwork, so your exam date and your application move together.' },
+  { name: 'Study Abroad', text: 'One focused service for students who want a course that leads to work rights and a realistic route to a job after graduation.' },
 ];
 
 // Nursing routes shown in the Nursing Careers section. `img` is a file slug in /public/img/dest.
@@ -219,34 +223,27 @@ export const nursing = [
   { img: 'maldives', place: 'Maldives', text: 'Hospital and clinic jobs a short flight from Kerala.', href: '/nursing-careers/maldives/' },
 ];
 
-export const exams = [
-  { name: 'IELTS', text: 'English test accepted for Australian skilled visas.' },
-  { name: 'OET', text: 'English test built for nurses and other healthcare professionals.' },
-  { name: 'PTE', text: 'Computer-based English test, also accepted for Australia.' },
-  { name: 'German', text: 'For healthcare roles in Germany. The Opportunity Card accepts basic German or good English.' },
-];
-
 export const supportChips = [
-  'Skills assessment', 'AHPRA registration', 'Anerkennung (Germany)', 'Malta council registration',
-  'IELTS, OET and PTE', 'German language training', 'Documentation', 'Pre-departure briefing', 'Post-landing support',
+  'Skills assessment', 'Credential recognition (AHPRA, Anerkennung, Malta registration)',
+  'IELTS, OET, PTE and German training', 'Documentation', 'Pre-departure and post-landing support',
 ];
 
 export const steps = [
   { title: 'Free profile and eligibility assessment', text: 'We review your age, education, experience and language level, and tell you plainly where you qualify.' },
   { title: 'Country and programme matching', text: 'You get a shortlist of realistic options with costs and requirements side by side.' },
-  { title: 'Documents, skills assessment and credential recognition', text: 'We prepare and check every paper before it goes to an authority.' },
-  { title: 'Language and exam preparation', text: 'IELTS, OET, PTE or German coaching runs in parallel with your file.' },
+  { title: 'Documents, skills assessment and credential recognition', text: 'Every paper is prepared and checked before it reaches an authority.' },
+  { title: 'Language and exam preparation', text: 'OET, IELTS, PTE or German coaching runs alongside your file.' },
   { title: 'Visa filing or employer matching', text: 'We lodge the application or introduce you to verified employers, depending on the route.' },
   { title: 'Pre-departure and post-landing support', text: 'Travel, accommodation and first-week guidance, so you are not alone on arrival.' },
 ];
 
 export const reasons = [
-  { title: 'Licensed and registered', text: 'We hold a recruiting licence from the Ministry of External Affairs, and we print the number on every page so you can check it.' },
+  { title: 'Licensed and registered', text: 'We hold a Recruiting Agent licence from the Ministry of External Affairs and print the number on every page, so you can check it yourself.' },
   { title: 'Honest eligibility advice', text: 'If you do not qualify, we say so at the first meeting. We never promise a job or a visa to win a client.' },
   { title: 'Healthcare and skilled-trade specialists', text: 'Our programmes are built around nurses, therapists, technicians and tradespeople, not general student admissions.' },
-  { title: 'In-house language support', text: 'IELTS, OET, PTE and German preparation is arranged by the same team that handles your file.' },
-  { title: 'Face-to-face offices', text: 'Meet your consultant in person in Thrissur or Kochi, and bring your family along.' },
-  { title: 'Transparent Fees', text: 'Our immigration services in Kerala are priced per programme. You get a written fee schedule before you pay, with no hidden charges and the refund terms stated.' },
+  { title: 'In-house language support', text: 'OET, IELTS, PTE and German preparation is arranged by the same team that handles your file.' },
+  { title: 'Face-to-face offices', text: 'Unlike an online-only overseas consultancy in Kerala, we let you meet your consultant in Thrissur or Kochi and bring your family along.' },
+  { title: 'Transparent Fees', text: 'Our immigration services in Kerala are priced per programme. Before you pay anything, you get a written fee schedule showing our service fee, what it includes, the government and exam charges paid separately, and the refund terms. No hidden charges.' },
 ];
 
 // Client reviews carried over from the current mountbell.com site.
@@ -257,51 +254,50 @@ export const reviews = [
 ];
 
 export const updates = [
-  { tag: 'Guide', img: 'kerala', title: 'How to identify fake immigration agents', excerpt: 'Eight checks to run before you pay any recruiter, starting with the eMigrate licence search.', href: '/resources/avoid-visa-fraud/' },
-  { tag: 'Germany', img: 'germany', title: 'Opportunity Card: who qualifies and how the points work', excerpt: 'The six-point rule explained with worked examples for nurses and technicians from Kerala.', href: '/countries/germany/opportunity-card/' },
-  { tag: 'Malta', img: 'malta', title: 'The bridging programme for nurses, step by step', excerpt: 'What the course covers, how registration follows, and what to arrange before you travel.', href: '/nursing-careers/malta/' },
+  { tag: 'Guide', img: 'kerala', title: 'How to Identify Fake Immigration Agents', excerpt: 'Eight checks to run before you pay any recruiter.', href: '/resources/avoid-visa-fraud/' },
+  { tag: 'Germany', img: 'germany', title: 'Opportunity Card: Who Qualifies and How the Points Work', excerpt: 'The six-point rule, with worked examples from Kerala.', href: '/countries/germany/opportunity-card/' },
+  { tag: 'Malta', img: 'malta', title: 'The Bridging Programme for Nurses, Step by Step', excerpt: 'What the course covers and how registration follows.', href: '/nursing-careers/malta/' },
 ];
 
-export const faqs = [
+// `href` is left out where the brief gives no link or the target page is not built yet.
+export const faqs: { q: string; a: string; href?: string; link?: string }[] = [
   {
-    q: 'Who are the best immigration consultants in Kerala for skilled migration?',
-    a: 'The best consultants are the ones you can verify. Look for a government licence number, written fees and honest advice about your chances. Mountbell is licensed by the Ministry of External Affairs and focuses on skilled migration for healthcare, trade, IT and teaching professionals.',
-    href: '/services/pr-visa/', link: 'PR visa and skilled migration',
+    q: 'Who are the best immigration consultants in Kerala?',
+    a: 'The right immigration consultants in Kerala are the ones you can verify: a government licence number, written fees and honest advice about your chances. Mountbell is MEA licensed and focuses on skilled migration for healthcare, trade, IT and teaching professionals.',
   },
   {
-    q: 'How do I know if an overseas job consultant in Kerala is genuine and licensed?',
-    a: 'A genuine overseas job consultant in Kerala holds a Recruiting Agent licence from the Ministry of External Affairs. Ask for the licence number and search for it on the eMigrate portal. Insist on receipts, a written contract and employer details before you pay anything.',
+    q: 'How to choose an immigration consultant in Kerala?',
+    a: 'Check the MEA licence number on the eMigrate portal, ask for fees in writing, and insist on receipts, a contract and the employer’s details before you pay. A genuine immigration agency in Kerala answers all of this at the first meeting. No real overseas job consultant in Kerala guarantees a visa.',
     href: '/resources/avoid-visa-fraud/', link: 'How to identify fake agents',
   },
   {
-    q: 'How much does immigration consulting cost at Mountbell?',
-    a: 'The cost depends on the country and the programme. Your first eligibility assessment is free. Before you pay anything, you receive a written fee schedule showing our service fee, what it includes, and the government, exam and assessment charges that are paid separately.',
+    q: 'How much does it cost to work with Mountbell?',
+    a: 'The cost depends on the country and the programme. Your first consultation is free. Before you pay, you receive a written fee schedule showing our service fee, what it includes, and the government, exam and assessment charges paid separately.',
     href: '/fees/', link: 'How our fees work',
   },
   {
-    q: 'Which country is best for me to migrate to from Kerala?',
-    a: 'The best country depends on your profession, age, language level and whether you want permanent residence or a work contract. Nurses often choose Australia, Germany or Malta. Tradespeople look at Australia and Europe. A free assessment gives you a shortlist that fits your profile.',
+    q: 'Which country is best to migrate to from Kerala?',
+    a: 'It depends on your profession, age, language level and whether you want permanent residence or a work contract. Tradespeople often look at Australia and Europe, while families wanting PR choose Australia or Canada. A free assessment at our immigration consultancy in Kerala gives you a shortlist that fits.',
     href: '/countries/', link: 'Compare countries',
   },
   {
     q: 'Which countries can nurses from Kerala migrate to?',
-    a: 'Nurses from Kerala can move to Australia, Germany, Denmark, Malta and the Maldives through Mountbell programmes. Each country has its own registration body and language requirement, so the right choice depends on your experience, your exam scores and how soon you want to start work.',
+    a: 'Through Mountbell, nurses from Kerala can move to Australia, Germany, Denmark, Malta and the Maldives. Each has its own registration body and language requirement, so the right choice depends on your experience, exam scores and start date.',
     href: '/nursing-careers/', link: 'Nursing careers abroad',
   },
   {
     q: 'Do I need IELTS, OET or German to work abroad?',
-    a: 'It depends on the country and the role. Australia asks for an English test such as IELTS, OET or PTE. Germany generally expects German for healthcare roles, and the Opportunity Card accepts basic German or good English. We confirm the exact requirement during your assessment.',
-    href: '#coaching', link: 'Language coaching',
+    a: 'It depends on the country and the role. Australia asks for an English test such as IELTS, OET or PTE. Germany generally expects German for healthcare roles, while the Opportunity Card accepts basic German or good English. We confirm the exact requirement during your assessment.',
   },
   {
-    q: 'Do you offer free consultation in Thrissur, Kochi and online?',
-    a: 'Yes. The first consultation is free at our Thrissur and Kochi offices, and by phone or video call for people elsewhere in Kerala, in other states or already working abroad. Book a time through the form on this page or on WhatsApp.',
-    href: '/contact/', link: 'Office addresses',
-  },
-  {
-    q: 'Can I get consultation in Malayalam?',
-    a: 'Yes. Our consultants speak Malayalam and English, and you can choose either for your consultation. Parents and spouses are welcome to join the meeting, so the whole family understands the process, the costs and the timeline before a decision is made.',
+    q: 'Is the first consultation free, and can I attend online?',
+    a: 'Yes. As an immigration consultancy in Kerala with offices in Thrissur and Kochi, we offer a free first consultation in person, by phone or by video call, including for people in other states or already working abroad.',
     href: '/free-immigration-assessment/', link: 'Book a free consultation',
+  },
+  {
+    q: 'Can I get an immigration consultation in Malayalam?',
+    a: 'Yes. We are Malayalam-speaking immigration consultants, and you can choose Malayalam or English for your meeting. Parents and spouses are welcome to join, so the whole family understands the process, costs and timeline before deciding.',
+    href: '/contact/', link: 'Office addresses',
   },
 ];
 

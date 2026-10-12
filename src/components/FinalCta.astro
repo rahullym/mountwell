@@ -3,10 +3,11 @@
 import Icon from './Icon.astro';
 import LeadForm from './LeadForm.astro';
 import { site, waLink } from '../data/site';
-interface Props { heading?: string; text?: string }
+interface Props { heading?: string; text?: string; submit?: string }
 const {
   heading = 'Book Your Free Immigration Consultation Today',
   text = 'Speak to Mountbell’s immigration consultants in Kerala in person, by phone or on WhatsApp.',
+  submit,
 } = Astro.props;
 const wa = waLink('Hi Mountbell, I would like to talk to an expert about working or migrating abroad.');
 ---
@@ -25,6 +26,6 @@ const wa = waLink('Hi Mountbell, I would like to talk to an expert about working
         <a class="btn btn-ghost" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp" size={20} /> WhatsApp us</a>
       </div>
     </div>
-    <LeadForm id="final" compact heading="Book a free consultation" />
+    <LeadForm id="final" compact heading="Book a free consultation" submit={submit} />
   </div>
 </section>
