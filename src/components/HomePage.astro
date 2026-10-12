@@ -121,9 +121,9 @@ const videoSchema = site.heroVideoId
                   <div>
                     <h3>{c.name}</h3>
                     <p>{c.text}</p>
-                    <a class="arrow-link" href={c.href}>Explore {c.name} <Icon name="arrow" size={17} /></a>
                   </div>
                   <div class="chips">{c.programmes.map((p) => p.href ? <a class="chip" href={p.href}>{p.label}</a> : <span class="chip">{p.label}</span>)}</div>
+                  <a class="arrow-link" href={c.href}>Explore {c.name} <Icon name="arrow" size={17} /></a>
                 </div>
               </article>
             ))}
@@ -295,9 +295,9 @@ const videoSchema = site.heroVideoId
       <div data-reveal>
         <h2 class="h2">Licences, Registrations and Partnerships</h2>
         <p class="lede" style="margin-top:18px">Any immigration consultancy in Kerala that recruits for overseas jobs must hold a Recruiting Agent licence from the Ministry of External Affairs (MEA). Our licence number is {site.licence.number}, issued to {site.legalName}, and you can search it on the government’s eMigrate portal before you share a single document. Licensed immigration consultants in Kerala should be happy to show you this. If an agent will not, walk away.</p>
-        <p style="margin-top:20px"><a class="arrow-link" href="/resources/avoid-visa-fraud/">How to Identify Fake Immigration Agents <Icon name="arrow" size={17} /></a></p>
       </div>
-      <div class="cert" data-reveal style="--n:2">
+      <div data-reveal style="--n:2">
+      <div class="cert">
         <div class="cert-in">
           <div class="cert-top"><Icon name="shield" size={30} /><strong>Government of India<br />Ministry of External Affairs</strong></div>
           <dl>
@@ -310,6 +310,8 @@ const videoSchema = site.heroVideoId
           </div>
         </div>
       </div>
+        <p style="margin:30px 0 0"><a class="arrow-link" href="/resources/avoid-visa-fraud/">How to Identify Fake Immigration Agents <Icon name="arrow" size={17} /></a></p>
+      </div>
     </div>
   </section>
 
@@ -320,10 +322,6 @@ const videoSchema = site.heroVideoId
         <h2 class="h2">Success Stories – From Kerala to Australia, Germany, Malta and Beyond</h2>
         <p class="lede">A few words from clients who chose Mountbell as their trusted immigration consultants in Kerala, from the first consultation to the day they flew.</p>
       </div>
-      <ul class="snaps" data-reveal-group>
-        {galleryPhotos.map((p) => <li><img src={p.src} alt={p.alt} width="480" height="480" loading="lazy" decoding="async" /></li>)}
-      </ul>
-      <p class="snaps-cap">From the Mountbell gallery.</p>
       <div class="stories" data-reveal-group>
         {reviews.map((r) => (
           <figure class="story" style="margin:0">
@@ -336,6 +334,10 @@ const videoSchema = site.heroVideoId
         <a class="arrow-link" href="/success-stories/">Read All Success Stories <Icon name="arrow" size={17} /></a>
         {site.googleRating && <a class="tlink" href={site.googleRating.url} target="_blank" rel="noopener">{site.googleRating.score} from {site.googleRating.count} Google reviews</a>}
       </div>
+      <ul class="snaps" style="margin-top:40px" data-reveal-group>
+        {galleryPhotos.map((p) => <li><img src={p.src} alt={p.alt} width="480" height="480" loading="lazy" decoding="async" /></li>)}
+      </ul>
+      <p class="snaps-cap">From the Mountbell gallery.</p>
     </div>
   </section>
 
@@ -375,7 +377,6 @@ const videoSchema = site.heroVideoId
           <h2 class="h2">Latest Visa, Migration and Overseas Job Updates</h2>
           <p class="lede">Visa rules change often, so our immigration consultancy in Kerala publishes dated guides you can read before you apply.</p>
         </div>
-        <a class="arrow-link" href="/resources/">All Resources <Icon name="arrow" size={17} /></a>
       </div>
       <div class="updates" data-reveal-group>
         {updates.map((u) => (
@@ -387,6 +388,7 @@ const videoSchema = site.heroVideoId
           </article>
         ))}
       </div>
+      <p style="margin:32px 0 0"><a class="arrow-link" href="/resources/">All Resources <Icon name="arrow" size={17} /></a></p>
     </div>
   </section>
 
