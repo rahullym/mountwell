@@ -2,7 +2,7 @@
 
 /* ---------- Banner ---------- */
 .hero { position: relative; isolation: isolate; overflow: hidden; color: #fff; background: radial-gradient(120% 90% at 85% 0%, #1b2a63 0%, #101a3c 46%, #0c1430 100%); }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: clamp(32px, 5vw, 72px); align-items: center; padding-block: clamp(48px, 5.4vw, 80px); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(32px, 5vw, 72px); align-items: center; padding-block: clamp(48px, 5.4vw, 80px); }
 .hero-copy > * { animation: rise .8s cubic-bezier(.2, .7, .2, 1) both; }
 .hero-copy > :nth-child(2) { animation-delay: .06s; }
 .hero-copy > :nth-child(3) { animation-delay: .16s; }
@@ -34,10 +34,11 @@
 .hero-video { display: inline-flex; align-items: center; gap: 12px; margin-top: 24px; font-weight: 600; color: #fff; }
 .hero-video span.play { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #fff; color: var(--navy); }
 
-/* Success-story reel: three photo columns drifting downward together. */
+/* Success-story reel: three slow photo columns, the outer two drifting down and the middle one up. */
 .hero-reel { position: relative; align-self: stretch; min-height: 460px; }
 .reel-cols { position: absolute; inset: calc(clamp(48px, 5.4vw, 80px) * -1) 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 80%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 80%, transparent 100%); }
-.reel-col ul { margin: 0; padding: 0; list-style: none; animation: reel 70s linear infinite; animation-delay: calc(var(--o) * -70s); }
+.reel-col ul { margin: 0; padding: 0; list-style: none; animation: reel 150s linear infinite; animation-delay: calc(var(--o) * -150s); }
+.reel-col:nth-child(2) ul { animation-direction: reverse; }
 .reel-col li { padding-bottom: 12px; }
 .reel-col img { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08); }
 .hero-reel:hover .reel-col ul { animation-play-state: paused; }

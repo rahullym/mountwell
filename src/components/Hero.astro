@@ -3,12 +3,11 @@
 import Icon from './Icon.astro';
 import { site, storyReel, waLink } from '../data/site';
 const wa = waLink('Hi Mountbell, I would like to talk to an expert about working or migrating abroad.');
-// The columns move at one speed, so their alignment never changes. These orders and start points
-// (`o`, a fraction of one loop) were worked out so that the same photo is never side by side
-// across columns. Changing the photos or their heights means working them out again.
+// Each column has its own photo order and start point (`o`, a fraction of one loop), worked out so that
+// the same photo does not sit side by side when the page opens. The middle column scrolls the other way.
 const columns = [
   { o: 0, order: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] },
-  { o: 0.9461, order: [2, 7, 8, 6, 1, 9, 0, 3, 4, 5] },
+  { o: 0.0539, order: [2, 7, 8, 6, 1, 9, 0, 3, 4, 5] }, // runs in reverse, so this lands at 0.9461 of a loop
   { o: 0.9137, order: [3, 4, 5, 9, 0, 7, 8, 2, 1, 6] },
 ].map((c) => ({ o: c.o, photos: c.order.map((n) => storyReel[n]) }));
 ---
