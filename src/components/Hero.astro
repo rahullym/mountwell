@@ -1,20 +1,16 @@
 ---
-// Homepage banner: headline beside four arch windows of destination photos.
+// Homepage banner: headline beside three columns of success-story photos scrolling downward.
 import Icon from './Icon.astro';
-import { site, countries, waLink } from '../data/site';
+import { site, storyReel, waLink } from '../data/site';
 const wa = waLink('Hi Mountbell, I would like to talk to an expert about working or migrating abroad.');
-
-const place = (name: string) => {
-  const c = countries.find((x) => x.name === name)!;
-  return { name, code: c.airport, src: `/img/dest/${name.toLowerCase()}-arch.webp` };
-};
-// Each arch alternates between two destinations, so all eight appear. `h` is the arch height.
-const arches = [
-  { h: 70, a: place('Australia'), b: place('Maldives') },
-  { h: 100, a: place('Germany'), b: place('Europe') },
-  { h: 85, a: place('Malta'), b: place('Denmark') },
-  { h: 62, a: place('Canada'), b: place('Netherlands') },
-];
+// The columns move at one speed, so their alignment never changes. These orders and start points
+// (`o`, a fraction of one loop) were worked out so that the same photo is never side by side
+// across columns. Changing the photos or their heights means working them out again.
+const columns = [
+  { o: 0, order: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] },
+  { o: 0.9461, order: [2, 7, 8, 6, 1, 9, 0, 3, 4, 5] },
+  { o: 0.9137, order: [3, 4, 5, 9, 0, 7, 8, 2, 1, 6] },
+].map((c) => ({ o: c.o, photos: c.order.map((n) => storyReel[n]) }));
 ---
 <section class="hero">
   <div class="wrap hero-grid">
@@ -47,21 +43,26 @@ const arches = [
       )}
     </div>
 
-    <div class="hero-art" aria-hidden="true">
-      <svg class="art-arcs" viewBox="0 0 560 520" fill="none" preserveAspectRatio="none">
-        <path pathLength="1" d="M-40 505C110 505 150 40 290 40S470 505 620 505" stroke="#7fb556" />
-        <path pathLength="1" d="M90 505C240 505 280 40 420 40S600 505 750 505" stroke="#5f93c4" />
-      </svg>
-      <div class="arches">
-        {arches.map((x, i) => (
-          <div class="arch" style={`--h:${x.h}%;--d:${i}`}>
-            <img src={x.a.src} alt="" width="360" height="1000" decoding="async" />
-            <img class="alt" src={x.b.src} alt="" width="360" height="1000" fetchpriority="low" decoding="async" />
-            <span class="tag"><b>{x.a.code}</b>{x.a.name}</span>
-            <span class="tag alt"><b>{x.b.code}</b>{x.b.name}</span>
+    <div class="hero-reel">
+      <div class="reel-cols">
+        {columns.map((col, i) => (
+          <div class="reel-col" style={`--o:${col.o}`}>
+            {/* Two copies of each column make the loop seamless. Only the first column's first copy is read out. */}
+            <ul aria-hidden={i > 0 ? 'true' : undefined}>
+              {[0, 1].map((copy) => col.photos.map((p) => (
+                <li aria-hidden={copy > 0 ? 'true' : undefined}>
+                  <img src={`/img/stories/${p.slug}.webp`} alt={copy > 0 || i > 0 ? '' : p.alt} width="320" height={p.h} decoding="async" />
+                </li>
+              )))}
+            </ul>
           </div>
         ))}
       </div>
+      <a class="reel-tag" href="#stories">
+        <span class="mono">Success stories</span>
+        <b>Our candidates on their travel day</b>
+        <Icon name="arrow" size={18} />
+      </a>
     </div>
   </div>
 </section>

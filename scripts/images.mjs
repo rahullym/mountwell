@@ -1,23 +1,30 @@
 // Builds the web images in public/img from the originals in assets-src.
 // Usage: node scripts/images.mjs
 import sharp from 'sharp';
-import { readdirSync } from 'node:fs';
+import { mkdirSync, readdirSync } from 'node:fs';
 import { basename, extname } from 'node:path';
 
 const attention = sharp.strategy.attention;
 // Where the subject sits in panoramas that the automatic crop gets wrong.
 const position = { australia: 'left', canada: 'centre' };
 
-// Tall, narrow slices for the arch windows in the homepage banner. `cx` is where the
-// subject sits across the photo (0 = left edge, 1 = right edge).
-const archFocus = { australia: 0.24, canada: 0.39, germany: 0.5, netherlands: 0.42, malta: 0.71, denmark: 0.66, maldives: 0.5, europe: 0.72, kerala: 0.72 };
-for (const [slug, cx] of Object.entries(archFocus)) {
-  const src = `assets-src/destinations/${slug}.jpg`;
-  const { width, height } = await sharp(src).metadata();
-  const sliceW = Math.round(height * (360 / 1000));
-  const left = Math.max(0, Math.min(width - sliceW, Math.round(width * cx - sliceW / 2)));
-  const slice = await sharp(src).extract({ left, top: 0, width: sliceW, height }).toBuffer();
-  await sharp(slice).resize(360, 1000).webp({ quality: 74 }).toFile(`public/img/dest/${slug}-arch.webp`);
+// Candidate travel photos for the scrolling columns in the homepage banner, 320px wide.
+// `h` sets each tile's height, so the columns have a mix of shapes.
+const reel = {
+  'departure-gate': ['photos/candidates-departure-gate.jpg', 240],
+  london: ['gallery/mount4.png', 400],
+  arrivals: ['gallery/mount9.png', 320],
+  night: ['photos/candidates-night.jpg', 240],
+  seafront: ['photos/candidates-seafront.jpg', 400],
+  'luggage-group': ['gallery/mount3.png', 320],
+  trolleys: ['photos/candidates-trolleys.jpg', 400],
+  terminal: ['photos/candidates-terminal.jpg', 400],
+  'travel-group': ['gallery/mount5.png', 320],
+  monument: ['gallery/mount7.png', 400],
+};
+mkdirSync('public/img/stories', { recursive: true });
+for (const [slug, [src, h]] of Object.entries(reel)) {
+  await sharp(`assets-src/${src}`).rotate().resize(320, h, { fit: 'cover', position: attention }).webp({ quality: 74 }).toFile(`public/img/stories/${slug}.webp`);
 }
 
 for (const file of readdirSync('assets-src/destinations')) {
@@ -59,6 +66,4 @@ for (const [slug, { w, h, cx, cy }] of Object.entries(photos)) {
   const top = Math.max(0, Math.min(height - boxH, Math.round(height * cy - boxH / 2)));
   await sharp(upright).extract({ left, top, width: boxW, height: boxH }).resize(w, h).webp({ quality: 78 }).toFile(`public/img/photos/${slug}.webp`);
 }
-// Wide cut of the lead travel-day photo for the homepage Success Stories section.
-await sharp('assets-src/photos/candidates-departure-gate.jpg').rotate().resize(1120, 760, { fit: 'cover', position: 'bottom' }).webp({ quality: 76 }).toFile('public/img/photos/candidates-departure-gate-wide.webp');
 console.log('images built');

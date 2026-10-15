@@ -28,7 +28,6 @@ body:has(.drawer.is-open) .wa-fab, html:has(.pop[open]) .wa-fab { display: none;
   :root { --wrap: 1500px; --header-h: 82px; }
   body { font-size: 19.5px; }
   .brand img { height: 54px; }
-  .hero-art { height: 540px; }
   .who-art { max-width: 620px; }
   .pw { grid-template-columns: 360px minmax(0, 1fr); }
 }
@@ -36,7 +35,6 @@ body:has(.drawer.is-open) .wa-fab, html:has(.pop[open]) .wa-fab { display: none;
 /* ---------- Small laptops and landscape tablets ---------- */
 @media (max-width: 1120px) {
   .who-badge { max-width: 64%; }
-  .arch .tag { left: 2px; right: 2px; font-size: 0.74rem; }
 }
 
 /* ---------- Tablets ---------- */
@@ -63,14 +61,14 @@ body:has(.drawer.is-open) .wa-fab, html:has(.pop[open]) .wa-fab { display: none;
   .who-badge { max-width: 66%; padding: 11px 12px; gap: 9px; }
   .office-body .top { flex-wrap: wrap; }
   .stories-foot { justify-content: flex-start; }
+  .hero-reel { height: 340px; }
+  .reel-tag { padding: 10px 14px; gap: 2px 10px; }
+  .reel-tag b { font-size: 0.84rem; }
   .legal-nav { gap: 8px 16px; }
 }
 @media (max-width: 400px) {
   .btn { white-space: normal; text-align: center; line-height: 1.2; padding: 10px 16px; }
   .btn svg { flex: none; }
-  .arch .tag { left: 2px; right: 2px; font-size: 0.64rem; }
-  .arch .tag b { font-size: 0.6rem; letter-spacing: 0.06em; }
-  .hero-art { height: 220px; }
   .tabs { display: flex; }
   .tabs button { flex: 1; padding: 0 8px; font-size: 0.9rem; white-space: nowrap; }
   .tool .figure { font-size: 3.4rem; right: 18px; top: 18px; }
@@ -90,7 +88,6 @@ body:has(.drawer.is-open) .wa-fab, html:has(.pop[open]) .wa-fab { display: none;
   .wa-fab { bottom: calc(66px + env(safe-area-inset-bottom)); width: 48px; height: 48px; }
   .wa-fab svg { width: 26px; height: 26px; }
   .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); align-items: center; }
-  .hero-art { height: 240px; }
-  .arch .tag { font-size: 0.62rem; }
-  .arch .tag b { font-size: 0.58rem; letter-spacing: 0.06em; }
+  .hero-reel { height: 300px; }
+  .reel-tag { display: none; }
 }

@@ -405,7 +405,20 @@ export const processPhoto = { src: '/img/photos/office-consultation.webp', w: 10
 // Photo of nurses for the Nursing Careers section (stock, credited on /image-credits/).
 // null = the section shows without a photo.
 export const nursingPhoto = { src: '/img/photos/nurse-portrait.webp', w: 1000, h: 1250, alt: 'Smiling nurse in blue scrubs holding a stethoscope in a hospital corridor' } as { src: string; w: number; h: number; alt: string } | null;
-export const storyPhoto = { src: '/img/photos/candidates-departure-gate-wide.webp', w: 1120, h: 760, alt: 'Group of women with luggage at an airport departure gate' };
+// Success-story photos for the scrolling columns in the homepage banner (built into /img/stories).
+// Every column shows all of them in its own order (see Hero.astro). `h` is the tile height at a width of 320.
+export const storyReel: { slug: string; h: number; alt: string }[] = [
+  { slug: 'departure-gate', h: 240, alt: 'Group of women with luggage at an airport departure gate' },
+  { slug: 'london', h: 400, alt: 'Mountbell candidate by Tower Bridge in London' },
+  { slug: 'arrivals', h: 320, alt: 'Four women smiling under an arrivals sign' },
+  { slug: 'seafront', h: 400, alt: 'Five people taking a selfie on a pebble beach by a harbour' },
+  { slug: 'night', h: 240, alt: 'Four women with suitcases outside an airport at night' },
+  { slug: 'monument', h: 400, alt: 'Two women in front of a monument abroad' },
+  { slug: 'luggage-group', h: 320, alt: 'Four women with suitcases ready to travel' },
+  { slug: 'trolleys', h: 400, alt: 'Four travellers with loaded luggage trolleys at an airport' },
+  { slug: 'terminal', h: 400, alt: 'Five travellers in winter jackets inside an airport terminal' },
+  { slug: 'travel-group', h: 320, alt: 'Five travellers with bags and luggage outdoors' },
+];
 export const galleryPhotos = [
   { src: '/img/photos/candidates-departure-gate.webp', alt: 'Group of women with luggage at an airport departure gate' },
   { src: '/img/photos/candidates-trolleys.webp', alt: 'Four travellers with loaded luggage trolleys at an airport' },

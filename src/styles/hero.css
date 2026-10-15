@@ -34,23 +34,19 @@
 .hero-video { display: inline-flex; align-items: center; gap: 12px; margin-top: 24px; font-weight: 600; color: #fff; }
 .hero-video span.play { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #fff; color: var(--navy); }
 
-/* Arch windows: four destination photos under the two arcs from the logo. */
-.hero-art { position: relative; height: clamp(340px, 33vw, 470px); }
-.art-arcs { position: absolute; inset: -4% -8% 0 -8%; width: 116%; height: 104%; overflow: visible; }
-.art-arcs path { stroke-width: 2; stroke-linecap: round; opacity: 0.75; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 2.2s .3s cubic-bezier(.6, .05, .25, 1) forwards; }
-.art-arcs path + path { animation-delay: .55s; }
-.arches { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 16px); align-items: end; }
-.arch { position: relative; height: var(--h); border-radius: 999px 999px 14px 14px; overflow: hidden; background: #1a2756; box-shadow: 0 34px 54px -30px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08); animation: arch-in 1.1s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(.2s + var(--d) * .13s); }
-.arch img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.arch::after { content: ''; position: absolute; inset: 55% 0 0; background: linear-gradient(180deg, rgba(8, 13, 32, 0) 0%, rgba(8, 13, 32, 0.78) 100%); z-index: 1; }
-.arch .tag { position: absolute; left: 6px; right: 6px; bottom: 14px; z-index: 2; text-align: center; font-size: 0.8rem; font-weight: 550; line-height: 1.25; color: #fff; }
-.arch .tag b { display: block; font-family: var(--mono); font-weight: 500; font-size: 0.68rem; letter-spacing: 0.1em; color: #c6e6ad; margin-bottom: 2px; }
-/* Each arch swaps to its second destination and back, one after another. */
-.arch .alt { opacity: 0; animation: swap-in 13s ease-in-out infinite; animation-delay: calc(3.5s + var(--d) * 1.6s); }
-.arch .tag:not(.alt) { animation: swap-out 13s ease-in-out infinite; animation-delay: calc(3.5s + var(--d) * 1.6s); }
-@keyframes swap-in { 0%, 100% { opacity: 0; } 8%, 50% { opacity: 1; } 58% { opacity: 0; } }
-@keyframes swap-out { 0%, 100% { opacity: 1; } 8%, 50% { opacity: 0; } 58% { opacity: 1; } }
-@keyframes arch-in { from { opacity: 0; transform: translateY(46px); } to { opacity: 1; transform: none; } }
+/* Success-story reel: three photo columns drifting downward together. */
+.hero-reel { position: relative; align-self: stretch; min-height: 460px; }
+.reel-cols { position: absolute; inset: calc(clamp(48px, 5.4vw, 80px) * -1) 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 80%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 80%, transparent 100%); }
+.reel-col ul { margin: 0; padding: 0; list-style: none; animation: reel 70s linear infinite; animation-delay: calc(var(--o) * -70s); }
+.reel-col li { padding-bottom: 12px; }
+.reel-col img { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08); }
+.hero-reel:hover .reel-col ul { animation-play-state: paused; }
+@keyframes reel { from { transform: translateY(-50%); } to { transform: translateY(0); } }
+.reel-tag { position: absolute; left: 50%; bottom: 8px; z-index: 2; translate: -50% 0; display: flex; align-items: center; gap: 4px 14px; width: max-content; max-width: 100%; padding: 12px 18px; border-radius: 12px; background: rgba(255, 255, 255, 0.96); color: var(--ink); box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.7); transition: transform .2s; }
+.reel-tag:hover { transform: translateY(-2px); }
+.reel-tag .mono { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-deep); }
+.reel-tag b { font-size: 0.92rem; font-weight: 650; }
+.reel-tag svg { color: var(--blue); flex: none; }
 
 .hero .lead { color: var(--ink); border: 0; box-shadow: 0 50px 90px -50px rgba(0, 0, 0, 0.75); }
 @keyframes settle { from { transform: scale(1.08); } to { transform: scale(1); } }
@@ -113,8 +109,8 @@
   .who-badge .mono { white-space: normal; word-break: break-all; }
   .who-facts div { min-width: 96px; padding-right: 12px; margin-right: 12px; }
   .hero-grid { grid-template-columns: 1fr; gap: 34px; padding-block: 36px 30px; }
-  .hero-art { height: 250px; }
-  .arch .tag { font-size: 0.72rem; bottom: 10px; }
+  .hero-reel { min-height: 0; height: 380px; }
+  .reel-cols { inset: 0; }
   .pw { grid-template-columns: 1fr; gap: 20px; }
   .pw-list { display: flex; gap: 8px; overflow-x: auto; margin-inline: calc(var(--gutter) * -1); padding: 2px var(--gutter) 6px; scrollbar-width: none; }
   .pw-list::-webkit-scrollbar { display: none; }
@@ -130,7 +126,5 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .pw-photo img { animation: none; }
-  .art-arcs path { stroke-dashoffset: 0; }
-  .arch .alt { opacity: 0; }
-  .arch .tag:not(.alt) { opacity: 1; }
+  .reel-col ul { animation: none; }
 }

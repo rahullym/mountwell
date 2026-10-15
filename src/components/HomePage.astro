@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Icon from './Icon.astro';
 import Hero from './Hero.astro';
 import FinalCta from './FinalCta.astro';
-import { site, countries, goals, professionGroups, homeServices, supportChips, nursing, training, steps, reasons, reviews, updates, faqs, waLink, photoAlt, teamPhotos, processPhoto, nursingPhoto, storyPhoto, galleryPhotos } from '../data/site';
+import { site, countries, goals, professionGroups, homeServices, supportChips, nursing, training, steps, reasons, reviews, updates, faqs, waLink, photoAlt, teamPhotos, processPhoto, nursingPhoto, galleryPhotos } from '../data/site';
 
 const title = 'Immigration Consultancy in Kerala – PR & Visas | Mountbell';
 const description = 'Established in 2017, Mountbell is an MEA-licensed immigration consultancy for PR, work visas and nursing careers abroad. Main branch in Kochi, Kerala.';
@@ -44,47 +44,6 @@ const videoSchema = site.heroVideoId
         {!site.googleRating && <li><strong>{site.presence}</strong><span>Main branch in Kochi · Branch in Thrissur</span></li>}
         {!site.foundedYear && !site.peoplePlaced && <li><strong>Malayalam · English</strong><span>Free first consultation</span></li>}
       </ul>
-    </div>
-  </section>
-
-  <!-- 03B Success stories -->
-  <section class="section section-white" id="stories">
-    <div class="wrap">
-      <div class="section-head split" data-reveal>
-        <div>
-          <h2 class="h2">Success Stories – From Kerala to Australia, Germany, Malta and Beyond</h2>
-          <p class="lede">Candidates on the day they travelled, and a few words from clients who chose Mountbell, from the first consultation to the day they flew.</p>
-        </div>
-        <a class="arrow-link" href="/success-stories/">Read All Success Stories <Icon name="arrow" size={17} /></a>
-      </div>
-      <div class="track">
-        <div class="track-art" data-reveal>
-          <figure class="track-lead">
-            <img src={storyPhoto.src} alt={storyPhoto.alt} width={storyPhoto.w} height={storyPhoto.h} loading="lazy" decoding="async" />
-            <figcaption>
-              {site.peoplePlaced && <b>{site.peoplePlaced}</b>}
-              <span>{site.peoplePlaced ? 'candidates placed or migrated' : 'Travel day, from the Mountbell gallery'}</span>
-            </figcaption>
-          </figure>
-          <ul class="track-row">
-            {galleryPhotos.slice(1).map((p) => <li><img src={p.src} alt={p.alt} width="480" height="480" loading="lazy" decoding="async" /></li>)}
-          </ul>
-        </div>
-        <div class="track-quotes" data-reveal-group>
-          {reviews.map((r) => (
-            <figure class="story" style="margin:0">
-              <blockquote>{r.text}</blockquote>
-              <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mountbell client</span></div></figcaption>
-            </figure>
-          ))}
-        </div>
-      </div>
-      {(site.heroVideoId || site.googleRating) && (
-        <div class="stories-foot">
-          {site.heroVideoId && <a class="arrow-link" href={`https://www.youtube.com/watch?v=${site.heroVideoId}`} target="_blank" rel="noopener">Watch Our Candidates’ Journeys <Icon name="play" size={17} /></a>}
-          {site.googleRating && <a class="tlink" href={site.googleRating.url} target="_blank" rel="noopener">{site.googleRating.score} from {site.googleRating.count} Google reviews</a>}
-        </div>
-      )}
     </div>
   </section>
 
@@ -388,6 +347,32 @@ const videoSchema = site.heroVideoId
       </div>
         <p style="margin:30px 0 0"><a class="arrow-link" href="/resources/avoid-visa-fraud/">How to Identify Fake Immigration Agents <Icon name="arrow" size={17} /></a></p>
       </div>
+    </div>
+  </section>
+
+  <!-- 11 Success stories -->
+  <section class="section" id="stories">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2 class="h2">Success Stories – From Kerala to Australia, Germany, Malta and Beyond</h2>
+        <p class="lede">A few words from clients who chose Mountbell as their trusted immigration consultants in Kerala, from the first consultation to the day they flew.</p>
+      </div>
+      <div class="stories" data-reveal-group>
+        {reviews.map((r) => (
+          <figure class="story" style="margin:0">
+            <blockquote>{r.text}</blockquote>
+            <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mountbell client</span></div></figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="stories-foot">
+        <a class="arrow-link" href="/success-stories/">Read All Success Stories <Icon name="arrow" size={17} /></a>
+        {site.googleRating && <a class="tlink" href={site.googleRating.url} target="_blank" rel="noopener">{site.googleRating.score} from {site.googleRating.count} Google reviews</a>}
+      </div>
+      <ul class="snaps" style="margin-top:40px" data-reveal-group>
+        {galleryPhotos.map((p) => <li><img src={p.src} alt={p.alt} width="480" height="480" loading="lazy" decoding="async" /></li>)}
+      </ul>
+      <p class="snaps-cap">From the Mountbell gallery.</p>
     </div>
   </section>
 
