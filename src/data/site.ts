@@ -200,11 +200,14 @@ export const professionGroups: { id: string; name: string; text: string; links: 
 
 export const services = [
   { name: 'PR Visa and Skilled Migration', href: '/services/pr-visa/', text: 'Points-based permanent residence handled by PR visa consultants in Kerala: skills assessment, expression of interest and state nomination.' },
+  { name: 'Skills Assessment', href: '/services/skills-assessment/', text: 'Preparing and lodging your application with assessing authorities (VETASSESS, ACS, TRA, AITSL, Engineers Australia) and credential recognition.' },
   { name: 'Work Visa', href: '/services/work-visa/', text: 'Employer-sponsored visas and work permits. We verify the job offer and the contract before your file is prepared.' },
+  { name: 'Dependent Visa', href: '/services/dependent-visa/', text: 'Spouse and child visas, family reunification and relationship evidence support.' },
+  { name: 'Visitor Visa', href: '/services/visitor-visa/', text: 'Tourist, business and family visit visas for Europe, Schengen, the UK, US, Canada and Australia.' },
   { name: 'Visa Documentation', href: '/services/visa-documentation/', text: 'Checklists, forms, medicals, appointments and interview preparation, checked before anything goes to an authority.' },
   { name: 'Nursing Careers', href: '/nursing-careers/', text: 'Registration, language exams and placement for nurses in Australia, Germany, Malta, the Maldives and Denmark.' },
   { name: 'Overseas Jobs', href: '/overseas-jobs/', text: 'Recruitment for verified employers under our government licence. You see the employer, salary and contract in writing first.' },
-  { name: 'Language Training', href: '/training/', text: 'Online German, Danish, IELTS, OET and English courses, run as our own training service.' },
+  { name: 'Language & Test Preparation', href: '/services/language-test-preparation/', text: 'OET, IELTS, PTE coaching and German classes A1 to B2 in Thrissur and online.' },
   { name: 'Free Immigration Consultation', href: '/free-immigration-assessment/', text: 'A one-to-one review of your profile against current rules: where you qualify, the route, the cost and the timeline.' },
 ];
 
@@ -212,11 +215,11 @@ export const services = [
 export const homeServices: { name: string; text: string; href?: string }[] = [
   { name: 'PR Visa and Skilled Migration', href: '/services/pr-visa/', text: 'Points-based permanent residence for you and your family, from skills assessment and expression of interest to state nomination and the final visa, with a skilled migration consultant in Kerala managing each stage.' },
   { name: 'Work Visa', href: '/services/work-visa/', text: 'Employer-sponsored visas and work permits. We verify the job offer, the employer and the contract in writing before your file is prepared, so you never pay for a job that does not exist.' },
-  { name: 'Skills Assessment', text: 'Credential recognition with the right body, such as AHPRA, Anerkennung or Malta registration, so your qualification and experience count abroad.' },
+  { name: 'Skills Assessment', href: '/services/skills-assessment/', text: 'Credential recognition with the right body, such as VETASSESS, ACS, Engineers Australia, TRA or AITSL, so your qualification and experience count abroad.' },
   { name: 'Visa Documentation', href: '/services/visa-documentation/', text: 'Checklists, forms, medicals, appointments and embassy interview preparation from visa consultants in Kerala who file these applications every week.' },
-  { name: 'Dependent and Family Visa', text: 'Spouse and children visas planned with your main application, so your family can join you without avoidable delays or a second round of paperwork.' },
-  { name: 'Visitor Visa', text: 'Tourist and business visit visas with a full document check before you apply, to reduce the risk of a refusal on your record.' },
-  { name: 'Language and Test Preparation', href: '/training/', text: 'Online German, Danish, IELTS and OET training from our own training service, planned so that your exam date and your application move together.' },
+  { name: 'Dependent and Family Visa', href: '/services/dependent-visa/', text: 'Spouse and children visas planned with your main application, so your family can join you without avoidable delays or a second round of paperwork.' },
+  { name: 'Visitor Visa', href: '/services/visitor-visa/', text: 'Tourist and business visit visas with a full document check before you apply, to reduce the risk of a refusal on your record.' },
+  { name: 'Language and Test Preparation', href: '/services/language-test-preparation/', text: 'OET, IELTS, PTE coaching and German classes A1 to B2 from our Thrissur centre and online, planned so that your exam date and your application move together.' },
   { name: 'Study Abroad', text: 'One focused service for students who want a course that leads to work rights and a realistic route to a job after graduation.' },
 ];
 
@@ -334,8 +337,12 @@ export const menu: { label: string; href: string; id: string; items?: { label: s
   { label: 'Services', id: 'services', href: '/services/', items: [
     { label: 'All services', href: '/services/' },
     { label: 'PR visa and skilled migration', href: '/services/pr-visa/' },
+    { label: 'Skills assessment', href: '/services/skills-assessment/' },
     { label: 'Work visa', href: '/services/work-visa/' },
+    { label: 'Dependent visa', href: '/services/dependent-visa/' },
+    { label: 'Visitor visa', href: '/services/visitor-visa/' },
     { label: 'Visa documentation', href: '/services/visa-documentation/' },
+    { label: 'Language & test preparation', href: '/services/language-test-preparation/' },
     { label: 'Free immigration consultation', href: '/free-immigration-assessment/' },
   ] },
   { label: 'Nursing Careers', id: 'nursing', href: '/nursing-careers/', items: [

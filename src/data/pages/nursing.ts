@@ -7,7 +7,7 @@ import { site, waLink } from '../site';
 
 // Blueprint pages that are not built yet. Links to them are left out until the page exists.
 const unbuilt = new Set([
-  '/tools/nurse-pathway-finder/', '/services/language-test-preparation/', '/services/dependent-visa/',
+  '/tools/nurse-pathway-finder/',
   '/resources/gnm-vs-bsc-nurses/', '/resources/oet-vs-ielts-for-nurses/', '/resources/ahpra-registration-for-indian-nurses/',
   '/resources/189-vs-190-vs-491/', '/resources/german-level-for-jobs-in-germany/', '/resources/anerkennung-for-nurses/',
   '/resources/malta-single-permit/', '/resources/malta-care-worker-vs-nurse/', '/resources/maldives-nursing-licensing-exam/',
