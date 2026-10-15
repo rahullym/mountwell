@@ -6,11 +6,12 @@ import { countries } from './countries';
 import { jobs } from './jobs';
 import { locations } from './locations';
 import { resources } from './resources';
+import { training } from './training';
 import { toolPages } from './tools';
 
 export { toolPages };
 
-export const pages: Page[] = [...about, ...services, ...nursing, ...countries, ...jobs, ...locations, ...resources];
+export const pages: Page[] = [...about, ...services, ...training, ...nursing, ...countries, ...jobs, ...locations, ...resources];
 
 const index = new Map<string, { path: string; crumb: string; description: string }>([...toolPages, ...pages].map((p) => [p.path, p]));
 

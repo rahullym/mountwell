@@ -19,7 +19,7 @@ export const services: Page[] = [
       { type: 'links', h2: 'Also part of your file', intro: 'These are handled by the same team as part of the services above. Ask your consultant about any of them.', items: [
         { title: 'Skills assessment', text: 'Preparing and lodging your application with the assessing authority for your occupation, and credential recognition for regulated professions.' },
         { title: 'Dependent and family visas', text: 'Including your spouse and children in your application, or bringing them to join you later.' },
-        { title: 'Language and test preparation', text: 'IELTS, OET, PTE and German coaching arranged alongside your paperwork.' },
+        { title: 'Language training', text: 'Online German, Danish, IELTS, OET and English courses from our own training service, planned alongside your paperwork.', href: '/training/' },
       ] },
     ],
     related: ['/countries/', '/how-it-works/', '/fees/'],

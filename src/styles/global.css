@@ -260,7 +260,7 @@ html:has(.pop[open]) { overflow: hidden; }
 
 /* ---------- Trust strip ---------- */
 .trust { background: var(--white); border-block: 1px solid var(--line); }
-.trust ul { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); }
+.trust ul { display: grid; grid-template-columns: 1fr 1.5fr repeat(2, 1fr); }
 .trust li { padding: 20px 24px; border-left: 1px solid var(--line-soft); display: grid; gap: 2px; align-content: center; }
 .trust li:first-child { border-left: 0; padding-left: 0; }
 .trust strong { font-family: var(--serif); font-size: 1.18rem; font-weight: 550; line-height: 1.2; }

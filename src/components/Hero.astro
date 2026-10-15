@@ -19,13 +19,27 @@ const arches = [
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
+      <p class="hero-est mono">{site.foundedYear && <>Established {site.foundedYear} <i aria-hidden="true"></i> </>}{site.presence}</p>
       <h1 class="display">Immigration Consultancy in Kerala <em>for PR, Work Visas and Jobs Abroad</em></h1>
-      <p class="lede">Mountbell is a licensed immigration consultancy in Kerala for nurses, healthcare staff, tradespeople, IT professionals and teachers who want to work or settle in Australia, Canada, Germany and five more countries. We advise from offices in Thrissur and Kochi under a recruiting licence from the Ministry of External Affairs.</p>
+      <p class="lede">{site.foundedYear && `Established in ${site.foundedYear}, `}Mountbell is a government-licensed immigration and overseas recruitment consultancy with a presence in {site.presence}. We help nurses, healthcare staff, tradespeople, IT professionals and teachers work or settle in Australia, Canada, Germany and five more countries.</p>
       <p class="hero-lang">Free first consultation in Malayalam and English. <span class="ml" lang="ml">മലയാളത്തിൽ സംസാരിക്കാം</span></p>
       <div class="hero-actions">
         <a class="btn btn-light" href="#eligibility" data-focus-form>Check My Eligibility <Icon name="arrow" size={18} /></a>
         <a class="btn btn-wa-dark" href={wa} target="_blank" rel="noopener"><Icon name="whatsapp" size={21} /> Talk to an Expert on WhatsApp</a>
       </div>
+      <div class="hero-proof">
+        <span class="seal"><Icon name="shield" size={24} /></span>
+        <p>
+          <b>Licensed by the {site.licence.authority}</b>
+          <span class="mono">{site.licence.type} {site.licence.number}</span>
+        </p>
+        <a href={site.licence.verifyUrl} target="_blank" rel="noopener">Verify on eMigrate <Icon name="arrow" size={15} /></a>
+      </div>
+      <ul class="hero-checks">
+        <li><Icon name="check" size={16} /> Fees in writing before you pay</li>
+        <li><Icon name="check" size={16} /> No job or visa guarantees</li>
+        <li><Icon name="check" size={16} /> Main branch in Kochi</li>
+      </ul>
       {site.heroVideoId && (
         <a class="hero-video" href={`https://www.youtube.com/watch?v=${site.heroVideoId}`} target="_blank" rel="noopener">
           <span class="play"><Icon name="play" size={18} /></span> Watch: how we work, in 90 seconds

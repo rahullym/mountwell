@@ -59,4 +59,6 @@ for (const [slug, { w, h, cx, cy }] of Object.entries(photos)) {
   const top = Math.max(0, Math.min(height - boxH, Math.round(height * cy - boxH / 2)));
   await sharp(upright).extract({ left, top, width: boxW, height: boxH }).resize(w, h).webp({ quality: 78 }).toFile(`public/img/photos/${slug}.webp`);
 }
+// Wide cut of the lead travel-day photo for the homepage Success Stories section.
+await sharp('assets-src/photos/candidates-departure-gate.jpg').rotate().resize(1120, 760, { fit: 'cover', position: 'bottom' }).webp({ quality: 76 }).toFile('public/img/photos/candidates-departure-gate-wide.webp');
 console.log('images built');

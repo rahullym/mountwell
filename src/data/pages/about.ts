@@ -1,7 +1,7 @@
 import type { Page } from './types';
 import { site, steps, reasons, teamPhotos, processPhoto } from '../site';
 
-const founded = site.foundedYear ? [['Founded', String(site.foundedYear)] as [string, string]] : [];
+const founded = site.foundedYear ? [['Established', String(site.foundedYear)] as [string, string]] : [];
 
 export const about: Page[] = [
   {
@@ -9,7 +9,7 @@ export const about: Page[] = [
     title: 'About Mountbell | Immigration Consultancy, Thrissur and Kochi',
     description: 'About Mountbell: a licensed immigration and overseas recruitment consultancy with offices in Thrissur and Kochi, registered as Mount Bell Global Studies.',
     h1: 'About Mountbell',
-    lede: 'Mountbell is an immigration and overseas recruitment consultancy headquartered in Thrissur, with a branch in Kochi. We help professionals from Kerala move abroad for work, training and permanent residence.',
+    lede: 'Mountbell is an immigration and overseas recruitment consultancy established in 2017, with its main branch in Kochi and a branch in Thrissur. We help professionals move abroad for work, training and permanent residence.',
     photo: teamPhotos[0],
     blocks: [
       { type: 'prose', h2: 'Who we are', body: [
@@ -18,9 +18,9 @@ export const about: Page[] = [
       ] },
       { type: 'facts', rows: [
         ['Legal name', site.legalName],
-        ['Head office', 'Thrissur, Kerala'],
-        ['Branch office', 'Kochi, Kerala'],
         ...founded,
+        ['Main branch', 'Kochi, Kerala'],
+        ['Branch office', 'Thrissur, Kerala'],
         ['Licence', `${site.licence.type}, ${site.licence.number}`],
         ['Destinations', 'Australia, Canada, Germany, Denmark, Malta, the Maldives, the Netherlands, Latvia, Poland, Lithuania and Bulgaria'],
         ['Languages', 'Malayalam and English'],
@@ -50,7 +50,7 @@ export const about: Page[] = [
         'The same consultant then coordinates everything that follows: document checks, the skills assessment or professional registration, language coaching, and the visa filing or employer interviews. Parents and spouses are welcome at any meeting.',
       ] },
       { type: 'facts', rows: [
-        ['Where we work', 'Thrissur (head office) and Kochi (branch)'],
+        ['Where we work', 'Kochi (main branch) and Thrissur (branch)'],
         ['Languages', 'Malayalam and English'],
         ['Meetings', 'In person, by phone or by video call'],
       ] },

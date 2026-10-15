@@ -25,7 +25,7 @@ export const locations: Page[] = [
       { type: 'offices', h2: 'Our offices' },
       { type: 'links', h2: 'Areas we serve', intro: `We meet clients from ${site.areasServed.join(', ')} and every other district at our two offices, and work with people elsewhere in India and abroad by phone and video call.`, items: cities.map((c) => ({
         title: `Immigration consultants in ${c.city}`,
-        text: c.city === 'Thrissur' ? 'Our head office, near Ashwini Junction.' : c.city === 'Kochi' ? 'Our branch office on Edapally Road, Palarivattom.' : `How people in ${c.city} work with us.`,
+        text: c.city === 'Thrissur' ? 'Our branch office, near Ashwini Junction.' : c.city === 'Kochi' ? 'Our main branch on Edapally Road, Palarivattom.' : `How people in ${c.city} work with us.`,
         href: c.href,
       })) },
       { type: 'form', h2: 'Send an enquiry' },
@@ -33,11 +33,11 @@ export const locations: Page[] = [
   },
   {
     path: '/immigration-consultants-thrissur/', parent: '/contact/', crumb: 'Thrissur',
-    title: 'Immigration Consultants in Thrissur | Mountbell Head Office',
-    description: 'Immigration consultants in Thrissur: Mountbell’s head office near Ashwini Junction. PR, work visa and overseas job consultations in Malayalam and English.',
-    label: 'Head office',
+    title: 'Immigration Consultants in Thrissur | Mountbell Thrissur Office',
+    description: 'Immigration consultants in Thrissur: Mountbell’s Thrissur branch near Ashwini Junction. PR, work visa and overseas job consultations in Malayalam and English.',
+    label: 'Branch office',
     h1: 'Immigration Consultants in Thrissur',
-    lede: 'Mountbell’s head office is at the Fair Trade Center on TUDA Road, by Ashwini Junction. Meet a consultant face to face and bring your family along.',
+    lede: 'Mountbell’s Thrissur branch is at the Fair Trade Center on TUDA Road, by Ashwini Junction. Meet a consultant face to face and bring your family along.',
     wa: 'Hi Mountbell, I would like to visit the Thrissur office.',
     blocks: [
       { type: 'offices', city: 'Thrissur' },
@@ -56,16 +56,16 @@ export const locations: Page[] = [
   },
   {
     path: '/immigration-consultants-kochi/', parent: '/contact/', crumb: 'Kochi',
-    title: 'Immigration Consultants in Kochi | Mountbell Kochi Office',
-    description: 'Immigration consultants in Kochi: Mountbell’s branch office on Edapally Road, Palarivattom. PR, work visa and overseas job consultations for Ernakulam.',
-    label: 'Branch office',
+    title: 'Immigration Consultants in Kochi | Mountbell Main Branch',
+    description: 'Immigration consultants in Kochi: Mountbell’s main branch on Edapally Road, Palarivattom. PR, work visa and overseas job consultations for Ernakulam.',
+    label: 'Main branch',
     h1: 'Immigration Consultants in Kochi',
-    lede: 'Mountbell’s Kochi office is on the fifth floor of Mathewsons Centre Point on Edapally Road, at Metro Pillar 485 in Palarivattom. It serves Ernakulam and the districts to the south.',
+    lede: 'Mountbell’s main branch is on the fifth floor of Mathewsons Centre Point on Edapally Road, at Metro Pillar 485 in Palarivattom. It serves Ernakulam and the districts to the south.',
     wa: 'Hi Mountbell, I would like to visit the Kochi office.',
     blocks: [
       { type: 'offices', city: 'Kochi' },
       { type: 'prose', h2: 'What you can do at the Kochi office', body: [
-        'You can book a free eligibility assessment and start a PR, work visa, nursing or overseas job file here, with the same services as our Thrissur head office.',
+        'You can book a free eligibility assessment and start a PR, work visa, nursing or overseas job file here. Kochi is Mountbell’s main branch, and every service is handled from this office.',
         'The office is on the metro corridor between Palarivattom and Edapally, which makes it straightforward to reach from most of Ernakulam, and from Alappuzha, Kottayam and Idukki by road or rail.',
       ] },
       { type: 'links', h2: 'Start here', items: [
@@ -89,7 +89,7 @@ export const locations: Page[] = [
         { title: 'Consultation by phone or video', text: 'The free first assessment does not need a visit. Share your certificates as photos or scans beforehand.' },
         { title: 'Documents', text: 'Checklists and document reviews are handled online. We tell you in advance if an original is needed.' },
         { title: 'Visit Kochi when it helps', text: 'Our Kochi office in Palarivattom is the nearest. Many families prefer to come once, together, before a decision is made.' },
-        { title: 'Thrissur is open to you too', text: 'If Thrissur suits you better, our head office offers the same services.' },
+        { title: 'Thrissur is open to you too', text: 'If Thrissur suits you better, our branch there offers the same services.' },
       ] },
       { type: 'offices', h2: 'Nearest office', city: 'Kochi' },
       { type: 'links', h2: 'What people from Kottayam ask us about', items: [

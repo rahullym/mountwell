@@ -24,7 +24,7 @@ export const site = {
   formEndpoint: '',
 
   // Verified figures only. null = not shown.
-  foundedYear: null as number | null,
+  foundedYear: 2017 as number | null,
   founder: null as { name: string; role: string } | null,
   peoplePlaced: null as string | null,
   googleRating: null as { score: string; count: string; url: string } | null,
@@ -37,20 +37,15 @@ export const site = {
     youtube: 'https://www.youtube.com/@MountBellGlobalStudies',
   },
 
+  // Countries the company operates in, as the client wants it presented.
+  presence: 'India and the UAE',
+
+  // Kochi is listed first and is always the main branch: the MEA licence authorises the Kochi office.
+  // The UAE office is added here once the client sends its address.
   offices: [
     {
-      city: 'Thrissur',
-      label: 'Head office',
-      lines: ['Fair Trade Center, TUDA Road', 'Ashwini Junction', 'Thrissur, Kerala 680022'],
-      street: 'Fair Trade Center, TUDA Road, Ashwini Junction',
-      postalCode: '680022',
-      phones: [{ display: '+91 487 222 1317', tel: '+914872221317' }],
-      hours: null as string | null,
-      mapQuery: 'Fair Trade Center, TUDA Road, Ashwini Junction, Thrissur, Kerala 680022',
-    },
-    {
       city: 'Kochi',
-      label: 'Branch office',
+      label: 'Main branch',
       lines: ['Mathewsons Centre Point, 5th Floor', 'Metro Pillar No. 485, Edapally Road', 'Palarivattom P.O., Mamangalam', 'Kochi, Kerala 682025'],
       street: 'Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Edapally Road, Mamangalam',
       postalCode: '682025',
@@ -60,6 +55,16 @@ export const site = {
       ],
       hours: null as string | null,
       mapQuery: 'Mathewsons Centre Point, Metro Pillar No. 485, Edapally Road, Mamangalam, Kochi, Kerala 682025',
+    },
+    {
+      city: 'Thrissur',
+      label: 'Branch office',
+      lines: ['Fair Trade Center, TUDA Road', 'Ashwini Junction', 'Thrissur, Kerala 680022'],
+      street: 'Fair Trade Center, TUDA Road, Ashwini Junction',
+      postalCode: '680022',
+      phones: [{ display: '+91 487 222 1317', tel: '+914872221317' }],
+      hours: null as string | null,
+      mapQuery: 'Fair Trade Center, TUDA Road, Ashwini Junction, Thrissur, Kerala 680022',
     },
   ],
 
@@ -199,6 +204,7 @@ export const services = [
   { name: 'Visa Documentation', href: '/services/visa-documentation/', text: 'Checklists, forms, medicals, appointments and interview preparation, checked before anything goes to an authority.' },
   { name: 'Nursing Careers', href: '/nursing-careers/', text: 'Registration, language exams and placement for nurses in Australia, Germany, Malta, the Maldives and Denmark.' },
   { name: 'Overseas Jobs', href: '/overseas-jobs/', text: 'Recruitment for verified employers under our government licence. You see the employer, salary and contract in writing first.' },
+  { name: 'Language Training', href: '/training/', text: 'Online German, Danish, IELTS, OET and English courses, run as our own training service.' },
   { name: 'Free Immigration Consultation', href: '/free-immigration-assessment/', text: 'A one-to-one review of your profile against current rules: where you qualify, the route, the cost and the timeline.' },
 ];
 
@@ -210,7 +216,7 @@ export const homeServices: { name: string; text: string; href?: string }[] = [
   { name: 'Visa Documentation', href: '/services/visa-documentation/', text: 'Checklists, forms, medicals, appointments and embassy interview preparation from visa consultants in Kerala who file these applications every week.' },
   { name: 'Dependent and Family Visa', text: 'Spouse and children visas planned with your main application, so your family can join you without avoidable delays or a second round of paperwork.' },
   { name: 'Visitor Visa', text: 'Tourist and business visit visas with a full document check before you apply, to reduce the risk of a refusal on your record.' },
-  { name: 'Language and Test Preparation', text: 'OET, IELTS, PTE and German coaching run by the same team that handles your paperwork, so your exam date and your application move together.' },
+  { name: 'Language and Test Preparation', href: '/training/', text: 'Online German, Danish, IELTS and OET training from our own training service, planned so that your exam date and your application move together.' },
   { name: 'Study Abroad', text: 'One focused service for students who want a course that leads to work rights and a realistic route to a job after graduation.' },
 ];
 
@@ -221,6 +227,22 @@ export const nursing = [
   { img: 'denmark', place: 'Denmark', text: 'Danish authorisation, the language requirement and employer matching.', href: '/nursing-careers/denmark/' },
   { img: 'malta', place: 'Malta', text: 'Council registration and the bridging programme, in an English-speaking EU country.', href: '/nursing-careers/malta/' },
   { img: 'maldives', place: 'Maldives', text: 'Hospital and clinic jobs a short flight from Kerala.', href: '/nursing-careers/maldives/' },
+];
+
+// Online language training, run as Mountbell's own educational service. German and Danish lead
+// because they feed the overseas employment programmes. `native` is the language's own name.
+export const training: { id: string; name: string; native?: string; text: string; links?: { label: string; href: string }[] }[] = [
+  { id: 'german', name: 'German', native: 'Deutsch', text: 'For nurses, Ausbildung trainees and Opportunity Card applicants preparing for work in Germany.', links: [
+    { label: 'Nurses in Germany', href: '/nursing-careers/germany/' },
+    { label: 'Ausbildung', href: '/countries/germany/ausbildung/' },
+    { label: 'Opportunity Card', href: '/countries/germany/opportunity-card/' },
+  ] },
+  { id: 'danish', name: 'Danish', native: 'Dansk', text: 'For nurses and dentists working towards Danish authorisation and a job in Denmark.', links: [
+    { label: 'Nurses in Denmark', href: '/nursing-careers/denmark/' },
+  ] },
+  { id: 'ielts', name: 'IELTS preparation', text: 'An English test accepted for skilled migration and professional registration.' },
+  { id: 'oet', name: 'OET preparation', text: 'The English test built for nurses and other healthcare professionals.' },
+  { id: 'english', name: 'English language and crash courses', text: 'General English, and short intensive courses when you need to prepare quickly.' },
 ];
 
 export const supportChips = [
@@ -242,7 +264,7 @@ export const reasons = [
   { title: 'Honest eligibility advice', text: 'If you do not qualify, we say so at the first meeting. We never promise a job or a visa to win a client.' },
   { title: 'Healthcare and skilled-trade specialists', text: 'Our programmes are built around nurses, therapists, technicians and tradespeople, not general student admissions.' },
   { title: 'In-house language support', text: 'OET, IELTS, PTE and German preparation is arranged by the same team that handles your file.' },
-  { title: 'Face-to-face offices', text: 'Unlike an online-only overseas consultancy in Kerala, we let you meet your consultant in Thrissur or Kochi and bring your family along.' },
+  { title: 'Face-to-face offices', text: 'Unlike an online-only overseas consultancy in Kerala, we let you meet your consultant in Kochi or Thrissur and bring your family along.' },
   { title: 'Transparent Fees', text: 'Our immigration services in Kerala are priced per programme. Before you pay anything, you get a written fee schedule showing our service fee, what it includes, the government and exam charges paid separately, and the refund terms. No hidden charges.' },
 ];
 
@@ -291,7 +313,7 @@ export const faqs: { q: string; a: string; href?: string; link?: string }[] = [
   },
   {
     q: 'Is the first consultation free, and can I attend online?',
-    a: 'Yes. As an immigration consultancy in Kerala with offices in Thrissur and Kochi, we offer a free first consultation in person, by phone or by video call, including for people in other states or already working abroad.',
+    a: 'Yes. As an immigration consultancy in Kerala with offices in Kochi and Thrissur, we offer a free first consultation in person, by phone or by video call, including for people in other states or already working abroad.',
     href: '/free-immigration-assessment/', link: 'Book a free consultation',
   },
   {
@@ -329,6 +351,7 @@ export const menu: { label: string; href: string; id: string; items?: { label: s
     { label: 'All overseas jobs', href: '/overseas-jobs/' },
     ...professionGroups.map((g) => ({ label: g.name, href: `/overseas-jobs/#${g.id}` })),
   ] },
+  { label: 'Training', id: 'training', href: '/training/' },
   { label: 'Tools', id: 'tools', href: '/tools/', items: [
     { label: 'All free calculators', href: '/tools/' },
     { label: 'Immigration eligibility calculator', href: '/tools/immigration-eligibility-checker/' },
@@ -382,6 +405,7 @@ export const processPhoto = { src: '/img/photos/office-consultation.webp', w: 10
 // Photo of nurses for the Nursing Careers section (stock, credited on /image-credits/).
 // null = the section shows without a photo.
 export const nursingPhoto = { src: '/img/photos/nurse-portrait.webp', w: 1000, h: 1250, alt: 'Smiling nurse in blue scrubs holding a stethoscope in a hospital corridor' } as { src: string; w: number; h: number; alt: string } | null;
+export const storyPhoto = { src: '/img/photos/candidates-departure-gate-wide.webp', w: 1120, h: 760, alt: 'Group of women with luggage at an airport departure gate' };
 export const galleryPhotos = [
   { src: '/img/photos/candidates-departure-gate.webp', alt: 'Group of women with luggage at an airport departure gate' },
   { src: '/img/photos/candidates-trolleys.webp', alt: 'Four travellers with loaded luggage trolleys at an airport' },

@@ -3,15 +3,15 @@ import Base from '../layouts/Base.astro';
 import Icon from './Icon.astro';
 import Hero from './Hero.astro';
 import FinalCta from './FinalCta.astro';
-import { site, countries, goals, professionGroups, homeServices, supportChips, nursing, steps, reasons, reviews, updates, faqs, waLink, photoAlt, teamPhotos, processPhoto, nursingPhoto, galleryPhotos } from '../data/site';
+import { site, countries, goals, professionGroups, homeServices, supportChips, nursing, training, steps, reasons, reviews, updates, faqs, waLink, photoAlt, teamPhotos, processPhoto, nursingPhoto, storyPhoto, galleryPhotos } from '../data/site';
 
 const title = 'Immigration Consultancy in Kerala – PR & Visas | Mountbell';
-const description = 'Mountbell is an MEA-licensed immigration consultancy in Kerala for PR, work visas and nursing careers abroad. Offices in Thrissur and Kochi.';
+const description = 'Established in 2017, Mountbell is an MEA-licensed immigration consultancy for PR, work visas and nursing careers abroad. Main branch in Kochi, Kerala.';
 const wa = waLink('Hi Mountbell, I would like to talk to an expert about working or migrating abroad.');
 // One accent colour per destination, used by the pathway explorer and the programme cards.
 const accent: Record<string, string> = { australia: 'var(--coral)', canada: 'var(--err)', germany: 'var(--amber-deep)', denmark: 'var(--sky)', malta: 'var(--teal)', maldives: 'var(--green-deep)', netherlands: 'var(--blue)', europe: 'var(--plum)' };
 const places = countries.map((c) => ({ ...c, slug: c.name.toLowerCase() }));
-const officeName: Record<string, string> = { Thrissur: 'Thrissur Head Office', Kochi: 'Kochi Branch Office' };
+const officeName: Record<string, string> = { Kochi: 'Kochi Main Branch', Thrissur: 'Thrissur Branch' };
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -31,22 +31,60 @@ const videoSchema = site.heroVideoId
   <section class="trust" aria-label="Why you can trust Mountbell">
     <div class="wrap">
       <ul data-reveal-group>
-        <li>
-          <strong>MEA licensed recruiting agent</strong>
-          <span class="mono">Lic. {site.licence.number}</span>
-        </li>
+        {site.foundedYear && <li><strong>Established {site.foundedYear}</strong><span>{new Date().getFullYear() - site.foundedYear} years of visa and recruitment experience</span></li>}
+        <li><strong>Check us before you pay</strong><span>Search our licence number on the government’s eMigrate portal, and get every fee in writing first</span></li>
         {site.googleRating && (
           <li>
             <strong>{site.googleRating.score} <span class="stars" aria-hidden="true">★★★★★</span></strong>
             <span>{site.googleRating.count} Google reviews</span>
           </li>
         )}
-        {site.foundedYear && <li><strong>{new Date().getFullYear() - site.foundedYear}+ years</strong><span>Guiding Kerala since {site.foundedYear}</span></li>}
         {site.peoplePlaced && <li><strong>{site.peoplePlaced}</strong><span>People placed or migrated</span></li>}
-        <li><strong>8 countries</strong><span>20+ job and migration programmes</span></li>
-        {!site.googleRating && <li><strong>2 offices</strong><span>Thrissur and Kochi, face to face</span></li>}
+        <li><strong>8 countries</strong><span>PR, work visa and overseas job programmes</span></li>
+        {!site.googleRating && <li><strong>{site.presence}</strong><span>Main branch in Kochi · Branch in Thrissur</span></li>}
         {!site.foundedYear && !site.peoplePlaced && <li><strong>Malayalam · English</strong><span>Free first consultation</span></li>}
       </ul>
+    </div>
+  </section>
+
+  <!-- 03B Success stories -->
+  <section class="section section-white" id="stories">
+    <div class="wrap">
+      <div class="section-head split" data-reveal>
+        <div>
+          <h2 class="h2">Success Stories – From Kerala to Australia, Germany, Malta and Beyond</h2>
+          <p class="lede">Candidates on the day they travelled, and a few words from clients who chose Mountbell, from the first consultation to the day they flew.</p>
+        </div>
+        <a class="arrow-link" href="/success-stories/">Read All Success Stories <Icon name="arrow" size={17} /></a>
+      </div>
+      <div class="track">
+        <div class="track-art" data-reveal>
+          <figure class="track-lead">
+            <img src={storyPhoto.src} alt={storyPhoto.alt} width={storyPhoto.w} height={storyPhoto.h} loading="lazy" decoding="async" />
+            <figcaption>
+              {site.peoplePlaced && <b>{site.peoplePlaced}</b>}
+              <span>{site.peoplePlaced ? 'candidates placed or migrated' : 'Travel day, from the Mountbell gallery'}</span>
+            </figcaption>
+          </figure>
+          <ul class="track-row">
+            {galleryPhotos.slice(1).map((p) => <li><img src={p.src} alt={p.alt} width="480" height="480" loading="lazy" decoding="async" /></li>)}
+          </ul>
+        </div>
+        <div class="track-quotes" data-reveal-group>
+          {reviews.map((r) => (
+            <figure class="story" style="margin:0">
+              <blockquote>{r.text}</blockquote>
+              <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mountbell client</span></div></figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+      {(site.heroVideoId || site.googleRating) && (
+        <div class="stories-foot">
+          {site.heroVideoId && <a class="arrow-link" href={`https://www.youtube.com/watch?v=${site.heroVideoId}`} target="_blank" rel="noopener">Watch Our Candidates’ Journeys <Icon name="play" size={17} /></a>}
+          {site.googleRating && <a class="tlink" href={site.googleRating.url} target="_blank" rel="noopener">{site.googleRating.score} from {site.googleRating.count} Google reviews</a>}
+        </div>
+      )}
     </div>
   </section>
 
@@ -64,14 +102,15 @@ const videoSchema = site.heroVideoId
       </div>
 
       <div class="who-body" data-reveal style="--n:1">
-        <h2 class="h2">Mountbell – Trusted Immigration and Overseas Migration Consultants in Thrissur, Kerala</h2>
-        <p class="who-lead">Mountbell is a Thrissur-headquartered immigration consultancy in Kerala that helps professionals move to Australia, Canada, Germany, Denmark, Malta, the Maldives, the Netherlands and other European countries through skilled migration, work visa and overseas job programmes.</p>
-        <p class="muted">We work as immigration consultants in Thrissur, with a second office in Kochi, and recruit for overseas employers under licence {site.licence.number}, issued to {site.legalName}. Our team specialises in healthcare, skilled trades, IT and teaching, the professions most people in Kerala want to take abroad.</p>
+        <h2 class="h2">Mountbell – Trusted Immigration and Overseas Migration Consultants, Established in 2017</h2>
+        <p class="who-lead">Established in {site.foundedYear}, Mountbell is an immigration and overseas recruitment consultancy with a presence in {site.presence}. We help professionals move to Australia, Canada, Germany, Denmark, Malta, the Maldives, the Netherlands and other European countries through skilled migration, work visa and overseas job programmes.</p>
+        <p class="muted">Our main branch is in Kochi, with a second branch in Thrissur, and we recruit for overseas employers under licence {site.licence.number}, issued to {site.legalName}. Our team specialises in healthcare, skilled trades, IT and teaching.</p>
         <p class="muted">Every client gets a named consultant, a straight answer about what is possible and fees in writing before any payment. That is why families comparing overseas immigration consultants in Kerala recommend us to relatives who want to migrate abroad from Kerala.</p>
         <dl class="who-facts">
-          <div><dt>Head office</dt><dd>Thrissur</dd></div>
-          <div><dt>Branch</dt><dd>Kochi</dd></div>
-          {site.foundedYear && <div><dt>Founded</dt><dd>{site.foundedYear}</dd></div>}
+          {site.foundedYear && <div><dt>Established</dt><dd>{site.foundedYear}</dd></div>}
+          <div><dt>Main branch</dt><dd>Kochi</dd></div>
+          <div><dt>Branch</dt><dd>Thrissur</dd></div>
+          <div><dt>Presence</dt><dd>{site.presence}</dd></div>
           {site.founder && <div><dt>{site.founder.role}</dt><dd>{site.founder.name}</dd></div>}
           <div><dt>We speak</dt><dd>Malayalam, English</dd></div>
         </dl>
@@ -198,6 +237,43 @@ const videoSchema = site.heroVideoId
     </div>
   </section>
 
+  <!-- 06B Language training -->
+  <section class="section section-white" id="training">
+    <div class="wrap train">
+      <div class="train-copy" data-reveal>
+        <div class="section-head">
+          <h2 class="h2">Online Language Training for Work and Migration Abroad</h2>
+          <p class="lede">The language exam often decides when you can travel. Mountbell runs its language training as a dedicated educational service, taught online, so your classes and your application are planned together.</p>
+        </div>
+        <div class="train-acts">
+          <a class="btn btn-primary" href="/training/">Explore Training <Icon name="arrow" size={18} /></a>
+          <a class="arrow-link" href={waLink('Hi Mountbell, I would like to know about your language training courses.')} target="_blank" rel="noopener">Ask About a Course <Icon name="arrow" size={17} /></a>
+        </div>
+      </div>
+      <div data-reveal style="--n:1">
+        <div class="train-lead">
+          {training.filter((t) => t.native).map((t) => (
+            <article>
+              <span class="mono">{t.native} · Online</span>
+              <h3><a href={`/training/#${t.id}`}>{t.name} Language Training</a></h3>
+              <p>{t.text}</p>
+              <div class="chips">{t.links!.map((l) => <a class="chip" href={l.href}>{l.label}</a>)}</div>
+            </article>
+          ))}
+        </div>
+        <ul class="train-more">
+          {training.filter((t) => !t.native).map((t) => (
+            <li>
+              <h3><a href={`/training/#${t.id}`}>{t.name}</a></h3>
+              <p>{t.text}</p>
+              <span class="go"><Icon name="arrow" size={18} /></span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- 07 Eligibility tools -->
   <section class="section" id="tools">
     <div class="wrap">
@@ -232,7 +308,7 @@ const videoSchema = site.heroVideoId
     <div class="wrap proc">
       <figure class="proc-art" data-reveal>
         <img src={processPhoto.src} alt={processPhoto.alt} width={processPhoto.w} height={processPhoto.h} loading="lazy" decoding="async" />
-        <figcaption class="mono">Kerala <Icon name="arrow" size={12} /> 8 countries</figcaption>
+        <figcaption class="mono">India <Icon name="arrow" size={12} /> 8 countries</figcaption>
       </figure>
       <div>
         <div class="section-head" data-reveal>
@@ -315,37 +391,11 @@ const videoSchema = site.heroVideoId
     </div>
   </section>
 
-  <!-- 11 Success stories -->
-  <section class="section" id="stories">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <h2 class="h2">Success Stories – From Kerala to Australia, Germany, Malta and Beyond</h2>
-        <p class="lede">A few words from clients who chose Mountbell as their trusted immigration consultants in Kerala, from the first consultation to the day they flew.</p>
-      </div>
-      <div class="stories" data-reveal-group>
-        {reviews.map((r) => (
-          <figure class="story" style="margin:0">
-            <blockquote>{r.text}</blockquote>
-            <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mountbell client</span></div></figcaption>
-          </figure>
-        ))}
-      </div>
-      <div class="stories-foot">
-        <a class="arrow-link" href="/success-stories/">Read All Success Stories <Icon name="arrow" size={17} /></a>
-        {site.googleRating && <a class="tlink" href={site.googleRating.url} target="_blank" rel="noopener">{site.googleRating.score} from {site.googleRating.count} Google reviews</a>}
-      </div>
-      <ul class="snaps" style="margin-top:40px" data-reveal-group>
-        {galleryPhotos.map((p) => <li><img src={p.src} alt={p.alt} width="480" height="480" loading="lazy" decoding="async" /></li>)}
-      </ul>
-      <p class="snaps-cap">From the Mountbell gallery.</p>
-    </div>
-  </section>
-
   <!-- 12 Offices -->
   <section class="section section-white" id="offices">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <h2 class="h2">Visit Our Offices in Thrissur and Kochi</h2>
+        <h2 class="h2">Visit Our Offices in Kochi and Thrissur</h2>
       </div>
       <div class="offices" data-reveal-group>
         {site.offices.map((o) => (
@@ -364,8 +414,8 @@ const videoSchema = site.heroVideoId
           </article>
         ))}
       </div>
-      <p class="svc-note">Both offices are run by the same team at our immigration consultancy in Kerala, offering immigration support for Keralites in all 14 districts, including {site.areasServed.slice(0, -1).join(', ')} and {site.areasServed.at(-1)}. People in other states, or already working abroad, can book an online consultation by phone or video call.</p>
-      <p class="svc-note" style="margin-top:12px"><a class="tlink" href="/immigration-consultants-thrissur/">Mountbell Thrissur office</a> &nbsp;·&nbsp; <a class="tlink" href="/immigration-consultants-kochi/">Mountbell Kochi office</a></p>
+      <p class="svc-note">Kochi is our main branch, and both offices are run by the same team. We meet clients from every district of Kerala, including {site.areasServed.slice(0, -1).join(', ')} and {site.areasServed.at(-1)}, and work with people across India and abroad by phone and video call.</p>
+      <p class="svc-note" style="margin-top:12px"><a class="tlink" href="/immigration-consultants-kochi/">Mountbell Kochi office</a> &nbsp;·&nbsp; <a class="tlink" href="/immigration-consultants-thrissur/">Mountbell Thrissur office</a></p>
     </div>
   </section>
 
@@ -411,7 +461,7 @@ const videoSchema = site.heroVideoId
   </section>
 
   <!-- 15 Final CTA -->
-  <FinalCta heading="Book Your Free Migration Eligibility Assessment Today" text={`Speak to Mountbell, a licensed immigration consultancy in Kerala, in person, by phone or on WhatsApp. Call ${site.phone.display}, visit our Thrissur or Kochi office, or fill in the short form and a consultant will contact you.`} submit="Book My Free Assessment" />
+  <FinalCta heading="Book Your Free Migration Eligibility Assessment Today" text={`Speak to Mountbell, a licensed immigration consultancy in Kerala, in person, by phone or on WhatsApp. Call ${site.phone.display}, visit our Kochi or Thrissur office, or fill in the short form and a consultant will contact you.`} submit="Book My Free Assessment" />
 </Base>
 
 <script>

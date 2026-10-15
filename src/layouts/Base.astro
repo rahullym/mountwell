@@ -34,7 +34,7 @@ const org = {
   ...(site.foundedYear ? { foundingDate: String(site.foundedYear) } : {}),
   ...(site.founder ? { founder: { '@type': 'Person', name: site.founder.name, jobTitle: site.founder.role } } : {}),
   knowsLanguage: ['ml', 'en'],
-  areaServed: { '@type': 'State', name: 'Kerala' },
+  areaServed: [{ '@type': 'Country', name: 'India' }, { '@type': 'Country', name: 'United Arab Emirates' }],
   hasCredential: {
     '@type': 'EducationalOccupationalCredential',
     credentialCategory: site.licence.type,
