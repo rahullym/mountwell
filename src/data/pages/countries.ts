@@ -93,7 +93,7 @@ export const countries: Page[] = [
           'Language: English or French; French adds points',
           'Best for: younger, highly educated applicants with strong English',
         ],
-        after: ['<a href="/countries/#canada">Canada overview &rarr;</a>'],
+        after: ['<a href="/countries/canada/">Canada country guide &rarr;</a>'],
       },
       {
         type: 'prose',
@@ -2280,5 +2280,449 @@ export const countries: Page[] = [
       },
     ],
     related: ['/countries/', '/services/', '/nursing-careers/'],
+  },
+  // 17. Canada Immigration Consultants in Kerala (Hub)
+  {
+    path: '/countries/canada/',
+    parent: '/countries/',
+    crumb: 'Canada',
+    img: 'canada',
+    accent: 'var(--coral)',
+    title: 'Canada Immigration Consultants in Kerala | Mountbell',
+    description: 'Canada immigration consultants in Kerala for PR, skilled worker and family routes. Check eligibility, costs and timelines with Mountbell, Thrissur & Kochi.',
+    label: 'Canada',
+    h1: 'Canada Immigration Consultants in Kerala – PR, Skilled Worker and Family Pathways',
+    lede: 'Canada immigration consultants in Kerala help you choose the right permanent residence route, build a complete application and avoid costly refusals. At Mountbell, our Thrissur and Kochi advisers guide professionals, tradespeople and families who want to migrate to Canada from Kerala, from the first profile check to landing day. Canada plans to admit 380,000 new permanent residents a year from 2026 to 2028, so a carefully prepared file matters more than ever.',
+    acts: { check: 'Book a free Canada profile check', wa: 'Request a call-back' },
+    blocks: [
+      {
+        type: 'prose',
+        body: [
+          '<strong>Quick answer: Can you get Canada PR from Kerala?</strong><br />Yes. Most Kerala applicants qualify through Express Entry, a Provincial Nominee Program or a regional programme. You generally need one year of skilled work experience, a valid language test result, an assessed education credential and proof of settlement funds. Canada immigration consultants in Kerala can confirm your best route in one free assessment.',
+        ],
+      },
+      {
+        type: 'facts',
+        h2: 'Canada at a Glance',
+        rows: [
+          ['Immigration authority', 'Immigration, Refugees and Citizenship Canada (IRCC)'],
+          ['Main PR routes', 'Express Entry, Provincial Nominee Program, Atlantic and rural programmes, family sponsorship'],
+          ['Accepted English tests', 'IELTS General Training, CELPIP-General, PTE Core'],
+          ['Minimum language (skilled worker)', 'CLB 7 in all four skills'],
+          ['Government fees per adult', 'CAD 1,590 (CAD 990 processing + CAD 600 RPRF)'],
+          ['Typical total timeline', '8 to 14 months, from test booking to visa'],
+          ['Family', 'Spouse and dependent children can be included'],
+          ['PR target', '380,000 per year, 2026 to 2028'],
+          ['Local support', 'Canada immigration consultants in Kerala at Mountbell, Thrissur and Kochi'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Why Work With Canada Immigration Consultants in Kerala?',
+        body: [
+          'A missing reference letter, an expired test score or a gap between your profile and your documents can lead to refusal and lost fees. Experienced Canada immigration consultants in Kerala understand both sides of the journey: the Indian paperwork you collect here and the Canada immigration requirements set by IRCC.',
+          'As Canada immigration consultants in Kerala, Mountbell assesses your profile honestly, matches you to a realistic pathway and prepares your document file. Where formal representation before IRCC is required, your file is handled by a Regulated Canadian Immigration Consultant, a CICC licensed representative, as Canadian law requires.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Canada PR Pathways for Kerala Applicants',
+        intro: 'Most approvals for Canada PR from India come through economic programmes, and Canada economic immigration is set to make up about 64% of admissions by 2027–2028. Our Canada immigration consultants in Kerala compare each route against your age, occupation, language score and family.',
+        body: [],
+        list: [
+          '<strong>Express Entry:</strong> suits skilled graduates and professionals. Candidates join a ranked online pool, and category draws favour healthcare, trades, STEM and French.',
+          '<strong>Provincial Nominee Program:</strong> suits profiles that match a province’s labour needs. A nomination greatly improves selection chances.',
+          '<strong>Atlantic Immigration Program:</strong> suits candidates with a job offer from an employer in one of the four Atlantic provinces.',
+          '<strong>Rural Community Immigration Pilot:</strong> suits workers with a job offer in a participating rural community, plus a community recommendation.',
+          '<strong>Quebec skilled worker immigration:</strong> suits French speakers settling in Quebec. Quebec selects first, then federal PR follows.',
+          '<strong>Canada family sponsorship:</strong> suits relatives of Canadian citizens or PRs, who sponsor the applicant.',
+        ],
+        after: [
+          '<a href="/countries/canada/express-entry/">Canada Express Entry Guide &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Canada PR Eligibility: Who Can Apply?',
+        intro: 'Canada PR eligibility for skilled workers rests on four building blocks, and our Canada immigration consultants in Kerala check each one before you pay for tests.',
+        body: [],
+        list: [
+          'Work experience: at least one year of continuous, paid, skilled work in the last ten years for Canada skilled worker immigration.',
+          'Language: the Canadian Language Benchmark (CLB) is the yardstick. Plan CELPIP and IELTS for Canada early; CLB 7 is the usual minimum and higher scores add many points.',
+          'Education: foreign degrees must be assessed by an approved body.',
+          'Funds: settlement funds are needed unless you hold a valid job offer or qualify under the Canadian Experience Class.',
+        ],
+        after: [
+          'There is no fixed Canada immigration age limit, but ranking points peak between 20 and 29 and then fall, so Canada immigration consultants in Kerala usually advise applying sooner. French ability earns extra points, and Francophone immigration to Canada has strong priority in 2026.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Occupations with an Advantage in 2026',
+        body: [
+          'Category draws favour three groups common in Kerala. Canada immigration for healthcare workers suits nurses, physiotherapists and allied health staff. Canada skilled trades immigration covers welders, electricians and carpenters. Canada immigration for IT professionals falls under STEM. Most 2026 categories need 12 months of recent experience, and our Canada immigration consultants in Kerala confirm which one fits you.',
+        ],
+        after: ['<a href="/nursing-careers/">Nursing Careers hub &rarr;</a>'],
+      },
+      {
+        type: 'steps',
+        h2: 'Canada PR Process from Kerala: Steps and Timeline',
+        intro: 'The Canada PR process from Kerala follows a clear sequence, and our Canada immigration consultants in Kerala track every deadline. Times are typical ranges, not guarantees.',
+        items: [
+          { title: 'Step 1: Free assessment (1–2 working days)', text: 'Canada immigration consultants in Kerala shortlist your routes.' },
+          { title: 'Step 2: Tests and credentials (1–3 months)', text: 'Language test and credential assessment.' },
+          { title: 'Step 3: Profile submission (1–2 weeks)', text: 'Profile created and checked.' },
+          { title: 'Step 4: Invitation (depends on score and draws)', text: 'Canada PR invitation to apply or a nomination from a province.' },
+          { title: 'Step 5: PR application (within 60 days of invitation)', text: 'Full application filed online.' },
+          { title: 'Step 6: Health and identity (within 30 days of request)', text: 'Canada biometrics and Canada PR medical examination.' },
+          { title: 'Step 7: IRCC processing (about 6 months for Express Entry)', text: 'Security and eligibility checks.' },
+          { title: 'Step 8: Approval and landing (before documents expire)', text: 'PR confirmation and visa; Canada PR landing process at entry.' },
+        ],
+        after: [
+          'Canada PR processing time depends on the programme and how complete your file is. Province-led routes add months, so Canada immigration consultants in Kerala build buffer time into your plan.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Canada PR Documents Checklist',
+        intro: 'A strong Canada PR documents checklist prevents common refusals; our Canada immigration consultants in Kerala review every page before upload.',
+        body: [],
+        list: [
+          'Valid passport with copies of all used pages',
+          'Language test result within its validity period',
+          'Educational credential assessment report',
+          'Reference letters with duties, hours, salary and dates',
+          'Bank statements proving settlement funds',
+          'Police certificates for countries lived in for six months or more',
+          'Marriage and birth certificates for family members',
+        ],
+        after: [
+          'Attestation and translations are handled by the same Canada immigration consultants in Kerala through our Visa Documentation service.',
+          '<a href="/services/visa-documentation/">Visa Documentation &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Canada Immigration Cost from India',
+        intro: 'Planning the full Canada immigration cost from India avoids surprises. The government Canada PR fees below took effect on 30 April 2026, and Canada immigration consultants in Kerala recheck them before you pay.',
+        body: [],
+        list: [
+          'PR processing fee: CAD 990 per adult',
+          'Right of Permanent Residence Fee: CAD 600 per adult',
+          'Processing fee: CAD 270 per dependent child',
+          'Biometrics: CAD 85 per person or CAD 170 per family',
+          'Language test, credential assessment and medical: paid to third-party providers',
+          'Settlement funds: not a fee; you keep this money',
+        ],
+        after: [
+          'Mountbell shares its own fee in writing on our Fees page.',
+          '<a href="/fees/">Fees &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Canada PR With Spouse and Children',
+        body: [
+          'Most programmes allow Canada PR with spouse and children in one application. Dependent children are generally under 22 and unmarried, and your spouse’s language score can add points. Our Canada immigration consultants in Kerala plan the family file together, and our Dependent and Family Visa team covers sponsorship.',
+        ],
+        after: ['<a href="/services/dependent-visa/">Dependent Visa &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Life After Landing: Jobs, Provinces and Rights',
+        body: [
+          'Canada permanent residency for Indians brings the right to live and work anywhere in Canada, public healthcare and a route to citizenship after 1,095 days of physical presence within five years. The Canada job market for Indians is strongest in healthcare, trades, technology and transport. The best province in Canada for Indians depends on your occupation: Ontario and British Columbia offer large job markets, Alberta lower living costs, and Atlantic provinces employer-led routes. Our Canada immigration consultants in Kerala discuss these trade-offs before you choose a province.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: '2026 Updates to Watch',
+        body: [],
+        list: [
+          'The Canada Immigration Levels Plan holds PR admissions steady at 380,000 a year for 2026–2028.',
+          'Temporary resident numbers are falling, shifting focus to PR-ready candidates.',
+          'New Express Entry categories arrived in February 2026; French-language draws led invitations in the first half.',
+          'Job offers no longer add Express Entry ranking points (since March 2025).',
+        ],
+      },
+      {
+        type: 'checks',
+        h2: 'Why Choose Mountbell as Your Canada Immigration Consultants in Kerala',
+        intro: 'Clients comparing Canada PR consultants in Kerala choose Mountbell’s Canada immigration consultants in Kerala for clear advice and accountability.',
+        items: [
+          { title: 'Local Kerala offices', text: 'Canada immigration consultants in Kerala at two real offices, Thrissur and Kochi.' },
+          { title: 'Government licensed', text: 'Ministry of External Affairs recruiting-agent licence B-1921/KER/PART/100/5/10348/2023.' },
+          { title: 'RCIC representation', text: 'Formal IRCC representation through a licensed RCIC partner.' },
+          { title: 'Transparent pricing', text: 'Written fee stages and no guaranteed-visa promises.' },
+          { title: 'Bilingual advisers', text: 'Malayalam- and English-speaking advisers.' },
+        ],
+        after: ['<a href="/free-immigration-assessment/">Free assessment &rarr;</a> &nbsp;·&nbsp; <a href="/success-stories/">Success stories &rarr;</a>'],
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'How do I choose the right Canada immigration consultants in Kerala?',
+            a: 'Choose Canada immigration consultants in Kerala with a physical office, written fees and verifiable licences. For IRCC representation, confirm the adviser is an RCIC on the CICC public register. Avoid anyone promising a guaranteed visa.',
+          },
+          {
+            q: 'Can I get Canada PR without a job offer?',
+            a: 'Yes. Most Express Entry candidates are invited without one. Ranking depends mainly on age, education, language and experience, so Canada immigration consultants in Kerala often start by improving your test score.',
+          },
+          {
+            q: 'What IELTS score do I need for Canada PR?',
+            a: 'Skilled worker applicants need at least CLB 7, equal to IELTS General Training 6.0 in each skill. Canada immigration consultants in Kerala usually advise aiming for CLB 9, which adds significant points.',
+          },
+          {
+            q: 'How long does Canada PR take from Kerala?',
+            a: 'Allow eight to fourteen months. Preparation takes one to four months, invitation timing varies, and IRCC processes most Express Entry files in about six months. Canada immigration consultants in Kerala help you avoid delays.',
+          },
+          {
+            q: 'How much does Canada PR cost for a family?',
+            a: 'Government fees for a couple are about CAD 3,180, plus CAD 270 per child and CAD 170 for family biometrics. Canada immigration consultants in Kerala list third-party costs separately.',
+          },
+          {
+            q: 'Do Mountbell’s Canada immigration consultants in Kerala guarantee a visa?',
+            a: 'No. Only IRCC decides. Genuine Canada immigration consultants in Kerala promise an honest assessment and a complete application, the best way to reduce refusal risk.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Book a Free Session With Our Canada Immigration Consultants in Kerala',
+        body: [
+          'Talk to our Canada immigration consultants in Kerala at our Thrissur or Kochi office, or online. Share your age, qualification, experience and test score on WhatsApp for your best-fit route within two working hours.',
+        ],
+        list: [
+          'Call: <a href="tel:+919207014777">+91 9207014777</a>',
+          'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
+          'Email: <a href="mailto:edu@mountbell.com">edu@mountbell.com</a>',
+          '<a href="/free-immigration-assessment/">Book a free assessment &rarr;</a>',
+        ],
+        after: [
+          '<strong>Thrissur Office (HQ)</strong><br />Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022',
+          '<strong>Kochi Office</strong><br />Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025',
+        ],
+      },
+    ],
+    related: ['/countries/canada/express-entry/', '/countries/', '/services/pr-visa/', '/study-abroad/'],
+  },
+
+  // 18. Canada Express Entry from India
+  {
+    path: '/countries/canada/express-entry/',
+    parent: '/countries/canada/',
+    crumb: 'Express Entry',
+    img: 'canada',
+    accent: 'var(--coral)',
+    title: 'Canada Express Entry from India: 2026 Guide | Mountbell',
+    description: 'Canada Express Entry from India explained: eligibility, ranking, 2026 draws, timelines and documents. Get a free profile review from Mountbell, Kerala.',
+    label: 'Canada › Express Entry',
+    h1: 'Canada Express Entry from India – Eligibility, Draws and Step-by-Step Guide',
+    lede: 'Canada Express Entry from India is the fastest federal route to permanent residence for skilled Indian professionals, and it is the first system most Kerala applicants explore. This guide explains Express Entry eligibility, how draws work in 2026, the documents you need and realistic times for each step of Canada Express Entry from India.',
+    acts: { check: 'Book a free profile review', wa: 'Request a call-back' },
+    blocks: [
+      {
+        type: 'prose',
+        body: [
+          '<strong>Quick answer: How does Canada Express Entry from India work?</strong><br />You create an online profile, enter the pool and receive a ranking score. IRCC holds regular rounds and invites the highest-ranked candidates. You then have 60 days to file a complete application, and most complete files are processed in about six months. Canada Express Entry from India usually takes 8 to 14 months in total.',
+        ],
+      },
+      {
+        type: 'facts',
+        h2: 'Express Entry at a Glance',
+        rows: [
+          ['Minimum language for most Indian applicants', 'CLB 7'],
+          ['Profile valid for', '12 months'],
+          ['Time to apply after an invitation', '60 days'],
+          ['IRCC processing target', 'About 6 months'],
+          ['Typical total time for Canada Express Entry from India', '8 to 14 months'],
+          ['Government fees per adult', 'CAD 1,590'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'What Is Canada Express Entry from India?',
+        body: [
+          'Express Entry is not a visa; it is an application management system. When you apply for Canada Express Entry from India, you are seeking permanent residence through Express Entry under one of three federal programmes. Every eligible candidate receives a score under the Comprehensive Ranking System, and IRCC uses that score, along with occupation and language priorities, to decide who is invited.',
+          'For Express Entry for Indians, the key advantage is that you can apply from home. Most applicants from Kerala qualify through the Federal Skilled Worker Program, because their experience was gained outside Canada.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'The Three Programmes Within Canada Express Entry from India',
+        body: [],
+        list: [
+          '<strong>Federal Skilled Worker Program:</strong> for professionals with at least one year of continuous, full-time skilled experience (1,560 hours) in the last ten years. You must also pass the FSW 67-point grid, covering age, education, experience, language and adaptability.',
+          '<strong>Canadian Experience Class:</strong> for people with at least one year of skilled work experience in Canada within the last three years. It suits Indians already working in Canada on a temporary permit.',
+          '<strong>Federal Skilled Trades Program:</strong> for tradespeople with two years of trade experience in the last five years, plus a qualifying offer of employment or a Canadian certificate of qualification.',
+        ],
+        after: [
+          'Our Express Entry consultants in Kerala confirm which programme fits you before you create your Express Entry profile, because the programme sets your language and document rules for Canada Express Entry from India.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Express Entry Eligibility and Requirements',
+        intro: 'Express Entry requirements for the Federal Skilled Worker Program cover five areas, and each must be met on the day you submit your profile.',
+        body: [],
+        list: [
+          'Skilled work: your job must fall under TEER 0, 1, 2 or 3 of the NOC TEER categories, and your duties must match the official description.',
+          'Language: Express Entry language requirements start at CLB 7 in all four skills. IELTS for Express Entry means the General Training test, not Academic. CELPIP-General and PTE Core are also accepted, and results stay valid for two years.',
+          'Education: a foreign degree needs an educational credential assessment from an IRCC-approved organisation.',
+          'Funds: you must show settlement funds unless you apply under the Canadian Experience Class.',
+          'Admissibility: police certificates and a medical exam are required after the invitation.',
+        ],
+        after: [
+          'Without a valid language result and credential report, Canada Express Entry from India cannot start, so these two items come first in every plan we build.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'How Ranking Works for Canada Express Entry from India',
+        body: [
+          'The Comprehensive Ranking System awards up to 1,200 points. Core factors such as age, education, language and work experience carry the most weight. Skill transferability adds points when strong language combines with education or foreign experience. Additional points come from French ability, a sibling in Canada, Canadian study or a provincial nomination, which alone adds 600 points.',
+          'Spousal points in Express Entry also matter. If your spouse travels with you, their language score, education and Canadian experience can add up to 40 points. Since March 2025, arranged employment no longer adds ranking points, so Express Entry without job offer is now the normal path for Canada Express Entry from India.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Express Entry Draws and the CRS Cut-Off Score',
+        body: [
+          'IRCC holds Express Entry draws throughout the year, with no fixed schedule. Each round sets a CRS cut-off score, and every candidate at or above it receives an Express Entry ITA. When several candidates share the cut-off, the Express Entry tie-breaking rule invites those who submitted their profiles earliest.',
+          'Rounds come in three types: general rounds, programme-specific rounds and category-based selection rounds. Studying Express Entry draw history helps you judge whether your score is competitive for Canada Express Entry from India, but past cut-offs never guarantee future ones.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Express Entry Categories in 2026',
+        intro: 'Category-based selection lets IRCC invite candidates in priority occupations, often at lower scores. The Express Entry categories for 2026 are:',
+        body: [],
+        list: [
+          'French-language proficiency draws, which issued the most category invitations in the first half of 2026',
+          'Healthcare category draws for nurses, allied health workers and physicians with Canadian experience',
+          'STEM category draws, now including cybersecurity roles',
+          'Trade occupations category, covering electricians, welders, plumbers and carpenters',
+          'Education occupations',
+          'New for 2026: transport occupations, researchers and senior managers with Canadian experience, and skilled military recruits',
+        ],
+        after: [
+          'For Canada Express Entry from India, category rounds now require at least one year of experience in an eligible occupation within the last three years.',
+        ],
+      },
+      {
+        type: 'steps',
+        h2: 'Express Entry Step-by-Step Process and Timeline',
+        intro: 'The Express Entry step-by-step process below shows typical times for Canada Express Entry from India. Times depend on test dates, documents and draws.',
+        items: [
+          { title: '1. Profile assessment (1–2 working days)', text: 'Our advisers confirm your programme and estimate your ranking.' },
+          { title: '2. Language test (2–6 weeks)', text: 'Book IELTS General Training, CELPIP-General or PTE Core and wait for results.' },
+          { title: '3. Credential assessment (4–8 weeks)', text: 'An approved organisation evaluates your degree.' },
+          { title: '4. Profile submission (1 week)', text: 'Create your IRCC secure account and enter the Express Entry pool.' },
+          { title: '5. Waiting for an invitation (varies)', text: 'Express Entry profile validity is 12 months, so update scores whenever they improve.' },
+          { title: '6. eAPR submission (within 60 days of invitation)', text: 'File your electronic application for permanent residence with every document.' },
+          { title: '7. Biometrics and medical (within 30 days of request)', text: 'Visit a visa application centre and an IRCC panel physician.' },
+          { title: '8. Decision and landing (about 6 months after filing)', text: 'Receive your confirmation of permanent residence and travel before it expires.' },
+        ],
+        after: [
+          'Express Entry processing time is counted from the day IRCC receives a complete eAPR. Missing papers cause delays, so our document team reviews every upload before your Canada Express Entry from India application is filed.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Documents for Canada Express Entry from India',
+        intro: 'After an invitation, every document must match your profile exactly. The most important items for Indian applicants are:',
+        body: [],
+        list: [
+          'Reference letters on company letterhead stating job title, duties, hours, salary and dates',
+          'Language test results and the credential assessment report',
+          'Passport, birth certificate and, if applicable, marriage certificate',
+          'Police certificates from India and any country where you lived six months or more',
+          'Bank statements showing settlement funds, explained in our guide to Canada PR proof of funds',
+        ],
+        after: [
+          'Our Visa Documentation team handles attestation and translations for Canada Express Entry from India files.',
+          '<a href="/services/visa-documentation/">Visa Documentation &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Common Express Entry Refusal Reasons',
+        intro: 'Most refusals in Canada Express Entry from India files are avoidable. Common Express Entry refusal reasons include:',
+        body: [],
+        list: [
+          'Work duties that do not match the claimed NOC code',
+          'Points claimed in the profile that cannot be proved later',
+          'Expired language results, or funds that fall below the required amount',
+          'Missing police certificates or incomplete family details',
+          'Misrepresentation, which can lead to a five-year ban',
+        ],
+        after: [
+          'A careful pre-submission review is the best protection for your Canada Express Entry from India application.',
+        ],
+      },
+      {
+        type: 'checks',
+        h2: 'Why Choose Mountbell for Canada Express Entry from India?',
+        intro: 'As Express Entry consultants in Kerala, Mountbell combines local support with licensed Canadian representation for Canada Express Entry from India.',
+        items: [
+          { title: 'Direct office access', text: 'Offices in Thrissur and Kochi, plus online consultations.' },
+          { title: 'CICC licensed partner', text: 'Representation before IRCC through a Regulated Canadian Immigration Consultant.' },
+          { title: 'Realistic scoring', text: 'Honest scoring, including advice when another route suits you better.' },
+          { title: 'Transparent fees', text: 'Written fee stages and no guaranteed-invitation promises.' },
+          { title: 'Bilingual guidance', text: 'Express Entry from Kerala guidance in Malayalam and English.' },
+        ],
+        after: ['<a href="/countries/canada/">Canada immigration consultants in Kerala &rarr;</a>'],
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'Can I apply for Canada Express Entry from India without a job offer?',
+            a: 'Yes. Most invited candidates have no arranged employment. Your ranking depends mainly on age, education, language and experience, so a strong test score is the most useful step for Canada Express Entry from India.',
+          },
+          {
+            q: 'What IELTS score do I need for Express Entry?',
+            a: 'The Federal Skilled Worker Program needs at least CLB 7, equal to IELTS General Training 6.0 in each skill. Competitive Canada Express Entry from India profiles usually aim for CLB 9, which adds many more points.',
+          },
+          {
+            q: 'How long does Canada Express Entry from India take?',
+            a: 'Allow 8 to 14 months in total. Preparation takes two to four months, invitation timing varies, and IRCC processes most complete applications in about six months.',
+          },
+          {
+            q: 'How often are Express Entry draws held?',
+            a: 'Rounds are held several times a month in most months, but IRCC publishes no fixed schedule. Check the latest results before planning your Canada Express Entry from India timeline.',
+          },
+          {
+            q: 'Can I update my Express Entry profile after submitting it?',
+            a: 'Yes. You can update it at any time before an invitation, such as after a new test score. Updated scores count in the next round of Canada Express Entry from India.',
+          },
+          {
+            q: 'Does Mountbell guarantee an invitation?',
+            a: 'No. Only IRCC issues invitations and decisions. We promise an honest assessment and a complete, accurate Canada Express Entry from India file.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Start Your Canada Express Entry from India Journey Today',
+        body: [
+          'Talk to our Canada desk at our Thrissur or Kochi office, or online. Share your age, qualification, experience and test score on WhatsApp, and receive your best-fit Canada Express Entry from India plan within two working hours.',
+        ],
+        list: [
+          'Call: <a href="tel:+919207014777">+91 9207014777</a>',
+          'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
+          'Email: <a href="mailto:edu@mountbell.com">edu@mountbell.com</a>',
+          '<a href="/free-immigration-assessment/">Book a free assessment &rarr;</a>',
+        ],
+        after: [
+          '<strong>Thrissur Office (HQ)</strong><br />Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022',
+          '<strong>Kochi Office</strong><br />Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025',
+        ],
+      },
+    ],
+    related: ['/countries/canada/', '/countries/', '/services/pr-visa/', '/study-abroad/'],
   },
 ];
