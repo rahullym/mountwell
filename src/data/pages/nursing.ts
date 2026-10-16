@@ -104,6 +104,13 @@ const pagesRaw: Page[] = [
         'Family: spouse and children can usually join [VERIFY]',
         'Best for: a long European career with family',
       ], after: [go(['nurse jobs in Denmark for Indians', '/nursing-careers/denmark/'])] },
+      { type: 'prose', h3: 'United Kingdom', body: [], list: [
+        'Registration: NMC, with CBT in India and OSCE in the UK',
+        'Language: IELTS Academic 7.0 (6.5 writing) or OET B (C+ writing) [VERIFY]',
+        'GNM nurses: assessed case by case against NMC standards [VERIFY]',
+        'Family: spouse or partner and children under 18 can join on the visa',
+        'Salary: £25,000+ sponsorship floor; Band 5 NHS starts around £32,073',
+      ], after: [go(['UK nurse jobs for Indian nurses', '/nursing-careers/uk/'])] },
 
       { type: 'prose', h2: 'Which Is the Best Country for Indian Nurses?', body: [
         'The best country for Indian nurses is the one that fits your language score, clinical experience and family plans. Once those three are clear, the choice usually narrows to one or two countries.',
@@ -113,6 +120,7 @@ const pagesRaw: Page[] = [
         'A European hospital job in English: Malta',
         'A quick contract move close to home: Maldives',
         'A long European career with family: Denmark',
+        'Direct NHS hospital sponsorship and English-speaking: United Kingdom',
       ], after: [
         'Our nurse migration consultants review your file before suggesting a country. Working with five countries, we have no reason to push you towards one.',
         go(['Nurse Pathway Finder', '/tools/nurse-pathway-finder/']),
@@ -146,6 +154,7 @@ const pagesRaw: Page[] = [
         'Australia, Malta and the Maldives: English, with OET or IELTS',
         'Germany: German through Goethe-Institut or telc-certified courses',
         'Denmark: Danish at the level set for authorisation',
+        'United Kingdom: English, with OET or IELTS Academic; NMC registration with CBT and OSCE',
         'Registration bodies: AHPRA, Anerkennung, Malta Council for Nursing and Midwifery, Maldives Nursing and Midwifery Council, Danish Patient Safety Authority',
       ], after: [
         'A nurse recruitment agency in Kerala should plan language and registration together, so one does not hold up the other. Our nurse migration consultants book your test dates around your registration timeline, and many Kerala nurses find OET more familiar because its tasks are built around clinical situations.',
@@ -876,6 +885,208 @@ const pagesRaw: Page[] = [
       contact('Talk to a Nurse Adviser About Denmark', 'Speak to a Mountbell nurse adviser about nurse jobs in Denmark for Indians. A free call tells you whether any exception applies to you, how to prepare for a possible reopening and which open country fits your profile today.', nurseWa('Denmark')),
     ],
     related: ['/nursing-careers/', '/nursing-careers/germany/', '/nursing-careers/malta/'],
+    cta: false,
+  },
+  {
+    path: '/nursing-careers/uk/',
+    crumb: 'Nurses in the UK',
+    accent: 'var(--blue)',
+    title: 'UK Nurse Jobs for Indian Nurses | Mountbell',
+    description: 'UK nurse jobs for Indian nurses: NMC registration, CBT, OSCE and the Health and Care Worker visa, with timelines and pay. MEA-licensed. Free eligibility check.',
+    label: 'Nursing Careers › United Kingdom',
+    h1: 'UK Nurse Jobs for Indian Nurses — NMC Registration, Visa, Pay and Timeline',
+    lede: 'UK nurse jobs for Indian nurses follow a clear route: pass an English test and the NMC computer-based test (CBT), secure a sponsored job offer, travel on the Health and Care Worker visa for nurses and pass the OSCE clinical exam in the UK. Mountbell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, guides registered nurses through each stage, usually in 6 to 12 months from first assessment to arrival [VERIFY].',
+    acts: { check: 'Check my UK eligibility', wa: 'WhatsApp a nurse adviser' },
+    photo: { src: '/img/stories/london.webp', alt: 'London city view, United Kingdom', w: 1200, h: 800 },
+    wa: nurseWa('the UK'),
+    blocks: [
+      {
+        type: 'facts',
+        h2: 'UK for Kerala Nurses: Key Facts',
+        intro: 'These facts shape UK nurse jobs for Indian nurses, based on NMC and NHS Employers guidance.',
+        rows: [
+          ['Regulator', 'The Nursing and Midwifery Council (NMC)'],
+          ['Test of competence', 'A computer-based test you can sit in India, then an OSCE you must take in the UK at an approved centre'],
+          ['English', 'IELTS for UK nurses at 7.0 overall with 6.5 in writing, or OET for UK nurses at grade B with C+ in writing [VERIFY current NMC scores]'],
+          ['Visa', 'The Health and Care Worker visa for nurses, a Skilled Worker route with lower fees and no Immigration Health Surcharge'],
+          ['Salary floor for sponsorship', '£25,000 for roles on published NHS pay scales (NHS Employers, 2025)'],
+          ['OSCE window', 'Usually within 12 weeks of your employment start date, with up to three attempts within eight months of your visa start'],
+          ['Family', 'Spouse and children can usually join you as dependants [VERIFY]'],
+          ['Care worker route notice', 'The UK care worker visa closed to new applicants on 22 July 2025; registered nurses use a separate route.'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Can Kerala Nurses Work as a Nurse in the UK?',
+        body: [
+          'Yes. Registered nurses trained in Kerala can work as a nurse in the UK once they meet NMC standards and hold a sponsored visa. Indian nurses in the UK form one of the largest groups of overseas-trained nurses on the NMC register, and Kerala nurses in the UK work across NHS hospitals, private hospitals and care homes. UK nurse jobs for Indian nurses start with checking your profile against these points:',
+        ],
+        list: [
+          'BSc nurses in the UK: the most common profile, assessed directly against NMC standards',
+          'GNM nurses in the UK: can apply, but the NMC assesses each qualification, and some GNM profiles need more evidence [VERIFY]',
+          'Registration: current Kerala Nurses and Midwives Council or state council registration',
+          'Experience: most NHS trusts prefer at least one year of recent hospital experience; UK nursing jobs for freshers exist but are harder to secure [VERIFY]',
+        ],
+        after: [go(['Quick check', '/tools/nurse-pathway-finder/'])],
+      },
+      {
+        type: 'steps',
+        h2: 'UK Nurse Jobs for Indian Nurses: 7 Steps and Timeline',
+        intro: 'This is how to become a nurse in the UK from Kerala, with the time each step usually takes [VERIFY with Mountbell case data].',
+        items: [
+          { title: 'Free assessment (week 1)', text: 'a nurse adviser checks your qualification, experience and English level' },
+          { title: 'English test (1 to 3 months)', text: 'IELTS or OET; NMC lets you combine test results taken within 12 months' },
+          { title: 'NMC CBT for nurses (4 to 6 weeks of preparation)', text: 'a computer-based test you can sit at an approved centre in India' },
+          { title: 'Documents (3 to 6 weeks, alongside steps 2 and 3)', text: 'we give you the full list of documents for NMC registration' },
+          { title: 'Job offer and interview (1 to 3 months)', text: 'interviews with NHS trusts and private employers, with UK nurse interview preparation before each one' },
+          { title: 'Sponsorship and visa (3 to 6 weeks)', text: 'your employer issues a certificate of sponsorship for nurses, then you apply for the visa' },
+          { title: 'Arrival and OSCE (within 12 weeks of starting work)', text: 'you work as a pre-registration nurse UK employers support, sit the OSCE, then receive your NMC PIN (up to 35 days)' },
+        ],
+        after: [
+          'Seen end to end, the UK nurse job process takes 6 to 12 months. Your adviser gives you a written UK nurse timeline after step 1.',
+          go(['Document checklist', '/services/visa-documentation/']),
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'NMC Registration for Indian Nurses: CBT, OSCE and English',
+        body: [
+          'NMC registration for Indian nurses has three parts, and NHS Employers confirms you can complete them in any order before the OSCE. It is the step that lets you work as a nurse in the UK at full scope.',
+        ],
+        list: [
+          'English: IELTS Academic or OET at the NMC score; if you miss by 0.5, employer support through the NMC’s SIFE process may help',
+          'CBT: a multiple-choice exam on nursing knowledge and numeracy, taken before you travel',
+          'OSCE for overseas nurses: a practical exam at an approved UK test centre, where you must pass every station',
+          'OSCE retake rules: wait at least 10 working days and resit only the failed stations; the reduced fee is £397 if you failed seven or fewer (NHS Employers)',
+          'After the OSCE: the NMC issues your NMC PIN, and you move to full registered nurse pay',
+        ],
+        after: [
+          'Sponsorship needs a CBT pass, the English score and a job offer.',
+          go(['OET or IELTS: which test to choose', '/resources/oet-vs-ielts-for-nurses/'], ['Language and test preparation', '/services/language-test-preparation/']),
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Health and Care Worker Visa for Nurses',
+        body: [
+          'The Health and Care Worker visa for nurses is the standard sponsorship route for UK nurse jobs for Indian nurses, and Indian nurses in the UK on this visa work for the employer that sponsors them.',
+        ],
+        list: [
+          'UK nurse visa sponsorship: your employer must be a licensed sponsor and issue your certificate of sponsorship',
+          'Salary: at least £25,000 on NHS pay scales, or £31,300 if the role is not on a published scale (NHS Employers)',
+          'Lower costs: reduced visa fees and no Immigration Health Surcharge for this route',
+        ],
+        after: [go(['Dependent and Family Visa', '/services/dependent-visa/'])],
+      },
+      {
+        type: 'prose',
+        h2: 'UK Nursing Jobs and Pay',
+        body: [
+          'NHS nurse jobs for Indians are the largest part of the market, though private hospitals and care homes also sponsor through the Health and Care Worker visa for nurses.',
+        ],
+        list: [
+          'Private hospital nurse jobs UK: independent hospitals and clinics, often with smaller teams',
+          'Care home nurse jobs UK: registered nurse roles in nursing homes, where nurse salary in UK care settings varies by employer',
+          'NHS Band 5 nurse salary: a newly registered nurse in England starts at around £32,073 a year from April 2026 under Agenda for Change [VERIFY]',
+          'Accommodation: many trusts offer short-term housing, so nurse jobs in UK with accommodation support are common [VERIFY]',
+        ],
+        after: [
+          'Most UK nurse jobs for Indian nurses start on the pre-registration rate, then move to Band 5 once the NMC PIN is issued.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'What Changed in 2025 and 2026',
+        body: [
+          'NHS trust international recruitment has slowed. The NMC reported 6,321 international joiners in April to September 2025, down 49.6% from 12,534 a year earlier. For Indian nurses in the UK, that means more competition for each role, so experience, English scores and interview preparation matter more.',
+        ],
+        list: [
+          'Visa English rule: from January 2026, new Skilled Worker applicants need B2 English; registered nurses already meet this through the NMC standard',
+          'Settlement: ILR for nurses in UK currently comes after five years [VERIFY]; a longer "earned settlement" route has been proposed but was not law as of September 2026',
+        ],
+        after: ['UK nurse recruitment from India continues.'],
+      },
+      {
+        type: 'prose',
+        h2: 'Family, Settlement and Life in the UK',
+        body: [],
+        list: [
+          'Family visa for nurses in UK: your spouse or partner and children under 18 can usually apply as dependants and work or study in the UK [VERIFY current rules]',
+          'Life in the UK for Indian nurses: established communities of Indian nurses in the UK and large Malayali groups in cities such as London, Manchester and Birmingham make settling in easier',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Costs to Plan For',
+        body: [
+          'The cost of nurse migration to UK is mostly exams, visa fees and first-month living costs. Budget for these before you apply for UK nurse jobs for Indian nurses.',
+        ],
+        list: [
+          'English test fees and any retakes',
+          'NMC CBT, OSCE and registration fees; many NHS employers reimburse the OSCE fee [VERIFY]',
+          'Visa fee and travel, which some employers cover',
+          'Mountbell service fee stages: [INSERT real stages and amounts]',
+        ],
+        after: [go(['Full fee breakdown', '/fees/'])],
+      },
+      {
+        type: 'prose',
+        h2: 'How Mountbell Supports Your Move',
+        body: [
+          `Mountbell holds Ministry of External Affairs Recruiting Agent Licence ${licence}, which you can check on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay anything. For UK nurse jobs for Indian nurses, our support covers every stage.`,
+        ],
+        list: [
+          'One nurse adviser handles your file from assessment to your NMC PIN',
+          'A shortlist of NHS nurse jobs for Indians that matches your specialty',
+          'OET, IELTS and CBT preparation at our Thrissur centre, plus OSCE orientation',
+          'Interview practice for NHS nurse jobs for Indians, based on competency questions',
+          'Ethical nurse recruitment UK standards: we follow the WHO Global Code of Practice and never promise a job or visa',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Nurse Story',
+        body: [
+          'Real stories from Kerala nurses in the UK show how UK nurse jobs for Indian nurses work in practice, from the OSCE weeks to the first months on a ward.',
+        ],
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'How long do UK nurse jobs for Indian nurses take to secure?',
+            a: 'Most nurses take 6 to 12 months from first assessment to arrival [VERIFY]. The OSCE follows within 12 weeks of arrival. Your adviser gives you a written timeline.',
+          },
+          {
+            q: 'What English score do I need?',
+            a: 'The NMC accepts IELTS Academic at 7.0 overall with 6.5 in writing, or OET at grade B with C+ in writing [VERIFY].',
+          },
+          {
+            q: 'Can GNM nurses apply?',
+            a: 'Yes. GNM nurses can work as a nurse in the UK, but the NMC assesses each qualification, and some GNM profiles need more evidence [VERIFY]. BSc nurses usually move faster.',
+          },
+          {
+            q: 'What happens if I fail the OSCE?',
+            a: 'You get up to three attempts within eight months of your visa start, resitting only failed stations. If you do not pass, sponsorship ends.',
+          },
+          {
+            q: 'Can my family come with me?',
+            a: 'Usually yes. Nurses on the Health and Care Worker visa for nurses can normally bring a spouse or partner and children under 18 [VERIFY].',
+          },
+          {
+            q: 'Is the UK still recruiting Indian nurses in 2026?',
+            a: 'Yes. UK nurse jobs for Indian nurses are still advertised, but fewer than in 2023 and 2024. NMC data show international joiners nearly halved in 2025, so employers are more selective, and NHS nurse jobs for Indians favour strong English scores and recent experience.',
+          },
+        ],
+      },
+      contact(
+        'Start Your UK Nursing Career',
+        'Speak to a Mountbell nurse adviser about UK nurse jobs for Indian nurses. A free assessment tells you which English score you need, how NMC registration for Indian nurses works and how long it will take before you work as a nurse in the UK.',
+        nurseWa('the UK')
+      ),
+    ],
+    related: ['/nursing-careers/', '/nursing-careers/australia/', '/nursing-careers/germany/', '/nursing-careers/malta/'],
     cta: false,
   },
 ];

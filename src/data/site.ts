@@ -220,7 +220,7 @@ export const homeServices: { name: string; text: string; href?: string }[] = [
   { name: 'Dependent and Family Visa', href: '/services/dependent-visa/', text: 'Spouse and children visas planned with your main application, so your family can join you without avoidable delays or a second round of paperwork.' },
   { name: 'Visitor Visa', href: '/services/visitor-visa/', text: 'Tourist and business visit visas with a full document check before you apply, to reduce the risk of a refusal on your record.' },
   { name: 'Language and Test Preparation', href: '/services/language-test-preparation/', text: 'OET, IELTS, PTE coaching and German classes A1 to B2 from our Thrissur centre and online, planned so that your exam date and your application move together.' },
-  { name: 'Study Abroad', text: 'One focused service for students who want a course that leads to work rights and a realistic route to a job after graduation.' },
+  { name: 'Study Abroad', href: '/study-abroad/', text: 'One focused service for students who want a course that leads to work rights and a realistic route to a job after graduation.' },
 ];
 
 // Nursing routes shown in the Nursing Careers section. `img` is a file slug in /public/img/dest.
@@ -230,6 +230,7 @@ export const nursing = [
   { img: 'denmark', place: 'Denmark', text: 'Danish authorisation, the language requirement and employer matching.', href: '/nursing-careers/denmark/' },
   { img: 'malta', place: 'Malta', text: 'Council registration and the bridging programme, in an English-speaking EU country.', href: '/nursing-careers/malta/' },
   { img: 'maldives', place: 'Maldives', text: 'Hospital and clinic jobs a short flight from Kerala.', href: '/nursing-careers/maldives/' },
+  { img: 'europe', place: 'United Kingdom', text: 'NMC registration, CBT, OSCE and the Health and Care Worker visa.', href: '/nursing-careers/uk/' },
 ];
 
 // Online language training, run as Mountbell's own educational service. German and Danish lead
