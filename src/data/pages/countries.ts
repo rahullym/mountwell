@@ -1277,4 +1277,1008 @@ export const countries: Page[] = [
     ],
     related: ['/countries/australia/', '/overseas-jobs/', '/services/', '/study-abroad/'],
   },
+  // 13. Australia IT Professionals Page
+  {
+    path: '/countries/australia/it-professionals/',
+    parent: '/countries/australia/',
+    crumb: 'IT professionals',
+    img: 'australia',
+    accent: 'var(--coral)',
+    title: 'Australia IT Migration from India: PR & Visas | Mountbell',
+    description: 'Australia IT migration from India for IT professionals: ICT occupations, PR routes, points, costs and timelines. Free profile check by Mountbell.',
+    label: 'Australia › IT Professionals',
+    h1: 'Australia IT Migration from India: PR and Work Visa Routes for IT Professionals',
+    lede: 'Australia IT migration from India works through skilled PR visas or employer-sponsored work visas. For PR, most applicants need an assessed ICT occupation, Competent English, age under 45 and at least 65 points. Well-prepared applicants usually need 8 to 18 months for PR, or 3 to 6 months with a sponsor.',
+    acts: { check: 'Check my eligibility', wa: 'Book a free call' },
+    blocks: [
+      {
+        type: 'prose',
+        body: [
+          'Software engineers, developers, analysts and cyber security staff are among our most active applicants. Software engineer PR Australia is realistic when your occupation is eligible, your score is competitive and your paperwork is strong. Mountbell reviews IT professionals from Kerala, picks the right route and plans each step with times.',
+        ],
+      },
+      {
+        type: 'note',
+        text: 'Licensed by the Ministry of External Affairs as a recruiting agent: B-1921/KER/PART/100/5/10348/2023 (<a href="https://emigrate.gov.in" target="_blank" rel="noopener">verify on eMigrate</a>) &nbsp;·&nbsp; Offices in Thrissur and Kochi, plus online consultations across Kerala &nbsp;·&nbsp; Written timelines, fees and the registered migration agent’s name before you commit',
+      },
+      {
+        type: 'facts',
+        h2: 'Key Facts at a Glance',
+        intro: 'These facts show why IT migration to Australia stays popular in 2026.',
+        rows: [
+          ['Routes', 'PR by points, state-nominated PR, regional PR or an employer-sponsored work visa'],
+          ['Pass mark', '65 points for the points-tested visas'],
+          ['Age', 'Under 45 when invited'],
+          ['Occupations', 'ICT occupations Australia accepts include software, cyber security, cloud and data roles'],
+          ['Assessment', 'The ICT skills assessment takes 1 to 4 months'],
+          ['Time', '8 to 18 months for PR, 3 to 6 months with a sponsor'],
+          ['Intake', '132,240 Skill stream places planned for 2026-27 (BDO, May 2026)'],
+          ['Demand', 'The Australian tech job market reports a tech skills shortage in cyber security, cloud and data'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Is Australia IT Migration from India Right for You?',
+        body: [
+          'IT professionals from Kerala often work at Technopark, Infopark or Cyberpark before applying. Assessors judge duties, not job titles, so a developer titled consultant can still qualify. Applicants in Thiruvananthapuram, Kozhikode and Kannur can start with a video consultation, then visit our Thrissur or Kochi office.',
+        ],
+        list: [
+          '<strong>It suits you if:</strong> your role matches an eligible ICT occupation, you are under 45 with Competent English or better, you have recent well-documented IT experience, and you want PR rather than a tied work visa.',
+          '<strong>Consider another route if:</strong> your degree is unrelated to IT and your experience is short, you score close to 65 in a crowded occupation, you already hold an Australian job offer, or your duties are managerial with no technical work.',
+        ],
+        after: [
+          '<a href="/countries/australia/">Australia hub &rarr;</a> &nbsp;·&nbsp; <a href="/services/pr-visa/">PR Visa &rarr;</a> &nbsp;·&nbsp; <a href="/nursing-careers/">Nursing Careers &rarr;</a>',
+        ],
+      },
+      {
+        type: 'table',
+        h2: 'ICT Occupations Australia Accepts',
+        intro: 'Assessors group IT roles into the ICT occupations Australia lists for skilled migration, and the list changes each year. Match your duties to the IT occupation codes before you pay for tests.',
+        head: ['Occupation', 'Typical duties assessors look for'],
+        rows: [
+          ['Software engineer', 'Design, build and test applications and systems'],
+          ['Software developer role', 'Write and maintain code in one or two main stacks'],
+          ['Analyst programmer', 'Combine business analysis with coding'],
+          ['ICT business analyst', 'Turn business needs into specifications'],
+          ['Data scientist', 'Build models, data pipelines and analytics'],
+          ['Cyber security specialist', 'Protect systems, test defences and handle incidents'],
+          ['Network engineer', 'Design, secure and run networks'],
+          ['Cloud architect and DevOps engineer', 'Design cloud systems and automate deployment'],
+          ['Database administrator', 'Manage, tune and secure databases'],
+        ],
+      },
+      {
+        type: 'table',
+        h2: 'Which Route Fits Your IT Profile?',
+        intro: 'Australia IT migration from India offers four main IT visa options. A software engineer PR Australia plan often lodges two EOIs at once.',
+        head: ['Route', 'Best for', 'Time'],
+        rows: [
+          ['Subclass 189', 'Strong scorers, with 75 points or more', '6 to 12 months'],
+          ['Subclass 190', 'Mid scorers who accept a nominating state, adding 5 points', '6 to 12 months'],
+          ['Subclass 491', 'Lower scorers open to regional life, adding 15 points', 'Provisional first'],
+          ['Skills in Demand (482)', 'Applicants who already hold a sponsor’s offer', '2 to 5 months'],
+        ],
+        note: 'Employer-sponsored IT jobs need an approved sponsor. Any IT job offer for Australian visa sponsorship must match your assessed role.',
+      },
+      {
+        type: 'prose',
+        h2: 'ICT Skills Assessment: Step One',
+        body: [
+          'An ICT skills assessment by the Australian Computer Society (ACS) checks that your degree and experience fit your chosen occupation. Allow 1 to 4 months. Assessors check your ICT degree match first, then count only relevant skilled employment. Keep your IT experience letters ready before you apply.',
+          'Home Affairs and ACS times change during Australia IT migration from India, so we recheck them before every assessment.',
+        ],
+        after: ['<a href="/services/skills-assessment/">Skills Assessment &rarr;</a>'],
+      },
+      {
+        type: 'table',
+        h2: 'Document Checklist for IT Professionals from Kerala',
+        head: ['Document', 'Notes'],
+        rows: [
+          ['Experience letters', 'Signed, on letterhead, with duties, tools, dates and hours'],
+          ['Pay records', 'Payslips, Form 16 and bank statements'],
+          ['Degree', 'Certificates and transcripts, plus a syllabus if your degree is not in IT'],
+          ['Police clearance', 'Every country where you lived 12 months or more; allow 2 to 4 weeks for India'],
+          ['Medicals', 'Approved panel doctor; results usually upload within 1 to 2 weeks'],
+        ],
+      },
+      {
+        type: 'table',
+        h2: 'Where IT Applicants Earn Points',
+        intro: 'Your IT professional points come mostly from age, English and education. Superior English is the quickest gain, and invitations often go above the 65 pass mark.',
+        head: ['Area', 'Points'],
+        rows: [
+          ['Age', '30 at 25 to 32, and 25 at 33 to 39'],
+          ['English', 'Proficient 10, Superior 20, from a PTE or IELTS score'],
+          ['Experience', 'Up to 20 together, from overseas and Australian skilled work'],
+          ['Education', '15 for a bachelor degree or masters, and 20 for a doctorate'],
+          ['Specialist education', '10 for an Australian STEM masters by research or doctorate'],
+          ['Professional year', '5 for an Australian professional year'],
+          ['Partner', '10 if single or your partner is skilled, 5 for a partner with Competent English'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'In-Demand IT Skills and Salaries',
+        body: [
+          'The Australian tech job market rewards current skills. IT skills in demand include cyber security, cloud, data engineering and modern software stacks. IT salary in Australia varies by city, seniority and employer, so compare offers after tax and rent. Useful IT certifications include AWS, Azure, Google Cloud and CISSP.',
+          'Sydney and Melbourne tech jobs are the most numerous, while Brisbane, Canberra, Perth and Adelaide offer lower rents. Tech hubs in Australia also host large Malayali communities. Australian IT employers advertise on Seek, LinkedIn and Indeed, and these IT job portals also reveal salary bands. Recent graduates can start in graduate IT roles. An IT career path in Australia often begins with a contract or mid-level role. Employers value Indian IT experience when letters show tools, duties and results.',
+        ],
+      },
+      {
+        type: 'table',
+        h2: 'Step-by-Step Process and Times',
+        intro: 'A typical plan for Australia IT migration from India looks like this.',
+        head: ['Step', 'What happens', 'Time'],
+        rows: [
+          ['1', 'Free IT profile assessment, occupation check and points estimate', 'Week 1'],
+          ['2', 'English test and skills assessment', 'Months 1 to 3'],
+          ['3', 'EOI lodged', 'Months 3 to 4'],
+          ['4', 'Wait for an invitation', 'Months 4 to 9'],
+          ['5', 'Police certificates, medicals and lodgement', '2 to 4 weeks, within 60 days'],
+          ['6', 'Visa decision', '6 to 12 months'],
+          ['Total', 'PR by points; longer if an English retest is needed', '8 to 18 months'],
+          ['Sponsored', 'Job offer, nomination and work visa', '3 to 6 months'],
+        ],
+      },
+      {
+        type: 'table',
+        h2: 'Quick Ways to Strengthen Your Profile',
+        intro: 'Before you apply, check that your role sits among the ICT occupations Australia accepts. A software engineer PR Australia profile then improves fastest through three actions.',
+        head: ['Action', 'Effect', 'Time'],
+        rows: [
+          ['Retest English for Superior', 'Adds up to 10 points', '4 to 8 weeks'],
+          ['Rewrite experience letters', 'Prevents assessment delays', '2 to 4 weeks'],
+          ['Earn a cloud certification', 'Strengthens employer appeal', '2 to 3 months'],
+        ],
+      },
+      {
+        type: 'table',
+        h2: 'What It Costs',
+        intro: 'Budget early for Australia IT migration from India, because costs come in four parts.',
+        head: ['Cost', 'Detail'],
+        rows: [
+          ['Government charges', 'Visa charges apply per family member and rise every 1 July'],
+          ['Assessments and tests', 'The ICT skills assessment fee, English test and coaching'],
+          ['Checks', 'Medical examination and police certificates'],
+          ['Arrival', 'Flights, first rent and living costs until your first salary'],
+        ],
+      },
+      {
+        type: 'table',
+        h2: 'Common IT Applicant Mistakes',
+        head: ['Mistake', 'How to avoid it'],
+        rows: [
+          ['Claiming a role your duties do not match', 'Match duties to the occupation first'],
+          ['Weak experience letters', 'Include tools, duties, dates and working hours'],
+          ['Booking tests before checking your degree', 'Confirm the fit before the assessment'],
+          ['Counting unrelated work', 'Claim only experience assessors accept'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Example: How a Software Engineer Plan Is Made',
+        intro: 'This is an illustrative example, not a client record.',
+        body: [],
+        list: [
+          'Profile: a 30-year-old software engineer from Kochi with six years of experience, a bachelor degree and PTE 79 in each skill',
+          'Points: 30 for age, 20 for Superior English, 15 for education and 10 for experience, which makes 75',
+          'Months 1 to 2: ACS assessment',
+          'Month 3: EOI lodged for subclass 189 and 190',
+          'Result: a clear 12 to 15 month plan for software engineer PR Australia',
+        ],
+      },
+      {
+        type: 'checks',
+        h2: 'Why Choose Mountbell for Australia IT Migration from India',
+        intro: 'Mountbell prepares your file step by step, from the first call to lodgement. Our advisers review IT professionals from Kerala in Thrissur, Kochi or online.',
+        items: [
+          { title: 'Honest route comparison', text: 'An honest comparison of routes, with no reason to push one.' },
+          { title: 'Verifiable government licence', text: 'A licence you can verify, and offices that serve IT professionals from Kerala.' },
+          { title: 'Dedicated technical teams', text: 'Separate teams for nurses, PR and work visas with deep ACS assessment knowledge.' },
+        ],
+        after: ['<a href="/free-immigration-assessment/">Free assessment &rarr;</a> &nbsp;·&nbsp; <a href="/success-stories/">Success stories &rarr;</a>'],
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'Who can use Australia IT migration from India?',
+            a: 'Applicants with an eligible ICT occupation, a positive assessment, Competent English, age under 45 and 65 points can apply for PR. A sponsored visa needs an approved employer instead.',
+          },
+          {
+            q: 'Is software engineer PR Australia possible without a job offer?',
+            a: 'Yes. Subclasses 189, 190 and 491 need no employer, but they need enough points, an assessed occupation and an invitation.',
+          },
+          {
+            q: 'Which ICT occupations Australia lists are most common?',
+            a: 'Software, analyst, cyber security, cloud, network and data roles are common. The list changes yearly, so we check it before you pay.',
+          },
+          {
+            q: 'How long does an ICT skills assessment take?',
+            a: 'Allow 1 to 4 months, and longer in busy periods.',
+          },
+          {
+            q: 'Can IT professionals from Kerala apply without leaving India?',
+            a: 'Yes. You complete the assessment, tests, medicals and police certificates in Kerala, then lodge online through a registered migration agent.',
+          },
+          {
+            q: 'Is the Australian tech job market open to Indian IT professionals?',
+            a: 'Yes. Many employers prefer PR holders because no sponsorship is needed, so the Australian tech job market favours PR applicants.',
+          },
+          {
+            q: 'Do I need a sponsor for a software engineer visa from India?',
+            a: 'No. A sponsor is optional, because points-tested PR needs no employer.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Speak to an Adviser',
+        body: ['Talk to a Mountbell adviser about Australia IT migration from India. The first assessment is free.'],
+        list: [
+          'Call: <a href="tel:+919207014777">+91 9207014777</a>',
+          'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
+          'Email: <a href="mailto:edu@mountbell.com">edu@mountbell.com</a>',
+          '<a href="/free-immigration-assessment/">Book a free assessment &rarr;</a>',
+        ],
+        after: [
+          '<strong>Thrissur Office (HQ)</strong><br />Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022',
+          '<strong>Kochi Office</strong><br />Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025',
+        ],
+      },
+    ],
+    related: ['/countries/australia/', '/countries/', '/services/', '/overseas-jobs/', '/study-abroad/'],
+  },
+
+  // 14. Australia Skills in Demand Visa Page
+  {
+    path: '/countries/australia/skills-in-demand-visa/',
+    parent: '/countries/australia/',
+    crumb: 'Skills in demand visa',
+    img: 'australia',
+    accent: 'var(--coral)',
+    title: 'Australia Skills in Demand Visa for Indians | Mountbell',
+    description: 'Australia Skills in Demand visa (subclass 482): eligibility, salary rules, costs and 2026 timelines for Kerala applicants. Free profile check by Mountbell.',
+    label: 'Australia › Employer Sponsored',
+    h1: 'Australia Skills in Demand Visa: Sponsored Work Visa for Indians',
+    lede: 'Australia Skills in Demand visa is the main route for skilled workers who already have, or can find, a job offer from an Australian business. Known as subclass 482, it replaced the Temporary Skill Shortage visa on 7 December 2024. It is a four-year visa that lets you work for an approved sponsor, bring your family and, in many cases, move on to permanent residence later. Use the sections below to check your eligibility, costs and timeline.',
+    acts: { check: 'Check my eligibility', wa: 'Book a free call' },
+    blocks: [
+      {
+        type: 'note',
+        text: 'Licensed by the Ministry of External Affairs as a recruiting agent: B-1921/KER/PART/100/5/10348/2023 (<a href="https://emigrate.gov.in" target="_blank" rel="noopener">verify on eMigrate</a>) &nbsp;·&nbsp; Offices in Thrissur and Kochi, plus online consultations across Kerala',
+      },
+      {
+        type: 'facts',
+        h2: 'Key Facts at a Glance',
+        intro: 'These facts show why the Australia Skills in Demand visa attracts skilled workers from Kerala in 2026.',
+        rows: [
+          ['Launched', '7 December 2024, as the main employer sponsored Australia visa'],
+          ['Visa length', 'Up to four years, with family members included'],
+          ['Core Skills stream salary floor', 'A$79,499 from 1 July 2026'],
+          ['Specialist Skills stream salary floor', 'A$146,717 from 1 July 2026'],
+          ['Decision time', 'Usually 2 to 5 months after lodgement'],
+          ['Main applicant charge', 'A$4,015 from 1 July 2026'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'What Is the Australia Skills in Demand Visa?',
+        body: [
+          'The Australia Skills in Demand visa lets an approved Australian business fill a skilled role with an overseas worker. The employer nominates you for a specific job, and you apply for the visa once that nomination is lodged. Unlike points-tested migration, you need a job offer from an Australian employer first, and no invitation round is involved. It is quicker than the points route, but it ties you to your sponsor at the start.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'The Three Streams of Subclass 482',
+        body: ['Subclass 482 now has three streams. Each suits a different kind of worker.'],
+        list: [
+          '<strong>Core Skills stream:</strong> Best for most sponsored workers, with a job on the Core Skills Occupation List. Salary rule: Core Skills Income Threshold or Annual Market Salary Rate, whichever is higher.',
+          '<strong>Specialist Skills stream:</strong> Best for higher earners, across a wide range of occupations with some exclusions. Salary rule: Specialist Skills Income Threshold or the market rate, whichever is higher.',
+          '<strong>Labour Agreement stream:</strong> Best for employers with a formal agreement with the Australian Government. Salary rule: Set by the agreement, so we read it first.',
+        ],
+        after: [
+          'Most Kerala applicants use the Core Skills stream. It covers many trades, engineering, technical and care roles.',
+          '<a href="/services/work-visa/">Work Visa &rarr;</a> &nbsp;·&nbsp; <a href="/services/pr-visa/">PR Visa &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Skills in Demand Visa Eligibility: Who Qualifies?',
+        intro: 'Skills in Demand visa eligibility rests on six checks.',
+        body: [],
+        list: [
+          'Sponsor: an approved sponsor must nominate you for a genuine position',
+          'Occupation: your job matches an occupation on the national list, or fits the Specialist Skills stream',
+          'Experience: the work experience requirement is usually one year of relevant, recent experience in the same field',
+          'English: the English requirement is usually IELTS 5 overall with 4.5 in each section, or an equal PTE, TOEFL or OET score',
+          'Licences: regulated trades and professions may need Australian registration or a licence before you start work',
+          'Health and character checks: a medical examination and police certificates for you and your family',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Core Skills Occupation List and Your ANZSCO Code',
+        body: [
+          'The Core Skills Occupation List is managed by Jobs and Skills Australia and holds roughly 450 occupations. It includes engineers, electricians, welders, motor mechanics, chefs, IT staff and many care roles. Find your ANZSCO code first, because the code decides your stream, your salary floor and your sponsor’s paperwork. The list changes, so we check the current Core Skills Occupation List before you pay for any test. Nurses are registered separately, so our Nursing Careers team handles them. Higher earners may fit the Specialist Skills stream instead.',
+        ],
+        after: [
+          '<a href="/nursing-careers/">Nursing Careers &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/welders/">Welders &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/mechanics/">Mechanics &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/cnc-machinists/">CNC Machinists &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/it-professionals/">IT Professionals &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Salary Rules: Thresholds and Market Rate',
+        body: [
+          'Your pay must meet the higher of two figures: the income threshold for your stream, or the Annual Market Salary Rate for the same job in the same place. Check that your job is on the Core Skills Occupation List first. From 1 July 2026, the Core Skills Income Threshold is A$79,499 and the Specialist Skills Income Threshold is A$146,717. Both are indexed every 1 July.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'How Employer Nomination and Sponsorship Work',
+        intro: 'Skills in Demand visa from India applicants move through three legal steps.',
+        body: [],
+        list: [
+          'The business becomes an approved sponsor with the Department of Home Affairs',
+          'The employer lodges an employer nomination for your role, proving a genuine position and a lawful salary',
+          'Most employers complete labour market testing, which means advertising the job locally, and pay the Skilling Australians Fund levy',
+        ],
+        after: [
+          'After approval, you lodge the visa application. Sponsor obligations continue during your stay: the employer must pay the agreed salary, keep records and report major changes. In employer sponsored Australia hiring, you should never pay for sponsorship or nomination.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Skills in Demand Visa Processing Time and Timeline',
+        body: [
+          'The Skills in Demand visa processing time is usually 2 to 5 months after lodgement, shorter for complete applications and longer in busy periods. A realistic plan from Kerala looks like this.',
+        ],
+        list: [
+          'Week 1: Free assessment, ANZSCO check and stream choice',
+          'Weeks 2 to 6: English test, document collection and any licence step',
+          'Months 1 to 6: Job search with Australian employers, which varies widely by occupation',
+          '2 to 6 weeks: Sponsor approval and nomination, if the employer is not already approved',
+          'Within 2 weeks of nomination: Visa lodged with documents',
+          '2 to 4 weeks: Health examination and police certificates',
+          '4 to 12 weeks: Decision for most complete applications',
+        ],
+        after: [
+          'For employer sponsored Australia work, plan for 2 to 5 months from a signed job offer to landing, plus the time it takes to find the job.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'What the Australia Skills in Demand Visa Costs',
+        intro: 'The Skills in Demand visa cost has three parts, and the government charge is the largest. Budget early.',
+        body: [],
+        list: [
+          'Visa application charge (Paid by you): A$4,015 for the main applicant from 1 July 2026, with a separate charge for each family member',
+          'Nomination fee, levy and job advertising (Paid by employer): Paid by the employer and not by you',
+          'English test, translations, medicals and police certificates (Paid by you): Paid by you',
+        ],
+        after: [
+          'A refused application is generally not refunded, so lodge only when everything is complete.',
+          '<a href="/fees/">Fees &rarr;</a> &nbsp;·&nbsp; <a href="/tools/migration-cost-calculator/">Cost calculator &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Skills in Demand Visa Documents Checklist',
+        intro: 'Prepare the Skills in Demand visa documents early, because Home Affairs asks for proof of every claim.',
+        body: [],
+        list: [
+          'Signed contract or job offer, with the employer’s nomination details',
+          'Degree certificates, trade certificates and experience letters',
+          'Licence or registration proof, where your trade needs one',
+          'Police certificates from each country where you lived for 12 months or more',
+          'Health examination results from an approved panel doctor',
+          'Marriage and birth certificates for family members',
+        ],
+        after: ['<a href="/services/visa-documentation/">Visa Documentation &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Family: Dependants and Partner Work Rights',
+        body: [
+          'You can include your spouse and children as dependants in the application. Partner work rights are generous, because a partner can usually work and study in Australia, and children can attend school.',
+        ],
+        after: ['<a href="/services/dependent-visa/">Dependent Visa &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Changing Jobs on the Visa',
+        body: [
+          'A subclass 482 visa is tied to your sponsor at the start, but it is more flexible than the older sponsored visa. If your job ends, you generally have up to 180 days to find a new sponsor, leave Australia or apply for another visa. You can change employer when the new business nominates you and the role is approved.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Pathway to Permanent Residence',
+        body: [
+          'The Australia Skills in Demand visa can be a stepping stone to settlement. After two years with the same employer, many holders can apply for permanent residence through the Temporary Residence Transition stream of subclass 186, if the employer nominates them. Subclass 186 has its own age limit, generally under 45, and the same Core Skills Income Threshold applies.',
+        ],
+        after: [
+          '<a href="/countries/australia/subclass-189/">Subclass 189 &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/subclass-491/">Subclass 491 &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Finding a Genuine Employer from Kerala',
+        body: [
+          'Regional employers often hire sponsored workers faster, and living costs are lower outside Sydney and Melbourne. Before accepting any employer sponsored Australia job, ask for a written offer showing the role, salary, location and sponsor approval. Never pay anyone for a guaranteed job or visa, because no honest adviser can promise one. Only a registered migration agent may give paid Australian visa advice, and you can verify their number on the OMARA register.',
+        ],
+        after: ['<a href="/resources/avoid-visa-fraud/">Avoid Visa Fraud &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Example: How a Typical Plan Is Made',
+        intro: 'This is an illustrative example, not a client record.',
+        body: [],
+        list: [
+          'Profile: a 29-year-old motor mechanic from Thrissur with four years of experience and PTE 58 in each skill',
+          'Week 1: free assessment confirms the Core Skills stream and a market salary near A$80,000',
+          'Months 2 to 4: job applications and interviews with Australian employers',
+          'Month 5: employer nominates, and the visa is lodged within two weeks',
+          'Result: a clear six-month plan, with costs, from first call to landing',
+        ],
+      },
+      {
+        type: 'checks',
+        h2: 'Why Choose Mountbell for the Australia Skills in Demand Visa',
+        items: [
+          { title: 'Honest pathway advice', text: 'An honest comparison of employer sponsored Australia and points-tested routes, with no reason to push one.' },
+          { title: 'Licensed & verifiable', text: 'A licence you can check, and offices you can visit in Thrissur and Kochi.' },
+        ],
+        after: ['<a href="/free-immigration-assessment/">Free assessment &rarr;</a> &nbsp;·&nbsp; <a href="/success-stories/">Success stories &rarr;</a>'],
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'What is the Australia Skills in Demand visa?',
+            a: 'It is the subclass 482 visa that lets an approved Australian employer sponsor a skilled overseas worker for up to four years. It replaced the older sponsored visa in December 2024 and has Core Skills, Specialist Skills and Labour Agreement streams.',
+          },
+          {
+            q: 'Can I apply without a job offer?',
+            a: 'No. An approved employer must nominate you first. Without a nomination, a points-tested visa is the better route, so we compare both during your free assessment.',
+          },
+          {
+            q: 'How long does the visa take?',
+            a: 'Most complete applications are decided in 2 to 5 months after lodgement.',
+          },
+          {
+            q: 'What salary do I need?',
+            a: 'From 1 July 2026, the Core Skills stream needs A$79,499 a year. The Specialist Skills stream needs A$146,717. The market rate applies if it is higher.',
+          },
+          {
+            q: 'Who pays for sponsorship?',
+            a: 'The employer pays for sponsorship, nomination and the levy. You pay your own visa charge, tests, medicals and travel.',
+          },
+          {
+            q: 'Is there an age limit?',
+            a: 'The visa itself has no age limit. Permanent residence through subclass 186 generally needs you to be under 45, with some exceptions.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Speak to an Adviser',
+        body: ['Talk to a Mountbell adviser about the Australia Skills in Demand visa for your profile. The first assessment is free.'],
+        list: [
+          'Call: <a href="tel:+919207014777">+91 9207014777</a>',
+          'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
+          'Email: <a href="mailto:edu@mountbell.com">edu@mountbell.com</a>',
+          '<a href="/free-immigration-assessment/">Book a free assessment &rarr;</a>',
+        ],
+        after: [
+          '<strong>Thrissur Office (HQ)</strong><br />Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022',
+          '<strong>Kochi Office</strong><br />Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025',
+        ],
+      },
+    ],
+    related: ['/countries/australia/', '/countries/', '/services/', '/nursing-careers/', '/study-abroad/'],
+  },
+
+  // 15. Australia Subclass 189 Visa Page
+  {
+    path: '/countries/australia/subclass-189/',
+    parent: '/countries/australia/',
+    crumb: 'Subclass 189',
+    img: 'australia',
+    accent: 'var(--coral)',
+    title: 'Australia Subclass 189 Visa: Points & Process | Mountbell',
+    description: 'Australia subclass 189 visa for Kerala applicants: eligibility, points, costs and processing times explained. Free 189 visa assessment by Mountbell.',
+    label: 'Australia › Skilled Independent',
+    h1: 'Australia Subclass 189 Visa: Skilled Independent PR for Kerala Applicants',
+    lede: 'Australia subclass 189 visa is the permanent visa for skilled workers invited to apply without an employer sponsor or state nomination. You need an assessed occupation, Competent English, age under 45 and at least 65 points, then an invitation. Most well-prepared applicants need 8 to 18 months in total.',
+    acts: { check: 'Check my eligibility', wa: 'Book a free call' },
+    blocks: [
+      {
+        type: 'prose',
+        body: [
+          'It is a points-tested skilled independent visa, so your score, occupation and English level decide whether an invitation arrives. Mountbell checks your 189 visa eligibility first. Then we count your 189 visa points and plan every step with realistic times. If you are planning a 189 visa from Kerala, this page gives you the rules, the score and the waiting times.',
+        ],
+      },
+      {
+        type: 'note',
+        text: 'Licensed by the Ministry of External Affairs as a recruiting agent: B-1921/KER/PART/100/5/10348/2023 (<a href="https://emigrate.gov.in" target="_blank" rel="noopener">verify on eMigrate</a>) &nbsp;·&nbsp; Offices in Thrissur and Kochi, plus online consultations across Kerala &nbsp;·&nbsp; Written timelines, fees and the registered migration agent’s name before you commit',
+      },
+      {
+        type: 'facts',
+        h2: 'Key Facts at a Glance',
+        intro: 'These facts show why the Australia subclass 189 visa stays popular with skilled Indian applicants in 2026.',
+        rows: [
+          ['Type', 'A skilled independent visa: permanent, points-tested and no sponsor needed'],
+          ['Pass mark', '65 points, although invited scores are often higher'],
+          ['Age', 'Under 45 when you receive an invitation'],
+          ['English', 'Competent or higher'],
+          ['Processing', 'Subclass 189 processing time is about 6 to 12 months after lodgement'],
+          ['Whole journey', '8 to 18 months from first assessment to the visa decision'],
+          ['Intake', '132,240 Skill stream places planned for 2026-27 (BDO, May 2026)'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Is the Australia Subclass 189 Visa Right for You?',
+        body: [
+          'The 189 visa for Indians carries no state conditions. Engineers, IT specialists and teachers form the largest groups from Kerala, and our Nursing Careers team handles nurses. Our Australia hub compares every route.',
+        ],
+        list: [
+          '<strong>It suits you if:</strong> your occupation is on the Skilled Occupation List, you are under 45 with Competent English or better, you want to live and work in any state, and you can score well above the pass mark.',
+          '<strong>Consider another route if:</strong> you score close to 65 in a crowded occupation, you have a job offer and want a sponsor, you will accept a chosen state or region for extra points, or you are a nurse (who follows a separate registration path).',
+        ],
+        after: [
+          '<a href="/countries/australia/">Australia hub &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/subclass-491/">Subclass 491 &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/skills-in-demand-visa/">Skills in Demand &rarr;</a> &nbsp;·&nbsp; <a href="/nursing-careers/">Nursing Careers &rarr;</a>',
+        ],
+      },
+      {
+        type: 'table',
+        h2: '189 Visa Eligibility: The Five Basics',
+        intro: 'As a skilled independent visa, it has five core 189 visa requirements, checked at invitation and again at lodgement. Health and character standards also apply to 189 visa eligibility.',
+        head: ['Requirement', 'What it means'],
+        rows: [
+          ['Occupation', 'Your job is on the 189 visa occupation list for the year you apply and matches an Australian occupation code'],
+          ['Skills assessment', 'A positive outcome from the body that assesses your occupation'],
+          ['Points', 'At least 65, counted from age, English, education, experience and extras'],
+          ['Age', 'Under 45 when invited, which is the 189 visa age limit'],
+          ['English', 'At least Competent, which is the 189 visa English requirement'],
+        ],
+      },
+      {
+        type: 'table',
+        h2: 'How the 189 Visa Points Add Up',
+        intro: 'The points test for 189 visa applicants counts six areas. Your 189 visa points come from these main values, which the government can change. Superior English points are the fastest gain for most applicants.',
+        head: ['Area', 'Points'],
+        rows: [
+          ['Age', '30 at 25 to 32, 25 at 33 to 39, and 15 at 40 to 44'],
+          ['English', 'Competent 0, Proficient 10, Superior 20'],
+          ['Experience', 'Skilled employment points reach 20 in total, from overseas and Australian work combined'],
+          ['Education', '15 for a bachelor degree and 20 for a doctorate'],
+          ['Partner', 'Partner skills points: 10 if you are single or your partner has a positive assessment, and 5 for a partner with Competent English'],
+          ['Extras', '5 each for a professional year, a community language, regional study or Australian study'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Skills Assessment Before You Apply',
+        body: [
+          'A 189 visa skills assessment proves that your qualifications and experience meet Australian standards. Engineers Australia, ACS, Trades Recognition Australia, AITSL and VETASSESS cover most Kerala applicants. Allow 1 to 4 months, and gather certificates and experience letters first.',
+        ],
+        after: ['<a href="/services/skills-assessment/">Skills Assessment &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Expression of Interest and Invitation Rounds',
+        body: [
+          'For this skilled independent visa, you first submit an expression of interest for 189 through SkillSelect, the system run by the Department of Home Affairs. Lodging it costs nothing.',
+          'The 189 visa invitation rounds are held regularly and rank applicants by points, then by the date they reached that score. Tracking 189 invitation score trends for your occupation shows how realistic your target is. The chances of getting a 189 invitation depend on your occupation, your score and how early you reached it. Each 189 visa invitation gives you 60 days to lodge, and your EOI stays valid for two years.',
+        ],
+      },
+      {
+        type: 'table',
+        h2: 'Step-by-Step Process and Times',
+        intro: 'The subclass 189 processing time is only one part of the journey. A typical plan for a well-prepared applicant looks like this.',
+        head: ['Step', 'What happens', 'Time'],
+        rows: [
+          ['1', 'Free assessment, occupation check and points estimate', 'Week 1'],
+          ['2', 'English test and skills assessment', 'Months 1 to 3'],
+          ['3', 'EOI lodged', 'Months 3 to 4'],
+          ['4', 'Wait for an invitation', 'Months 4 to 9'],
+          ['5', 'Police certificates, medicals and lodgement', '2 to 4 weeks, within the 60-day limit'],
+          ['6', 'Visa decision: subclass 189 processing time', '6 to 12 months'],
+          ['Total', 'Longer if an English retest is needed', '8 to 18 months'],
+        ],
+      },
+      {
+        type: 'table',
+        h2: 'What the 189 Visa Costs',
+        intro: 'Budget early for the Australia subclass 189 visa, because the 189 visa fee is only one of four costs.',
+        head: ['Cost', 'Detail'],
+        rows: [
+          ['Government charges', 'The 189 visa fee for the main applicant was about AUD 4,765 in 2025-26, with extra charges for each family member, and it rises every 1 July'],
+          ['Assessments and tests', 'The skills assessment fee, the English test and any coaching'],
+          ['Checks', 'The medical examination and police certificates'],
+          ['Arrival', 'Flights, first rent and living costs until your first salary'],
+        ],
+      },
+      {
+        type: 'table',
+        h2: '189 Visa Checklist: Documents You Need',
+        intro: 'Prepare early, because a 189 visa from Kerala is document-heavy and Home Affairs asks for proof of every claim.',
+        head: ['Document', 'Notes'],
+        rows: [
+          ['Identity', 'Your 189 visa documents: passport and identity papers, as clear scans'],
+          ['Education', 'Degree certificates and transcripts'],
+          ['Work', 'Experience letters, payslips and tax records'],
+          ['Language and assessment', 'English test report and skills assessment outcome'],
+          ['Family', 'Marriage and birth certificates'],
+          ['Police clearance', '189 visa police clearance from each country where you lived for 12 months or more; allow 2 to 4 weeks for the Indian certificate'],
+          ['Medicals', '189 visa medical examination with an approved panel doctor; results usually upload within 1 to 2 weeks'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Including Your Family',
+        body: [
+          'The skilled independent visa lets you include family in 189 visa applications: your spouse or partner and dependent children. Each person needs health and character checks and pays a separate charge.',
+        ],
+        after: ['<a href="/services/dependent-visa/">Dependent Visa &rarr;</a>'],
+      },
+      {
+        type: 'table',
+        h2: 'What You Get After the Grant',
+        intro: 'The main 189 visa benefits are lasting ones.',
+        head: ['Benefit', 'Detail'],
+        rows: [
+          ['Freedom', 'Live, work and study anywhere in Australia, so your work and study rights carry no state or employer conditions'],
+          ['Health', 'Medicare access follows for permanent residents'],
+          ['Family', 'You may sponsor eligible relatives'],
+          ['Travel', 'The initial travel facility lasts five years'],
+          ['Citizenship', 'Citizenship after 189 visa grant usually becomes possible after four years of lawful residence, including one year as a permanent resident'],
+        ],
+        note: 'India does not allow dual citizenship, but an OCI card keeps your right to live and work in India.',
+      },
+      {
+        type: 'table',
+        h2: 'Common 189 Visa Mistakes',
+        head: ['Mistake', 'How to avoid it'],
+        rows: [
+          ['Claiming points you cannot prove', 'Match every claim to a document'],
+          ['Assessing the wrong occupation', 'Check the occupation list before you pay'],
+          ['Booking police certificates late', 'Apply when you lodge your EOI'],
+          ['Missing the 60-day deadline', 'Keep every document ready before the invitation'],
+          ['Weak experience letters', 'Include duties, dates and working hours'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Example: How a Typical Plan Is Made',
+        intro: 'This is an illustrative example, not a client record.',
+        body: [],
+        list: [
+          'Profile: a 29-year-old IT professional from Kochi with six years of experience, a bachelor degree and PTE 79 in each skill',
+          '189 visa points: 30 for age, 20 for Superior English, 15 for education and 10 for experience, which makes 75',
+          'Months 1 to 2: ACS assessment',
+          'Month 3: EOI lodged',
+          'Result: a clear 12 to 15 month plan and an invitation as the target',
+        ],
+      },
+      {
+        type: 'checks',
+        h2: 'Why Choose Mountbell for the Australia Subclass 189 Visa',
+        intro: 'Your first step is a free 189 visa assessment, where an adviser checks your 189 visa eligibility against the current rules. Mountbell then prepares your Australia subclass 189 visa file step by step.',
+        items: [
+          { title: 'Honest route guidance', text: 'An honest comparison of routes, with no reason to push one.' },
+          { title: 'Registered verification', text: 'A licence you can verify, and offices in Thrissur and Kochi that serve every 189 visa from Kerala.' },
+          { title: 'Specialised visa teams', text: 'Separate teams for nurses, PR and work visas.' },
+        ],
+        after: ['<a href="/free-immigration-assessment/">Free assessment &rarr;</a> &nbsp;·&nbsp; <a href="/success-stories/">Success stories &rarr;</a>'],
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'Who can apply for the Australia subclass 189 visa?',
+            a: '189 visa eligibility needs an occupation on the list, a positive assessment, Competent English, age under 45 and at least 65 points. You also need an invitation.',
+          },
+          {
+            q: 'How many points do I need?',
+            a: 'The minimum is 65, but your real target depends on your occupation. We compare your 189 visa points with recent invitation scores before you pay for tests.',
+          },
+          {
+            q: 'Can I apply without a job offer?',
+            a: 'Yes. A 189 visa without sponsor needs no employer and no state nomination. It needs enough points, an assessed occupation and an invitation.',
+          },
+          {
+            q: 'How long does the Australia subclass 189 visa take?',
+            a: 'The subclass 189 processing time is about 6 to 12 months after lodgement. Most well-prepared applicants need 8 to 18 months from first assessment to decision.',
+          },
+          {
+            q: 'Can I include my family?',
+            a: 'Yes. Your partner and dependent children can be included after their own checks.',
+          },
+          {
+            q: 'Can I apply for the 189 visa from Kerala?',
+            a: 'Yes. Applicants complete the assessment, tests, medicals and police certificates in Kerala, then lodge their 189 visa application online through a registered migration agent.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Speak to an Adviser',
+        body: ['Talk to a Mountbell adviser about the Australia subclass 189 visa. The first assessment is free.'],
+        list: [
+          'Call: <a href="tel:+919207014777">+91 9207014777</a>',
+          'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
+          'Email: <a href="mailto:edu@mountbell.com">edu@mountbell.com</a>',
+          '<a href="/free-immigration-assessment/">Book a free assessment &rarr;</a>',
+        ],
+        after: [
+          '<strong>Thrissur Office (HQ)</strong><br />Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022',
+          '<strong>Kochi Office</strong><br />Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025',
+        ],
+      },
+    ],
+    related: ['/countries/australia/', '/countries/', '/services/', '/services/pr-visa/', '/study-abroad/'],
+  },
+
+  // 16. Australia Subclass 491 Visa Page
+  {
+    path: '/countries/australia/subclass-491/',
+    parent: '/countries/australia/',
+    crumb: 'Subclass 491',
+    img: 'australia',
+    accent: 'var(--coral)',
+    title: 'Australia Subclass 491 Visa | Mountbell',
+    description: 'Australia subclass 491 visa: eligibility, points, costs and timelines for Kerala applicants, plus the regional pathway to PR. Free profile check by Mountbell.',
+    label: 'Australia › Regional Skilled',
+    h1: 'Australia Subclass 491 Visa: Regional Visa for Skilled Workers from Kerala',
+    lede: 'The Australia subclass 491 visa gives skilled workers up to five years in regional Australia, with a route to permanent residence. It is a regional provisional visa, so you need a state or territory nomination or an eligible relative sponsorship, plus 65 points and an assessed occupation. Mountbell checks your subclass 491 eligibility and plans each step with realistic timelines for applicants from Kerala.',
+    acts: { check: 'Check my eligibility', wa: 'Book a free call' },
+    blocks: [
+      {
+        type: 'facts',
+        h2: 'Subclass 491 at a Glance',
+        rows: [
+          ['Visa', 'Skilled Work Regional visa, a five-year provisional visa'],
+          ['Extra points', '15, through regional nomination or a relative’s backing'],
+          ['Age', 'Under 45 when you are invited'],
+          ['Where you live', 'Only in a designated regional area'],
+          ['Permanent residence', 'Subclass 191, after at least 3 years'],
+          ['Time to the grant', 'About 8 to 18 months from your first assessment'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Is the 491 Right for You?',
+        body: [
+          'The Australia subclass 491 visa suits applicants whose scores fall just short on the main skilled visas and who are happy to build a life outside the biggest cities. That is why the 491 visa for Indians is popular.',
+        ],
+        list: [
+          '<strong>It suits you if:</strong> your score is close to 65 and you need the extra 15, you can commit to three years of regional life, and you want a regional provisional visa as a staged route to PR.',
+          '<strong>Think twice if:</strong> you or your family must stay in Sydney, Melbourne or Brisbane, you are 45 or older, or you need to change cities freely in the first years.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Subclass 491 Eligibility: Who Can Apply',
+        body: [
+          'Each state and territory sets its own priorities, so 491 visa occupations differ by region. Subclass 491 eligibility therefore depends on state rules as well as federal ones. We match your profile to the Australia subclass 491 visa programmes that are open before you pay any fees.',
+        ],
+        list: [
+          'Occupation: your job must be on the list of the state or territory that nominates you',
+          'Skills assessment: a positive outcome from the assessing body for your occupation',
+          'Points: at least 65, including 15 extra points for the regional visa',
+          'Age: under 45 when you receive an invitation',
+          'English: the 491 visa English requirement starts at Competent, with higher scores adding points',
+          'Backing: a nomination or an eligible relative’s sponsorship',
+          'Checks: 491 visa health checks and character requirements for you and your family',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Subclass 491 Points: How the Score Adds Up',
+        body: [
+          'Subclass 491 points follow the same system as other skilled visas. The strongest age band for points is 25 to 32, Superior English adds up to 20 points, and your degree and skilled experience add more. A skilled partner can add further points. The 491 visa extra points are the 15 awarded for backing by a state or relative, and they often lift a borderline score above the pass mark.',
+        ],
+        after: ['<a href="/tools/australia-pr-points-calculator/">Australia PR points calculator &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Two Ways In: Nomination or Relative Sponsorship',
+        body: [
+          '<strong>Regional nomination</strong> means a state or territory government backs you. It is the route most Kerala applicants use, and you prove your occupation, points and ties to the state.',
+          '<strong>Relative sponsorship</strong> means an eligible relative living in a regional area backs you. You prove the relationship and the relative’s residence, so it is worth checking first if you have family there.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: '491 Visa Requirements: Before and After the Grant',
+        intro: 'The 491 visa requirements sit in two groups: what you prove before the grant and what you keep doing afterwards. Breaching them can put your PR at risk.',
+        body: [],
+        list: [
+          'Before the grant: skills assessment, English test, points, backing, and clean health and character checks',
+          'After the grant: live, work and study only in your designated regional area',
+          'For PR: three years of compliant regional life and tax evidence for subclass 191',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Designated Regional Areas and Regional Australia Jobs',
+        body: [
+          'Under the Australia subclass 491 visa, almost everywhere except Sydney, Melbourne and Brisbane counts as regional, so Perth, Adelaide, Canberra, Hobart and Darwin all qualify. Regional Australia jobs are plentiful because regional employers struggle to fill roles in trades, health care, engineering, education and construction. Moving to regional Australia often means lower rent and shorter commutes. Check the postcode before you accept a job, because working outside the zone breaks your visa conditions.',
+        ],
+      },
+      {
+        type: 'steps',
+        h2: '491 Visa Timeline: Step by Step',
+        intro: 'The Australia subclass 491 visa timeline depends on your occupation, state and document readiness. The 491 visa application steps below show a typical plan.',
+        items: [
+          { title: 'Week 1', text: 'Free profile check and occupation match.' },
+          { title: 'Months 1 to 3', text: 'English test and skills assessment.' },
+          { title: 'Months 3 to 4', text: 'Expression of interest and nomination application.' },
+          { title: 'Months 4 to 9', text: 'Waiting for nomination and an invitation, which varies by state.' },
+          { title: 'Within 60 days', text: 'Lodge the visa application after invitation.' },
+          { title: '6 to 12 months', text: '491 visa processing time after lodgement.' },
+          { title: 'Years 1 to 3', text: 'Live and work in regional Australia.' },
+          { title: 'Years 3 to 5', text: 'Apply for subclass 191 before the visa ends.' },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'The Regional Pathway to PR: From 491 to 191',
+        intro: 'The regional pathway to PR works in two stages. First you hold the 491 and meet its conditions. Then you apply for the Permanent Residence (Skilled Regional) visa, known as subclass 191.',
+        body: [],
+        list: [
+          'Time on the visa: at least 3 years from the date of grant',
+          'Deadline: lodge before the five-year visa ends',
+          'Income evidence: tax assessment notices for three income years. The rules have changed before, so we confirm the current test',
+          'Compliance: you must have followed every visa condition, including condition 8579, which keeps you in a regional area',
+        ],
+        after: [
+          'Provisional to permanent is not automatic. Keep payslips, tenancy records and tax notices from day one, because they are your evidence later.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: '491 Visa Benefits and Conditions',
+        body: [
+          'The regional provisional visa carries real value. The main 491 visa benefits are the right to live, work and study in regional Australia, the option to include your family and the regional pathway to PR. The 491 visa conditions keep you inside your designated regional area. Moving between regional areas is allowed, but moving to a major city is not.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: '491 Visa Cost',
+        intro: 'Budget for the Australia subclass 491 visa in four blocks. We put every figure in writing before you commit.',
+        body: [],
+        list: [
+          'Government charges: the visa application fee for you and each family member, due at lodgement',
+          'Assessment and tests: the skills assessment, English test and optional coaching, in months 1 to 3',
+          'Checks: police certificates and health tests, after the invitation',
+          'Arrival: flights, first rent and regional living costs until your first salary, before you fly',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: '491 Visa Documents',
+        intro: 'Build your 491 visa documents file early, because it proves your subclass 491 eligibility. Every claim needs evidence under the 491 visa requirements.',
+        body: [],
+        list: [
+          'Identity: passport and travel history',
+          'Education: degrees and transcripts',
+          'Work: experience letters, payslips and tax records',
+          'Skills and language: assessment outcome and English report',
+          'Backing: the nomination letter or your relative’s sponsorship papers',
+          'Character: police certificates for each country lived in for 12 months or more',
+          'Family: marriage and birth certificates',
+        ],
+        after: [
+          '<a href="/services/visa-documentation/">Visa Documentation &rarr;</a> &nbsp;·&nbsp; <a href="/services/skills-assessment/">Skills Assessment &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: '491 Visa Family Members',
+        body: [
+          'Your partner and dependent children can usually be included in the application. They must pass health and character checks, and a partner’s English or skills can add points.',
+        ],
+        after: ['<a href="/services/dependent-visa/">Dependent Visa &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Common Mistakes That Delay a 491 Application',
+        body: [],
+        list: [
+          'Choosing a state before checking its open list and its own 491 visa requirements',
+          'Booking the English test late, so the assessment or invitation waits',
+          'Moving to a major city while on the regional provisional visa',
+          'Discarding payslips and tax notices you need for PR later',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Settling In: Your First 90 Days',
+        body: [
+          'Settling in on the Australia subclass 491 visa is easier with a plan. Malayali families in regional Australia usually rent near work first and buy within a few years. In the first weeks, open a bank account, enrol children at the local school and check how to convert your driving licence. Regional migration Australia keeps growing, so you will rarely be the only newcomer in town.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Before You Accept a Nomination',
+        intro: 'A nomination is the first step on the regional pathway to PR, so treat it as a commitment. Run five checks first.',
+        body: [],
+        list: [
+          'Confirm your occupation is still on that state’s list on the day you apply',
+          'Read the residence and work commitment the state expects',
+          'Check how long you must stay in the state',
+          'Compare fees and waiting times across two states',
+          'Save the nomination email and reference for your visa file',
+        ],
+      },
+      {
+        type: 'steps',
+        h2: 'How Mountbell Handles the Australia Subclass 491 Visa',
+        items: [
+          { title: 'Day 1', text: 'A subclass 491 eligibility check and a written shortlist of states.' },
+          { title: 'Week 2', text: 'A booking plan for the skills assessment and English test.' },
+          { title: 'Months 3 to 4', text: 'The expression of interest and nomination file, reviewed by an adviser before submission.' },
+          { title: 'After the invitation', text: 'A line-by-line check of the visa file before lodgement.' },
+          { title: 'Years 1 to 5', text: 'Reminders for visa conditions and a tax-evidence checklist.' },
+        ],
+      },
+      {
+        type: 'note',
+        text: 'Paid visa advice for Australia must come from an agent registered in Australia, so ask for a registration number and look it up. Mountbell is licensed by the Ministry of External Affairs, and you can verify that on eMigrate.',
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'What is the Australia subclass 491 visa?',
+            a: 'It is a five-year regional provisional visa for skilled workers who live, work and study in a designated regional area. After three years you may apply for permanent residence.',
+          },
+          {
+            q: 'Can Indians apply for the 491 visa from Kerala?',
+            a: 'Yes. The 491 visa from Kerala is open to Indian skilled workers who have an assessed occupation, enough points, English proof and a nomination or a sponsoring relative.',
+          },
+          {
+            q: 'How long does the 491 visa take?',
+            a: 'Most applications need 8 to 18 months from the first assessment to the grant. Waiting for nomination is the least predictable step.',
+          },
+          {
+            q: 'Is there an age limit for the 491 visa?',
+            a: 'The 491 visa age limit is 44: you must normally be under 45 when invited. Applicants aged 25 to 32 earn the most age points.',
+          },
+          {
+            q: 'Does the 491 give permanent residence?',
+            a: 'Not directly. The regional pathway to PR opens after three years of compliant regional life. You may then apply for subclass 191, so meet the conditions throughout.',
+          },
+          {
+            q: 'Do I need a job offer?',
+            a: 'Not always. Many states nominate on occupation and points alone, but some prefer applicants who already live or work in the state. Check each state’s 491 visa requirements first.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Talk to Mountbell',
+        body: ['Talk to Mountbell about the Australia subclass 491 visa and your other options. The first assessment is free.'],
+        list: [
+          'Call: <a href="tel:+919207014777">+91 9207014777</a>',
+          'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
+          'Email: <a href="mailto:edu@mountbell.com">edu@mountbell.com</a>',
+          '<a href="/free-immigration-assessment/">Book a free assessment &rarr;</a>',
+        ],
+        after: [
+          '<strong>Thrissur Office (HQ)</strong><br />Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022',
+          '<strong>Kochi Office</strong><br />Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025',
+        ],
+      },
+    ],
+    related: ['/countries/', '/services/', '/nursing-careers/'],
+  },
 ];

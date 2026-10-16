@@ -11,7 +11,7 @@ const unbuilt = new Set([
   '/resources/gnm-vs-bsc-nurses/', '/resources/oet-vs-ielts-for-nurses/', '/resources/ahpra-registration-for-indian-nurses/',
   '/resources/189-vs-190-vs-491/', '/resources/german-level-for-jobs-in-germany/', '/resources/anerkennung-for-nurses/',
   '/resources/malta-single-permit/', '/resources/malta-care-worker-vs-nurse/', '/resources/maldives-nursing-licensing-exam/',
-  '/resources/maldives-healthcare-salaries/', '/countries/australia/skills-in-demand-visa/', '/countries/malta/care-workers/',
+  '/resources/maldives-healthcare-salaries/', '/countries/malta/care-workers/',
   '/countries/denmark/', '/countries/maldives/',
 ]);
 
