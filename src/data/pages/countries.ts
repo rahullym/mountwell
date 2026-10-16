@@ -525,4 +525,756 @@ export const countries: Page[] = [
     ],
     related: ['/nursing-careers/malta/', '/services/work-visa/', '/countries/'],
   },
+  // 10. CNC Machinist Jobs in Australia
+  {
+    path: '/countries/australia/cnc-machinists/',
+    parent: '/countries/australia/',
+    crumb: 'CNC machinists',
+    img: 'australia',
+    accent: 'var(--coral)',
+    title: 'CNC Machinist Jobs in Australia | Mountbell',
+    description: 'CNC machinist jobs in Australia : visa routes, trade assessment, pay and timelines for Kerala machinists. Free profile check with Mountbell.',
+    label: 'Australia › Skilled Trades',
+    h1: 'CNC Machinist Jobs in Australia : Visa, Assessment and Pay for Indians',
+    lede: 'CNC machinist jobs in Australia suit skilled machinists who can set up, program and run computer-controlled machines to tight tolerances. Machinists can reach Australia through an employer’s offer, a state place or a points score, and a machinist visa Australia pathway exists for each, while precision manufacturers still cannot fill their machine shops. Mountbell sets out CNC machinist visa requirements, realistic pay, waiting times and costs, so your plan is clear before any money goes on tests.',
+    acts: { check: 'Check my eligibility', wa: 'Book a free call' },
+    blocks: [
+      {
+        type: 'note',
+        text: 'Licensed by the Ministry of External Affairs as a recruiting agent: B-1921/KER/PART/100/5/10348/2023 (<a href="https://emigrate.gov.in" target="_blank" rel="noopener">verify on eMigrate</a>) &nbsp;·&nbsp; Visa advice from a registered agent &nbsp;·&nbsp; Offices in Thrissur and Kochi &nbsp;·&nbsp; Written timelines and fees before you pay anything',
+      },
+      {
+        type: 'facts',
+        h2: 'CNC Machinist Jobs in Australia : Key Facts (2026-27)',
+        rows: [
+          ['Occupations', 'Metal Machinist (First Class), plus fitter and turner Australia roles for broader fitting work'],
+          ['CNC machinist skills assessment', 'Usually 1 to 4 months'],
+          ['CNC machinist salary in Australia', 'Commonly AUD 70,000 to over AUD 100,000 a year, with programmers and shift workers near the top'],
+          ['Machinist visa Australia (employer route)', 'Allow 2 to 5 months of processing after a firm nominates you'],
+          ['CNC machinist visa requirements', 'Trade assessment, English, proven machining experience and good character'],
+          ['Points route timeline', 'Expect 12 to 24 months overall'],
+          ['Government fee (points main applicant)', 'AUD 6,135 from 1 July 2026'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'What a CNC Machinist Does',
+        body: [
+          'A CNC machinist reads engineering drawings, sets up lathes and milling machines, loads or edits programs, and checks finished parts with gauges and micrometres. Australian employers expect safe work, steady quality and clear records. Good machinists often grow into setter, programmer or supervisor roles.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Why CNC Machinist Jobs in Australia Stay in Demand',
+        body: [
+          'The machinist shortage Australia faces comes from ageing tradespeople, growth in defence and mining supply chains, and a push for local advanced manufacturing. Many employers also hire for fitter and turner Australia roles that overlap with machining. Competition for the best positions is still firm, so a strong portfolio of past work helps.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Machinist Visa Australia: Choose Your Route',
+        body: [
+          'Machinists have two realistic doors into Australia. Which one suits you comes down to age, budget and how much shop-floor time you can prove.',
+        ],
+        list: [
+          '<strong>Employer door:</strong> a manufacturer nominates you and you begin on a temporary work visa. Everything starts with a CNC machinist job offer Australia firms put in writing, and CNC machinist sponsorship Australia law requires the firm to hold sponsor approval',
+          '<strong>Points door:</strong> no employer is needed, because you earn your place through age, English, experience and a state or territory place. Your CNC machinist visa points must reach at least 65',
+          '<strong>Later settlement:</strong> with time in the role, employer-backed machinists may move to a permanent visa once the rules are met',
+        ],
+        after: [
+          'Pick the machinist visa Australia door that fits your own record, not the one a colleague used.',
+          '<a href="/countries/australia/">Australia skilled migration &rarr;</a> &nbsp;·&nbsp; <a href="/services/work-visa/">Work Visa &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'CNC Machinist Visa Requirements: The Basics',
+        body: [
+          'Exact CNC machinist visa requirements vary with the visa, yet applicants are usually tested on six points.',
+        ],
+        list: [
+          'Assessment: a positive outcome from the trade assessing authority',
+          'Training: an ITI diploma or trade certificate helps, although proven shop-floor years can bridge a gap',
+          'Experience: the CNC machinist work experience requirements ask for recent, documented machining work',
+          'English: the CNC machinist English requirement changes with the visa, and stronger scores earn points',
+          'Age: points routes generally cap eligibility at 45',
+          'Character: medicals and police certificates for every adult on the file',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'CNC Machinist Skills Assessment: Your First Step',
+        body: [
+          'A CNC machinist skills assessment tests your skills against the Australian trade standard. From India, you normally apply through an approved training organisation. It reviews your papers, questions you on technical points and sets a practical machining test. Budget 1 to 4 months, and begin early, since this stage is the one you can control best.',
+          'Recognition of prior learning for machinists helps if you learned on the shop floor rather than in a course. Gather payslips, employer letters, drawings you have worked from and photos of finished parts, and keep every claim honest.',
+        ],
+        after: [
+          '<a href="/services/skills-assessment/">Skills Assessment &rarr;</a> &nbsp;·&nbsp; <a href="/services/visa-documentation/">Visa Documentation &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Skills and Roles Employers Want',
+        body: [],
+        list: [
+          'CNC operator jobs in Australia: loading parts, running cycles and checking quality',
+          'CNC setter jobs Australia: preparing tooling, offsets and fixtures',
+          'CNC programmer jobs Australia: writing and proving programs from drawings or CAD models',
+          'CNC turning jobs Australia: shafts, bushes and threaded parts',
+          'CNC milling jobs Australia: housings, plates and complex profiles',
+          '5-axis CNC jobs Australia: aerospace, defence and medical parts',
+          'Metal machinist first class Australia: the full trade level that assessors compare you against',
+          'Toolmaker jobs Australia: dies, moulds and jigs for production lines',
+          'Fitter and turner Australia roles: fitting and machining work in maintenance shops',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Industries That Hire Machinists',
+        body: [],
+        list: [
+          'Precision engineering jobs Australia: contract machining and component makers',
+          'Defence manufacturing jobs Australia: naval, land and aerospace supply chains',
+          'Mining machinist jobs Australia: spare parts and equipment repair near resource regions',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Where CNC Machinist Jobs in Australia Are Found',
+        body: ['Demand shifts by state and with project cycles, so read these notes as a guide only.'],
+        list: [
+          'Victoria CNC machinist jobs: manufacturing and component suppliers around Melbourne',
+          'New South Wales CNC machinist jobs: general engineering, defence and tooling',
+          'Queensland CNC machinist jobs: mining supply and agricultural equipment',
+          'South Australia CNC machinist jobs: defence shipbuilding and advanced manufacturing',
+          'Western Australia CNC machinist jobs: resource services and heavy engineering',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'CNC Machinist Salary in Australia',
+        body: [
+          'The CNC machinist salary in Australia depends on your skills, state, shifts and allowances. Base rates come from awards and company agreements, and programmers and 5-axis specialists usually out-earn general operators. Night shifts and overtime can lift annual pay noticeably. Set the CNC machinist salary in Australia against rent in your target city before saying yes to an offer.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'CNC Machinist Visa Timeline: What to Expect',
+        body: [
+          'This plan shows the likely CNC machinist visa processing time at each stage. These times suit a well-prepared applicant, and our team rechecks them at every assessment.',
+        ],
+        list: [
+          'Week 1: free assessment and occupation check',
+          'Months 1 to 2: papers collected, drawings and job records sorted, English test booked',
+          'Months 2 to 4: CNC machinist skills assessment and technical interview',
+          'Months 3 to 8: employer outreach and interviews, or a wait for a state place on the points route',
+          '2 to 5 months: visa processing once a firm nominates you',
+          '6 to 15 months: typical total on the employer route',
+          '12 to 24 months: typical total on a well-prepared points route',
+        ],
+        after: ['<a href="/how-it-works/">How It Works &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'CNC Machinist Visa Cost',
+        body: [
+          'The CNC machinist visa cost has several parts. Budget for tests, medicals, police certificates, flights and the first month’s rent, along with the assessment fee. The government charge for a main applicant on the points route is AUD 6,135 from 1 July 2026, and it goes up each 1 July. Certain firms cover sponsorship costs, so get the split in writing. Our cost guide and calculator itemise everything.',
+        ],
+        after: ['<a href="/fees/">Fees &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'CNC Machinist Visa for Family',
+        body: [
+          'Your partner and children can normally be included on the same application. For a CNC machinist visa for family, each person needs a health check, a character check and proof of the relationship. The dependent visa page covers the family steps in full.',
+        ],
+        after: ['<a href="/services/dependent-visa/">Dependent Visa &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Avoiding CNC Job Offer Scams',
+        body: [
+          'CNC job offer scams often copy real company names, so verify every message. Real employers do not sell jobs. Check the company’s registration and sponsor approval before you send a rupee for a machinist visa Australia application. Walk away from anyone who guarantees a visa.',
+        ],
+        after: ['<a href="/resources/avoid-visa-fraud/">Avoid Visa Fraud &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Indian CNC Machinists in Australia: Support from Kerala',
+        body: [
+          'Indian CNC machinists in Australia usually begin as operators or setters, then move into programming or supervision. From Thrissur and Kochi, Mountbell guides CNC machinist jobs for Kerala applicants and builds each file to the machinist and fitter and turner Australia standards. Our team reviews your certificates and drawings, picks a route and gets your papers ready before you spend on tests.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Example: How a Typical Plan Is Made',
+        intro: 'This is an illustrative example, not a client record.',
+        body: [],
+        list: [
+          'Profile: a 28-year-old CNC setter from Thrissur with seven years in a precision shop, an ITI diploma and IELTS 6.0',
+          'Week 1: a free assessment confirms the trade and the likely route',
+          'Months 1 to 4: paperwork, technical interview and skills check',
+          'Months 5 to 9: employer outreach and interviews',
+          'Result: a costed 12 to 15 month plan for a machinist visa Australia employer route',
+        ],
+      },
+      {
+        type: 'checks',
+        h2: 'Why Mountbell',
+        intro: 'Our About pages show how the team works, who reviews each page and which licences we hold. When you are ready, book a free profile check. Our Australia hub compares every route, including CNC machinist jobs in Australia.',
+        items: [
+          { title: 'Registered partner advice', text: 'Visa advice from a registered agent partner with official MARN verification.' },
+          { title: 'Trade assessment specialists', text: 'Direct guidance on drawings, technical interviews, and trade testing.' },
+          { title: 'Zero visa fraud', text: 'We never sell jobs or make deceptive visa guarantees.' },
+          { title: 'Local Kerala presence', text: 'Offices in Thrissur and Kochi with dedicated Australian immigration specialists.' },
+        ],
+        after: ['<a href="/about/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'Are CNC machinist jobs in Australia open without a degree?',
+            a: 'Yes. Machining is a trade, so a passed assessment, proven experience and suitable English count for more than a degree.',
+          },
+          {
+            q: 'Do I need a job offer first?',
+            a: 'Not always. An employer-led move needs a nominating firm, but a points route does not. Read the CNC machinist visa requirements for each before you decide.',
+          },
+          {
+            q: 'How long does a machinist visa Australia application take?',
+            a: 'Expect 6 to 15 months overall on the employer route and 12 to 24 months on the points route.',
+          },
+          {
+            q: 'What is the CNC machinist salary in Australia?',
+            a: 'Many machinists take home from AUD 70,000 to over AUD 100,000 a year, and programming skills and shifts push it higher.',
+          },
+          {
+            q: 'What are the main CNC machinist visa requirements?',
+            a: 'A passed CNC machinist skills assessment comes first. After that come documented experience, English, health and character checks, and, on points routes, a competitive score.',
+          },
+          {
+            q: 'Can my family come with me?',
+            a: 'In most cases, yes. Your partner and children can join the file, with relationship proof and character checks.',
+          },
+          {
+            q: 'Do I need an agent?',
+            a: 'Not by law. For Australian visa advice, choose a registered agent and confirm the number on the official agents register.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Speak to an Adviser',
+        body: ['Talk to Mountbell about CNC machinist jobs in Australia. The first assessment is free.'],
+        list: [
+          'Call: <a href="tel:+919207014777">+91 9207014777</a>',
+          'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
+          'Email: <a href="mailto:edu@mountbell.com">edu@mountbell.com</a>',
+          '<a href="/free-immigration-assessment/">Book a free assessment &rarr;</a>',
+        ],
+        after: [
+          '<strong>Thrissur Office (HQ)</strong><br />Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022',
+          '<strong>Kochi Office</strong><br />Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025',
+        ],
+      },
+    ],
+    related: ['/countries/australia/', '/overseas-jobs/', '/services/', '/study-abroad/'],
+  },
+
+  // 11. Welder Jobs in Australia for Indians
+  {
+    path: '/countries/australia/welders/',
+    parent: '/countries/australia/',
+    crumb: 'Welders',
+    img: 'australia',
+    accent: 'var(--coral)',
+    title: 'Welder Jobs in Australia for Indians | Mountbell',
+    description: 'Welder jobs in Australia for Indians : visa routes, skills assessment, pay and timelines for Kerala welders. Free profile check with Mountbell.',
+    label: 'Australia › Skilled Trades',
+    h1: 'Welder Jobs in Australia for Indians : Visa, Skills Assessment and Pay',
+    lede: 'Welder jobs in Australia for Indians are open to qualified tradespeople who pass a trade skills assessment and secure a visa through an employer, a state or a points score. Welding is a trade Australia keeps short, and a welder visa Australia route exists for people with proven experience, a recognised qualification and workable English. Mountbell explains welder visa requirements, realistic times, pay and costs below, so you can plan before you spend money on tests.',
+    acts: { check: 'Check my eligibility', wa: 'Book a free call' },
+    blocks: [
+      {
+        type: 'note',
+        text: 'Licensed by the Ministry of External Affairs as a recruiting agent: B-1921/KER/PART/100/5/10348/2023 (<a href="https://emigrate.gov.in" target="_blank" rel="noopener">verify on eMigrate</a>) &nbsp;·&nbsp; Visa advice from a registered agent &nbsp;·&nbsp; Offices in Thrissur and Kochi &nbsp;·&nbsp; Written timelines and fees before you pay anything',
+      },
+      {
+        type: 'facts',
+        h2: 'Welder Jobs in Australia for Indians : Key Facts (2026-27)',
+        rows: [
+          ['Occupation', 'Welder (First Class), a trade that appears on Australia’s federal skills lists'],
+          ['Welder skills assessment', 'Usually 1 to 4 months'],
+          ['Welder salary in Australia', 'Roughly AUD 70,000 to over AUD 100,000 a year, depending on industry, overtime and state'],
+          ['Welder visa Australia (sponsored route)', 'About 2 to 5 months of processing once an employer nominates you'],
+          ['Welder visa requirements', 'A trade assessment, suitable English, documented experience and a clean record'],
+          ['Points-tested route timeline', 'Usually 12 to 24 months from first assessment to decision'],
+          ['Government charge (points main applicant)', 'AUD 6,135 for a points-tested main applicant from 1 July 2026'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Why Welder Jobs in Australia for Indians Stay in Demand',
+        body: [
+          'The welder shortage Australia faces comes from steady building work in mining, construction, defence shipbuilding, rail, manufacturing and energy projects. Employers value welders who read drawings, pass weld tests and work safely to Australian standards. That demand is why trade migration Australia offers real openings, although competition for the best jobs is firm and lists change each year.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Welder Visa Australia: Your Main Routes',
+        body: [
+          'There are two practical ways to move under trade migration Australia rules, and the right one depends on whether you can find an employer or prefer to qualify on points.',
+        ],
+        list: [
+          '<strong>Sponsored work route:</strong> an Australian employer nominates you for a job, and you hold a temporary work visa first. A welder job offer Australia employers make is the starting point, and welder sponsorship Australia rules require the employer to be approved',
+          '<strong>Points-tested or state route:</strong> you qualify through age, English, experience and a state or territory nomination, with no employer needed. Your welder visa points must reach at least 65',
+          '<strong>Later settlement:</strong> sponsored welders can move on to a permanent visa after time with their employer, if the conditions are met',
+        ],
+        after: [
+          'Whichever welder visa Australia route you pick, it should match your age, savings and experience, not simply the route a friend used.',
+          '<a href="/countries/australia/">Australia skilled migration &rarr;</a> &nbsp;·&nbsp; <a href="/services/work-visa/">Work Visa &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Welder Visa Requirements: The Basics',
+        body: [
+          'Welder visa requirements vary by route, but most applicants must show the following.',
+        ],
+        list: [
+          'Skills assessment: a positive result from the trade assessing authority',
+          'Qualification or evidence: a welding trade qualification helps, and strong experience can fill gaps',
+          'Work history: the welder work experience requirements ask for recent, documented hands-on welding',
+          'Language: the welder English requirement depends on the visa, and higher scores add points',
+          'Age: most points-tested routes need you to be under 45',
+          'Health and character: medicals and police certificates for every adult',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Welder Skills Assessment: The First Gate',
+        body: [
+          'The welder skills assessment proves that your skills match the first class welder Australia standard. Offshore applicants usually go through an approved training organisation, which checks documents, holds a technical interview and sets a practical welding test. Start early, because this is the longest step you control. Allow 1 to 4 months, and collect certificates, payslips, employer letters and photos of your work first.',
+          'Recognition of prior learning for welders can help if your skills come from years on site rather than a certificate. Assessors expect honest, detailed evidence, so never inflate your experience.',
+        ],
+        after: [
+          '<a href="/services/skills-assessment/">Skills Assessment &rarr;</a> &nbsp;·&nbsp; <a href="/services/visa-documentation/">Visa Documentation &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Welding Certificates and the White Card',
+        body: [
+          'Employers look for welding certificates Australia sites accept, tested in the processes you use daily. Many sites also require a white card for welders, which is the construction safety induction. You normally complete it after you arrive, so budget a day and a small fee. Keep every Indian trade certificate and apprenticeship record, because they support your assessment.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Welding Skills Employers Want',
+        body: [],
+        list: [
+          'MIG welding jobs Australia: common in fabrication shops and manufacturing',
+          'TIG welding jobs Australia: precision work on stainless steel and pressure parts',
+          'Stick welding jobs Australia: structural, repair and site work',
+          'Pipe welder jobs Australia: pipelines, plants and power projects',
+          'Structural welder jobs Australia: steel frames, bridges and buildings',
+          'Mining welder jobs Australia: equipment repair and shutdown maintenance',
+          'Shipyard welder jobs Australia: naval and commercial vessel building',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Where Welder Jobs in Australia for Indians Are Found',
+        body: ['Demand differs by state and moves with project cycles, so use these notes as a starting point.'],
+        list: [
+          'Western Australia welder jobs: mining, oil, gas and shutdown work',
+          'South Australia welder jobs: defence shipbuilding and manufacturing',
+          'Queensland welder jobs: mining, rail and resource projects',
+          'Victoria welder jobs: manufacturing, transport and infrastructure',
+          'New South Wales welder jobs: construction, infrastructure and heavy fabrication',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Welder Salary in Australia',
+        body: [
+          'The welder salary in Australia depends on your industry, state, overtime and allowances. Pay is set by awards and company agreements, and many welders earn from AUD 70,000 to over AUD 100,000 a year with overtime. Mining and shutdown roles often pay more, but they come with long shifts and remote sites. Compare the welder salary in Australia with rent in the city before you accept an offer.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Welder Visa Timeline: What to Expect',
+        body: [
+          'This plan shows the likely welder visa processing time at each stage. The times assume a ready applicant, and we recheck them before every assessment.',
+        ],
+        list: [
+          'Week 1: free assessment and trade check',
+          'Months 1 to 2: documents gathered and an English test booked',
+          'Months 2 to 4: welder skills assessment and practical welding test',
+          'Months 3 to 8: employer search and interviews, or a state place for the points route',
+          '2 to 5 months: processing of a sponsored work visa after nomination',
+          '6 to 15 months: usual total for a sponsored route',
+          '12 to 24 months: total for a well-prepared points-tested route',
+        ],
+        after: ['<a href="/how-it-works/">How It Works &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Welder Visa Cost',
+        body: [
+          'The welder visa cost has several parts. Budget for the skills assessment, English test, medicals, police certificates, flights and first rent. The government charge for a points-tested main applicant is AUD 6,135 from 1 July 2026, and it rises every 1 July. For sponsored routes, ask in writing which charges the employer pays and which you pay. Trade migration Australia can cost less when an employer pays the sponsorship charges. Our cost guide and calculator give a full breakdown.',
+        ],
+        after: ['<a href="/fees/">Fees &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Welder Visa for Family',
+        body: [
+          'Most routes let your partner and children join you. A welder visa for family needs proof of the relationship and health and character checks for each person. Our dependent visa page explains the full process.',
+        ],
+        after: ['<a href="/services/dependent-visa/">Dependent Visa &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'How to Spot Welder Job Offer Scams',
+        body: [
+          'Welder job offer scams target hopeful tradespeople, so check every offer. A genuine employer does not ask you to pay for a job. Ask for the company’s registration details and confirm that it is an approved sponsor before you send money or documents for any welder visa Australia application. Never trust anyone who promises a guaranteed visa.',
+        ],
+        after: ['<a href="/resources/avoid-visa-fraud/">Avoid Visa Fraud &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Indian Welders in Australia: Support from Kerala',
+        body: [
+          'Indian welders in Australia often start in fabrication, mining support or shipyards and then grow into supervisor or inspection roles. Mountbell advises welder jobs for Kerala applicants from our offices in Thrissur and Kochi. We review your certificates, match your experience to the right route and prepare your trade migration Australia file before you pay for tests.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Example: How a Typical Plan Is Made',
+        intro: 'This is an illustrative example, not a client record.',
+        body: [],
+        list: [
+          'Profile: a 29-year-old welder from Thrissur with eight years in fabrication, a trade certificate and IELTS 6.0',
+          'Week 1: free assessment confirms the trade and a realistic route',
+          'Months 1 to 3: documents collected, skills assessment and practical test',
+          'Months 4 to 8: employer search and interviews',
+          'Result: a clear 11 to 14 month plan, with costs, for a welder visa Australia sponsored route',
+        ],
+      },
+      {
+        type: 'checks',
+        h2: 'Why Mountbell',
+        intro: 'Read how our team works, who reviews each page and which licences we hold on the About pages, then book a free profile check. You can also return to our Australia hub to see every route to welder jobs in Australia for Indians side by side.',
+        items: [
+          { title: 'Registered trade migration', text: 'Trade assessment and visa planning with registered migration agents.' },
+          { title: 'Hands-on practical guidance', text: 'Preparation for weld tests, technical interviews, and White Card compliance.' },
+          { title: 'Ethical recruitment licence', text: 'MEA-licensed agency with no hidden fees or bogus job charges.' },
+          { title: 'Full family visa support', text: 'Partner and dependent children included seamlessly on your file.' },
+        ],
+        after: ['<a href="/about/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'Are welder jobs in Australia for Indians possible without a degree?',
+            a: 'Yes. Welding is a trade, so experience, a trade qualification and a positive skills assessment matter more than a degree.',
+          },
+          {
+            q: 'Do I need a job offer first?',
+            a: 'Not always. A sponsored route needs an employer, but a points-tested route does not. Compare the welder visa requirements for both, then choose the route that fits your age, score and savings.',
+          },
+          {
+            q: 'How long does a welder visa Australia application take?',
+            a: 'A sponsored move usually takes 6 to 15 months in total. A points-tested move usually takes 12 to 24 months.',
+          },
+          {
+            q: 'What is the welder salary in Australia?',
+            a: 'Many welders earn from AUD 70,000 to over AUD 100,000 a year with overtime, depending on industry and state.',
+          },
+          {
+            q: 'What are the main welder visa requirements?',
+            a: 'You need a positive welder skills assessment, enough documented experience, suitable English, good health and a clean record. Points routes also need a high enough score.',
+          },
+          {
+            q: 'Can my family come with me?',
+            a: 'Usually yes. Your partner and children can be included, with relationship proof and health and character checks.',
+          },
+          {
+            q: 'Do I need an agent?',
+            a: 'No agent is compulsory. If you use one for Australian visa advice, choose a registered agent and verify the number on the official agents register.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Speak to an Adviser',
+        body: ['Talk to Mountbell about welder jobs in Australia for Indians. The first assessment is free.'],
+        list: [
+          'Call: <a href="tel:+919207014777">+91 9207014777</a>',
+          'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
+          'Email: <a href="mailto:edu@mountbell.com">edu@mountbell.com</a>',
+          '<a href="/free-immigration-assessment/">Book a free assessment &rarr;</a>',
+        ],
+        after: [
+          '<strong>Thrissur Office (HQ)</strong><br />Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022',
+          '<strong>Kochi Office</strong><br />Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025',
+        ],
+      },
+    ],
+    related: ['/countries/australia/', '/overseas-jobs/', '/services/', '/study-abroad/'],
+  },
+
+  // 12. Mechanic Jobs in Australia for Indians
+  {
+    path: '/countries/australia/mechanics/',
+    parent: '/countries/australia/',
+    crumb: 'Mechanics',
+    img: 'australia',
+    accent: 'var(--coral)',
+    title: 'Mechanic Jobs in Australia for Indians | Mountbell',
+    description: 'Mechanic jobs in Australia for Indians : visa routes, trade assessment, pay and timelines for Kerala mechanics. Free profile check with Mountbell.',
+    label: 'Australia › Skilled Trades',
+    h1: 'Mechanic Jobs in Australia for Indians : Visa, Assessment and Pay',
+    lede: 'Mechanic jobs in Australia for Indians suit skilled technicians who hold a trade assessment, steady workshop experience and workable English. A motor mechanic visa Australia route can run through an employer, a state place or a points score, and automotive trades Australia employers keep struggling to fill workshop roles. Below, Mountbell sets out mechanic visa requirements, expected pay, waiting times and costs, so your plan is settled before any money goes on tests.',
+    acts: { check: 'Check my eligibility', wa: 'Book a free call' },
+    blocks: [
+      {
+        type: 'note',
+        text: 'Licensed by the Ministry of External Affairs as a recruiting agent: B-1921/KER/PART/100/5/10348/2023 (<a href="https://emigrate.gov.in" target="_blank" rel="noopener">verify on eMigrate</a>) &nbsp;·&nbsp; Visa advice from a registered agent &nbsp;·&nbsp; Offices in Thrissur and Kochi &nbsp;·&nbsp; Written timelines and fees before you pay anything',
+      },
+      {
+        type: 'facts',
+        h2: 'Mechanic Jobs in Australia for Indians : Key Facts (2026-27)',
+        rows: [
+          ['Occupations', 'Motor Mechanic (General), Diesel Motor Mechanic and related trades'],
+          ['Mechanic skills assessment', 'Usually 1 to 4 months'],
+          ['Mechanic salary in Australia', 'Commonly AUD 65,000 to over AUD 100,000 a year, with diesel, mining and overtime work at the top'],
+          ['Motor mechanic visa Australia (employer route)', 'Allow 2 to 5 months of processing after a workshop nominates you'],
+          ['Mechanic visa requirements', 'Trade assessment, English, proven repair experience and good character'],
+          ['Points route timeline', 'About 12 to 24 months end to end'],
+          ['Visa charge (points main applicant)', 'AUD 6,135 from 1 July 2026'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Why Mechanic Jobs in Australia for Indians Stay in Demand',
+        body: [
+          'The mechanic shortage Australia reports is driven by a growing vehicle fleet, long freight distances, busy mines and farms, and the arrival of electric vehicles. Workshops struggle to replace retiring tradespeople, which is why automotive trades Australia wide appear on skills lists. Competition for the best roles is still firm, and employers prefer technicians who diagnose faults, explain repairs clearly and keep tidy records of past work.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Motor Mechanic Visa Australia: Choose Your Route',
+        body: [
+          'There are two ways in: an employer nominates you, or you qualify on points. Age, savings and workshop experience decide which fits.',
+        ],
+        list: [
+          '<strong>Employer route:</strong> a workshop nominates you and you start on a temporary work visa. A mechanic job offer Australia employers make is the first step, and mechanic sponsorship Australia law requires the business to be an approved sponsor',
+          '<strong>Points route:</strong> you earn your place through age, English, experience and a state or territory place, without any employer. Your mechanic visa points must reach 65 at least',
+          '<strong>Regional hiring:</strong> regional Australia mechanic jobs often move faster, because country towns find it harder to recruit',
+          '<strong>Settlement later:</strong> after time in the job, employer-backed mechanics may apply for a permanent visa if the rules are met',
+        ],
+        after: [
+          'Whichever motor mechanic visa Australia route you pick, match it to your own profile rather than a friend’s story.',
+          '<a href="/countries/australia/">Australia skilled migration &rarr;</a> &nbsp;·&nbsp; <a href="/services/work-visa/">Work Visa &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Mechanic Visa Requirements: The Basics',
+        body: [
+          'Mechanic visa requirements differ by route, but most applicants need the following.',
+        ],
+        list: [
+          'Assessment: a passed review by the trade assessing authority',
+          'Qualification: a trade certificate or ITI diploma helps, and strong workshop experience can fill gaps',
+          'Experience: the mechanic work experience requirements look for recent, documented repair work',
+          'English: the mechanic English requirement varies by visa, and stronger scores bring extra points',
+          'Age: points routes generally expect you to be under 45',
+          'Character: medicals and police clearance for every adult on the file',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Mechanic Skills Assessment: Your First Step',
+        body: [
+          'The mechanic skills assessment checks that your skills match the Australian trade standard. From India you normally apply through an approved training organisation, which reviews your papers, interviews you and may set a practical trade assessment for mechanics. Plan on 1 to 4 months and start early, since you control this step more than any other.',
+          'Recognition of prior learning for mechanics helps if you learned on the job rather than in a course. Gather payslips, workshop letters, job cards and photos of repairs, and keep every claim honest.',
+        ],
+        after: [
+          '<a href="/services/skills-assessment/">Skills Assessment &rarr;</a> &nbsp;·&nbsp; <a href="/services/visa-documentation/">Visa Documentation &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Licences You May Need on the Job',
+        body: [
+          'Rules differ by state and task. Air-conditioning work, for example, needs a refrigerant handling licence, and roadworthy inspections need separate approval. Mining sites add their own inductions, and most employers explain these in your first weeks. Ask any employer which licences it expects before you accept an offer, so nothing surprises you after you land.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Mechanic Specialties in Demand',
+        body: [],
+        list: [
+          'General motor mechanic jobs Australia: servicing and repairs in independent and franchise workshops',
+          'Diesel mechanic jobs Australia: utes, buses, farm and light commercial vehicles',
+          'Truck mechanic jobs Australia: prime movers, trailers and freight fleets',
+          'Motorcycle mechanic jobs Australia: dealer and specialist workshops',
+          'Small engine mechanic jobs Australia: mowers, generators and outdoor equipment',
+          'Mining equipment mechanic jobs Australia: heavy plant repair and shutdown work',
+          'Electric vehicle mechanic jobs Australia: a growing field that rewards retraining',
+          'Car dealership mechanic jobs Australia: brand-trained technicians on structured pay',
+          'Fleet mechanic jobs Australia: council, bus and delivery vehicle maintenance',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Where Mechanic Jobs in Australia for Indians Are Found',
+        body: ['Demand differs by state and shifts with project cycles, so treat these notes as a starting point.'],
+        list: [
+          'Western Australia mechanic jobs: mining fleets and heavy equipment',
+          'Queensland mechanic jobs: mining, agriculture and a fast-growing population',
+          'New South Wales mechanic jobs: dealerships, transport and construction fleets',
+          'Victoria mechanic jobs: manufacturing, logistics and large service networks',
+          'South Australia mechanic jobs: regional workshops and defence supply chains',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Mechanic Salary in Australia',
+        body: [
+          'The mechanic salary in Australia depends on your specialty, state, overtime and allowances. Awards and company agreements set the base rate, and diesel, mining and heavy vehicle roles often pay above general workshops. Remote work adds allowances but also long rosters, and overtime and penalty rates can lift annual pay noticeably. Weekend and public holiday penalty rates also add to take-home pay in many workshops. Compare the mechanic salary in Australia with rent in your chosen city before you accept an offer.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Mechanic Visa Timeline: What to Expect',
+        body: [
+          'This plan shows the likely mechanic visa processing time at each stage. These times suit a prepared applicant, and our advisers recheck them at each assessment.',
+        ],
+        list: [
+          'Week 1: free assessment and occupation check',
+          'Months 1 to 2: papers collected, job records sorted and an English test booked',
+          'Months 2 to 4: mechanic skills assessment and technical interview',
+          'Months 3 to 8: approaching workshops and interviewing, or waiting for a state place on the points route',
+          '2 to 5 months: processing after an employer nominates you',
+          '6 to 15 months: usual total for the employer route',
+          '12 to 24 months: usual total for a well-prepared points route',
+        ],
+        after: ['<a href="/how-it-works/">How It Works &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Mechanic Visa Cost',
+        body: [
+          'The mechanic visa cost has several parts. Plan for assessment fees, an English test, medicals, police certificates, flights and the first month’s rent. A points-route main applicant pays a government charge of AUD 6,135 from 1 July 2026, rising each 1 July. Automotive trades Australia employers sometimes pay sponsorship charges, so ask in writing who pays what. Our cost guide and calculator list every item.',
+        ],
+        after: ['<a href="/fees/">Fees &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Mechanic Visa for Family',
+        body: [
+          'Partners and children can usually be added to the application. A mechanic visa for family requires proof of the relationship plus health and character checks for each member. Our dependent visa page explains the whole process.',
+        ],
+        after: ['<a href="/services/dependent-visa/">Dependent Visa &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Avoiding Mechanic Job Offer Scams',
+        body: [
+          'Mechanic job offer scams often copy real workshop names, so verify every message. A genuine employer never charges you for a job. Ask for the workshop’s registration details and confirm its sponsor approval before paying anything towards a motor mechanic visa Australia application. Never trust a promise of a guaranteed visa.',
+        ],
+        after: ['<a href="/resources/avoid-visa-fraud/">Avoid Visa Fraud &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Indian Mechanics in Australia: Support from Kerala',
+        body: [
+          'Indian mechanics in Australia usually begin in general workshops, then move into diesel, fleet or supervisor roles. Mountbell guides mechanic jobs for Kerala applicants from Thrissur and Kochi, and we shape every file around automotive trades Australia standards. Our advisers check your certificates, choose a route and prepare your papers before you spend on tests.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Example: How a Typical Plan Is Made',
+        intro: 'This is an illustrative example, not a client record.',
+        body: [],
+        list: [
+          'Profile: a 31-year-old diesel mechanic from Kochi with nine years in heavy vehicle workshops, an ITI diploma and IELTS 6.0',
+          'Week 1: our free assessment confirms the trade and the best fit',
+          'Months 1 to 4: documents, technical interview and assessment',
+          'Months 5 to 9: employer search and interviews',
+          'Result: a clear 12 to 15 month plan, with costs, for a motor mechanic visa Australia employer route',
+        ],
+      },
+      {
+        type: 'checks',
+        h2: 'Why Mountbell',
+        intro: 'See how our team works, who reviews each page and which licences we hold on the About pages, then book your free profile check. The Australia hub lays out every route side by side, including mechanic jobs in Australia for Indians.',
+        items: [
+          { title: 'Trade assessment expertise', text: 'Proven experience matching workshop records to Australian trade units.' },
+          { title: 'Licensed immigration partner', text: 'Registered agent partner advice with verifiable MARN credentials.' },
+          { title: 'Employer & points pathways', text: 'Objective comparison between Skills in Demand employer sponsorship and points PR.' },
+          { title: 'Clear fee stages', text: 'All government fees, skills assessment charges, and agency costs quoted upfront.' },
+        ],
+        after: ['<a href="/about/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'Are mechanic jobs in Australia for Indians open without a degree?',
+            a: 'Yes. Mechanics is a trade, so a passed assessment, proven experience and suitable English outweigh a degree.',
+          },
+          {
+            q: 'Do I need a job offer first?',
+            a: 'Not always. Employer-led moves need a nominating workshop, while points routes do not. Review the mechanic visa requirements for each before deciding.',
+          },
+          {
+            q: 'How long does a motor mechanic visa Australia application take?',
+            a: 'Employer-led moves typically take 6 to 15 months overall, while points routes take 12 to 24 months.',
+          },
+          {
+            q: 'What is the mechanic salary in Australia?',
+            a: 'Pay commonly runs from AUD 65,000 to over AUD 100,000 a year, rising with diesel, mining and overtime work.',
+          },
+          {
+            q: 'What are the main mechanic visa requirements?',
+            a: 'Expect a passed mechanic skills assessment, documented experience, suitable English, good health and a clean record, plus a competitive score on points routes.',
+          },
+          {
+            q: 'Can my family come with me?',
+            a: 'Usually, yes. Partners and children can be included, with proof of the relationship and their own checks.',
+          },
+          {
+            q: 'Do I need an agent?',
+            a: 'No law requires one. For Australian visa advice, use a registered agent and verify the number on the official agents register.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Speak to an Adviser',
+        body: ['Talk to Mountbell about mechanic jobs in Australia for Indians. The first assessment is free.'],
+        list: [
+          'Call: <a href="tel:+919207014777">+91 9207014777</a>',
+          'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
+          'Email: <a href="mailto:edu@mountbell.com">edu@mountbell.com</a>',
+          '<a href="/free-immigration-assessment/">Book a free assessment &rarr;</a>',
+        ],
+        after: [
+          '<strong>Thrissur Office (HQ)</strong><br />Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022',
+          '<strong>Kochi Office</strong><br />Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025',
+        ],
+      },
+    ],
+    related: ['/countries/australia/', '/overseas-jobs/', '/services/', '/study-abroad/'],
+  },
 ];
