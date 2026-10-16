@@ -5,35 +5,328 @@ const tags = (name: string) => list.find((c) => c.name === name)!.programmes.map
 
 export const countries: Page[] = [
   {
-    path: '/countries/', crumb: 'Countries', wide: true,
-    title: 'Best Countries to Migrate to from India | Mountbell',
-    description: 'Compare the best countries to migrate to from India: Australia, Canada, Germany, Malta, Denmark, the Netherlands, the Maldives and Eastern Europe, side by side.',
-    h1: 'Best Countries to Migrate to from India',
-    lede: 'There is no single best country, only the best one for your profession, age and language level. This page sets the eight destinations Mountbell works with side by side.',
+    path: '/countries/',
+    crumb: 'Countries',
+    wide: true,
+    title: 'Best Countries to Migrate from India (Compared) | Mountbell',
+    description: 'Compare the best countries to migrate from India: PR vs work routes, language, cost and timelines for Australia, Canada, Germany, Malta and more. Free check.',
+    label: 'Countries',
+    h1: 'Best Countries to Migrate from India — PR, Work, Language and Cost Compared',
+    lede: 'Best countries to migrate from India in 2026 include Australia and Canada for permanent residence, Germany for skilled jobs in Europe, and Malta, Poland and the Netherlands for job-based work. The right one for you depends on your occupation, age, English or German level, budget and how soon you want to move. Use this hub to compare countries side by side and shortlist two or three before you speak to an adviser.',
+    acts: { check: 'Find my best country', wa: 'Book a free call' },
     img: 'kerala',
     blocks: [
-      { type: 'table', h2: 'Country comparison', head: ['Country', 'Main routes', 'Permanent residence', 'Working language', 'Suits'], rows: [
-        ['<a href="/countries/australia/">Australia</a>', 'Points-tested skilled visas, employer sponsorship', 'Direct PR visas available', 'English', 'Nurses, tradespeople, IT professionals and teachers with strong English'],
-        ['<a href="#canada">Canada</a>', 'Express Entry, provincial nomination', 'Direct PR visas available', 'English or French', 'Skilled workers with high language scores and a degree'],
-        ['<a href="/countries/germany/">Germany</a>', 'Skilled worker visa, Opportunity Card, Ausbildung', 'After a period of work and residence', 'German', 'Healthcare and technical staff, and school leavers ready to learn German'],
-        ['<a href="/countries/malta/">Malta</a>', 'Employer work permit, nurse bridging programme', 'Long-term residence after several years', 'English', 'Nurses and allied health professionals who want the EU in English'],
-        ['<a href="#denmark">Denmark</a>', 'Authorisation, then employment', 'After a period of work and residence', 'Danish', 'Dentists and nurses willing to learn Danish'],
-        ['<a href="#netherlands">Netherlands</a>', 'Employer-sponsored work and residence permit', 'After a period of work and residence', 'English or Dutch, by employer', 'General category workers with an employer offer'],
-        ['<a href="#maldives">Maldives</a>', 'Employer-sponsored work visa', 'No. Contract work only', 'English', 'Healthcare staff who want experience close to home'],
-        ['<a href="#europe">Latvia, Poland, Lithuania, Bulgaria</a>', 'Employer work permit and national visa', 'Long-term residence after several years', 'By employer', 'Tradespeople and drivers with hands-on experience'],
-      ], note: 'A summary of how each system works. Rules are set by each government and change; your consultant confirms the current position for your route.' },
-      { type: 'links', h2: 'The eight destinations', items: list.map((c) => ({
-        title: c.name, id: c.name.toLowerCase(), meta: c.code,
-        text: c.text,
-        tags: c.href.startsWith('/countries/#') ? tags(c.name) : undefined,
-        href: c.href.startsWith('/countries/#') ? undefined : c.href,
-      })) },
-      { type: 'prose', h2: 'PR route or work route?', body: [
-        'A PR route (Australia, Canada) selects you on points and gives you permanent status from the start, but it is competitive and favours younger applicants with high English scores. A work route gets you abroad on the strength of a job offer, often faster, and permanent status comes later if you stay.',
-        'Many people qualify for a work route long before they would be invited for PR. The <a href="/tools/immigration-eligibility-checker/">immigration eligibility calculator</a> shows which of the two is open to you, and the <a href="/services/pr-visa/">PR visa</a> and <a href="/services/work-visa/">work visa</a> pages explain each in detail.',
-      ] },
+      {
+        type: 'note',
+        text: 'Licensed by the Ministry of External Affairs as a recruiting agent: B-1921/KER/PART/100/5/10348/2023 (<a href="https://emigrate.gov.in" target="_blank" rel="noopener">verify on eMigrate</a>) &nbsp;·&nbsp; Offices in Thrissur and Kochi, plus online consultations across India',
+      },
+      {
+        type: 'facts',
+        h2: 'Key Facts at a Glance',
+        intro: 'These figures explain why these are the best countries to migrate from India in 2026.',
+        rows: [
+          ['Australia', '185,000 permanent Migration Program places for 2026–27, with 132,240 in the Skill stream (BDO, May 2026)'],
+          ['Canada', 'A target of 380,000 new permanent residents in 2026, about 239,800 of them in the economic class (Government of Canada levels plan)'],
+          ['Germany', 'Skilled jobs in healthcare, engineering, IT and the trades, with the EU Blue Card for graduates on higher salaries'],
+          ['UK', 'Skilled Worker applicants need B2 English from January 2026 (The PIE News)'],
+          ['Typical migration timeline', '2 to 6 months for a job-based permit, or 8 to 18 months for PR by points'],
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'How to Choose Between Immigration Options for Indians',
+        body: [
+          'Before you compare countries, answer these questions about yourself. They narrow the list quickly for anyone planning to migrate abroad from Kerala.',
+        ],
+        list: [
+          'Do you want to settle permanently, or work abroad for a few years first?',
+          'Is your job among the occupations in demand in the country you like?',
+          'What is your English or German level, and how long would it take to improve it?',
+          'How old are you? Age limits for migration and points for age matter in Australia and Canada',
+          'What can you spend before your first salary arrives?',
+          'Will your spouse and children move with you, or join later?',
+        ],
+        after: [
+          'Your answers decide which of the best countries to migrate from India is realistic for you, not just attractive.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'PR vs Work Routes',
+        body: [
+          'Every country fits one of three models, and PR vs work routes is the first choice to make.',
+        ],
+        list: [
+          '<strong>Points-tested countries (Australia, Canada):</strong> countries with a path to PR from day one, based on age, education, experience and English; many routes need no job offer, but preparation takes longer',
+          '<strong>Work-first countries (Germany, Malta, Poland, the Netherlands, Denmark):</strong> you move with a job offer and an employer’s permit, then apply to settle after some years',
+          '<strong>Contract countries (Maldives, the Gulf):</strong> fixed-term jobs, usually without a route to permanent residence',
+        ],
+        after: [
+          'When weighing PR vs work routes, remember that points-tested routes cost more upfront but give security from day one. Employer-led routes are faster and cheaper, but tie you to a job at first.',
+          '<a href="/services/pr-visa/">PR Visa &rarr;</a> &nbsp;·&nbsp; <a href="/services/work-visa/">Work Visa &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Country Comparison',
+        body: [
+          'This country comparison covers every destination we work with. Each of our country guides has the full process, documents and costs.',
+        ],
+      },
+      {
+        type: 'prose',
+        h3: 'Australia',
+        body: [],
+        list: [
+          'Route: points-tested PR, state-sponsored options or employer sponsorship',
+          'Language: IELTS or PTE; higher scores add points',
+          'Best for: professionals and tradespeople under 45 with a strong points score',
+        ],
+        after: ['<a href="/countries/australia/">Australia country guide &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'Canada',
+        body: [],
+        list: [
+          'Route: points-ranked federal system and provincial programmes',
+          'Language: English or French; French adds points',
+          'Best for: younger, highly educated applicants with strong English',
+        ],
+        after: ['<a href="/countries/#canada">Canada overview &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'Germany',
+        body: [],
+        list: [
+          'Route: job offer and skilled worker permit, the EU Blue Card, or a job-search route',
+          'Language: German B1 to B2 for most jobs; some IT roles work in English',
+          'Best for: nurses, engineers, IT staff and tradespeople ready to learn German',
+        ],
+        after: ['<a href="/countries/germany/">Germany country guide &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'Malta',
+        body: [],
+        list: [
+          'Route: single permit, applied for by the employer',
+          'Language: English',
+          'Best for: hospitality, care, construction and healthcare workers',
+        ],
+        after: ['<a href="/countries/malta/">Malta country guide &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'Netherlands',
+        body: [],
+        list: [
+          'Route: highly skilled migrant permit through a recognised sponsor',
+          'Language: English in most professional jobs',
+          'Best for: IT, engineering and technical professionals with a salary offer',
+        ],
+        after: ['<a href="/countries/#netherlands">Netherlands overview &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'Poland and Eastern Europe',
+        body: [],
+        list: [
+          'Route: job-based permit in Poland, Latvia, Lithuania or Bulgaria',
+          'Best for: welders, fitters, drivers and factory workers',
+        ],
+        after: ['<a href="/countries/#europe">Eastern Europe overview &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'Denmark',
+        body: [],
+        list: [
+          'Route: shortage-list and salary schemes; nurse recruitment from outside the EU is paused until 31 December 2026',
+        ],
+        after: ['<a href="/countries/#denmark">Denmark overview &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'United Kingdom',
+        body: [],
+        list: [
+          'Route: Health and Care Worker visa for registered nurses only, through our Nursing Careers team',
+        ],
+        after: ['<a href="/nursing-careers/uk/">UK nursing guide &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'Maldives',
+        body: [],
+        list: [
+          'Route: fixed-term contracts in healthcare, hospitality and technical roles, close to Kerala',
+        ],
+        after: [
+          '<a href="/countries/#maldives">Maldives overview &rarr;</a> &nbsp;·&nbsp; <a href="/nursing-careers/">Nursing Careers &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Best Country by Profile',
+        intro: 'No list of the best countries to migrate from India fits everyone. Still, clear patterns emerge after years of advising families who migrate abroad from Kerala.',
+        body: [],
+        list: [
+          '<strong>Countries for IT professionals:</strong> Australia, Canada, Germany and the Netherlands',
+          '<strong>Countries for tradespeople:</strong> Australia for PR; Germany, Malta and Poland for faster employer-led moves',
+          '<strong>Allied health professionals:</strong> Australia, Germany and Malta, each with its own registration process',
+          '<strong>Family-friendly countries:</strong> Australia and Canada, where spouses and children usually get full rights from the start',
+          '<strong>Cheapest country to migrate:</strong> Poland or Malta, where the employer often covers the permit',
+          '<strong>Fastest migration route:</strong> a job-based permit in Malta or Poland, often 3 to 5 months',
+          '<strong>Australia vs Canada:</strong> Australia suits strong points scorers with an assessed occupation; Canada suits younger applicants with high English scores',
+        ],
+        after: [
+          '<a href="/services/dependent-visa/">Dependent Visa &rarr;</a> &nbsp;·&nbsp; <a href="/tools/">Free tools &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Timelines by Country',
+        intro: 'Processing times by country vary widely across immigration options for Indians, and they change with demand.',
+        body: [],
+        list: [
+          'Malta, Poland and the Maldives: 2 to 5 months from offer to travel',
+          'Germany: 4 to 12 months, mostly waiting for recognition and the visa appointment',
+          'Canada: 6 to 12 months after an invitation, plus 3 to 6 months of preparation',
+          'Australia: 8 to 18 months, including skills assessment and English test',
+        ],
+        after: [
+          'For most people who migrate abroad from Kerala, the language test is the longest step they control, so start it early.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'What Each Country Costs',
+        intro: 'Migration cost by country follows a simple pattern across the best countries to migrate from India. Your written country comparison after the assessment includes a budget for each option.',
+        body: [],
+        list: [
+          'Highest: Australia and Canada, because of skills assessments, English tests and government fees for each family member',
+          'Middle: Germany, mainly because of language classes and recognition fees',
+          'Lowest: Malta, Poland and other employer-led routes, where the employer often pays the permit',
+          'Also plan for: flights, the first months’ rent, and the cost of living abroad until your first salary',
+        ],
+        after: ['<a href="/fees/">Fee structure &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Language Needs by Country',
+        intro: 'Language requirements by country are often the deciding factor when you compare countries.',
+        body: [],
+        list: [
+          'English-speaking countries: Australia, Canada, the UK, Malta and Ireland',
+          'German: needed for most jobs in Germany, usually at B1 or B2',
+          'English at work, local language for life: the Netherlands, Denmark and Poland',
+        ],
+        after: [
+          'Our language classes in Thrissur are built around these targets.',
+          '<a href="/services/language-test-preparation/">Language classes &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Gulf or Europe?',
+        intro: 'Many families who migrate abroad from Kerala have worked in the Gulf first. The Gulf vs Europe choice now comes down to settlement.',
+        body: [],
+        list: [
+          'Gulf: tax-free salaries and short flights home, but no route to citizenship for most workers',
+          'Europe: lower take-home pay at first, but settlement rights after several years of work, plus family rights',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Life After You Arrive',
+        intro: 'Among the best countries to migrate from India, quality of life matters as much as the visa.',
+        body: [],
+        list: [
+          'Salary expectations: higher gross pay in Australia, Canada and the Netherlands; higher take-home pay in the Gulf',
+          'Malayali communities abroad: large in Australia, Canada, the UK and the Gulf, and growing in Germany and Malta',
+          'Route to citizenship: possible in Australia, Canada and most of Europe after several years of residence, whichever of the PR vs work routes you take',
+          'OCI card: India does not allow dual citizenship, but an OCI card keeps your right to live and work in India',
+        ],
+        after: ['<a href="/countries/">Country guides &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h2: 'Example: How a Typical Shortlist Is Made',
+        intro: 'This is an illustrative example, not a client record.',
+        body: [],
+        list: [
+          'Profile: a 32-year-old civil engineer from Kottayam with eight years of experience and IELTS 6.5',
+          'Day 1: free assessment to compare countries: Australia, Canada and Germany',
+          'Day 3: written country comparison: Australia first, with a higher English score needed; Germany as the backup',
+          'Months 1 to 3: English retest and skills assessment',
+          'Total: a clear 12-month plan, with costs, for two countries',
+        ],
+      },
+      {
+        type: 'checks',
+        h2: 'Why Choose Mountbell',
+        intro: 'Many people discuss the best countries to migrate from India with several consultants before choosing. Here is what Mountbell does differently:',
+        items: [
+          { title: 'Honest country comparison', text: 'An honest country comparison across many destinations, with no reason to push one.' },
+          { title: 'Licensed recruiting agent', text: 'Licensed by the Ministry of External Affairs, which you can check on eMigrate.' },
+          { title: 'Specialised expert teams', text: 'Separate teams covering the main immigration options for Indians: nurses, PR, work and study.' },
+          { title: 'Transparent fees and timelines', text: 'Written timelines and fees before you pay anything.' },
+        ],
+        after: [
+          '<a href="/free-immigration-assessment/">Free assessment &rarr;</a> &nbsp;·&nbsp; <a href="/success-stories/">Success stories &rarr;</a>',
+        ],
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'Which are the best countries to migrate from India?',
+            a: 'For permanent residence, Australia and Canada. For skilled jobs in Europe, Germany. For faster employer-led moves, Malta, Poland and the Netherlands. The best of the immigration options for Indians depends on your occupation, age, language and budget.',
+          },
+          {
+            q: 'Which country is easiest to move to?',
+            a: 'Among immigration options for Indians, Malta and Poland usually have the simplest job-based permits. For permanent residence, Australia and Canada are clearer, but they need a strong points score. Your choice between PR vs work routes decides which is easier for you.',
+          },
+          {
+            q: 'Which country is best for me?',
+            a: 'A free assessment lets you compare countries for your occupation, age and language level, with timelines and costs.',
+          },
+          {
+            q: 'Can I migrate without IELTS?',
+            a: 'Some routes accept other tests, such as PTE or OET. Germany uses German instead of English for most jobs. Most countries need some proof of language.',
+          },
+          {
+            q: 'How long does migration take?',
+            a: 'From 2 to 5 months for employer-led permits to 8 to 18 months for points-tested PR, depending on the country and how prepared you are.',
+          },
+          {
+            q: 'What are the migration rules in 2026?',
+            a: 'Migration rules for 2026 include higher English levels in the UK and continued large skilled intakes in Australia and Canada. We check the current rules before every assessment.',
+          },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Compare Countries With an Adviser',
+        body: [
+          'Speak to Mountbell about the best countries to migrate from India for your profile. The first assessment is free.',
+        ],
+        list: [
+          'Call: <a href="tel:+919207014777">+91 9207014777</a>',
+          'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
+          'Email: <a href="mailto:edu@mountbell.com">edu@mountbell.com</a>',
+          '<a href="/free-immigration-assessment/">Book a free assessment &rarr;</a>',
+        ],
+        after: [
+          '<strong>Thrissur Office (HQ)</strong><br />Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022',
+          '<strong>Kochi Office</strong><br />Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025',
+        ],
+      },
     ],
-    related: ['/nursing-careers/', '/overseas-jobs/', '/free-immigration-assessment/'],
+    related: ['/services/', '/nursing-careers/', '/study-abroad/'],
   },
   {
     path: '/countries/australia/', crumb: 'Australia', img: 'australia', accent: 'var(--coral)',
