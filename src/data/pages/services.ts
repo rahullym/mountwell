@@ -1300,41 +1300,318 @@ const pagesRaw: Page[] = [
     related: ['/services/', '/nursing-careers/', '/services/visa-documentation/'],
   },
 
-  // 9. Free Immigration Assessment (Kept intact)
+  // 9. Free Immigration Consultation (Complete 1,779-word specification)
   {
     path: '/free-immigration-assessment/',
     parent: '/services/',
     crumb: 'Free immigration consultation',
-    title: 'Book a Free Immigration Consultation | Mountbell',
-    description: 'Book a free immigration consultation with Mountbell in Thrissur, Kochi or by video call. A free profile evaluation, in Malayalam or English.',
-    h1: 'Book a Free Immigration Consultation',
-    lede: 'Send us four details and a consultant will contact you to arrange a time. The consultation is free and ends with a clear answer on where you qualify.',
+    title: 'Book a Free Immigration Consultation | Mountbell Kerala',
+    description: 'Book a free immigration consultation with Mountbell: a free profile evaluation, country advice and a written next-step plan. Thrissur, Kochi or online.',
+    label: 'Free Immigration Assessment',
+    h1: 'Book a Free Immigration Consultation — Speak to an Adviser About Your Next Move',
+    lede: 'Book a free immigration consultation with Mountbell and get a straight answer to the question that matters most: which country and visa route fits your profile, and what will it take? In 30 to 45 minutes, an adviser reviews your education, experience and goals, explains your realistic options and tells you what to do first. You get a written summary within 2 working days. There is no charge and no obligation.',
+    acts: { check: 'Book my free consultation', wa: 'Request a call-back' },
     blocks: [
-      { type: 'form' },
       {
-        type: 'steps',
-        h2: 'What happens next',
-        items: [
-          { title: 'We call you', text: 'A consultant phones or messages you to fix a time, at our Thrissur or Kochi office or by video call.' },
-          { title: 'We review your profile', text: 'Qualification, experience, age, language level and what you want: PR, a work contract or training.' },
-          { title: 'You get a shortlist', text: 'The countries and programmes that fit, what each one requires, and the ones we would rule out.' },
-          { title: 'You decide', text: 'If you want to go ahead, you receive a written fee schedule first. There is no obligation.' },
+        type: 'note',
+        text: 'Licensed by the Ministry of External Affairs as a recruiting agent: B-1921/KER/PART/100/5/10348/2023 (<a href="https://emigrate.gov.in" target="_blank" rel="noopener">verify on eMigrate</a>) &nbsp;·&nbsp; Offices in Thrissur and Kochi, plus online consultations across India &nbsp;·&nbsp; Written fees and timelines before you pay for anything',
+      },
+      {
+        type: 'facts',
+        h2: 'Key Facts at a Glance',
+        rows: [
+          ['Cost', 'The free consultation has no charge and no obligation'],
+          ['Length', '30 to 45 minutes for a career guidance call'],
+          ['Format', 'Phone, video, or face-to-face at our Thrissur or Kochi office'],
+          ['Booking', 'A consultation slot is usually offered within 2 to 3 working days of your request'],
+          ['After the call', 'A written assessment within 2 working days'],
+          ['Who it suits', 'Nurses, tradespeople and engineers, families, students and graduates, and anyone planning PR'],
         ],
       },
       {
         type: 'prose',
-        h2: 'Have these to hand',
-        body: ['Copies or photos are fine. Nothing is filed at this stage.'],
+        h2: 'What Is a Free Profile Evaluation?',
+        body: [
+          'A free profile evaluation is a structured review of your background against the rules of the countries you are considering. It replaces guesswork with facts.',
+        ],
         list: [
-          'Your highest qualification and the year you completed it',
-          'Your current job and total years of experience',
-          'Any language test score, or the date you plan to sit one',
-          'Your passport expiry date',
+          'Education: your highest qualification and how it is likely to be assessed abroad',
+          'Experience: years in your field, and whether they count as skilled work',
+          'Language: your English or German level, or a target score if you have not taken a test',
+          'Age, family and budget: the factors that decide which routes are practical for you',
+        ],
+        after: [
+          'At the end, your adviser gives you an honest view of your strongest options, including when the honest answer is to wait and improve your profile first.',
         ],
       },
-      { type: 'note', text: 'Prefer to check for yourself first? The <a href="/tools/immigration-eligibility-checker/">immigration eligibility calculator</a> takes two minutes and needs no contact details.' },
+      {
+        type: 'prose',
+        h2: 'What We Cover in Your Consultation',
+        body: [
+          'Every free consultation follows the same agenda, so nothing important is missed.',
+        ],
+        list: [
+          'Your goal: work, PR, nursing registration, study or joining family',
+          'Best-fit visa routes: the two or three that suit your profile best',
+          'Country recommendation: where your occupation is in demand and your profile is competitive',
+          'Early points check: for Australia and Canada, an early estimate of your likely score',
+          'English test advice: which test to take and the score to aim for',
+          'Cost and timeline estimate: what each route usually costs and how long it takes',
+          'Questions: anything you want to ask about the process, fees or risks',
+        ],
+        after: [
+          'The aim is a clear migration roadmap, not a sales pitch.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Who Should Book',
+        body: [
+          'Anyone can book a free immigration consultation, but it helps most for these groups:',
+        ],
+      },
+      {
+        type: 'prose',
+        h3: 'Nurses',
+        body: [],
+        list: [
+          'A nurse profile check covering registration, language and the best-fit country for GNM and BSc nurses',
+        ],
+        after: ['<a href="/nursing-careers/">Nursing Careers &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'Trades and professions',
+        body: [],
+        list: [
+          'Tradespeople and engineers, plus IT and healthcare staff, who want to compare work visa and PR routes',
+        ],
+        after: ['<a href="/services/work-visa/">Work Visa &rarr;</a> &nbsp;·&nbsp; <a href="/services/pr-visa/">PR Visa &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'Families',
+        body: [],
+        list: [
+          'A consultation for families planning to move together, or for a spouse and children joining someone already abroad',
+        ],
+        after: ['<a href="/services/dependent-visa/">Dependent Visa &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'Students and graduates',
+        body: [],
+        list: [
+          'Students and graduates weighing study abroad against a direct work or skilled route, often after a short career guidance call',
+        ],
+        after: ['<a href="/study-abroad/">Study Abroad &rarr;</a>'],
+      },
+      {
+        type: 'prose',
+        h3: 'Career changers',
+        body: [],
+        list: [
+          'Professionals exploring overseas career options and job prospects abroad before committing to a route',
+        ],
+      },
+      {
+        type: 'steps',
+        h2: 'How to Book: 5 Steps and Timeline',
+        intro: 'This is how it works when you book a free immigration consultation with Mountbell.',
+        items: [
+          { title: '1. Request (2 minutes)', text: 'Fill in the consultation booking form, call us or request a call-back.' },
+          { title: '2. Confirmation (within 1 working day)', text: 'We confirm your consultation slot and the format you chose.' },
+          { title: '3. Preparation (before the call)', text: 'We send a short list of documents to bring.' },
+          { title: '4. Consultation (30 to 45 minutes)', text: 'Your free profile evaluation and options discussion.' },
+          { title: '5. Written assessment (within 2 working days)', text: 'A summary of your options, next steps and costs.' },
+        ],
+        after: [
+          'If you decide to go ahead, the next steps after your consultation are set out in writing, with fees shown before you pay anything.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Choose How to Meet',
+        body: [
+          'Pick the format that suits your schedule when you book a free immigration consultation. Each one covers the same agenda.',
+        ],
+        list: [
+          'Video consultation: on your phone or laptop, from anywhere in India or abroad',
+          'Phone call: the quickest option if you just want to talk to an adviser',
+          'Thrissur office consultation: face-to-face at our head office near Ashwini Junction',
+          'Kochi office consultation: face-to-face at Palarivattom, Edappally Road',
+        ],
+        after: [
+          'An online immigration consultation is just as detailed as a face-to-face consultation, and many clients outside Thrissur and Kochi prefer it.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Online or In Person?',
+        body: [
+          'Both formats give you the same adviser and agenda.',
+        ],
+        list: [
+          'An online immigration consultation saves travel and suits people working shifts, living in other districts or already abroad',
+          'A face-to-face meeting suits families who want everyone in the room',
+          'Either way, you can talk to an adviser again before deciding, at no cost',
+        ],
+        after: [
+          'Most first-time clients choose an online immigration consultation, then visit an office later when documents need checking.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Documents to Bring',
+        body: [
+          'You do not need every certificate yet, but these documents to bring help your adviser:',
+        ],
+        list: [
+          'Passport, or at least your date of birth and passport status',
+          'Your highest qualification certificate and mark sheets',
+          'A CV, or a list of jobs with dates',
+          'Any English or German test result',
+          'Details of any earlier visa refusal',
+          'For nurses: your registration and experience letters',
+        ],
+        after: [
+          'Our guide on how to prepare for your consultation lists a few more questions.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'What You Get Afterwards',
+        body: [
+          'Every consultation outcome is written down, so you can think it over at home or share it with your family.',
+        ],
+        list: [
+          'Written assessment: your profile summary and your strongest routes',
+          'Migration roadmap: each step in order, from English test to visa decision, with typical timings',
+          'Cost and timeline estimate: government fees, third-party costs and our service fee, shown separately',
+          'Honest eligibility advice: what could weaken your application, and how to fix it',
+        ],
+        after: [
+          'Many people book a free immigration consultation, follow our advice on English or experience, and come back a year later when their profile is stronger.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Why Book Before You Pay Anyone',
+        body: [
+          'Many migration problems start with a payment made too early, often for a job or route that never existed.',
+        ],
+        list: [
+          'A free profile evaluation shows whether a route is realistic before money changes hands',
+          'A career guidance call helps you compare routes on cost, time and long-term settlement',
+          'A free consultation with a licensed firm costs you nothing but an hour',
+        ],
+        after: [
+          'That is why we ask everyone to book a free immigration consultation before paying any agent, including us.',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Questions to Ask Any Consultant',
+        body: [
+          'Whether you choose Mountbell or another firm, these questions protect you from bad advice:',
+        ],
+        list: [
+          'Are you licensed, and can I check the licence myself?',
+          'Who will lodge my visa application, and what are their credentials?',
+          'What are the fees, when are they paid, and what happens if my case does not go ahead?',
+          'Can you guarantee a job or a visa? (The only honest answer is no.)',
+        ],
+        after: [
+          'Any firm worth trusting should answer every one of these in writing, and you can run a licence check on eMigrate before you pay.',
+          '<a href="/fees/">Fee structure &rarr;</a>',
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Example: How a Typical Consultation Runs',
+        intro: 'This is an illustrative example, not a client record.',
+        body: [],
+        list: [
+          'Profile: a 29-year-old mechanical engineer from Kochi with six years of experience',
+          'Day 1: free consultation booked online; consultation slot confirmed the next morning',
+          'Day 3: free profile evaluation by video; Australia and Germany compared, with an early points check for Australia',
+          'Day 5: written assessment received, recommending an English test and a skills assessment first',
+          'Outcome: a 12-month migration roadmap with costs for each stage',
+        ],
+      },
+      {
+        type: 'checks',
+        h2: 'Why Choose Mountbell',
+        intro: 'Many people talk to several firms before they book a free immigration consultation. Here is what Mountbell does differently:',
+        items: [
+          { title: 'Direct expert access', text: 'You talk to an adviser who explains the rules, not a salesperson.' },
+          { title: 'Comprehensive coverage', text: 'Advice across work, PR, nursing, family and visitor routes in one meeting.' },
+          { title: 'No-obligation consultation', text: 'No-obligation consultation, with nothing to sign on the day.' },
+          { title: 'Government licensed', text: 'Licensed by the Ministry of External Affairs, which you can check on eMigrate.' },
+          { title: 'Career counselling', text: 'Career counselling that looks at your long-term goals, not just the next visa.' },
+        ],
+      },
+      {
+        type: 'prose',
+        h2: 'Your Information Is Private',
+        body: [
+          'We take data privacy seriously. The details you share are used only to assess your profile and contact you about it. We never sell your information, and you can ask us to delete it at any time.',
+        ],
+      },
+      {
+        type: 'faq',
+        h2: 'Frequently Asked Questions',
+        items: [
+          {
+            q: 'Is the consultation really free?',
+            a: 'Yes. The free consultation and your written assessment cost nothing. You only pay if you choose to go ahead with a service, and every fee is shown in writing first.',
+          },
+          {
+            q: 'How long does a career guidance call take?',
+            a: 'A career guidance call usually takes 30 to 45 minutes. Families and complex cases sometimes need a second session, also free.',
+          },
+          {
+            q: 'Can I book a free immigration consultation if I live outside Kerala?',
+            a: 'Yes. Most clients outside Thrissur and Kochi choose an online immigration consultation by video or phone, with the same written assessment afterwards.',
+          },
+          {
+            q: 'Do I need my documents ready before I talk to an adviser?',
+            a: 'No. Basic details are enough for the first call. Your adviser will tell you which documents to collect next.',
+          },
+          {
+            q: 'Will you tell me if I am not eligible?',
+            a: 'Yes. If your profile does not meet a route’s rules today, we say so and explain what would change that, such as a higher English score or more experience.',
+          },
+          {
+            q: 'What happens after the consultation?',
+            a: 'You receive a written assessment within 2 working days. If you want to proceed, we send a written plan with fees and timelines; if not, there is no follow-up pressure.',
+          },
+        ],
+      },
+      {
+        type: 'form',
+        h2: 'Book Your Free Consultation',
+      },
+      {
+        type: 'prose',
+        h2: 'Contact & Office Locations',
+        body: [
+          'Book a free immigration consultation today by phone, email or the booking form.',
+          'Prefer to talk to an adviser first? Call us and we can book your slot on the same call.',
+        ],
+        list: [
+          'Call: <a href="tel:+919207014777">+91 9207014777</a>',
+          'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
+          'Email: <a href="mailto:edu@mountbell.com">edu@mountbell.com</a>',
+        ],
+        after: [
+          '<strong>Thrissur Office (HQ)</strong><br />Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022',
+          '<strong>Kochi Office</strong><br />Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025',
+          '<a href="/services/">All services &rarr;</a> &nbsp;·&nbsp; <a href="/fees/">Fees &rarr;</a>',
+        ],
+      },
     ],
-    related: ['/how-it-works/', '/fees/', '/contact/'],
+    related: ['/services/', '/tools/', '/fees/'],
   },
 ];
 
