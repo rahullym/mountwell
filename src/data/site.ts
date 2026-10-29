@@ -68,7 +68,7 @@ export const site = {
     },
   ],
 
-  areasServed: ['Thrissur', 'Ernakulam', 'Palakkad', 'Malappuram', 'Kottayam', 'Idukki', 'Alappuzha'],
+  areasServed: ['Thrissur', 'Ernakulam', 'Kozhikode', 'Kannur', 'Kollam', 'Kottayam', 'Palakkad', 'Malappuram', 'Idukki', 'Alappuzha', 'Wayanad', 'Kasaragod', 'Pathanamthitta'],
 
   // name, role, years, credentials, languages, photo (path in /public)
   team: [] as { name: string; role: string; years: string; credentials: string; languages: string; photo: string }[],
@@ -386,6 +386,9 @@ export const menu: { label: string; href: string; id: string; items?: { label: s
 export const locations = [
   { city: 'Thrissur', href: '/immigration-consultants-thrissur/' },
   { city: 'Kochi', href: '/immigration-consultants-kochi/' },
+  { city: 'Calicut', href: '/immigration-consultants-calicut/' },
+  { city: 'Kannur', href: '/immigration-consultants-kannur/' },
+  { city: 'Kollam', href: '/immigration-consultants-kollam/' },
   { city: 'Kottayam', href: '/immigration-consultants-kottayam/' },
 ];
 
