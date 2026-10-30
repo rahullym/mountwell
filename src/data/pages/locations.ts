@@ -9,9 +9,9 @@ const phones = (o: typeof thrissur) => o.phones.map((p) => `<a href="tel:${p.tel
 export const locations: Page[] = [
   {
     path: '/contact-us/', crumb: 'Contact', wide: true,
-    title: 'Contact Mountbell | Thrissur and Kochi Offices',
-    description: 'Contact Mountbell by phone, WhatsApp or the enquiry form, or visit our immigration offices in Thrissur and Kochi. Consultations in Malayalam and English.',
-    h1: 'Contact Mountbell',
+    title: 'Contact Mount Bell | Thrissur and Kochi Offices',
+    description: 'Contact Mount Bell by phone, WhatsApp or the enquiry form, or visit our immigration offices in Thrissur and Kochi. Consultations in Malayalam and English.',
+    h1: 'Contact Mount Bell',
     lede: 'Call, message or visit. A consultant will answer in Malayalam or English.',
     cta: false,
     blocks: [
@@ -33,13 +33,13 @@ export const locations: Page[] = [
   },
   {
     path: '/immigration-consultants-thrissur/', parent: '/contact-us/', crumb: 'Thrissur',
-    title: 'Immigration Consultants in Thrissur | Mountbell Head Office',
+    title: 'Immigration Consultants in Thrissur | Mount Bell Head Office',
     description: 'Immigration consultants in Thrissur at Ashwini Junction: MEA-licensed advice on PR, work visas, nursing and overseas jobs. Free assessment. Call +91 9207014777.',
     label: 'Head office · Ashwini Junction',
-    h1: "Immigration Consultants in Thrissur: Mountbell's Head Office, Ashwini Junction",
-    lede: "Immigration consultants in Thrissur should be easy to visit, licensed to recruit and honest about which routes fit you. Mountbell's head office stands at Fair Trade Center, TUDA Road. Families from across the district come here to plan moves for work, permanent residence, nursing careers and study. Your first assessment is free, in Malayalam or English.",
+    h1: "Immigration Consultants in Thrissur: Mount Bell's Head Office, Ashwini Junction",
+    lede: "Immigration consultants in Thrissur should be easy to visit, licensed to recruit and honest about which routes fit you. Mount Bell's head office stands at Fair Trade Center, TUDA Road. Families from across the district come here to plan moves for work, permanent residence, nursing careers and study. Your first assessment is free, in Malayalam or English.",
     acts: { check: 'Book a Free Assessment', wa: 'WhatsApp Us' },
-    wa: 'Hi Mountbell, I would like to visit the Thrissur head office.',
+    wa: 'Hi Mount Bell, I would like to visit the Thrissur head office.',
     blocks: [
       { type: 'cert', h2: 'Licensed by the Ministry of External Affairs' },
       {
@@ -53,9 +53,9 @@ export const locations: Page[] = [
       },
       {
         type: 'prose',
-        h2: 'Quick Answer: Where Is Mountbell in Thrissur?',
+        h2: 'Quick Answer: Where Is Mount Bell in Thrissur?',
         body: [
-          'The Mountbell Thrissur office is our head office, at Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022. Call +91 9207014777 or +91 487 2221317 to book a time.',
+          'The Mount Bell Thrissur office is our head office, at Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022. Call +91 9207014777 or +91 487 2221317 to book a time.',
           'Our immigration consultants in Thrissur advise on skilled migration, PR, work visas, overseas recruitment, nursing careers and study abroad, under a Ministry of External Affairs recruiting licence (B-1921/KER/PART/100/5/10348/2023).',
         ],
       },
@@ -88,7 +88,7 @@ export const locations: Page[] = [
       {
         type: 'checks',
         h2: 'What Makes This Office Different',
-        intro: "As Mountbell's head office, this is where our most experienced specialists work every day:",
+        intro: "As Mount Bell's head office, this is where our most experienced specialists work every day:",
         items: [
           { title: 'Senior advisers on complex cases', text: 'Senior advisers who handle complex applications, administrative reviews, and second appraisals.' },
           { title: 'Direct leadership access', text: 'The leadership team is on site, available whenever a complicated case needs a final evaluation.' },
@@ -100,7 +100,7 @@ export const locations: Page[] = [
       {
         type: 'links',
         h2: 'Services Available Here',
-        intro: 'Every Mountbell service is offered at our Thrissur head office:',
+        intro: 'Every Mount Bell service is offered at our Thrissur head office:',
         items: [
           { title: 'Skilled migration and PR', text: 'Points-tested permanent residence in Australia and Canada.', href: '/services/pr-visa/' },
           { title: 'Work visas through employers', text: 'Verified employer-sponsored visas across Europe and the Gulf.', href: '/services/work-visa/' },
@@ -216,13 +216,13 @@ export const locations: Page[] = [
         type: 'faq',
         h2: 'Frequently Asked Questions',
         items: [
-          { q: 'Where is the Mountbell Thrissur office located?', a: 'At Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022. It is our official head office.' },
-          { q: 'Are your immigration consultants in Thrissur licensed?', a: 'Yes. Mountbell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify on eMigrate.' },
+          { q: 'Where is the Mount Bell Thrissur office located?', a: 'At Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, Kerala 680022. It is our official head office.' },
+          { q: 'Are your immigration consultants in Thrissur licensed?', a: 'Yes. Mount Bell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify on eMigrate.' },
           { q: 'Do I need an appointment before visiting the office?', a: 'It helps. Calling ahead at +91 9207014777 or +91 487 2221317 ensures the appropriate specialist consultant is reserved for your consultation.' },
           { q: 'Where do I get a police certificate in Thrissur?', a: 'Through Passport Seva. The Passport Seva Kendra Thrissur is on Poothole Road near the railway station, and our advisers tell you when your route needs one.' },
           { q: 'Do you help nurses from Thrissur hospitals?', a: 'Yes. Nursing routes to the UK, Germany, Malta, the Maldives and Denmark are among our most common cases, especially for staff from Jubilee Mission, Amala, and GMC Thrissur.' },
           { q: 'Can migration consultants Thrissur families trust help with Gulf experience?', a: 'Yes. We check whether your Gulf work counts towards a skilled route before you pay for tests.' },
-          { q: 'Do visa consultants Thrissur offices charge for the first meeting?', a: 'We do not. Your first assessment at the Mountbell Thrissur office is completely free.' },
+          { q: 'Do visa consultants Thrissur offices charge for the first meeting?', a: 'We do not. Your first assessment at the Mount Bell Thrissur office is completely free.' },
         ],
       },
       {
@@ -242,13 +242,13 @@ export const locations: Page[] = [
   },
   {
     path: '/immigration-consultants-kochi/', parent: '/contact-us/', crumb: 'Kochi',
-    title: 'Immigration Consultants in Kochi | Mountbell Palarivattom',
+    title: 'Immigration Consultants in Kochi | Mount Bell Palarivattom',
     description: 'Immigration consultants in Kochi at Palarivattom, on the Metro line: MEA-licensed advice on PR, work visas, nursing and overseas jobs. Call +91 9207014777.',
     label: 'Main branch · Palarivattom',
-    h1: 'Immigration Consultants in Kochi: Mountbell\'s Office at Palarivattom',
-    lede: 'Immigration consultants in Kochi should be easy to reach, licensed to recruit and honest about which routes fit you. Mountbell\'s Kochi office is at Mathewsons Centre Point on Edappally Road, beside the Metro line. Families from across central Kerala come here to plan moves for work, permanent residence, nursing careers and study. Your first assessment is free, in Malayalam or English.',
+    h1: 'Immigration Consultants in Kochi: Mount Bell\'s Office at Palarivattom',
+    lede: 'Immigration consultants in Kochi should be easy to reach, licensed to recruit and honest about which routes fit you. Mount Bell\'s Kochi office is at Mathewsons Centre Point on Edappally Road, beside the Metro line. Families from across central Kerala come here to plan moves for work, permanent residence, nursing careers and study. Your first assessment is free, in Malayalam or English.',
     acts: { check: 'Book a Free Assessment', wa: 'WhatsApp Us' },
-    wa: 'Hi Mountbell, I would like to visit the Kochi office in Palarivattom.',
+    wa: 'Hi Mount Bell, I would like to visit the Kochi office in Palarivattom.',
     blocks: [
       { type: 'cert', h2: 'Licensed by the Ministry of External Affairs' },
       {
@@ -262,9 +262,9 @@ export const locations: Page[] = [
       },
       {
         type: 'prose',
-        h2: 'Quick Answer: Where Is Mountbell in Kochi?',
+        h2: 'Quick Answer: Where Is Mount Bell in Kochi?',
         body: [
-          'The Mountbell Kochi office is at Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025. Call +91 9207014777 to book a time.',
+          'The Mount Bell Kochi office is at Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi, Kerala 682025. Call +91 9207014777 to book a time.',
           'Our immigration consultants in Kochi advise on skilled migration, PR, work visas, overseas recruitment, nursing careers and study abroad, under a Ministry of External Affairs recruiting licence (B-1921/KER/PART/100/5/10348/2023).',
         ],
       },
@@ -307,7 +307,7 @@ export const locations: Page[] = [
       {
         type: 'links',
         h2: 'Services Available Here',
-        intro: 'Every Mountbell service is offered at our Kochi office:',
+        intro: 'Every Mount Bell service is offered at our Kochi office:',
         items: [
           { title: 'Skilled migration and PR', text: 'Permanent residence for Australia (Subclass 189, 190, 491) and Canada (Express Entry & PNPs).', href: '/services/pr-visa/' },
           { title: 'Work visas through employers', text: 'Direct employment contracts with verified employers in Germany, Europe and the Gulf.', href: '/services/work-visa/' },
@@ -407,7 +407,7 @@ export const locations: Page[] = [
       },
       {
         type: 'reviews',
-        h2: 'What Clients Say About Mountbell',
+        h2: 'What Clients Say About Mount Bell',
       },
       {
         type: 'prose',
@@ -421,12 +421,12 @@ export const locations: Page[] = [
         type: 'faq',
         h2: 'Frequently Asked Questions',
         items: [
-          { q: 'Where is the Mountbell Kochi office located?', a: 'We are at Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi 682025.' },
-          { q: 'Are your immigration consultants in Kochi licensed?', a: 'Yes. Mountbell holds a recruiting agent licence from the Ministry of External Affairs, Government of India (Licence No. B-1921/KER/PART/100/5/10348/2023), verifiable on eMigrate.' },
+          { q: 'Where is the Mount Bell Kochi office located?', a: 'We are at Mathewsons Centre Point, 5th Floor, Metro Pillar No. 485, Palarivattom P O, Mamangalam, Edappally Road, Kochi 682025.' },
+          { q: 'Are your immigration consultants in Kochi licensed?', a: 'Yes. Mount Bell holds a recruiting agent licence from the Ministry of External Affairs, Government of India (Licence No. B-1921/KER/PART/100/5/10348/2023), verifiable on eMigrate.' },
           { q: 'Do I need an appointment before visiting the Kochi office?', a: 'An appointment is recommended so we can ensure the specialist consultant for your country or sector is reserved and free to give you an unhurried consultation. Call or WhatsApp +91 9207014777.' },
           { q: 'Where do I get a police clearance certificate (PCC) in Kochi?', a: 'Police Clearance Certificates are issued through Passport Seva under the Regional Passport Office Kochi at Panampilly Nagar. Our advisers instruct you on the exact timing to apply so it remains valid.' },
           { q: 'Do you help IT professionals and software engineers from Kakkanad?', a: 'Yes. Australia Subclass 189, 190, and 491 visas, along with Canadian Express Entry and employer-sponsored ICT pathways, are among the most frequent files handled at our Kochi office.' },
-          { q: 'Do visa consultants Kochi offices charge for the first meeting?', a: 'Mountbell does not charge for your opening eligibility assessment. The first consultation is completely free of charge.' },
+          { q: 'Do visa consultants Kochi offices charge for the first meeting?', a: 'Mount Bell does not charge for your opening eligibility assessment. The first consultation is completely free of charge.' },
           { q: 'Can I schedule an evening or weekend consultation?', a: 'Yes, by prior arrangement. We also offer secure online video consultations for working clients and family members currently living in the Gulf.' },
         ],
       },
@@ -446,14 +446,14 @@ export const locations: Page[] = [
   },
   {
     path: '/immigration-consultants-calicut/', parent: '/contact-us/', crumb: 'Calicut',
-    title: 'Immigration Consultants in Calicut | Mountbell Kozhikode',
-    description: 'Immigration consultants in Calicut: MEA-licensed Mountbell advice on PR, work visas, nursing and overseas jobs, online or in Thrissur. Free assessment.',
+    title: 'Immigration Consultants in Calicut | Mount Bell Kozhikode',
+    description: 'Immigration consultants in Calicut: MEA-licensed Mount Bell advice on PR, work visas, nursing and overseas jobs, online or in Thrissur. Free assessment.',
     label: 'Kozhikode & Malabar',
     h1: 'Immigration Consultants in Calicut: Licensed Advice for Kozhikode, Online and In Person',
-    lede: 'Immigration consultants in Calicut should be licensed to recruit, honest about which routes fit you and easy to reach. Mountbell does not have an office in Calicut yet. We serve clients across the district through online meetings, calls, WhatsApp and at our head office in Thrissur. Your first assessment is free, in Malayalam or English.',
+    lede: 'Immigration consultants in Calicut should be licensed to recruit, honest about which routes fit you and easy to reach. Mount Bell does not have an office in Calicut yet. We serve clients across the district through online meetings, calls, WhatsApp and at our head office in Thrissur. Your first assessment is free, in Malayalam or English.',
     acts: { check: 'Book a Free Assessment', wa: 'WhatsApp Us' },
     img: 'kerala',
-    wa: 'Hi Mountbell, I am from Calicut and would like an immigration consultation.',
+    wa: 'Hi Mount Bell, I am from Calicut and would like an immigration consultation.',
     blocks: [
       { type: 'cert', h2: 'Licensed by the Ministry of External Affairs' },
       {
@@ -467,7 +467,7 @@ export const locations: Page[] = [
       },
       {
         type: 'prose',
-        h2: 'Quick Answer: Does Mountbell Have an Office in Calicut?',
+        h2: 'Quick Answer: Does Mount Bell Have an Office in Calicut?',
         body: [
           'Not yet. Our immigration consultants in Calicut work with clients online and by phone, and in person at our main office at Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur. Call +91 9207014777 to book.',
           'We advise on skilled migration, PR, work visas, overseas recruitment, nursing careers and study abroad, under a Ministry of External Affairs recruiting licence (B-1921/KER/PART/100/5/10348/2023).',
@@ -507,7 +507,7 @@ export const locations: Page[] = [
       {
         type: 'links',
         h2: 'Services Available to Calicut Clients',
-        intro: 'Every Mountbell service is available online or at our offices:',
+        intro: 'Every Mount Bell service is available online or at our offices:',
         items: [
           { title: 'Skilled migration and PR', text: 'Points-tested permanent residence pathways for Australia and Canada.', href: '/services/pr-visa/' },
           { title: 'Work visas through employers', text: 'Verified employer-sponsored work permits across Europe and the Gulf.', href: '/services/work-visa/' },
@@ -544,7 +544,7 @@ export const locations: Page[] = [
         h2: 'For Gulf Workers and Returnees',
         body: [
           'Many clients from Kozhikode district have worked in the Gulf for years in countries like the UAE, Saudi Arabia, Kuwait, Oman, or Qatar. That experience can count towards skilled migration routes in Europe, Australia or Canada, provided your experience certificates spell out your exact duties, tools, and tenure.',
-          'The visa consultants Calicut clients speak to at Mountbell check whether your job fits an official skilled occupation list before you spend money on English tests or credential evaluations.',
+          'The visa consultants Calicut clients speak to at Mount Bell check whether your job fits an official skilled occupation list before you spend money on English tests or credential evaluations.',
         ],
       },
       {
@@ -614,7 +614,7 @@ export const locations: Page[] = [
       },
       {
         type: 'reviews',
-        h2: 'What Clients Say About Mountbell',
+        h2: 'What Clients Say About Mount Bell',
       },
       {
         type: 'prose',
@@ -628,13 +628,13 @@ export const locations: Page[] = [
         type: 'faq',
         h2: 'Frequently Asked Questions',
         items: [
-          { q: 'Does Mountbell have an office in Calicut?', a: 'Not yet. We serve Calicut clients online and at our head office at Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur.' },
-          { q: 'Are your immigration consultants in Calicut licensed?', a: 'Yes. Mountbell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify directly on eMigrate.' },
+          { q: 'Does Mount Bell have an office in Calicut?', a: 'Not yet. We serve Calicut clients online and at our head office at Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur.' },
+          { q: 'Are your immigration consultants in Calicut licensed?', a: 'Yes. Mount Bell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify directly on eMigrate.' },
           { q: 'Can I do the whole immigration process online?', a: 'Most of it. Our Kozhikode immigration consultants conduct consultations, document reviews, and mock interviews online. We may ask for one visit to inspect original certificates.' },
           { q: 'Where do I get a police certificate in Kozhikode?', a: 'Through Passport Seva, at the Passport Seva Kendra Kozhikode at West Hill Chungam.' },
           { q: 'Can my Gulf work experience count towards European or Australian visas?', a: 'Often, if your experience letters show your specific duties, dates, and hours. We verify whether your tenure matches the skilled occupation lists before you spend on tests.' },
           { q: 'Can visa consultants Calicut families find online be trusted?', a: 'Only if they hold an active recruiting agent licence you can verify on eMigrate. Always ask for the registration number before transferring any fees.' },
-          { q: 'Do Kozhikode immigration consultants charge for the first meeting?', a: 'Mountbell does not charge for your initial assessment. Your first consultation with our team is completely free.' },
+          { q: 'Do Kozhikode immigration consultants charge for the first meeting?', a: 'Mount Bell does not charge for your initial assessment. Your first consultation with our team is completely free.' },
         ],
       },
       {
@@ -654,14 +654,14 @@ export const locations: Page[] = [
   },
   {
     path: '/immigration-consultants-kannur/', parent: '/contact-us/', crumb: 'Kannur',
-    title: 'Immigration Consultants in Kannur | Mountbell',
-    description: 'Immigration consultants in Kannur: MEA-licensed Mountbell advice on Europe work visas, nursing, PR and moves from the Gulf, mostly online. Free assessment.',
+    title: 'Immigration Consultants in Kannur | Mount Bell',
+    description: 'Immigration consultants in Kannur: MEA-licensed Mount Bell advice on Europe work visas, nursing, PR and moves from the Gulf, mostly online. Free assessment.',
     label: 'Kannur & North Malabar',
     h1: 'Immigration Consultants in Kannur: Licensed Help for Work, Nursing and PR, Mostly Online',
-    lede: 'Immigration consultants in Kannur should do three things: show a licence you can verify, tell you which routes genuinely suit your profile, and stay reachable after you pay. Mountbell has no Kannur office at present. Clients from the district reach us by video, calls and WhatsApp messages, and come to our head office in Thrissur only when a document needs to be seen in person. The opening assessment costs nothing, and you can talk in Malayalam or English.',
+    lede: 'Immigration consultants in Kannur should do three things: show a licence you can verify, tell you which routes genuinely suit your profile, and stay reachable after you pay. Mount Bell has no Kannur office at present. Clients from the district reach us by video, calls and WhatsApp messages, and come to our head office in Thrissur only when a document needs to be seen in person. The opening assessment costs nothing, and you can talk in Malayalam or English.',
     acts: { check: 'Book a Free Assessment', wa: 'WhatsApp Us' },
     img: 'kerala',
-    wa: 'Hi Mountbell, I am from Kannur and would like an immigration consultation.',
+    wa: 'Hi Mount Bell, I am from Kannur and would like an immigration consultation.',
     blocks: [
       { type: 'cert', h2: 'Licensed by the Ministry of External Affairs' },
       {
@@ -675,7 +675,7 @@ export const locations: Page[] = [
       },
       {
         type: 'prose',
-        h2: 'Quick Answer: Can Kannur Clients Use Mountbell?',
+        h2: 'Quick Answer: Can Kannur Clients Use Mount Bell?',
         body: [
           'Yes. Most work runs online, and our head office is at Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur. Our immigration consultants in Kannur handle jobs with European employers, overseas recruitment, nursing registration abroad, skilled migration, PR and study plans, all under a recruiting licence issued by the Ministry of External Affairs (B-1921/KER/PART/100/5/10348/2023). Call +91 9207014777 to arrange a slot.',
         ],
@@ -715,7 +715,7 @@ export const locations: Page[] = [
       {
         type: 'links',
         h2: 'Services Kannur Clients Can Use',
-        intro: 'All core Mountbell programmes are accessible remotely:',
+        intro: 'All core Mount Bell programmes are accessible remotely:',
         items: [
           { title: 'Jobs with sponsoring employers', text: 'Direct hiring in Europe and the Gulf for trades, mechanics, and drivers.', href: '/overseas-jobs/' },
           { title: 'Nurse registration & placements', text: 'Nursing jobs in the UK, Germany, Malta, the Maldives and Denmark.', href: '/nursing-careers/' },
@@ -751,7 +751,7 @@ export const locations: Page[] = [
         type: 'prose',
         h2: 'From Gulf Jobs to Settled Careers Abroad',
         body: [
-          'A driver with a GCC licence, a welder with ten years on Gulf sites, or an accountant from a Muscat firm may all have a stronger case than they think. The visa consultants Kannur workers talk to at Mountbell first look at your experience letters, then at the employer, and only then at fees. If a letter is weak, we explain exactly what to ask your former company for.',
+          'A driver with a GCC licence, a welder with ten years on Gulf sites, or an accountant from a Muscat firm may all have a stronger case than they think. The visa consultants Kannur workers talk to at Mount Bell first look at your experience letters, then at the employer, and only then at fees. If a letter is weak, we explain exactly what to ask your former company for.',
         ],
       },
       {
@@ -823,7 +823,7 @@ export const locations: Page[] = [
       },
       {
         type: 'reviews',
-        h2: 'What Clients Say About Mountbell',
+        h2: 'What Clients Say About Mount Bell',
       },
       {
         type: 'prose',
@@ -837,18 +837,18 @@ export const locations: Page[] = [
         type: 'faq',
         h2: 'Frequently Asked Questions',
         items: [
-          { q: 'Is there a Mountbell office in Kannur?', a: 'No, not at present. Clients deal with us via video calls and visit our Thrissur head office when required.' },
+          { q: 'Is there a Mount Bell office in Kannur?', a: 'No, not at present. Clients deal with us via video calls and visit our Thrissur head office when required.' },
           { q: 'Can I check that your immigration consultants in Kannur are licensed?', a: 'Yes. Search our recruiting licence number (B-1921/KER/PART/100/5/10348/2023) directly on the Ministry of External Affairs eMigrate portal.' },
           { q: 'Where is the passport centre for Kannur residents?', a: 'The Passport Seva Kendra Kannur at Fort Road / South Bazar handles fresh passports and police clearance certificates.' },
           { q: 'Will my Gulf experience help for European or Australian visas?', a: 'Often, as long as your letters show specific duties, dates, and hours. We check before you spend on tests.' },
           { q: 'Do you place Kannur nurses with a GNM diploma?', a: 'Yes. Countries like Germany and Malta accept GNM diploma holders, and we specify your exact eligibility before you register for tests.' },
           { q: 'How do I know visa consultants Kannur agents recommend are genuine?', a: 'Ask for their MEA licence number and verify it yourself on the government\'s eMigrate portal.' },
-          { q: 'Does the first assessment cost anything?', a: 'No. Your initial profile assessment with Mountbell is completely free.' },
+          { q: 'Does the first assessment cost anything?', a: 'No. Your initial profile assessment with Mount Bell is completely free.' },
         ],
       },
       {
         type: 'facts',
-        h2: 'Speak With Mountbell',
+        h2: 'Speak With Mount Bell',
         rows: [
           ['Call & WhatsApp', `<a href="tel:${site.phone.tel}">${site.phone.display}</a>`],
           ['Thrissur Landline', '<a href="tel:+914872221317">+91 487 222 1317</a>'],
@@ -862,14 +862,14 @@ export const locations: Page[] = [
   },
   {
     path: '/immigration-consultants-kollam/', parent: '/contact-us/', crumb: 'Kollam',
-    title: 'Immigration Consultants in Kollam | Mountbell',
-    description: 'Immigration consultants in Kollam: MEA-licensed Mountbell guidance on nursing abroad, Europe jobs, PR and Gulf-to-Europe moves, online or in Kochi.',
+    title: 'Immigration Consultants in Kollam | Mount Bell',
+    description: 'Immigration consultants in Kollam: MEA-licensed Mount Bell guidance on nursing abroad, Europe jobs, PR and Gulf-to-Europe moves, online or in Kochi.',
     label: 'Kollam & South Kerala',
     h1: 'Immigration Consultants in Kollam: Licensed Guidance From Your First Call to Your Flight',
-    lede: 'Immigration consultants in Kollam earn trust in a simple way: a licence anyone can verify, honest answers about which countries suit you, and an adviser who still picks up the phone after the fees are paid. Mountbell is not yet based in Kollam. People from the district work with our team over video and WhatsApp, and visit our Kochi branch when originals must be checked. There is no charge for the opening assessment, held in Malayalam or English.',
+    lede: 'Immigration consultants in Kollam earn trust in a simple way: a licence anyone can verify, honest answers about which countries suit you, and an adviser who still picks up the phone after the fees are paid. Mount Bell is not yet based in Kollam. People from the district work with our team over video and WhatsApp, and visit our Kochi branch when originals must be checked. There is no charge for the opening assessment, held in Malayalam or English.',
     acts: { check: 'Book a Free Assessment', wa: 'WhatsApp Us' },
     img: 'kerala',
-    wa: 'Hi Mountbell, I am from Kollam and would like an immigration consultation.',
+    wa: 'Hi Mount Bell, I am from Kollam and would like an immigration consultation.',
     blocks: [
       { type: 'cert', h2: 'Licensed by the Ministry of External Affairs' },
       {
@@ -883,7 +883,7 @@ export const locations: Page[] = [
       },
       {
         type: 'prose',
-        h2: 'Quick Answer: How Does Mountbell Serve Kollam?',
+        h2: 'Quick Answer: How Does Mount Bell Serve Kollam?',
         body: [
           'Mainly online, with in-person meetings at Mathewsons Centre Point, Edappally Road, Kochi. Our immigration consultants in Kollam guide clients on European employment, recruitment abroad, nursing registration, skilled migration, PR and overseas study, under a recruiting licence granted by the Ministry of External Affairs (B-1921/KER/PART/100/5/10348/2023). Ring +91 9207014777 to fix a time.',
         ],
@@ -959,7 +959,7 @@ export const locations: Page[] = [
         type: 'prose',
         h2: 'Cashew, Coast and Gulf: Skills That Travel',
         body: [
-          'Supervisors from cashew processing facilities, marine mechanics from the Neendakara harbour, and drivers returning from Kuwait often have experience that European employers actively seek. The visa consultants Kollam workers speak to at Mountbell review your letters and licences, verify the employer, and only then talk about costs.',
+          'Supervisors from cashew processing facilities, marine mechanics from the Neendakara harbour, and drivers returning from Kuwait often have experience that European employers actively seek. The visa consultants Kollam workers speak to at Mount Bell review your letters and licences, verify the employer, and only then talk about costs.',
           'When a document is missing or ambiguous, we explain exactly what to request from former employers. Workers from Kollam district who returned during recent economic shifts in the Gulf are often surprised how much their Gulf years count toward European trade programmes.',
         ],
       },
@@ -1031,7 +1031,7 @@ export const locations: Page[] = [
       },
       {
         type: 'reviews',
-        h2: 'What Clients Say About Mountbell',
+        h2: 'What Clients Say About Mount Bell',
       },
       {
         type: 'prose',
@@ -1045,13 +1045,13 @@ export const locations: Page[] = [
         type: 'faq',
         h2: 'Frequently Asked Questions',
         items: [
-          { q: 'Does Mountbell have a Kollam office?', a: 'Not at present. You can deal with our team online and visit our Kochi branch at Mathewsons Centre Point, Palarivattom when needed.' },
+          { q: 'Does Mount Bell have a Kollam office?', a: 'Not at present. You can deal with our team online and visit our Kochi branch at Mathewsons Centre Point, Palarivattom when needed.' },
           { q: 'Can I verify that your immigration consultants in Kollam are licensed?', a: 'Yes. Our licence number (B-1921/KER/PART/100/5/10348/2023) can be checked directly on the government\'s eMigrate portal.' },
           { q: 'Where do Kollam residents get a police clearance certificate?', a: 'At the Passport Seva Kendra Kollam at Anandavalleeswaram / Kadappakada, booked through the Passport Seva website.' },
           { q: 'Does Gulf work count for Europe?', a: 'Frequently, when your experience certificates clearly state your clinical or technical duties and exact employment dates.' },
           { q: 'Do you help Kollam nurses with a GNM diploma?', a: 'Yes. Some countries accept GNM (such as Germany and Malta), and we name them before you pay for any exam.' },
           { q: 'How can I tell if visa consultants Kollam friends suggest are genuine?', a: 'Ask for their MEA licence number and look it up on eMigrate yourself. Never pay without checking.' },
-          { q: 'Is there a fee for the first assessment?', a: 'No. Your initial consultation with Mountbell is completely free.' },
+          { q: 'Is there a fee for the first assessment?', a: 'No. Your initial consultation with Mount Bell is completely free.' },
         ],
       },
       {
@@ -1070,14 +1070,14 @@ export const locations: Page[] = [
   },
   {
     path: '/immigration-consultants-kottayam/', parent: '/contact-us/', crumb: 'Kottayam',
-    title: 'Immigration Consultants in Kottayam | Mountbell, Online',
-    description: 'Immigration consultants in Kottayam: MEA-licensed Mountbell advice on nursing, PR, work visas and overseas jobs, online or at our Kochi office. Free assessment.',
+    title: 'Immigration Consultants in Kottayam | Mount Bell, Online',
+    description: 'Immigration consultants in Kottayam: MEA-licensed Mount Bell advice on nursing, PR, work visas and overseas jobs, online or at our Kochi office. Free assessment.',
     label: 'Kottayam & Central Travancore',
     h1: 'Immigration Consultants in Kottayam: Licensed Advice for Nurses, Families and Professionals',
-    lede: 'Immigration consultants in Kottayam should hold a licence you can check, explain routes in plain words and be easy to reach. Mountbell does not have an office in Kottayam yet. We work with clients across the district through online meetings, calls and WhatsApp, and in person at our Kochi office, the closest to you. Your first assessment is free, in Malayalam or English.',
+    lede: 'Immigration consultants in Kottayam should hold a licence you can check, explain routes in plain words and be easy to reach. Mount Bell does not have an office in Kottayam yet. We work with clients across the district through online meetings, calls and WhatsApp, and in person at our Kochi office, the closest to you. Your first assessment is free, in Malayalam or English.',
     acts: { check: 'Book a Free Assessment', wa: 'WhatsApp Us' },
     img: 'kerala',
-    wa: 'Hi Mountbell, I am from Kottayam and would like an immigration consultation.',
+    wa: 'Hi Mount Bell, I am from Kottayam and would like an immigration consultation.',
     blocks: [
       { type: 'cert', h2: 'Licensed by the Ministry of External Affairs' },
       {
@@ -1091,7 +1091,7 @@ export const locations: Page[] = [
       },
       {
         type: 'prose',
-        h2: 'Quick Answer: Is There a Mountbell Office in Kottayam?',
+        h2: 'Quick Answer: Is There a Mount Bell Office in Kottayam?',
         body: [
           'Not yet. Our immigration consultants in Kottayam work with clients online and by phone, and in person at Mathewsons Centre Point, Palarivattom, Kochi. Our head office in Thrissur handles complex cases. Call +91 9207014777 to book. We advise on nursing careers, skilled migration, PR, work visas, overseas recruitment and study abroad, under a Ministry of External Affairs recruiting licence (B-1921/KER/PART/100/5/10348/2023).',
         ],
@@ -1131,7 +1131,7 @@ export const locations: Page[] = [
       {
         type: 'links',
         h2: 'Every Service, Online or in Person',
-        intro: 'Every Mountbell programme is available to Kottayam candidates:',
+        intro: 'Every Mount Bell programme is available to Kottayam candidates:',
         items: [
           { title: 'Nursing careers abroad', text: 'Registration and hospital placement in the UK, Germany, Malta, the Maldives and Denmark.', href: '/nursing-careers/' },
           { title: 'Skilled migration and PR', text: 'Points-tested permanent residence in Australia and Canada.', href: '/services/pr-visa/' },
@@ -1167,7 +1167,7 @@ export const locations: Page[] = [
         type: 'prose',
         h2: 'For Professionals and Returning Gulf Workers',
         body: [
-          'Engineers, teachers and tradespeople from the district often weigh a route scored on points against a direct job offer. Gulf experience can count too, provided your letters spell out your duties and dates. The visa consultants Kottayam clients speak to at Mountbell check whether your job fits a skilled list before you spend money on tests.',
+          'Engineers, teachers and tradespeople from the district often weigh a route scored on points against a direct job offer. Gulf experience can count too, provided your letters spell out your duties and dates. The visa consultants Kottayam clients speak to at Mount Bell check whether your job fits a skilled list before you spend money on tests.',
           'If you are weighing overseas jobs Kottayam agents advertise, we check the employer and the contract before you sign anything.',
         ],
       },
@@ -1253,13 +1253,13 @@ export const locations: Page[] = [
         type: 'faq',
         h2: 'Frequently Asked Questions',
         items: [
-          { q: 'Does Mountbell have an office in Kottayam?', a: 'Not yet. We serve you online and at our Kochi office at Mathewsons Centre Point, Palarivattom.' },
-          { q: 'Are your immigration consultants in Kottayam licensed?', a: 'Yes. Mountbell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify on eMigrate.' },
+          { q: 'Does Mount Bell have an office in Kottayam?', a: 'Not yet. We serve you online and at our Kochi office at Mathewsons Centre Point, Palarivattom.' },
+          { q: 'Are your immigration consultants in Kottayam licensed?', a: 'Yes. Mount Bell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify on eMigrate.' },
           { q: 'Where do I get a police certificate locally in Kottayam?', a: 'Through Passport Seva, at the Passport Seva Kendra Kottayam in the Head Post Office building at Nagampadam, once the centre confirms your slot.' },
           { q: 'Do you help Kottayam nurses with a GNM diploma?', a: 'Yes. Several countries accept GNM (such as Germany and Malta), and we explain which ones before you pay for tests.' },
           { q: 'Can visa consultants Kottayam families find online be trusted?', a: 'Only if they hold a licence you can check on eMigrate. Always ask for the number before you pay.' },
           { q: 'Do you list overseas jobs Kottayam workers can apply for?', a: 'Yes, with verified employers. See our overseas jobs page for current openings.' },
-          { q: 'Is the first meeting free?', a: 'Yes. Your first assessment with Mountbell is free.' },
+          { q: 'Is the first meeting free?', a: 'Yes. Your first assessment with Mount Bell is free.' },
         ],
       },
       {
@@ -1278,14 +1278,14 @@ export const locations: Page[] = [
   },
 {
     path: '/immigration-consultants-malappuram/', parent: '/contact-us/', crumb: 'Malappuram',
-    title: 'Immigration Consultants in Malappuram | Mountbell',
-    description: 'Immigration consultants in Malappuram: MEA-licensed Mountbell advice on Europe work visas, nursing, PR and Gulf-to-Europe moves, online or in Thrissur.',
+    title: 'Immigration Consultants in Malappuram | Mount Bell',
+    description: 'Immigration consultants in Malappuram: MEA-licensed Mount Bell advice on Europe work visas, nursing, PR and Gulf-to-Europe moves, online or in Thrissur.',
     label: 'Malappuram & Gulf Transitions',
     h1: 'Immigration Consultants in Malappuram: Licensed Advice Beyond the Gulf',
-    lede: 'Immigration consultants in Malappuram should hold a licence you can check, explain each route in plain words and stay with you until you travel. Mountbell does not have an office in Malappuram yet. We serve clients across the district through online meetings, calls and WhatsApp, and in person at our head office in Thrissur. Your first assessment is free, in Malayalam or English.',
+    lede: 'Immigration consultants in Malappuram should hold a licence you can check, explain each route in plain words and stay with you until you travel. Mount Bell does not have an office in Malappuram yet. We serve clients across the district through online meetings, calls and WhatsApp, and in person at our head office in Thrissur. Your first assessment is free, in Malayalam or English.',
     acts: { check: 'Book a Free Assessment', wa: 'WhatsApp Us' },
     img: 'kerala',
-    wa: 'Hi Mountbell, I am from Malappuram and would like an immigration consultation.',
+    wa: 'Hi Mount Bell, I am from Malappuram and would like an immigration consultation.',
     blocks: [
       { type: 'cert', h2: 'Licensed by the Ministry of External Affairs' },
       {
@@ -1299,7 +1299,7 @@ export const locations: Page[] = [
       },
       {
         type: 'prose',
-        h2: 'Quick Answer: How Do Malappuram Clients Reach Mountbell?',
+        h2: 'Quick Answer: How Do Malappuram Clients Reach Mount Bell?',
         body: [
           'Online, by phone, or at our head office at Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur. Our immigration consultants in Malappuram advise on work visas, overseas recruitment, nursing careers, skilled migration, PR and study abroad, under a Ministry of External Affairs recruiting licence (B-1921/KER/PART/100/5/10348/2023). Call +91 9207014777 to book.',
         ],
@@ -1326,7 +1326,7 @@ export const locations: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'What Makes Mountbell a Safe Choice',
+        h2: 'What Makes Mount Bell a Safe Choice',
         intro: 'We provide legal protections and full transparency for Malappuram families:',
         items: [
           { title: 'Ministry of External Affairs licence', text: 'A verified recruiting licence (B-1921/KER/PART/100/5/10348/2023) searchable on eMigrate.' },
@@ -1339,7 +1339,7 @@ export const locations: Page[] = [
       {
         type: 'links',
         h2: 'Help Available to Malappuram Clients',
-        intro: 'Every core Mountbell programme is open to Malappuram candidates:',
+        intro: 'Every core Mount Bell programme is open to Malappuram candidates:',
         items: [
           { title: 'Work visas through employers', text: 'Direct hiring by verified employers in Germany, Europe and the Gulf.', href: '/services/work-visa/' },
           { title: 'Overseas recruitment', text: 'Recruitment for heavy drivers, tradespeople, mechanics and hospitality staff.', href: '/overseas-jobs/' },
@@ -1377,7 +1377,7 @@ export const locations: Page[] = [
         h2: 'Turning Gulf Experience Into a Skilled Visa',
         body: [
           'For workers from Malappuram district, years in Riyadh, Dubai, Doha or Kuwait can count towards work routes in Europe and skilled routes in Australia or Canada. What matters is proof: experience letters that list your duties and dates, a valid licence for drivers, and certificates for trades.',
-          'The visa consultants Malappuram workers speak to at Mountbell check your papers and the employer before you pay anything. If a letter is missing or ambiguous, we tell you exactly what to request from your old company.',
+          'The visa consultants Malappuram workers speak to at Mount Bell check your papers and the employer before you pay anything. If a letter is missing or ambiguous, we tell you exactly what to request from your old company.',
         ],
       },
       {
@@ -1462,13 +1462,13 @@ export const locations: Page[] = [
         type: 'faq',
         h2: 'Frequently Asked Questions',
         items: [
-          { q: 'Does Mountbell have an office in Malappuram?', a: 'Not yet. We serve you online and at our head office in Thrissur at Fair Trade Center, TUDA Road, Ashwini Jn.' },
-          { q: 'Are your immigration consultants in Malappuram licensed?', a: 'Yes. Mountbell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify on eMigrate.' },
+          { q: 'Does Mount Bell have an office in Malappuram?', a: 'Not yet. We serve you online and at our head office in Thrissur at Fair Trade Center, TUDA Road, Ashwini Jn.' },
+          { q: 'Are your immigration consultants in Malappuram licensed?', a: 'Yes. Mount Bell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify on eMigrate.' },
           { q: 'Where do I get a police certificate in Malappuram?', a: 'Through Passport Seva, at the Passport Seva Kendra Malappuram at Sajidha Tower on Jubilee Road, Moonampadi.' },
           { q: 'Can I start while I am still working in the Gulf?', a: 'Yes. Most steps—including eligibility review, credential evaluation, and language coaching—can be completed online before you return to Kerala.' },
           { q: 'Do you help Malappuram nurses with Gulf experience?', a: 'Yes. Gulf hospital experience often counts towards European, UK, and Australian registrations, and we check your letters first.' },
           { q: 'Can visa consultants Malappuram clients find online be trusted?', a: 'Only if they hold a licence you can check on eMigrate. Ask for the registration number before you pay.' },
-          { q: 'Is the first meeting free?', a: 'Yes. Your initial assessment with Mountbell is completely free.' },
+          { q: 'Is the first meeting free?', a: 'Yes. Your initial assessment with Mount Bell is completely free.' },
         ],
       },
       {
@@ -1488,14 +1488,14 @@ export const locations: Page[] = [
   },
 {
     path: '/immigration-consultants-palakkad/', parent: '/contact-us/', crumb: 'Palakkad',
-    title: 'Immigration Consultants in Palakkad | Mountbell',
-    description: 'Immigration consultants in Palakkad: MEA-licensed Mountbell advice on work visas, nursing, PR and overseas jobs, online or in Thrissur. Free assessment.',
+    title: 'Immigration Consultants in Palakkad | Mount Bell',
+    description: 'Immigration consultants in Palakkad: MEA-licensed Mount Bell advice on work visas, nursing, PR and overseas jobs, online or in Thrissur. Free assessment.',
     label: 'Palakkad & Industrial Belt',
     h1: 'Immigration Consultants in Palakkad: Licensed Advice for Work, Nursing and PR',
-    lede: 'Immigration consultants in Palakkad should hold a licence you can check, explain each route honestly and be close enough to visit. Mountbell does not have an office in Palakkad yet. We serve clients across the district through online meetings, calls and WhatsApp, and in person at our head office in Thrissur, the nearest one to you. Your first assessment is free, in Malayalam or English.',
+    lede: 'Immigration consultants in Palakkad should hold a licence you can check, explain each route honestly and be close enough to visit. Mount Bell does not have an office in Palakkad yet. We serve clients across the district through online meetings, calls and WhatsApp, and in person at our head office in Thrissur, the nearest one to you. Your first assessment is free, in Malayalam or English.',
     acts: { check: 'Book a Free Assessment', wa: 'WhatsApp Us' },
     img: 'kerala',
-    wa: 'Hi Mountbell, I am from Palakkad and would like an immigration consultation.',
+    wa: 'Hi Mount Bell, I am from Palakkad and would like an immigration consultation.',
     blocks: [
       { type: 'cert', h2: 'Licensed by the Ministry of External Affairs' },
       {
@@ -1509,7 +1509,7 @@ export const locations: Page[] = [
       },
       {
         type: 'prose',
-        h2: 'Quick Answer: Where Can Palakkad Clients Meet Mountbell?',
+        h2: 'Quick Answer: Where Can Palakkad Clients Meet Mount Bell?',
         body: [
           'Online, by phone, or at our head office at Fair Trade Center, TUDA Road, Ashwini Jn, Thrissur, a short drive or train ride from Palakkad. Our immigration consultants in Palakkad advise on work visas, overseas recruitment, nursing careers, skilled migration, PR and study abroad, under a Ministry of External Affairs recruiting licence (B-1921/KER/PART/100/5/10348/2023). Call +91 9207014777 to book.',
         ],
@@ -1536,11 +1536,11 @@ export const locations: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Reasons Clients Here Pick Mountbell',
+        h2: 'Reasons Clients Here Pick Mount Bell',
         intro: 'We combine regional proximity with official government accreditation:',
         items: [
           { title: 'Ministry of External Affairs licence', text: 'Licence B-1921/KER/PART/100/5/10348/2023, searchable directly on eMigrate.' },
-          { title: 'Head office is closest to you', text: 'Our head office in Thrissur, where our leadership and senior advisers work, is the closest Mountbell location to Palakkad.' },
+          { title: 'Head office is closest to you', text: 'Our head office in Thrissur, where our leadership and senior advisers work, is the closest Mount Bell location to Palakkad.' },
           { title: 'Clear fees with receipts', text: 'Fees set out in writing, with an official receipt for every payment.' },
           { title: 'One dedicated adviser', text: 'One adviser stays with your case from first call to departure.' },
         ],
@@ -1587,7 +1587,7 @@ export const locations: Page[] = [
         h2: 'For Tradespeople and Factory Workers',
         body: [
           'Many clients in Palakkad district work in the Kanjikode industrial factories, in automotive workshops, or as commercial drivers. Employers in Europe hire welders, fitters, electricians and drivers with proven experience.',
-          'The visa consultants Palakkad workers speak to at Mountbell check the employer, the contract and the salary before you pay anything. ITI certificates and experience letters matter most, so bring both to your first meeting.',
+          'The visa consultants Palakkad workers speak to at Mount Bell check the employer, the contract and the salary before you pay anything. ITI certificates and experience letters matter most, so bring both to your first meeting.',
         ],
       },
       {
@@ -1671,13 +1671,13 @@ export const locations: Page[] = [
         type: 'faq',
         h2: 'Frequently Asked Questions',
         items: [
-          { q: 'Does Mountbell have an office in Palakkad?', a: 'Not yet. We serve you online and at our head office in Thrissur, which is easily accessible by train or road.' },
-          { q: 'Are your immigration consultants in Palakkad licensed?', a: 'Yes. Mountbell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify on eMigrate.' },
+          { q: 'Does Mount Bell have an office in Palakkad?', a: 'Not yet. We serve you online and at our head office in Thrissur, which is easily accessible by train or road.' },
+          { q: 'Are your immigration consultants in Palakkad licensed?', a: 'Yes. Mount Bell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify on eMigrate.' },
           { q: 'Where do I get a police certificate in Palakkad?', a: 'Through Passport Seva, at the Passport Seva Kendra Palakkad at the Head Post Office in Olavakode.' },
           { q: 'Can my Tamil Nadu work experience count?', a: 'Usually, if your experience certificates show your duties, dates, and hours clearly.' },
           { q: 'Do you help Palakkad nurses with a GNM diploma?', a: 'Yes. Several countries accept GNM (such as Germany and Malta), and we explain which ones before you pay for tests.' },
           { q: 'Can visa consultants Palakkad clients find online be trusted?', a: 'Only if they hold a licence you can check on eMigrate. Ask for the number before you pay.' },
-          { q: 'Is the first meeting free?', a: 'Yes. Your initial profile assessment with Mountbell is completely free.' },
+          { q: 'Is the first meeting free?', a: 'Yes. Your initial profile assessment with Mount Bell is completely free.' },
         ],
       },
       {
@@ -1697,14 +1697,14 @@ export const locations: Page[] = [
   },
 {
     path: '/immigration-consultants-trivandrum/', parent: '/contact-us/', crumb: 'Trivandrum',
-    title: 'Immigration Consultants in Trivandrum | Mountbell',
-    description: 'Immigration consultants in Trivandrum: MEA-licensed Mountbell advice on PR, nursing, work visas and overseas jobs, online or in Kochi. Free assessment.',
+    title: 'Immigration Consultants in Trivandrum | Mount Bell',
+    description: 'Immigration consultants in Trivandrum: MEA-licensed Mount Bell advice on PR, nursing, work visas and overseas jobs, online or in Kochi. Free assessment.',
     label: 'Thiruvananthapuram Capital',
     h1: 'Immigration Consultants in Trivandrum: Licensed Advice for the Capital, Online and In Person',
-    lede: 'Immigration consultants in Trivandrum should hold a licence you can check, give straight answers about your chances and be easy to reach from home. Mountbell does not have an office in Trivandrum yet. We work with clients across the capital through online meetings, calls and WhatsApp, and in person at our Kochi office. Your first assessment is free, in Malayalam or English.',
+    lede: 'Immigration consultants in Trivandrum should hold a licence you can check, give straight answers about your chances and be easy to reach from home. Mount Bell does not have an office in Trivandrum yet. We work with clients across the capital through online meetings, calls and WhatsApp, and in person at our Kochi office. Your first assessment is free, in Malayalam or English.',
     acts: { check: 'Book a Free Assessment', wa: 'WhatsApp Us' },
     img: 'kerala',
-    wa: 'Hi Mountbell, I am from Trivandrum and would like an immigration consultation.',
+    wa: 'Hi Mount Bell, I am from Trivandrum and would like an immigration consultation.',
     blocks: [
       { type: 'cert', h2: 'Licensed by the Ministry of External Affairs' },
       {
@@ -1718,7 +1718,7 @@ export const locations: Page[] = [
       },
       {
         type: 'prose',
-        h2: 'Quick Answer: Can I Meet Mountbell in Trivandrum?',
+        h2: 'Quick Answer: Can I Meet Mount Bell in Trivandrum?',
         body: [
           'Not in person in the city yet. Our immigration consultants in Trivandrum work with clients online and by phone, and in person at Mathewsons Centre Point, Edappally Road, Kochi. Our head office in Thrissur handles complex cases. Call +91 9207014777 to book. We advise on skilled migration, PR, work visas, overseas recruitment, nursing careers and study abroad, under a Ministry of External Affairs recruiting licence (B-1921/KER/PART/100/5/10348/2023).',
         ],
@@ -1730,7 +1730,7 @@ export const locations: Page[] = [
           ['Online meetings', 'On screen, including evenings and weekends by arrangement'],
           ['Calls and WhatsApp', '<a href="tel:+919207014777">+91 92070 14777</a>'],
           ['Email', '<a href="mailto:edu@mountbell.com">edu@mountbell.com</a>'],
-          ['Nearest Mountbell office', 'Kochi branch (Palarivattom), about 3 hours from Thiruvananthapuram Central by train'],
+          ['Nearest Mount Bell office', 'Kochi branch (Palarivattom), about 3 hours from Thiruvananthapuram Central by train'],
           ['Languages spoken', 'Malayalam and English'],
           ['Licence status', 'MEA licensed recruiting agent B-1921/KER/PART/100/5/10348/2023'],
         ],
@@ -1745,7 +1745,7 @@ export const locations: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Clients Here Choose Mountbell',
+        h2: 'Why Clients Here Choose Mount Bell',
         intro: 'We bring verified government accountability to professionals in the capital:',
         items: [
           { title: 'Ministry of External Affairs licence', text: 'A licence number (B-1921/KER/PART/100/5/10348/2023) you can verify directly on eMigrate.' },
@@ -1795,7 +1795,7 @@ export const locations: Page[] = [
         h2: 'For Developers and Engineers in Technopark',
         body: [
           "Many clients here work in the city's IT parks (Technopark Phase I, II, III) or in prominent engineering firms. PR routes that score age, English and experience in Australia and Canada often suit them, provided their job matches a skilled list and their English score is strong.",
-          'The visa consultants Trivandrum clients speak to at Mountbell check your occupation against ANZSCO / NOC codes and evaluate your points before you pay for skills assessments. Gulf experience can count too, if your letters spell out your duties and dates.',
+          'The visa consultants Trivandrum clients speak to at Mount Bell check your occupation against ANZSCO / NOC codes and evaluate your points before you pay for skills assessments. Gulf experience can count too, if your letters spell out your duties and dates.',
         ],
       },
       {
@@ -1878,12 +1878,12 @@ export const locations: Page[] = [
         type: 'faq',
         h2: 'Frequently Asked Questions',
         items: [
-          { q: 'Does Mountbell have an office in Trivandrum?', a: 'Not yet. We serve you online and at our Kochi office at Mathewsons Centre Point, Palarivattom.' },
-          { q: 'Are Thiruvananthapuram immigration consultants at Mountbell licensed?', a: 'Yes. Mountbell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify on eMigrate.' },
+          { q: 'Does Mount Bell have an office in Trivandrum?', a: 'Not yet. We serve you online and at our Kochi office at Mathewsons Centre Point, Palarivattom.' },
+          { q: 'Are Thiruvananthapuram immigration consultants at Mount Bell licensed?', a: 'Yes. Mount Bell holds a recruiting agent licence from the Ministry of External Affairs (Licence No. B-1921/KER/PART/100/5/10348/2023), which you can verify on eMigrate.' },
           { q: 'Where do I get a police certificate in the city?', a: 'Through Passport Seva, at the Carmel Towers centre in Vazhuthacaud, under the Regional Passport Office Thiruvananthapuram.' },
           { q: 'Do you help Trivandrum nurses with a GNM diploma?', a: 'Yes. Several countries accept GNM (such as Germany and Malta), and we explain which ones before you pay for tests.' },
           { q: 'Can visa consultants Trivandrum families find online be trusted?', a: 'Only if they hold a licence you can check on eMigrate. Ask for the number before you pay.' },
-          { q: 'Do Thiruvananthapuram immigration consultants charge for the first meeting?', a: 'We do not. Your first assessment with Mountbell is free.' },
+          { q: 'Do Thiruvananthapuram immigration consultants charge for the first meeting?', a: 'We do not. Your first assessment with Mount Bell is free.' },
           { q: 'Do you assist software developers from Technopark?', a: 'Yes. Points-tested PR pathways for Australia and Canada, plus European tech work permits, are popular among Technopark engineers.' },
         ],
       },

@@ -8,7 +8,7 @@ export const countries: Page[] = [
     path: '/countries/',
     crumb: 'Countries',
     wide: true,
-    title: 'Best Countries to Migrate from India (Compared) | Mountbell',
+    title: 'Best Countries to Migrate from India (Compared) | Mount Bell',
     description: 'Compare the best countries to migrate from India: PR vs work routes, language, cost and timelines for Australia, Canada, Germany, Malta and more. Free check.',
     label: 'Countries',
     h1: 'Best Countries to Migrate from India — PR, Work, Language and Cost Compared',
@@ -266,8 +266,8 @@ export const countries: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell',
-        intro: 'Many people discuss the best countries to migrate from India with several consultants before choosing. Here is what Mountbell does differently:',
+        h2: 'Why Choose Mount Bell',
+        intro: 'Many people discuss the best countries to migrate from India with several consultants before choosing. Here is what Mount Bell does differently:',
         items: [
           { title: 'Honest country comparison', text: 'An honest country comparison across many destinations, with no reason to push one.' },
           { title: 'Licensed recruiting agent', text: 'Licensed by the Ministry of External Affairs, which you can check on eMigrate.' },
@@ -312,7 +312,7 @@ export const countries: Page[] = [
         type: 'prose',
         h2: 'Compare Countries With an Adviser',
         body: [
-          'Speak to Mountbell about the best countries to migrate from India for your profile. The first assessment is free.',
+          'Speak to Mount Bell about the best countries to migrate from India for your profile. The first assessment is free.',
         ],
         list: [
           'Call: <a href="tel:+919207014777">+91 9207014777</a>',
@@ -330,12 +330,12 @@ export const countries: Page[] = [
   },
   {
     path: '/countries/australia/', crumb: 'Australia', img: 'australia', accent: 'var(--coral)',
-    title: 'Australia Immigration Consultants in Kerala | PR | Mountbell',
+    title: 'Australia Immigration Consultants in Kerala | PR | Mount Bell',
     description: 'Australia immigration consultants in Kerala for PR and skilled migration: subclass 189, 190 and 491 visas, skills assessment, SkillSelect EOI and sponsorship.',
     label: 'Australia',
     h1: 'Australia Immigration Consultants in Kerala',
     lede: 'Australia selects skilled migrants on points. Our Australia PR consultants work out your score, manage the skills assessment and expression of interest, and tell you honestly whether an invitation is within reach.',
-    wa: 'Hi Mountbell, I would like to know about migrating to Australia.',
+    wa: 'Hi Mount Bell, I would like to know about migrating to Australia.',
     blocks: [
       { type: 'table', h2: 'Australian visas we work with', head: ['Visa', 'What it is', 'Key condition'], rows: [
         ['Skilled Independent (subclass 189)', 'Permanent residence with no sponsor. You can live anywhere in Australia.', 'Invitation based on points alone. The most competitive.'],
@@ -375,12 +375,12 @@ export const countries: Page[] = [
   },
   {
     path: '/countries/germany/', crumb: 'Germany', img: 'germany', accent: 'var(--amber-deep)',
-    title: 'Germany Immigration Consultants in Kerala | Mountbell',
+    title: 'Germany Immigration Consultants in Kerala | Mount Bell',
     description: 'Germany immigration consultants in Kerala: the Opportunity Card, Ausbildung vocational training and skilled worker visas, with German language training.',
     label: 'Germany',
     h1: 'Germany Immigration Consultants in Kerala',
     lede: 'Germany has opened several doors for workers from outside the EU. Which one you use depends on whether your qualification is recognised, how much German you speak and whether you already have an employer.',
-    wa: 'Hi Mountbell, I would like to know about working or training in Germany.',
+    wa: 'Hi Mount Bell, I would like to know about working or training in Germany.',
     blocks: [
       { type: 'links', h2: 'Three ways to move to Germany', items: [
         { title: 'Opportunity Card', meta: 'Job seeker route', text: 'Travel to Germany for up to a year to look for work, on a points system. No job offer needed first.', href: '/countries/germany/opportunity-card/' },
@@ -412,12 +412,12 @@ export const countries: Page[] = [
   },
   {
     path: '/countries/germany/opportunity-card/', crumb: 'Opportunity Card', img: 'germany', accent: 'var(--amber-deep)',
-    title: 'Germany Opportunity Card Consultants in Kerala | Mountbell',
+    title: 'Germany Opportunity Card Consultants in Kerala | Mount Bell',
     description: 'Germany Opportunity Card consultants in Kerala. Check your Chancenkarte points, prepare the qualification and funds evidence, and apply for the job seeker visa.',
     label: 'Germany · Chancenkarte',
     h1: 'Germany Opportunity Card Consultants in Kerala',
     lede: 'The Opportunity Card (Chancenkarte) lets you enter Germany without a job offer and look for work there for up to a year. You qualify either with a fully recognised qualification or by scoring six points.',
-    wa: 'Hi Mountbell, I would like to know about the Germany Opportunity Card.',
+    wa: 'Hi Mount Bell, I would like to know about the Germany Opportunity Card.',
     blocks: [
       { type: 'checks', h2: 'Basic requirements', intro: 'All three are needed before any points are counted.', items: [
         { title: 'A recognised qualification', text: 'A university degree, or a vocational qualification of at least two years, that is state-recognised in the country where you earned it.' },
@@ -457,12 +457,12 @@ export const countries: Page[] = [
   },
   {
     path: '/countries/germany/ausbildung/', crumb: 'Ausbildung', img: 'germany', accent: 'var(--amber-deep)',
-    title: 'Ausbildung in Germany from Kerala | Mountbell',
+    title: 'Ausbildung in Germany from Kerala | Mount Bell',
     description: 'Ausbildung in Germany from Kerala: paid vocational training with a German employer, the German level you need, the training contract and the Ausbildung visa.',
     label: 'Germany · Vocational training',
     h1: 'Ausbildung in Germany from Kerala',
     lede: 'Ausbildung is Germany’s dual vocational training: you are employed by a company, paid a monthly training allowance, and attend vocational school part of the time. It ends with a qualification German employers recognise.',
-    wa: 'Hi Mountbell, I would like to know about Ausbildung in Germany.',
+    wa: 'Hi Mount Bell, I would like to know about Ausbildung in Germany.',
     blocks: [
       { type: 'facts', h2: 'At a glance', rows: [
         ['Duration', 'Usually two to three and a half years, depending on the occupation'],
@@ -494,12 +494,12 @@ export const countries: Page[] = [
   },
   {
     path: '/countries/malta/', crumb: 'Malta', img: 'malta', accent: 'var(--teal)',
-    title: 'Malta Work Visa Consultants in Kerala | Mountbell',
+    title: 'Malta Work Visa Consultants in Kerala | Mount Bell',
     description: 'Malta work visa consultants in Kerala: healthcare jobs for Indians, registration with Malta’s health councils and the Identità single work permit.',
     label: 'Malta',
     h1: 'Malta Work Visa Consultants in Kerala',
     lede: 'Malta is a small EU and Schengen country where English is an official language. For healthcare professionals from Kerala it offers European employment without learning a new language first.',
-    wa: 'Hi Mountbell, I would like to know about working in Malta.',
+    wa: 'Hi Mount Bell, I would like to know about working in Malta.',
     blocks: [
       { type: 'prose', h2: 'How the Malta work permit works', body: [
         'Non-EU nationals work in Malta on a single permit, which combines the right to work and the right to reside. The application is made to Identità, Malta’s identity and residence agency, and it is tied to a specific employer and role. You therefore need a job offer first, and for healthcare roles you need registration with the relevant professional council.',
@@ -532,11 +532,11 @@ export const countries: Page[] = [
     crumb: 'CNC machinists',
     img: 'australia',
     accent: 'var(--coral)',
-    title: 'CNC Machinist Jobs in Australia | Mountbell',
-    description: 'CNC machinist jobs in Australia : visa routes, trade assessment, pay and timelines for Kerala machinists. Free profile check with Mountbell.',
+    title: 'CNC Machinist Jobs in Australia | Mount Bell',
+    description: 'CNC machinist jobs in Australia : visa routes, trade assessment, pay and timelines for Kerala machinists. Free profile check with Mount Bell.',
     label: 'Australia › Skilled Trades',
     h1: 'CNC Machinist Jobs in Australia : Visa, Assessment and Pay for Indians',
-    lede: 'CNC machinist jobs in Australia suit skilled machinists who can set up, program and run computer-controlled machines to tight tolerances. Machinists can reach Australia through an employer’s offer, a state place or a points score, and a machinist visa Australia pathway exists for each, while precision manufacturers still cannot fill their machine shops. Mountbell sets out CNC machinist visa requirements, realistic pay, waiting times and costs, so your plan is clear before any money goes on tests.',
+    lede: 'CNC machinist jobs in Australia suit skilled machinists who can set up, program and run computer-controlled machines to tight tolerances. Machinists can reach Australia through an employer’s offer, a state place or a points score, and a machinist visa Australia pathway exists for each, while precision manufacturers still cannot fill their machine shops. Mount Bell sets out CNC machinist visa requirements, realistic pay, waiting times and costs, so your plan is clear before any money goes on tests.',
     acts: { check: 'Check my eligibility', wa: 'Book a free call' },
     blocks: [
       {
@@ -702,7 +702,7 @@ export const countries: Page[] = [
         type: 'prose',
         h2: 'Indian CNC Machinists in Australia: Support from Kerala',
         body: [
-          'Indian CNC machinists in Australia usually begin as operators or setters, then move into programming or supervision. From Thrissur and Kochi, Mountbell guides CNC machinist jobs for Kerala applicants and builds each file to the machinist and fitter and turner Australia standards. Our team reviews your certificates and drawings, picks a route and gets your papers ready before you spend on tests.',
+          'Indian CNC machinists in Australia usually begin as operators or setters, then move into programming or supervision. From Thrissur and Kochi, Mount Bell guides CNC machinist jobs for Kerala applicants and builds each file to the machinist and fitter and turner Australia standards. Our team reviews your certificates and drawings, picks a route and gets your papers ready before you spend on tests.',
         ],
       },
       {
@@ -720,7 +720,7 @@ export const countries: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Mountbell',
+        h2: 'Why Mount Bell',
         intro: 'Our About pages show how the team works, who reviews each page and which licences we hold. When you are ready, book a free profile check. Our Australia hub compares every route, including CNC machinist jobs in Australia.',
         items: [
           { title: 'Registered partner advice', text: 'Visa advice from a registered agent partner with official MARN verification.' },
@@ -728,7 +728,7 @@ export const countries: Page[] = [
           { title: 'Zero visa fraud', text: 'We never sell jobs or make deceptive visa guarantees.' },
           { title: 'Local Kerala presence', text: 'Offices in Thrissur and Kochi with dedicated Australian immigration specialists.' },
         ],
-        after: ['<a href="/about-us/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
+        after: ['<a href="/about-us/">About Mount Bell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
       },
       {
         type: 'faq',
@@ -767,7 +767,7 @@ export const countries: Page[] = [
       {
         type: 'prose',
         h2: 'Speak to an Adviser',
-        body: ['Talk to Mountbell about CNC machinist jobs in Australia. The first assessment is free.'],
+        body: ['Talk to Mount Bell about CNC machinist jobs in Australia. The first assessment is free.'],
         list: [
           'Call: <a href="tel:+919207014777">+91 9207014777</a>',
           'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
@@ -790,11 +790,11 @@ export const countries: Page[] = [
     crumb: 'Welders',
     img: 'australia',
     accent: 'var(--coral)',
-    title: 'Welder Jobs in Australia for Indians | Mountbell',
-    description: 'Welder jobs in Australia for Indians : visa routes, skills assessment, pay and timelines for Kerala welders. Free profile check with Mountbell.',
+    title: 'Welder Jobs in Australia for Indians | Mount Bell',
+    description: 'Welder jobs in Australia for Indians : visa routes, skills assessment, pay and timelines for Kerala welders. Free profile check with Mount Bell.',
     label: 'Australia › Skilled Trades',
     h1: 'Welder Jobs in Australia for Indians : Visa, Skills Assessment and Pay',
-    lede: 'Welder jobs in Australia for Indians are open to qualified tradespeople who pass a trade skills assessment and secure a visa through an employer, a state or a points score. Welding is a trade Australia keeps short, and a welder visa Australia route exists for people with proven experience, a recognised qualification and workable English. Mountbell explains welder visa requirements, realistic times, pay and costs below, so you can plan before you spend money on tests.',
+    lede: 'Welder jobs in Australia for Indians are open to qualified tradespeople who pass a trade skills assessment and secure a visa through an employer, a state or a points score. Welding is a trade Australia keeps short, and a welder visa Australia route exists for people with proven experience, a recognised qualification and workable English. Mount Bell explains welder visa requirements, realistic times, pay and costs below, so you can plan before you spend money on tests.',
     acts: { check: 'Check my eligibility', wa: 'Book a free call' },
     blocks: [
       {
@@ -948,7 +948,7 @@ export const countries: Page[] = [
         type: 'prose',
         h2: 'Indian Welders in Australia: Support from Kerala',
         body: [
-          'Indian welders in Australia often start in fabrication, mining support or shipyards and then grow into supervisor or inspection roles. Mountbell advises welder jobs for Kerala applicants from our offices in Thrissur and Kochi. We review your certificates, match your experience to the right route and prepare your trade migration Australia file before you pay for tests.',
+          'Indian welders in Australia often start in fabrication, mining support or shipyards and then grow into supervisor or inspection roles. Mount Bell advises welder jobs for Kerala applicants from our offices in Thrissur and Kochi. We review your certificates, match your experience to the right route and prepare your trade migration Australia file before you pay for tests.',
         ],
       },
       {
@@ -966,7 +966,7 @@ export const countries: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Mountbell',
+        h2: 'Why Mount Bell',
         intro: 'Read how our team works, who reviews each page and which licences we hold on the About pages, then book a free profile check. You can also return to our Australia hub to see every route to welder jobs in Australia for Indians side by side.',
         items: [
           { title: 'Registered trade migration', text: 'Trade assessment and visa planning with registered migration agents.' },
@@ -974,7 +974,7 @@ export const countries: Page[] = [
           { title: 'Ethical recruitment licence', text: 'MEA-licensed agency with no hidden fees or bogus job charges.' },
           { title: 'Full family visa support', text: 'Partner and dependent children included seamlessly on your file.' },
         ],
-        after: ['<a href="/about-us/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
+        after: ['<a href="/about-us/">About Mount Bell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
       },
       {
         type: 'faq',
@@ -1013,7 +1013,7 @@ export const countries: Page[] = [
       {
         type: 'prose',
         h2: 'Speak to an Adviser',
-        body: ['Talk to Mountbell about welder jobs in Australia for Indians. The first assessment is free.'],
+        body: ['Talk to Mount Bell about welder jobs in Australia for Indians. The first assessment is free.'],
         list: [
           'Call: <a href="tel:+919207014777">+91 9207014777</a>',
           'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
@@ -1036,11 +1036,11 @@ export const countries: Page[] = [
     crumb: 'Mechanics',
     img: 'australia',
     accent: 'var(--coral)',
-    title: 'Mechanic Jobs in Australia for Indians | Mountbell',
-    description: 'Mechanic jobs in Australia for Indians : visa routes, trade assessment, pay and timelines for Kerala mechanics. Free profile check with Mountbell.',
+    title: 'Mechanic Jobs in Australia for Indians | Mount Bell',
+    description: 'Mechanic jobs in Australia for Indians : visa routes, trade assessment, pay and timelines for Kerala mechanics. Free profile check with Mount Bell.',
     label: 'Australia › Skilled Trades',
     h1: 'Mechanic Jobs in Australia for Indians : Visa, Assessment and Pay',
-    lede: 'Mechanic jobs in Australia for Indians suit skilled technicians who hold a trade assessment, steady workshop experience and workable English. A motor mechanic visa Australia route can run through an employer, a state place or a points score, and automotive trades Australia employers keep struggling to fill workshop roles. Below, Mountbell sets out mechanic visa requirements, expected pay, waiting times and costs, so your plan is settled before any money goes on tests.',
+    lede: 'Mechanic jobs in Australia for Indians suit skilled technicians who hold a trade assessment, steady workshop experience and workable English. A motor mechanic visa Australia route can run through an employer, a state place or a points score, and automotive trades Australia employers keep struggling to fill workshop roles. Below, Mount Bell sets out mechanic visa requirements, expected pay, waiting times and costs, so your plan is settled before any money goes on tests.',
     acts: { check: 'Check my eligibility', wa: 'Book a free call' },
     blocks: [
       {
@@ -1197,7 +1197,7 @@ export const countries: Page[] = [
         type: 'prose',
         h2: 'Indian Mechanics in Australia: Support from Kerala',
         body: [
-          'Indian mechanics in Australia usually begin in general workshops, then move into diesel, fleet or supervisor roles. Mountbell guides mechanic jobs for Kerala applicants from Thrissur and Kochi, and we shape every file around automotive trades Australia standards. Our advisers check your certificates, choose a route and prepare your papers before you spend on tests.',
+          'Indian mechanics in Australia usually begin in general workshops, then move into diesel, fleet or supervisor roles. Mount Bell guides mechanic jobs for Kerala applicants from Thrissur and Kochi, and we shape every file around automotive trades Australia standards. Our advisers check your certificates, choose a route and prepare your papers before you spend on tests.',
         ],
       },
       {
@@ -1215,7 +1215,7 @@ export const countries: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Mountbell',
+        h2: 'Why Mount Bell',
         intro: 'See how our team works, who reviews each page and which licences we hold on the About pages, then book your free profile check. The Australia hub lays out every route side by side, including mechanic jobs in Australia for Indians.',
         items: [
           { title: 'Trade assessment expertise', text: 'Proven experience matching workshop records to Australian trade units.' },
@@ -1223,7 +1223,7 @@ export const countries: Page[] = [
           { title: 'Employer & points pathways', text: 'Objective comparison between Skills in Demand employer sponsorship and points PR.' },
           { title: 'Clear fee stages', text: 'All government fees, skills assessment charges, and agency costs quoted upfront.' },
         ],
-        after: ['<a href="/about-us/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
+        after: ['<a href="/about-us/">About Mount Bell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
       },
       {
         type: 'faq',
@@ -1262,7 +1262,7 @@ export const countries: Page[] = [
       {
         type: 'prose',
         h2: 'Speak to an Adviser',
-        body: ['Talk to Mountbell about mechanic jobs in Australia for Indians. The first assessment is free.'],
+        body: ['Talk to Mount Bell about mechanic jobs in Australia for Indians. The first assessment is free.'],
         list: [
           'Call: <a href="tel:+919207014777">+91 9207014777</a>',
           'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
@@ -1284,8 +1284,8 @@ export const countries: Page[] = [
     crumb: 'IT professionals',
     img: 'australia',
     accent: 'var(--coral)',
-    title: 'Australia IT Migration from India: PR & Visas | Mountbell',
-    description: 'Australia IT migration from India for IT professionals: ICT occupations, PR routes, points, costs and timelines. Free profile check by Mountbell.',
+    title: 'Australia IT Migration from India: PR & Visas | Mount Bell',
+    description: 'Australia IT migration from India for IT professionals: ICT occupations, PR routes, points, costs and timelines. Free profile check by Mount Bell.',
     label: 'Australia › IT Professionals',
     h1: 'Australia IT Migration from India: PR and Work Visa Routes for IT Professionals',
     lede: 'Australia IT migration from India works through skilled PR visas or employer-sponsored work visas. For PR, most applicants need an assessed ICT occupation, Competent English, age under 45 and at least 65 points. Well-prepared applicants usually need 8 to 18 months for PR, or 3 to 6 months with a sponsor.',
@@ -1294,7 +1294,7 @@ export const countries: Page[] = [
       {
         type: 'prose',
         body: [
-          'Software engineers, developers, analysts and cyber security staff are among our most active applicants. Software engineer PR Australia is realistic when your occupation is eligible, your score is competitive and your paperwork is strong. Mountbell reviews IT professionals from Kerala, picks the right route and plans each step with times.',
+          'Software engineers, developers, analysts and cyber security staff are among our most active applicants. Software engineer PR Australia is realistic when your occupation is eligible, your score is competitive and your paperwork is strong. Mount Bell reviews IT professionals from Kerala, picks the right route and plans each step with times.',
         ],
       },
       {
@@ -1469,8 +1469,8 @@ export const countries: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell for Australia IT Migration from India',
-        intro: 'Mountbell prepares your file step by step, from the first call to lodgement. Our advisers review IT professionals from Kerala in Thrissur, Kochi or online.',
+        h2: 'Why Choose Mount Bell for Australia IT Migration from India',
+        intro: 'Mount Bell prepares your file step by step, from the first call to lodgement. Our advisers review IT professionals from Kerala in Thrissur, Kochi or online.',
         items: [
           { title: 'Honest route comparison', text: 'An honest comparison of routes, with no reason to push one.' },
           { title: 'Verifiable government licence', text: 'A licence you can verify, and offices that serve IT professionals from Kerala.' },
@@ -1515,7 +1515,7 @@ export const countries: Page[] = [
       {
         type: 'prose',
         h2: 'Speak to an Adviser',
-        body: ['Talk to a Mountbell adviser about Australia IT migration from India. The first assessment is free.'],
+        body: ['Talk to a Mount Bell adviser about Australia IT migration from India. The first assessment is free.'],
         list: [
           'Call: <a href="tel:+919207014777">+91 9207014777</a>',
           'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
@@ -1538,8 +1538,8 @@ export const countries: Page[] = [
     crumb: 'Skills in demand visa',
     img: 'australia',
     accent: 'var(--coral)',
-    title: 'Australia Skills in Demand Visa for Indians | Mountbell',
-    description: 'Australia Skills in Demand visa (subclass 482): eligibility, salary rules, costs and 2026 timelines for Kerala applicants. Free profile check by Mountbell.',
+    title: 'Australia Skills in Demand Visa for Indians | Mount Bell',
+    description: 'Australia Skills in Demand visa (subclass 482): eligibility, salary rules, costs and 2026 timelines for Kerala applicants. Free profile check by Mount Bell.',
     label: 'Australia › Employer Sponsored',
     h1: 'Australia Skills in Demand Visa: Sponsored Work Visa for Indians',
     lede: 'Australia Skills in Demand visa is the main route for skilled workers who already have, or can find, a job offer from an Australian business. Known as subclass 482, it replaced the Temporary Skill Shortage visa on 7 December 2024. It is a four-year visa that lets you work for an approved sponsor, bring your family and, in many cases, move on to permanent residence later. Use the sections below to check your eligibility, costs and timeline.',
@@ -1725,7 +1725,7 @@ export const countries: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell for the Australia Skills in Demand Visa',
+        h2: 'Why Choose Mount Bell for the Australia Skills in Demand Visa',
         items: [
           { title: 'Honest pathway advice', text: 'An honest comparison of employer sponsored Australia and points-tested routes, with no reason to push one.' },
           { title: 'Licensed & verifiable', text: 'A licence you can check, and offices you can visit in Thrissur and Kochi.' },
@@ -1765,7 +1765,7 @@ export const countries: Page[] = [
       {
         type: 'prose',
         h2: 'Speak to an Adviser',
-        body: ['Talk to a Mountbell adviser about the Australia Skills in Demand visa for your profile. The first assessment is free.'],
+        body: ['Talk to a Mount Bell adviser about the Australia Skills in Demand visa for your profile. The first assessment is free.'],
         list: [
           'Call: <a href="tel:+919207014777">+91 9207014777</a>',
           'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
@@ -1788,8 +1788,8 @@ export const countries: Page[] = [
     crumb: 'Subclass 189',
     img: 'australia',
     accent: 'var(--coral)',
-    title: 'Australia Subclass 189 Visa: Points & Process | Mountbell',
-    description: 'Australia subclass 189 visa for Kerala applicants: eligibility, points, costs and processing times explained. Free 189 visa assessment by Mountbell.',
+    title: 'Australia Subclass 189 Visa: Points & Process | Mount Bell',
+    description: 'Australia subclass 189 visa for Kerala applicants: eligibility, points, costs and processing times explained. Free 189 visa assessment by Mount Bell.',
     label: 'Australia › Skilled Independent',
     h1: 'Australia Subclass 189 Visa: Skilled Independent PR for Kerala Applicants',
     lede: 'Australia subclass 189 visa is the permanent visa for skilled workers invited to apply without an employer sponsor or state nomination. You need an assessed occupation, Competent English, age under 45 and at least 65 points, then an invitation. Most well-prepared applicants need 8 to 18 months in total.',
@@ -1798,7 +1798,7 @@ export const countries: Page[] = [
       {
         type: 'prose',
         body: [
-          'It is a points-tested skilled independent visa, so your score, occupation and English level decide whether an invitation arrives. Mountbell checks your 189 visa eligibility first. Then we count your 189 visa points and plan every step with realistic times. If you are planning a 189 visa from Kerala, this page gives you the rules, the score and the waiting times.',
+          'It is a points-tested skilled independent visa, so your score, occupation and English level decide whether an invitation arrives. Mount Bell checks your 189 visa eligibility first. Then we count your 189 visa points and plan every step with realistic times. If you are planning a 189 visa from Kerala, this page gives you the rules, the score and the waiting times.',
         ],
       },
       {
@@ -1967,8 +1967,8 @@ export const countries: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell for the Australia Subclass 189 Visa',
-        intro: 'Your first step is a free 189 visa assessment, where an adviser checks your 189 visa eligibility against the current rules. Mountbell then prepares your Australia subclass 189 visa file step by step.',
+        h2: 'Why Choose Mount Bell for the Australia Subclass 189 Visa',
+        intro: 'Your first step is a free 189 visa assessment, where an adviser checks your 189 visa eligibility against the current rules. Mount Bell then prepares your Australia subclass 189 visa file step by step.',
         items: [
           { title: 'Honest route guidance', text: 'An honest comparison of routes, with no reason to push one.' },
           { title: 'Registered verification', text: 'A licence you can verify, and offices in Thrissur and Kochi that serve every 189 visa from Kerala.' },
@@ -2009,7 +2009,7 @@ export const countries: Page[] = [
       {
         type: 'prose',
         h2: 'Speak to an Adviser',
-        body: ['Talk to a Mountbell adviser about the Australia subclass 189 visa. The first assessment is free.'],
+        body: ['Talk to a Mount Bell adviser about the Australia subclass 189 visa. The first assessment is free.'],
         list: [
           'Call: <a href="tel:+919207014777">+91 9207014777</a>',
           'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
@@ -2032,11 +2032,11 @@ export const countries: Page[] = [
     crumb: 'Subclass 491',
     img: 'australia',
     accent: 'var(--coral)',
-    title: 'Australia Subclass 491 Visa | Mountbell',
-    description: 'Australia subclass 491 visa: eligibility, points, costs and timelines for Kerala applicants, plus the regional pathway to PR. Free profile check by Mountbell.',
+    title: 'Australia Subclass 491 Visa | Mount Bell',
+    description: 'Australia subclass 491 visa: eligibility, points, costs and timelines for Kerala applicants, plus the regional pathway to PR. Free profile check by Mount Bell.',
     label: 'Australia › Regional Skilled',
     h1: 'Australia Subclass 491 Visa: Regional Visa for Skilled Workers from Kerala',
-    lede: 'The Australia subclass 491 visa gives skilled workers up to five years in regional Australia, with a route to permanent residence. It is a regional provisional visa, so you need a state or territory nomination or an eligible relative sponsorship, plus 65 points and an assessed occupation. Mountbell checks your subclass 491 eligibility and plans each step with realistic timelines for applicants from Kerala.',
+    lede: 'The Australia subclass 491 visa gives skilled workers up to five years in regional Australia, with a route to permanent residence. It is a regional provisional visa, so you need a state or territory nomination or an eligible relative sponsorship, plus 65 points and an assessed occupation. Mount Bell checks your subclass 491 eligibility and plans each step with realistic timelines for applicants from Kerala.',
     acts: { check: 'Check my eligibility', wa: 'Book a free call' },
     blocks: [
       {
@@ -2220,7 +2220,7 @@ export const countries: Page[] = [
       },
       {
         type: 'steps',
-        h2: 'How Mountbell Handles the Australia Subclass 491 Visa',
+        h2: 'How Mount Bell Handles the Australia Subclass 491 Visa',
         items: [
           { title: 'Day 1', text: 'A subclass 491 eligibility check and a written shortlist of states.' },
           { title: 'Week 2', text: 'A booking plan for the skills assessment and English test.' },
@@ -2231,7 +2231,7 @@ export const countries: Page[] = [
       },
       {
         type: 'note',
-        text: 'Paid visa advice for Australia must come from an agent registered in Australia, so ask for a registration number and look it up. Mountbell is licensed by the Ministry of External Affairs, and you can verify that on eMigrate.',
+        text: 'Paid visa advice for Australia must come from an agent registered in Australia, so ask for a registration number and look it up. Mount Bell is licensed by the Ministry of External Affairs, and you can verify that on eMigrate.',
       },
       {
         type: 'faq',
@@ -2265,8 +2265,8 @@ export const countries: Page[] = [
       },
       {
         type: 'prose',
-        h2: 'Talk to Mountbell',
-        body: ['Talk to Mountbell about the Australia subclass 491 visa and your other options. The first assessment is free.'],
+        h2: 'Talk to Mount Bell',
+        body: ['Talk to Mount Bell about the Australia subclass 491 visa and your other options. The first assessment is free.'],
         list: [
           'Call: <a href="tel:+919207014777">+91 9207014777</a>',
           'Thrissur landline: <a href="tel:+914872221317">+91 487 2221317</a>',
@@ -2288,11 +2288,11 @@ export const countries: Page[] = [
     crumb: 'Canada',
     img: 'canada',
     accent: 'var(--coral)',
-    title: 'Canada Immigration Consultants in Kerala | Mountbell',
-    description: 'Canada immigration consultants in Kerala for PR, skilled worker and family routes. Check eligibility, costs and timelines with Mountbell, Thrissur & Kochi.',
+    title: 'Canada Immigration Consultants in Kerala | Mount Bell',
+    description: 'Canada immigration consultants in Kerala for PR, skilled worker and family routes. Check eligibility, costs and timelines with Mount Bell, Thrissur & Kochi.',
     label: 'Canada',
     h1: 'Canada Immigration Consultants in Kerala – PR, Skilled Worker and Family Pathways',
-    lede: 'Canada immigration consultants in Kerala help you choose the right permanent residence route, build a complete application and avoid costly refusals. At Mountbell, our Thrissur and Kochi advisers guide professionals, tradespeople and families who want to migrate to Canada from Kerala, from the first profile check to landing day. Canada plans to admit 380,000 new permanent residents a year from 2026 to 2028, so a carefully prepared file matters more than ever.',
+    lede: 'Canada immigration consultants in Kerala help you choose the right permanent residence route, build a complete application and avoid costly refusals. At Mount Bell, our Thrissur and Kochi advisers guide professionals, tradespeople and families who want to migrate to Canada from Kerala, from the first profile check to landing day. Canada plans to admit 380,000 new permanent residents a year from 2026 to 2028, so a carefully prepared file matters more than ever.',
     acts: { check: 'Book a free Canada profile check', wa: 'Request a call-back' },
     blocks: [
       {
@@ -2313,7 +2313,7 @@ export const countries: Page[] = [
           ['Typical total timeline', '8 to 14 months, from test booking to visa'],
           ['Family', 'Spouse and dependent children can be included'],
           ['PR target', '380,000 per year, 2026 to 2028'],
-          ['Local support', 'Canada immigration consultants in Kerala at Mountbell, Thrissur and Kochi'],
+          ['Local support', 'Canada immigration consultants in Kerala at Mount Bell, Thrissur and Kochi'],
         ],
       },
       {
@@ -2321,7 +2321,7 @@ export const countries: Page[] = [
         h2: 'Why Work With Canada Immigration Consultants in Kerala?',
         body: [
           'A missing reference letter, an expired test score or a gap between your profile and your documents can lead to refusal and lost fees. Experienced Canada immigration consultants in Kerala understand both sides of the journey: the Indian paperwork you collect here and the Canada immigration requirements set by IRCC.',
-          'As Canada immigration consultants in Kerala, Mountbell assesses your profile honestly, matches you to a realistic pathway and prepares your document file. Where formal representation before IRCC is required, your file is handled by a Regulated Canadian Immigration Consultant, a CICC licensed representative, as Canadian law requires.',
+          'As Canada immigration consultants in Kerala, Mount Bell assesses your profile honestly, matches you to a realistic pathway and prepares your document file. Where formal representation before IRCC is required, your file is handled by a Regulated Canadian Immigration Consultant, a CICC licensed representative, as Canadian law requires.',
         ],
       },
       {
@@ -2415,7 +2415,7 @@ export const countries: Page[] = [
           'Settlement funds: not a fee; you keep this money',
         ],
         after: [
-          'Mountbell shares its own fee in writing on our Fees page.',
+          'Mount Bell shares its own fee in writing on our Fees page.',
           '<a href="/fees/">Fees &rarr;</a>',
         ],
       },
@@ -2447,8 +2447,8 @@ export const countries: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell as Your Canada Immigration Consultants in Kerala',
-        intro: 'Clients comparing Canada PR consultants in Kerala choose Mountbell’s Canada immigration consultants in Kerala for clear advice and accountability.',
+        h2: 'Why Choose Mount Bell as Your Canada Immigration Consultants in Kerala',
+        intro: 'Clients comparing Canada PR consultants in Kerala choose Mount Bell’s Canada immigration consultants in Kerala for clear advice and accountability.',
         items: [
           { title: 'Local Kerala offices', text: 'Canada immigration consultants in Kerala at two real offices, Thrissur and Kochi.' },
           { title: 'Government licensed', text: 'Ministry of External Affairs recruiting-agent licence B-1921/KER/PART/100/5/10348/2023.' },
@@ -2483,7 +2483,7 @@ export const countries: Page[] = [
             a: 'Government fees for a couple are about CAD 3,180, plus CAD 270 per child and CAD 170 for family biometrics. Canada immigration consultants in Kerala list third-party costs separately.',
           },
           {
-            q: 'Do Mountbell’s Canada immigration consultants in Kerala guarantee a visa?',
+            q: 'Do Mount Bell’s Canada immigration consultants in Kerala guarantee a visa?',
             a: 'No. Only IRCC decides. Genuine Canada immigration consultants in Kerala promise an honest assessment and a complete application, the best way to reduce refusal risk.',
           },
         ],
@@ -2516,8 +2516,8 @@ export const countries: Page[] = [
     crumb: 'Express Entry',
     img: 'canada',
     accent: 'var(--coral)',
-    title: 'Canada Express Entry from India: 2026 Guide | Mountbell',
-    description: 'Canada Express Entry from India explained: eligibility, ranking, 2026 draws, timelines and documents. Get a free profile review from Mountbell, Kerala.',
+    title: 'Canada Express Entry from India: 2026 Guide | Mount Bell',
+    description: 'Canada Express Entry from India explained: eligibility, ranking, 2026 draws, timelines and documents. Get a free profile review from Mount Bell, Kerala.',
     label: 'Canada › Express Entry',
     h1: 'Canada Express Entry from India – Eligibility, Draws and Step-by-Step Guide',
     lede: 'Canada Express Entry from India is the fastest federal route to permanent residence for skilled Indian professionals, and it is the first system most Kerala applicants explore. This guide explains Express Entry eligibility, how draws work in 2026, the documents you need and realistic times for each step of Canada Express Entry from India.',
@@ -2664,8 +2664,8 @@ export const countries: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell for Canada Express Entry from India?',
-        intro: 'As Express Entry consultants in Kerala, Mountbell combines local support with licensed Canadian representation for Canada Express Entry from India.',
+        h2: 'Why Choose Mount Bell for Canada Express Entry from India?',
+        intro: 'As Express Entry consultants in Kerala, Mount Bell combines local support with licensed Canadian representation for Canada Express Entry from India.',
         items: [
           { title: 'Direct office access', text: 'Offices in Thrissur and Kochi, plus online consultations.' },
           { title: 'CICC licensed partner', text: 'Representation before IRCC through a Regulated Canadian Immigration Consultant.' },
@@ -2700,7 +2700,7 @@ export const countries: Page[] = [
             a: 'Yes. You can update it at any time before an invitation, such as after a new test score. Updated scores count in the next round of Canada Express Entry from India.',
           },
           {
-            q: 'Does Mountbell guarantee an invitation?',
+            q: 'Does Mount Bell guarantee an invitation?',
             a: 'No. Only IRCC issues invitations and decisions. We promise an honest assessment and a complete, accurate Canada Express Entry from India file.',
           },
         ],

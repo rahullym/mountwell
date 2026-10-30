@@ -2,7 +2,7 @@
 // Anything set to null is hidden on the live page until a verified value is supplied.
 
 export const site = {
-  name: 'Mountbell',
+  name: 'Mount Bell',
   legalName: 'Mount Bell Global Studies',
   url: 'https://mountbell.com',
   email: 'edu@mountbell.com',
@@ -233,7 +233,7 @@ export const nursing = [
   { img: 'europe', place: 'United Kingdom', text: 'NMC registration, CBT, OSCE and the Health and Care Worker visa.', href: '/nursing-careers/uk/' },
 ];
 
-// Online language training, run as Mountbell's own educational service. German and Danish lead
+// Online language training, run as Mount Bell's own educational service. German and Danish lead
 // because they feed the overseas employment programmes. `native` is the language's own name.
 export const training: { id: string; name: string; native?: string; text: string; links?: { label: string; href: string }[] }[] = [
   { id: 'german', name: 'German', native: 'Deutsch', text: 'For nurses, Ausbildung trainees and Opportunity Card applicants preparing for work in Germany.', links: [
@@ -276,7 +276,7 @@ export const reasons = [
 export const reviews = [
   { name: 'Feby Siby', text: 'They were very supportive from the beginning. They are very transparent from the start till the end. They helped me to achieve my dream by making the process so easy and simple.' },
   { name: 'Jincy Thomas', text: 'Got my visa cleared very smoothly. Very caring staff who are very much accessible and who were spontaneous in responding to my queries.' },
-  { name: 'Neenu Abraham', text: 'I chose Mountbell after doing so much study on all agencies. The amount of patience and dedication they put into helping us is commendable.' },
+  { name: 'Neenu Abraham', text: 'I chose Mount Bell after doing so much study on all agencies. The amount of patience and dedication they put into helping us is commendable.' },
 ];
 
 export const updates = [
@@ -289,7 +289,7 @@ export const updates = [
 export const faqs: { q: string; a: string; href?: string; link?: string }[] = [
   {
     q: 'Who are the best immigration consultants in Kerala?',
-    a: 'The right immigration consultants in Kerala are the ones you can verify: a government licence number, written fees and honest advice about your chances. Mountbell is MEA licensed and focuses on skilled migration for healthcare, trade, IT and teaching professionals.',
+    a: 'The right immigration consultants in Kerala are the ones you can verify: a government licence number, written fees and honest advice about your chances. Mount Bell is MEA licensed and focuses on skilled migration for healthcare, trade, IT and teaching professionals.',
   },
   {
     q: 'How to choose an immigration consultant in Kerala?',
@@ -297,7 +297,7 @@ export const faqs: { q: string; a: string; href?: string; link?: string }[] = [
     href: '/resources/avoid-visa-fraud/', link: 'How to identify fake agents',
   },
   {
-    q: 'How much does it cost to work with Mountbell?',
+    q: 'How much does it cost to work with Mount Bell?',
     a: 'The cost depends on the country and the programme. Your first consultation is free. Before you pay, you receive a written fee schedule showing our service fee, what it includes, and the government, exam and assessment charges paid separately.',
     href: '/fees/', link: 'How our fees work',
   },
@@ -308,7 +308,7 @@ export const faqs: { q: string; a: string; href?: string; link?: string }[] = [
   },
   {
     q: 'Which countries can nurses from Kerala migrate to?',
-    a: 'Through Mountbell, nurses from Kerala can move to Australia, Germany, Denmark, Malta and the Maldives. Each has its own registration body and language requirement, so the right choice depends on your experience, exam scores and start date.',
+    a: 'Through Mount Bell, nurses from Kerala can move to Australia, Germany, Denmark, Malta and the Maldives. Each has its own registration body and language requirement, so the right choice depends on your experience, exam scores and start date.',
     href: '/nursing-careers/', link: 'Nursing careers abroad',
   },
   {
@@ -373,7 +373,7 @@ export const menu: { label: string; href: string; id: string; items?: { label: s
     { label: 'Success stories', href: '/success-stories/' },
   ] },
   { label: 'About', id: 'about', href: '/about-us/', items: [
-    { label: 'About Mountbell', href: '/about-us/' },
+    { label: 'About Mount Bell', href: '/about-us/' },
     { label: 'Our team', href: '/about-us/team/' },
     { label: 'Licences and accreditations', href: '/about-us/licences/' },
     { label: 'How it works', href: '/how-it-works/' },
@@ -408,14 +408,14 @@ export const photoAlt: Record<string, string> = {
   australia: 'Sydney Opera House and Harbour Bridge at dusk, Australia',
 };
 
-// Mountbell's own photos, built by scripts/images.mjs from assets-src/photos.
+// Mount Bell's own photos, built by scripts/images.mjs from assets-src/photos.
 export const teamPhotos = [
-  { src: '/img/photos/team-kerala-dress.webp', w: 800, h: 800, alt: 'Mountbell team in matching blue and white Kerala dress at the office' },
-  { src: '/img/photos/office-briefing.webp', w: 600, h: 600, alt: 'Group briefing in progress at the Mountbell office' },
-  { src: '/img/photos/office-reception.webp', w: 420, h: 496, alt: 'Reception desk under the Mountbell Global Studies sign' },
-  { src: '/img/photos/team-celebration.webp', w: 800, h: 600, alt: 'Mountbell team at an office celebration with blue and green balloons' },
+  { src: '/img/photos/team-kerala-dress.webp', w: 800, h: 800, alt: 'Mount Bell team in matching blue and white Kerala dress at the office' },
+  { src: '/img/photos/office-briefing.webp', w: 600, h: 600, alt: 'Group briefing in progress at the Mount Bell office' },
+  { src: '/img/photos/office-reception.webp', w: 420, h: 496, alt: 'Reception desk under the Mount Bell Global Studies sign' },
+  { src: '/img/photos/team-celebration.webp', w: 800, h: 600, alt: 'Mount Bell team at an office celebration with blue and green balloons' },
 ];
-export const processPhoto = { src: '/img/photos/office-consultation.webp', w: 1000, h: 1120, alt: 'Two women going through details on a laptop in the Mountbell office lounge' };
+export const processPhoto = { src: '/img/photos/office-consultation.webp', w: 1000, h: 1120, alt: 'Two women going through details on a laptop in the Mount Bell office lounge' };
 // Photo of nurses for the Nursing Careers section (stock, credited on /image-credits/).
 // null = the section shows without a photo.
 export const nursingPhoto = { src: '/img/photos/nurse-portrait.webp', w: 1000, h: 1250, alt: 'Smiling nurse in blue scrubs holding a stethoscope in a hospital corridor' } as { src: string; w: number; h: number; alt: string } | null;
@@ -423,7 +423,7 @@ export const nursingPhoto = { src: '/img/photos/nurse-portrait.webp', w: 1000, h
 // Every column shows all of them in its own order (see Hero.astro). `h` is the tile height at a width of 320.
 export const storyReel: { slug: string; h: number; alt: string }[] = [
   { slug: 'departure-gate', h: 240, alt: 'Group of women with luggage at an airport departure gate' },
-  { slug: 'london', h: 400, alt: 'Mountbell candidate by Tower Bridge in London' },
+  { slug: 'london', h: 400, alt: 'Mount Bell candidate by Tower Bridge in London' },
   { slug: 'arrivals', h: 320, alt: 'Four women smiling under an arrivals sign' },
   { slug: 'seafront', h: 400, alt: 'Five people taking a selfie on a pebble beach by a harbour' },
   { slug: 'night', h: 240, alt: 'Four women with suitcases outside an airport at night' },

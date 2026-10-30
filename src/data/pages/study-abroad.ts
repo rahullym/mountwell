@@ -10,7 +10,7 @@ function publish<T>(v: T): T {
 }
 
 const licence = 'B-1921/KER/PART/100/5/10348/2023';
-const studyWa = 'Hi Mountbell, I am interested in studying abroad and would like counselling on courses and universities.';
+const studyWa = 'Hi Mount Bell, I am interested in studying abroad and would like counselling on courses and universities.';
 
 const contactBlock = (h2: string, text: string, waMsg: string): Block => ({
   type: 'prose',
@@ -33,13 +33,13 @@ const pagesRaw: Page[] = [
     path: '/study-abroad/',
     crumb: 'Study abroad',
     accent: 'var(--blue)',
-    title: 'Study Abroad Consultants in Thrissur | Mountbell',
+    title: 'Study Abroad Consultants in Thrissur | Mount Bell',
     description: 'Study abroad consultants in Thrissur for courses abroad, university admission, student visas and education loan assistance. UK, Canada, Australia, Germany.',
     label: 'Study Abroad',
     h1: 'Study Abroad Consultants in Thrissur — Courses, Universities, Visas and Loans',
-    lede: 'Study abroad consultants in Thrissur should help you answer three questions before you apply: which course, which country, and how will you pay for it? Mountbell has helped students study abroad from Kerala since our start as Mount Bell Global Studies, and we work with partner universities in 15+ countries. We handle course selection and university admission. We also arrange the student visa and help with loans, from offices in Thrissur and Kochi. Most students need 6 to 9 months from first meeting to flight.',
+    lede: 'Study abroad consultants in Thrissur should help you answer three questions before you apply: which course, which country, and how will you pay for it? Mount Bell has helped students study abroad from Kerala since our start as Mount Bell Global Studies, and we work with partner universities in 15+ countries. We handle course selection and university admission. We also arrange the student visa and help with loans, from offices in Thrissur and Kochi. Most students need 6 to 9 months from first meeting to flight.',
     acts: { check: 'Plan my study abroad', wa: 'Book a free call' },
-    photo: { src: '/img/dest/kerala-wide.webp', alt: 'Mountbell study abroad consultants Thrissur', w: 1400, h: 820 },
+    photo: { src: '/img/dest/kerala-wide.webp', alt: 'Mount Bell study abroad consultants Thrissur', w: 1400, h: 820 },
     wa: studyWa,
     blocks: [
       {
@@ -60,7 +60,7 @@ const pagesRaw: Page[] = [
       },
       {
         type: 'prose',
-        h2: 'How Mountbell Helps, From Course to Campus',
+        h2: 'How Mount Bell Helps, From Course to Campus',
         body: ['Good study abroad consultants in Thrissur cover the whole journey, not just the application form.'],
         list: [
           '<strong>Course selection:</strong> matching your marks, budget and career plan to the right programme',
@@ -166,7 +166,7 @@ const pagesRaw: Page[] = [
       {
         type: 'steps',
         h2: 'Study Abroad Process: 8 Steps and Timeline',
-        intro: 'This is how a typical plan runs with Mountbell’s study abroad consultants in Thrissur.',
+        intro: 'This is how a typical plan runs with Mount Bell’s study abroad consultants in Thrissur.',
         items: [
           { title: 'Free counselling (week 1)', text: 'Your marks, goals, budget and English level.' },
           { title: 'Course selection and shortlisting (weeks 2 to 3)', text: 'Selecting 5 to 8 suitable university options across safe, target and ambitious tiers.' },
@@ -201,7 +201,7 @@ const pagesRaw: Page[] = [
           'Tuition fees: vary widely by country, course and university; Germany’s public universities charge little or none',
           'Living costs: set by each country’s visa rules, as shown in the Key Facts',
           'One-off costs: application fees, English test, visa fee, health cover and flights',
-          'Mountbell fee: shown in writing before you start and listed on our Fees page',
+          'Mount Bell fee: shown in writing before you start and listed on our Fees page',
         ],
         after: [
           'As study abroad consultants in Thrissur, we give you a full year-one budget before you apply, so there are no surprises at visa stage.',
@@ -279,8 +279,8 @@ const pagesRaw: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell',
-        intro: 'Many families compare study abroad consultants in Thrissur before choosing. Here is what Mountbell does differently:',
+        h2: 'Why Choose Mount Bell',
+        intro: 'Many families compare study abroad consultants in Thrissur before choosing. Here is what Mount Bell does differently:',
         items: [
           { title: 'Kerala roots', text: 'Years of experience with Kerala students, from our roots as Mount Bell Global Studies.' },
           { title: 'Honest advice', text: 'Honest advice on courses abroad, even when it means a cheaper university or a later intake.' },
@@ -321,7 +321,7 @@ const pagesRaw: Page[] = [
       },
       contactBlock(
         'Book Your Free Study Abroad Counselling',
-        'Speak to Mountbell’s study abroad consultants in Thrissur about your course, country and budget. The first session is free.',
+        'Speak to Mount Bell’s study abroad consultants in Thrissur about your course, country and budget. The first session is free.',
         studyWa
       ),
     ],

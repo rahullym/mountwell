@@ -5,9 +5,9 @@ import Hero from './Hero.astro';
 import FinalCta from './FinalCta.astro';
 import { site, countries, goals, professionGroups, homeServices, supportChips, nursing, training, steps, reasons, reviews, updates, faqs, waLink, photoAlt, teamPhotos, processPhoto, nursingPhoto, galleryPhotos } from '../data/site';
 
-const title = 'Immigration Consultancy in Kerala – PR & Visas | Mountbell';
-const description = 'Established in 2017, Mountbell is an MEA-licensed immigration consultancy for PR, work visas and nursing careers abroad. Main branch in Kochi, Kerala.';
-const wa = waLink('Hi Mountbell, I would like to talk to an expert about working or migrating abroad.');
+const title = 'Immigration Consultancy in Kerala – PR & Visas | Mount Bell';
+const description = 'Established in 2017, Mount Bell is an MEA-licensed immigration consultancy for PR, work visas and nursing careers abroad. Main branch in Kochi, Kerala.';
+const wa = waLink('Hi Mount Bell, I would like to talk to an expert about working or migrating abroad.');
 // One accent colour per destination, used by the pathway explorer and the programme cards.
 const accent: Record<string, string> = { australia: 'var(--coral)', canada: 'var(--err)', germany: 'var(--amber-deep)', denmark: 'var(--sky)', malta: 'var(--teal)', maldives: 'var(--green-deep)', netherlands: 'var(--blue)', europe: 'var(--plum)' };
 const places = countries.map((c) => ({ ...c, slug: c.name.toLowerCase() }));
@@ -19,7 +19,7 @@ const faqSchema = {
   mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 const videoSchema = site.heroVideoId
-  ? [{ '@context': 'https://schema.org', '@type': 'VideoObject', name: 'Mountbell: immigration consultants in Kerala', description, thumbnailUrl: `https://i.ytimg.com/vi/${site.heroVideoId}/maxresdefault.jpg`, embedUrl: `https://www.youtube.com/embed/${site.heroVideoId}` }]
+  ? [{ '@context': 'https://schema.org', '@type': 'VideoObject', name: 'Mount Bell: immigration consultants in Kerala', description, thumbnailUrl: `https://i.ytimg.com/vi/${site.heroVideoId}/maxresdefault.jpg`, embedUrl: `https://www.youtube.com/embed/${site.heroVideoId}` }]
   : [];
 ---
 <Base title={title} description={description} schema={[faqSchema, ...videoSchema]}>
@@ -28,7 +28,7 @@ const videoSchema = site.heroVideoId
   <Hero />
 
   <!-- 03 Trust strip -->
-  <section class="trust" aria-label="Why you can trust Mountbell">
+  <section class="trust" aria-label="Why you can trust Mount Bell">
     <div class="wrap">
       <ul data-reveal-group>
         {site.foundedYear && <li><strong>Established {site.foundedYear}</strong><span>{new Date().getFullYear() - site.foundedYear} years of visa and recruitment experience</span></li>}
@@ -61,8 +61,8 @@ const videoSchema = site.heroVideoId
       </div>
 
       <div class="who-body" data-reveal style="--n:1">
-        <h2 class="h2">Mountbell – Trusted Immigration and Overseas Migration Consultants, Established in 2017</h2>
-        <p class="who-lead">Established in {site.foundedYear}, Mountbell is an immigration and overseas recruitment consultancy with a presence in {site.presence}. We help professionals move to Australia, Canada, Germany, Denmark, Malta, the Maldives, the Netherlands and other European countries through skilled migration, work visa and overseas job programmes.</p>
+        <h2 class="h2">Mount Bell – Trusted Immigration and Overseas Migration Consultants, Established in 2017</h2>
+        <p class="who-lead">Established in {site.foundedYear}, Mount Bell is an immigration and overseas recruitment consultancy with a presence in {site.presence}. We help professionals move to Australia, Canada, Germany, Denmark, Malta, the Maldives, the Netherlands and other European countries through skilled migration, work visa and overseas job programmes.</p>
         <p class="muted">Our main branch is in Kochi, with a second branch in Thrissur, and we recruit for overseas employers under licence {site.licence.number}, issued to {site.legalName}. Our team specialises in healthcare, skilled trades, IT and teaching.</p>
         <p class="muted">Every client gets a named consultant, a straight answer about what is possible and fees in writing before any payment. That is why families comparing overseas immigration consultants in Kerala recommend us to relatives who want to migrate abroad from Kerala.</p>
         <dl class="who-facts">
@@ -202,11 +202,11 @@ const videoSchema = site.heroVideoId
       <div class="train-copy" data-reveal>
         <div class="section-head">
           <h2 class="h2">Online Language Training for Work and Migration Abroad</h2>
-          <p class="lede">The language exam often decides when you can travel. Mountbell runs its language training as a dedicated educational service, taught online, so your classes and your application are planned together.</p>
+          <p class="lede">The language exam often decides when you can travel. Mount Bell runs its language training as a dedicated educational service, taught online, so your classes and your application are planned together.</p>
         </div>
         <div class="train-acts">
           <a class="btn btn-primary" href="/training/">Explore Training <Icon name="arrow" size={18} /></a>
-          <a class="arrow-link" href={waLink('Hi Mountbell, I would like to know about your language training courses.')} target="_blank" rel="noopener">Ask About a Course <Icon name="arrow" size={17} /></a>
+          <a class="arrow-link" href={waLink('Hi Mount Bell, I would like to know about your language training courses.')} target="_blank" rel="noopener">Ask About a Course <Icon name="arrow" size={17} /></a>
         </div>
       </div>
       <div data-reveal style="--n:1">
@@ -286,7 +286,7 @@ const videoSchema = site.heroVideoId
   <section class="section" id="why">
     <div class="wrap why">
       <div class="why-sticky" data-reveal>
-        <h2 class="h2">Why Choose Mountbell as Your Immigration Consultancy in Kerala</h2>
+        <h2 class="h2">Why Choose Mount Bell as Your Immigration Consultancy in Kerala</h2>
         <img class="why-photo" src={teamPhotos[3].src} alt={teamPhotos[3].alt} width={teamPhotos[3].w} height={teamPhotos[3].h} loading="lazy" decoding="async" />
       </div>
       <div>
@@ -306,7 +306,7 @@ const videoSchema = site.heroVideoId
             <ul class="expert-grid">
               {site.team.map((m) => (
                 <li class="expert">
-                  <img src={m.photo} alt={`${m.name}, ${m.role} at Mountbell`} loading="lazy" width="400" height="500" />
+                  <img src={m.photo} alt={`${m.name}, ${m.role} at Mount Bell`} loading="lazy" width="400" height="500" />
                   <strong>{m.name}</strong>
                   <span>{m.role} · {m.years}</span>
                   <span>{m.credentials}</span>
@@ -355,13 +355,13 @@ const videoSchema = site.heroVideoId
     <div class="wrap">
       <div class="section-head" data-reveal>
         <h2 class="h2">Success Stories – From Kerala to Australia, Germany, Malta and Beyond</h2>
-        <p class="lede">A few words from clients who chose Mountbell as their trusted immigration consultants in Kerala, from the first consultation to the day they flew.</p>
+        <p class="lede">A few words from clients who chose Mount Bell as their trusted immigration consultants in Kerala, from the first consultation to the day they flew.</p>
       </div>
       <div class="stories" data-reveal-group>
         {reviews.map((r) => (
           <figure class="story" style="margin:0">
             <blockquote>{r.text}</blockquote>
-            <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mountbell client</span></div></figcaption>
+            <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mount Bell client</span></div></figcaption>
           </figure>
         ))}
       </div>
@@ -372,7 +372,7 @@ const videoSchema = site.heroVideoId
       <ul class="snaps" style="margin-top:40px" data-reveal-group>
         {galleryPhotos.map((p) => <li><img src={p.src} alt={p.alt} width="480" height="480" loading="lazy" decoding="async" /></li>)}
       </ul>
-      <p class="snaps-cap">From the Mountbell gallery.</p>
+      <p class="snaps-cap">From the Mount Bell gallery.</p>
     </div>
   </section>
 
@@ -385,7 +385,7 @@ const videoSchema = site.heroVideoId
       <div class="offices" data-reveal-group>
         {site.offices.map((o) => (
           <article class="office">
-            <iframe title={`Map of Mountbell ${o.city} office`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" src={`https://www.google.com/maps?q=${encodeURIComponent(o.mapQuery)}&z=15&output=embed`}></iframe>
+            <iframe title={`Map of Mount Bell ${o.city} office`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" src={`https://www.google.com/maps?q=${encodeURIComponent(o.mapQuery)}&z=15&output=embed`}></iframe>
             <div class="office-body">
               <div class="top"><h3 class="h3" style="font-size:1.6rem">{officeName[o.city]}</h3></div>
               <address>{o.lines.map((l) => <>{l}<br /></>)}</address>
@@ -400,7 +400,7 @@ const videoSchema = site.heroVideoId
         ))}
       </div>
       <p class="svc-note">Kochi is our main branch, and both offices are run by the same team. We meet clients from every district of Kerala, including {site.areasServed.slice(0, -1).join(', ')} and {site.areasServed.at(-1)}, and work with people across India and abroad by phone and video call.</p>
-      <p class="svc-note" style="margin-top:12px"><a class="tlink" href="/immigration-consultants-kochi/">Mountbell Kochi office</a> &nbsp;·&nbsp; <a class="tlink" href="/immigration-consultants-thrissur/">Mountbell Thrissur office</a></p>
+      <p class="svc-note" style="margin-top:12px"><a class="tlink" href="/immigration-consultants-kochi/">Mount Bell Kochi office</a> &nbsp;·&nbsp; <a class="tlink" href="/immigration-consultants-thrissur/">Mount Bell Thrissur office</a></p>
     </div>
   </section>
 
@@ -446,7 +446,7 @@ const videoSchema = site.heroVideoId
   </section>
 
   <!-- 15 Final CTA -->
-  <FinalCta heading="Book Your Free Migration Eligibility Assessment Today" text={`Speak to Mountbell, a licensed immigration consultancy in Kerala, in person, by phone or on WhatsApp. Call ${site.phone.display}, visit our Kochi or Thrissur office, or fill in the short form and a consultant will contact you.`} submit="Book My Free Assessment" />
+  <FinalCta heading="Book Your Free Migration Eligibility Assessment Today" text={`Speak to Mount Bell, a licensed immigration consultancy in Kerala, in person, by phone or on WhatsApp. Call ${site.phone.display}, visit our Kochi or Thrissur office, or fill in the short form and a consultant will contact you.`} submit="Book My Free Assessment" />
 </Base>
 
 <script>

@@ -32,16 +32,16 @@ const pagesRaw: Page[] = [
     path: '/services/',
     crumb: 'Services',
     wide: true,
-    title: 'Mountbell Immigration Services – PR, Work Visa & More',
-    description: 'Mountbell immigration services in one place: PR, skilled migration, work visas, nursing careers, visa documentation, family and visitor visas. Free assessment.',
-    h1: 'Mountbell Immigration Services — Find the Right Service for Your Move Abroad',
+    title: 'Mount Bell Immigration Services – PR, Work Visa & More',
+    description: 'Mount Bell immigration services in one place: PR, skilled migration, work visas, nursing careers, visa documentation, family and visitor visas. Free assessment.',
+    h1: 'Mount Bell Immigration Services — Find the Right Service for Your Move Abroad',
     tagline: 'Every service, one team, offices in Thrissur and Kochi.',
-    lede: 'Mountbell immigration services help Indian applicants settle, work or reunite with family abroad. We handle permanent residence, work visas, nurse recruitment, skills assessments, visa documents, family and visitor visas, and language coaching, from offices in Thrissur and Kochi and online across India. Start with your goal below, or book a free assessment.',
+    lede: 'Mount Bell immigration services help Indian applicants settle, work or reunite with family abroad. We handle permanent residence, work visas, nurse recruitment, skills assessments, visa documents, family and visitor visas, and language coaching, from offices in Thrissur and Kochi and online across India. Start with your goal below, or book a free assessment.',
     acts: { check: 'Book a free assessment', wa: 'WhatsApp an adviser' },
     blocks: [
       {
         type: 'checks',
-        h2: 'Why You Can Trust Mountbell',
+        h2: 'Why You Can Trust Mount Bell',
         items: [
           { title: 'MEA Recruiting Agent Licence', text: `Licence ${site.licence.number} (<a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">verify on eMigrate</a>)` },
           { title: 'Two Kerala Branch Offices', text: 'Offices in Thrissur and Kochi, plus online consultations for overseas migration support across India' },
@@ -60,13 +60,13 @@ const pagesRaw: Page[] = [
           { title: 'I want an overseas job in my trade or profession', meta: 'Overseas Jobs', text: 'Match to employers we have verified under our MEA licence, with full overseas migration support.', href: '/overseas-jobs/' },
           { title: 'My spouse or children need to join me', meta: 'Dependent Visa', text: 'Relationship evidence, financial proof and dependant applications for spouses, partners and children.', href: '/services/dependent-visa/' },
           { title: 'I am visiting family or travelling on business', meta: 'Visitor Visa', text: 'Travel plan, funds evidence, invitation letters and appointment booking for tourism, family visits and business trips.', href: '/services/visitor-visa/' },
-          { title: 'I am not sure', meta: 'Free Consultation', text: 'Book a free assessment, and an adviser will match you to one or two Mountbell services that fit your profile.', href: '/free-immigration-assessment/' },
+          { title: 'I am not sure', meta: 'Free Consultation', text: 'Book a free assessment, and an adviser will match you to one or two Mount Bell services that fit your profile.', href: '/free-immigration-assessment/' },
         ],
       },
       {
         type: 'links',
         h2: 'Our Immigration and Visa Services, Grouped by Goal',
-        intro: 'Every card below links to a full page with eligibility, documents, timelines and fees. All Mountbell immigration services follow the same pattern: who it is for, what we do and how long it usually takes.',
+        intro: 'Every card below links to a full page with eligibility, documents, timelines and fees. All Mount Bell immigration services follow the same pattern: who it is for, what we do and how long it usually takes.',
         items: [
           { title: 'PR Visa & Skilled Migration', meta: 'Settle Abroad · 8 to 18 months', text: 'For skilled professionals who want permanent residence abroad. Points check, country comparison, expression of interest planning and application support.', href: '/services/pr-visa/' },
           { title: 'Skills Assessment', meta: 'Settle Abroad · 1 to 4 months', text: 'For applicants whose occupation must be assessed before a PR or work visa. Choose the right assessing body, map duties and prepare reference letters.', href: '/services/skills-assessment/' },
@@ -81,7 +81,7 @@ const pagesRaw: Page[] = [
       },
       {
         type: 'steps',
-        h2: 'How Mountbell Immigration Services Work',
+        h2: 'How Mount Bell Immigration Services Work',
         intro: 'Whichever of our immigration and visa services you choose, the same five stages apply, so you always know what comes next.',
         items: [
           { title: 'Free assessment (about 30 minutes)', text: 'An adviser reviews your education, work history, age, language level and goals.' },
@@ -91,7 +91,7 @@ const pagesRaw: Page[] = [
           { title: 'Decision and departure', text: 'Visa result, pre-departure briefing and a named contact after you arrive.' },
         ],
         after: [
-          'At every stage, our end-to-end visa support includes a named adviser on WhatsApp and phone, a full document check and an update whenever your case moves. Many applicants use two or three Mountbell services together, and one adviser coordinates all of them.',
+          'At every stage, our end-to-end visa support includes a named adviser on WhatsApp and phone, a full document check and an update whenever your case moves. Many applicants use two or three Mount Bell services together, and one adviser coordinates all of them.',
           '<a href="/how-it-works/">Read our full step-by-step process guide →</a>',
         ],
       },
@@ -99,7 +99,7 @@ const pagesRaw: Page[] = [
         type: 'prose',
         h2: 'Who We Can and Cannot Help',
         body: [
-          'Mountbell immigration services start with honest advice, not a quick sale. Before you pay, we tell you plainly whether a route fits your profile.',
+          'Mount Bell immigration services start with honest advice, not a quick sale. Before you pay, we tell you plainly whether a route fits your profile.',
         ],
         list: [
           'We help: applicants with a realistic route under current rules, and families planning a move together',
@@ -141,7 +141,7 @@ const pagesRaw: Page[] = [
           'A receipt is issued for every payment',
         ],
         after: [
-          'Prices vary by service and country, so each of the Mountbell immigration services above shows its own fee structure on its page.',
+          'Prices vary by service and country, so each of the Mount Bell immigration services above shows its own fee structure on its page.',
           '<a href="/fees/">View fee structure and refund policy →</a>',
         ],
       },
@@ -159,20 +159,20 @@ const pagesRaw: Page[] = [
         type: 'faq',
         h2: 'Frequently Asked Questions',
         items: [
-          { q: 'What immigration services does Mountbell offer?', a: 'Mountbell immigration services include PR and skilled migration, work visas, skills assessments, visa documentation, dependant visas, visitor visas and language test preparation, plus specialist programmes for nursing careers, overseas jobs and study abroad.' },
+          { q: 'What immigration services does Mount Bell offer?', a: 'Mount Bell immigration services include PR and skilled migration, work visas, skills assessments, visa documentation, dependant visas, visitor visas and language test preparation, plus specialist programmes for nursing careers, overseas jobs and study abroad.' },
           { q: 'Which service should I start with?', a: 'Start with your goal. If you want permanent residence, begin with a PR assessment; if you have a job offer, start with the work visa. If you are unsure, a free 30-minute assessment points you to the right first step.' },
           { q: 'How do I know which service is right for me?', a: 'Our immigration and visa services are grouped by goal on this page. A free assessment then confirms the route and gives you a written plan within 2 working days.' },
           { q: 'Do you offer visa services for Indians outside Kerala?', a: 'Yes. Our visa services for Indians are not limited to Kerala. Most consultations happen online, and our Thrissur and Kochi offices are open for in-person meetings and document hand-over.' },
-          { q: 'Can I use more than one service?', a: 'Yes. Many applicants combine Mountbell services, such as test preparation, a skills assessment and a PR application. One adviser coordinates them so nothing is duplicated or missed.' },
-          { q: 'How long does each service take?', a: 'It depends on the route and on which Mountbell services you combine. Visitor visas and document checks usually take weeks, work visas two to six months after an offer, and PR eight to eighteen months. Mountbell immigration services always start with a written timeline, so you can plan your job, finances and family around real dates.' },
-          { q: 'Does Mountbell guarantee a visa?', a: 'No. Visa decisions are made by governments and employers. We give end-to-end visa support, check every document and explain your chances honestly, but no genuine consultant can guarantee a visa.' },
-          { q: 'How do I check that Mountbell is licensed?', a: `Search our recruiting agent licence number, ${site.licence.number}, on the Ministry of External Affairs eMigrate portal and confirm the name and address match.` },
+          { q: 'Can I use more than one service?', a: 'Yes. Many applicants combine Mount Bell services, such as test preparation, a skills assessment and a PR application. One adviser coordinates them so nothing is duplicated or missed.' },
+          { q: 'How long does each service take?', a: 'It depends on the route and on which Mount Bell services you combine. Visitor visas and document checks usually take weeks, work visas two to six months after an offer, and PR eight to eighteen months. Mount Bell immigration services always start with a written timeline, so you can plan your job, finances and family around real dates.' },
+          { q: 'Does Mount Bell guarantee a visa?', a: 'No. Visa decisions are made by governments and employers. We give end-to-end visa support, check every document and explain your chances honestly, but no genuine consultant can guarantee a visa.' },
+          { q: 'How do I check that Mount Bell is licensed?', a: `Search our recruiting agent licence number, ${site.licence.number}, on the Ministry of External Affairs eMigrate portal and confirm the name and address match.` },
         ],
       },
       contactBlock(
-        'Talk to a Mountbell Adviser',
-        'Tell us your goal, and we will recommend the right Mountbell immigration services for your profile in a free assessment. Applicants across India can book online or visit our Kerala offices.',
-        'Hi Mountbell, I would like to book a free assessment to discuss my immigration options.',
+        'Talk to a Mount Bell Adviser',
+        'Tell us your goal, and we will recommend the right Mount Bell immigration services for your profile in a free assessment. Applicants across India can book online or visit our Kerala offices.',
+        'Hi Mount Bell, I would like to book a free assessment to discuss my immigration options.',
       ),
     ],
     related: ['/countries/', '/how-it-works/', '/fees/'],
@@ -185,15 +185,15 @@ const pagesRaw: Page[] = [
     label: 'Service',
     img: 'australia',
     accent: 'var(--coral)',
-    title: 'PR Visa Consultants in Kerala | Mountbell',
+    title: 'PR Visa Consultants in Kerala | Mount Bell',
     description: 'PR visa consultants in Kerala: compare Australia and Canada PR routes, check points eligibility, timelines and documents. Thrissur and Kochi. Free assessment.',
     h1: 'PR Visa Consultants in Kerala — Compare PR Routes, Check Eligibility and Apply',
-    lede: 'PR visa consultants in Kerala help skilled professionals choose the right country, check their points and prepare an application that holds up. Permanent residency abroad is a long decision, so the first choice matters. Mountbell compares Australia and Canada side by side, plans your skills assessment and English test, and checks every document, from offices in Thrissur and Kochi. Most points-based PR routes take 8 to 18 months from assessment to grant.',
+    lede: 'PR visa consultants in Kerala help skilled professionals choose the right country, check their points and prepare an application that holds up. Permanent residency abroad is a long decision, so the first choice matters. Mount Bell compares Australia and Canada side by side, plans your skills assessment and English test, and checks every document, from offices in Thrissur and Kochi. Most points-based PR routes take 8 to 18 months from assessment to grant.',
     acts: { check: 'Check my PR eligibility', wa: 'WhatsApp a PR adviser' },
     blocks: [
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell for PR',
+        h2: 'Why Choose Mount Bell for PR',
         items: [
           { title: 'Kerala Branch Offices & Online', text: 'Offices in Thrissur and Kochi, plus online consultations across India' },
           { title: 'Transparent Points Estimates', text: 'Honest points estimates for permanent residency abroad before you pay anything' },
@@ -226,7 +226,7 @@ const pagesRaw: Page[] = [
           'English points: a higher IELTS, PTE or CELPIP score can add more points than any other single factor',
         ],
         after: [
-          'Among the skilled migration consultants Kerala applicants can choose from, Mountbell starts every case with an honest points estimate, not a sales pitch.',
+          'Among the skilled migration consultants Kerala applicants can choose from, Mount Bell starts every case with an honest points estimate, not a sales pitch.',
           'Try our free tools: <a href="/tools/australia-pr-points-calculator/">Australia PR points calculator</a> &nbsp;·&nbsp; <a href="/tools/immigration-eligibility-checker/">Immigration eligibility checker</a>',
         ],
       },
@@ -263,7 +263,7 @@ const pagesRaw: Page[] = [
       {
         type: 'checks',
         h2: 'PR Eligibility Check: What We Assess',
-        intro: 'A free PR eligibility check with Mountbell looks at the same six factors every points-based PR system uses:',
+        intro: 'A free PR eligibility check with Mount Bell looks at the same six factors every points-based PR system uses:',
         items: [
           { title: 'Age on Invitation Date', text: 'Points are scored based on your exact age bracket at the time you are invited to apply.' },
           { title: 'Highest Qualification', text: 'Whether your degree or diploma is assessed as equal to a local degree in the target country.' },
@@ -276,7 +276,7 @@ const pagesRaw: Page[] = [
       {
         type: 'steps',
         h2: 'The PR Visa Process: 8 Steps and Timeline',
-        intro: 'This is how the PR visa process usually runs with Mountbell:',
+        intro: 'This is how the PR visa process usually runs with Mount Bell:',
         items: [
           { title: 'Free assessment (week 1)', text: 'Points estimate, occupation verification and country choice.' },
           { title: 'Written plan (within 2 working days)', text: 'Your route, document requirements, expected timeline and staged fees.' },
@@ -315,7 +315,7 @@ const pagesRaw: Page[] = [
         list: [
           'Government fees: visa application charges for you and each family member',
           'Third-party costs: English test, skills assessment, medicals, police certificates and translations',
-          'Mountbell fee: charged in stages and written down before you start',
+          'Mount Bell fee: charged in stages and written down before you start',
           'Timeline: plan for 8 to 18 months in total, and budget for each stage separately',
         ],
         after: ['<a href="/fees/">See our full fee structure and refund terms →</a>'],
@@ -357,7 +357,7 @@ const pagesRaw: Page[] = [
         h2: 'Who Lodges Your Application',
         body: [
           'Honest advice matters as much as a good points score. As PR visa consultants in Kerala, we explain who does what before you pay. Ask the same of any skilled migration consultants Kerala friends recommend to you.',
-          'Australian immigration assistance must come from a registered migration agent (MARA), and Canadian representation from a licensed consultant (CICC) or lawyer. Mountbell assists with file compilation and coordinates with licensed representatives where required by destination regulations.',
+          'Australian immigration assistance must come from a registered migration agent (MARA), and Canadian representation from a licensed consultant (CICC) or lawyer. Mount Bell assists with file compilation and coordinates with licensed representatives where required by destination regulations.',
           'We never promise a guaranteed invitation, sell job offers for points, or ask for cash-only payments. PR visa scams often promise fast grants or fake employer letters—always check the credentials before paying.',
           '<a href="/resources/avoid-visa-fraud/">Read our guide on how to spot PR visa scams →</a>',
         ],
@@ -376,8 +376,8 @@ const pagesRaw: Page[] = [
       },
       contactBlock(
         'Book Your PR Assessment',
-        'Speak to Mountbell\'s PR visa consultants in Kerala about your points, your best country and your timeline. We will tell you honestly whether permanent residency abroad is realistic for you now. The first assessment is free.',
-        'Hi Mountbell, I would like to book a free PR assessment to check my points eligibility.',
+        'Speak to Mount Bell\'s PR visa consultants in Kerala about your points, your best country and your timeline. We will tell you honestly whether permanent residency abroad is realistic for you now. The first assessment is free.',
+        'Hi Mount Bell, I would like to book a free PR assessment to check my points eligibility.',
       ),
     ],
     related: ['/countries/australia/', '/services/skills-assessment/', '/services/work-visa/'],
@@ -390,15 +390,15 @@ const pagesRaw: Page[] = [
     label: 'Service',
     img: 'germany',
     accent: 'var(--amber-deep)',
-    title: 'Work Visa Consultants in Kerala | Mountbell',
+    title: 'Work Visa Consultants in Kerala | Mount Bell',
     description: 'Work visa consultants in Kerala: job offer checks, employer-sponsored work permits, documents and emigration clearance. Thrissur and Kochi. Free assessment.',
     h1: 'Work Visa Consultants in Kerala — Job Offer Checks, Permits and Visa Applications',
-    lede: 'Work visa consultants in Kerala help you turn a job offer abroad into a legal, approved right to work. Mountbell checks that the employer and offer are genuine, prepares your documents, guides emigration clearance where it applies and files your application, from offices in Thrissur and Kochi. Most employer-sponsored visa cases take 2 to 6 months from offer to departure.',
+    lede: 'Work visa consultants in Kerala help you turn a job offer abroad into a legal, approved right to work. Mount Bell checks that the employer and offer are genuine, prepares your documents, guides emigration clearance where it applies and files your application, from offices in Thrissur and Kochi. Most employer-sponsored visa cases take 2 to 6 months from offer to departure.',
     acts: { check: 'Check my work visa eligibility', wa: 'WhatsApp a consultant' },
     blocks: [
       {
         type: 'checks',
-        h2: 'Why Work With Mountbell for Your Work Visa',
+        h2: 'Why Work With Mount Bell for Your Work Visa',
         items: [
           { title: 'Licensed Recruiting Agent', text: `Licensed by the Ministry of External Affairs (${site.licence.number}) on eMigrate` },
           { title: 'Offices in Thrissur & Kochi', text: 'Face-to-face consultations in Kerala plus remote consultations across India' },
@@ -443,7 +443,7 @@ const pagesRaw: Page[] = [
       {
         type: 'table',
         h2: 'Countries We Handle',
-        intro: 'Here is where Mountbell files permits and what each suits best, as work visa consultants in Kerala covering ten countries:',
+        intro: 'Here is where Mount Bell files permits and what each suits best, as work visa consultants in Kerala covering ten countries:',
         head: ['Country', 'Focus Roles', 'Key Details'],
         rows: [
           ['<a href="/countries/germany/">Germany</a>', 'Skilled trades, engineering, IT and healthcare', 'German language required for most regulated roles; settlement permit pathway'],
@@ -459,7 +459,7 @@ const pagesRaw: Page[] = [
       {
         type: 'checks',
         h2: 'Check Your Job Offer Before You Pay',
-        intro: 'Fake job offers are the biggest risk in overseas hiring. Before any permit is filed, Mountbell runs a job offer verification that every applicant can understand:',
+        intro: 'Fake job offers are the biggest risk in overseas hiring. Before any permit is filed, Mount Bell runs a job offer verification that every applicant can understand:',
         items: [
           { title: 'Sponsor verification', text: 'We check the employer\'s registration and its legal right to hire foreign workers.' },
           { title: 'Employment contract check', text: 'Salary, hours, duties, accommodation, notice period and who pays for flights.' },
@@ -546,8 +546,8 @@ const pagesRaw: Page[] = [
       },
       contactBlock(
         'Book Your Work Visa Assessment',
-        'Speak to Mountbell\'s work visa consultants in Kerala about your offer, your country and your timeline. We also explain whether a work visa for Indians in your trade leads to PR later. The first assessment is free.',
-        'Hi Mountbell, I have a job offer or work visa enquiry and would like to verify it.',
+        'Speak to Mount Bell\'s work visa consultants in Kerala about your offer, your country and your timeline. We also explain whether a work visa for Indians in your trade leads to PR later. The first assessment is free.',
+        'Hi Mount Bell, I have a job offer or work visa enquiry and would like to verify it.',
       ),
     ],
     related: ['/overseas-jobs/', '/nursing-careers/', '/services/visa-documentation/'],
@@ -558,15 +558,15 @@ const pagesRaw: Page[] = [
     path: '/services/visa-documentation/',
     crumb: 'Visa documentation',
     label: 'Service',
-    title: 'Visa Documentation Services Kerala | Mountbell',
+    title: 'Visa Documentation Services Kerala | Mount Bell',
     description: 'Visa documentation services Kerala applicants trust: checklists, file review, translations, medicals and interview preparation. Thrissur and Kochi. Free check.',
     h1: 'Visa Documentation Services Kerala — Checklists, File Review, Medicals and Interview Preparation',
-    lede: 'Visa documentation services Kerala applicants use should catch problems before an embassy does. Mountbell builds your visa document checklist, checks every certificate, translation and form, books your medicals and appointments, and prepares you for the embassy interview, from offices in Thrissur and Kochi. Most files are ready to submit in 2 to 6 weeks.',
+    lede: 'Visa documentation services Kerala applicants use should catch problems before an embassy does. Mount Bell builds your visa document checklist, checks every certificate, translation and form, books your medicals and appointments, and prepares you for the embassy interview, from offices in Thrissur and Kochi. Most files are ready to submit in 2 to 6 weeks.',
     acts: { check: 'Get my free checklist', wa: 'WhatsApp an adviser' },
     blocks: [
       {
         type: 'checks',
-        h2: 'Why Mountbell Documentation Services',
+        h2: 'Why Mount Bell Documentation Services',
         items: [
           { title: 'Licensed Recruiting Agent', text: `Licensed by the Ministry of External Affairs (${site.licence.number}) on eMigrate` },
           { title: 'Thrissur & Kochi Offices', text: 'Offices in Thrissur and Kochi, plus online file reviews across India' },
@@ -590,7 +590,7 @@ const pagesRaw: Page[] = [
       {
         type: 'checks',
         h2: 'What Our Visa Documentation Service Covers',
-        intro: 'Visa documentation services Kerala families book with Mountbell cover the whole file, not just the form:',
+        intro: 'Visa documentation services Kerala families book with Mount Bell cover the whole file, not just the form:',
         items: [
           { title: 'Visa document checklist', text: 'Built for your visa type and country, not copied from a generic list.' },
           { title: 'Document verification', text: 'Names, dates and numbers matched across your passport, certificates and forms.' },
@@ -616,7 +616,7 @@ const pagesRaw: Page[] = [
       {
         type: 'steps',
         h2: 'The Visa Filing Process: 7 Steps and Timeline',
-        intro: 'This is how a typical case runs with visa documentation services Kerala clients use through Mountbell:',
+        intro: 'This is how a typical case runs with visa documentation services Kerala clients use through Mount Bell:',
         items: [
           { title: 'Free file check (day 1)', text: 'We confirm your visa type and what the embassy will ask for.' },
           { title: 'Personal visa document checklist (within 2 working days)', text: 'Every item, its source and its deadline.' },
@@ -676,7 +676,7 @@ const pagesRaw: Page[] = [
         list: [
           'Embassy and appointment-centre fees: paid directly to them',
           'Third-party costs: translations, attestation, medicals and photos',
-          'Mountbell fee: charged in stages, written down before you start and listed on our Fees page',
+          'Mount Bell fee: charged in stages, written down before you start and listed on our Fees page',
           'Timeline: 2 to 6 weeks to a submission-ready file',
         ],
         after: ['<a href="/fees/">View our full fee schedule →</a>'],
@@ -703,8 +703,8 @@ const pagesRaw: Page[] = [
       },
       contactBlock(
         'Book Your Free File Check',
-        'Speak to Mountbell about visa documentation services Kerala applicants rely on for work, PR, family and visitor visas. Your first file check is free.',
-        'Hi Mountbell, I need documentation and file review support for my visa application.',
+        'Speak to Mount Bell about visa documentation services Kerala applicants rely on for work, PR, family and visitor visas. Your first file check is free.',
+        'Hi Mount Bell, I need documentation and file review support for my visa application.',
         'Get my free checklist',
       ),
     ],
@@ -716,15 +716,15 @@ const pagesRaw: Page[] = [
     path: '/services/skills-assessment/',
     crumb: 'Skills assessment',
     label: 'Service',
-    title: 'Skills Assessment Assistance Kerala | Mountbell',
+    title: 'Skills Assessment Assistance Kerala | Mount Bell',
     description: 'Skills assessment assistance Kerala applicants trust: VETASSESS, ACS, TRA, AITSL, Engineers Australia and WES. Documents, timelines and fees. Free check.',
     h1: 'Skills Assessment Assistance Kerala — VETASSESS, ACS, TRA, AITSL and Engineers Australia',
-    lede: 'Skills assessment assistance Kerala professionals can rely on starts with one question: which authority must assess your occupation, and what evidence will it accept? Mountbell identifies the right body, maps your duties to your nominated occupation, checks every reference letter and prepares a complete file, from offices in Thrissur and Kochi. Most assessments take 4 to 15 weeks once the file is complete.',
+    lede: 'Skills assessment assistance Kerala professionals can rely on starts with one question: which authority must assess your occupation, and what evidence will it accept? Mount Bell identifies the right body, maps your duties to your nominated occupation, checks every reference letter and prepares a complete file, from offices in Thrissur and Kochi. Most assessments take 4 to 15 weeks once the file is complete.',
     acts: { check: 'Check my occupation', wa: 'WhatsApp an adviser' },
     blocks: [
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell for Skills Assessment',
+        h2: 'Why Choose Mount Bell for Skills Assessment',
         items: [
           { title: 'Licensed Recruiting Agent', text: `Licensed by the Ministry of External Affairs (${site.licence.number}) on eMigrate` },
           { title: 'Offices in Thrissur & Kochi', text: 'In-person consultations across central Kerala, plus online support across India' },
@@ -735,7 +735,7 @@ const pagesRaw: Page[] = [
       {
         type: 'prose',
         h2: 'Key Facts at a Glance',
-        body: ['These figures come from published fee schedules (August 2026) and WES. Fees are in Australian dollars unless stated. Skills assessment assistance Kerala applicants receive from Mountbell is planned around these timelines:'],
+        body: ['These figures come from published fee schedules (August 2026) and WES. Fees are in Australian dollars unless stated. Skills assessment assistance Kerala applicants receive from Mount Bell is planned around these timelines:'],
         list: [
           'VETASSESS skills assessment (professional occupations): about 7 weeks; A$1,096 offshore, with priority processing in 10 business days for an extra fee',
           'ACS skills assessment (ICT occupations): 4 to 6 weeks if no further information is requested; A$1,498 plus GST',
@@ -776,7 +776,7 @@ const pagesRaw: Page[] = [
       {
         type: 'checks',
         h2: 'How Our Skills Assessment Assistance Works',
-        intro: 'Skills assessment assistance Kerala professionals receive from Mountbell covers six key areas:',
+        intro: 'Skills assessment assistance Kerala professionals receive from Mount Bell covers six key areas:',
         items: [
           { title: 'Occupation choice', text: 'We compare your duties with each possible nominated occupation and its occupation code before you pay any fee.' },
           { title: 'Duty mapping', text: 'We match your real responsibilities to the assessing authority\'s official task list.' },
@@ -789,7 +789,7 @@ const pagesRaw: Page[] = [
       {
         type: 'steps',
         h2: 'Skills Assessment Process: 7 Steps and Timeline',
-        intro: 'This is how a typical case moves with skills assessment assistance Kerala engineers, teachers and IT staff book through Mountbell:',
+        intro: 'This is how a typical case moves with skills assessment assistance Kerala engineers, teachers and IT staff book through Mount Bell:',
         items: [
           { title: 'Free occupation check (week 1)', text: 'We confirm the authority and the best occupation code for your profile.' },
           { title: 'Written plan (within 2 working days)', text: 'Documents list, authority fees and expected timeline.' },
@@ -823,7 +823,7 @@ const pagesRaw: Page[] = [
         items: [
           { q: 'What does skills assessment assistance Kerala applicants use actually include?', a: 'It covers choosing the right occupation and authority, mapping your duties, checking reference letters and skills assessment documents, reviewing any written report, submitting the application and handling requests for more information.' },
           { q: 'How long does a skills assessment for Indians take?', a: 'Most take 4 to 15 weeks after a complete submission: about 4 to 6 weeks for the ACS, about 7 weeks for a VETASSESS skills assessment of a professional occupation and about 15 weeks for Engineers Australia without fast-track. Collecting evidence usually adds 2 to 6 weeks before that.' },
-          { q: 'Can Mountbell write my CDR or RPL report?', a: 'No. Authorities require the report to be your own work and check for copied content. We explain the format, show you what assessors look for and review your draft.' },
+          { q: 'Can Mount Bell write my CDR or RPL report?', a: 'No. Authorities require the report to be your own work and check for copied content. We explain the format, show you what assessors look for and review your draft.' },
           { q: 'What happens if my assessment is negative?', a: 'Most authorities offer a review or appeal within a set period, and sometimes a fresh application under a better-matched occupation is the stronger choice.' },
           { q: 'How long is a skills assessment valid?', a: 'Usually two to three years from the outcome date, depending on the authority.' },
           { q: 'Do I need a skills assessment for Canada?', a: 'For most economic programmes, you need an educational credential assessment for any foreign degree you claim; it is Canada\'s credential recognition step. WES is one of the designated organisations.' },
@@ -831,8 +831,8 @@ const pagesRaw: Page[] = [
       },
       contactBlock(
         'Book Your Free Occupation Check',
-        'Speak to Mountbell about skills assessment assistance Kerala applicants use for Australia and Canada. We confirm your authority, occupation and timeline in a free call.',
-        'Hi Mountbell, I would like to check which skills assessment authority assesses my occupation.',
+        'Speak to Mount Bell about skills assessment assistance Kerala applicants use for Australia and Canada. We confirm your authority, occupation and timeline in a free call.',
+        'Hi Mount Bell, I would like to check which skills assessment authority assesses my occupation.',
         'Check my occupation',
       ),
     ],
@@ -844,15 +844,15 @@ const pagesRaw: Page[] = [
     path: '/services/dependent-visa/',
     crumb: 'Dependent visa',
     label: 'Service',
-    title: 'Spouse and Dependent Visa Consultants Kerala | Mountbell',
+    title: 'Spouse and Dependent Visa Consultants Kerala | Mount Bell',
     description: 'Spouse and dependent visa consultants Kerala families trust: partner visas, family reunification, children\'s visas, documents and timelines. Free family check.',
     h1: 'Spouse and Dependent Visa Consultants Kerala — Bring Your Spouse and Children Abroad',
-    lede: 'Spouse and dependent visa consultants Kerala families work with should answer one question first: can your family travel with you, or must they join later? Mountbell checks the rules for your country and visa, builds the relationship and financial evidence, and files each family member\'s application, from offices in Thrissur and Kochi. Most spouse and child applications take 1 to 6 months, depending on the country.',
+    lede: 'Spouse and dependent visa consultants Kerala families work with should answer one question first: can your family travel with you, or must they join later? Mount Bell checks the rules for your country and visa, builds the relationship and financial evidence, and files each family member\'s application, from offices in Thrissur and Kochi. Most spouse and child applications take 1 to 6 months, depending on the country.',
     acts: { check: 'Check my family\'s options', wa: 'WhatsApp an adviser' },
     blocks: [
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell for Dependent Visas',
+        h2: 'Why Choose Mount Bell for Dependent Visas',
         items: [
           { title: 'Licensed Recruiting Agent', text: `Licensed by the Ministry of External Affairs (${site.licence.number}) on eMigrate` },
           { title: 'Offices in Thrissur & Kochi', text: 'Offices in Thrissur and Kochi, plus online consultations across India' },
@@ -948,7 +948,7 @@ const pagesRaw: Page[] = [
       {
         type: 'steps',
         h2: 'The Family Visa Process: 7 Steps and Timeline',
-        intro: 'This is how a typical case runs with Mountbell\'s spouse and dependent visa consultants Kerala families book:',
+        intro: 'This is how a typical case runs with Mount Bell\'s spouse and dependent visa consultants Kerala families book:',
         items: [
           { title: 'Free family check (week 1)', text: 'Your visa status, your family members and the best route.' },
           { title: 'Written plan (within 2 working days)', text: 'Required documents, official fees and expected dates.' },
@@ -978,7 +978,7 @@ const pagesRaw: Page[] = [
         type: 'prose',
         h2: 'Cost, Timeline & Why Family Visas Are Refused',
         body: [
-          'Government fees are charged per family member, so a family of four pays four sets of fees. Third-party costs include translations, attestation, medicals and photos. Our Mountbell service fee is charged in stages and written down before you start.',
+          'Government fees are charged per family member, so a family of four pays four sets of fees. Third-party costs include translations, attestation, medicals and photos. Our Mount Bell service fee is charged in stages and written down before you start.',
           'Most dependent visa refusal decisions come from evidence gaps: little or no proof of a genuine relationship (especially for recent marriages), sponsor income below the required level, housing that is too small under local rules, missing consent from the other parent for a child, or name/date discrepancies across marriage and birth records. We read any earlier refusal letter with you and fix each reason before reapplying.',
         ],
         after: ['<a href="/fees/">View our transparent fee structure →</a>'],
@@ -1005,8 +1005,8 @@ const pagesRaw: Page[] = [
       },
       contactBlock(
         'Book Your Free Family Check',
-        'Speak to Mountbell\'s spouse and dependent visa consultants Kerala families rely on about your spouse, children and timeline. The first check is free.',
-        'Hi Mountbell, I would like to check dependent and family visa options for my spouse and children.',
+        'Speak to Mount Bell\'s spouse and dependent visa consultants Kerala families rely on about your spouse, children and timeline. The first check is free.',
+        'Hi Mount Bell, I would like to check dependent and family visa options for my spouse and children.',
         'Check my family\'s options',
       ),
     ],
@@ -1018,15 +1018,15 @@ const pagesRaw: Page[] = [
     path: '/services/visitor-visa/',
     crumb: 'Visitor visa',
     label: 'Service',
-    title: 'Visitor Visa Consultants in Kerala | Mountbell',
+    title: 'Visitor Visa Consultants in Kerala | Mount Bell',
     description: 'Visitor visa consultants in Kerala for tourist, business and Schengen visit visas, plus UK, US and Canada trips. Clear fees and timelines. Free check.',
     h1: 'Visitor Visa Consultants in Kerala — Tourist, Business and Family Visit Visas',
-    lede: 'Visitor visa consultants in Kerala should do more than fill in a form. They should tell you which visa fits your trip, what the embassy will look for and how early to apply. Mountbell plans tourist, business and family trips to Europe, the UK, North America, Australia and the Gulf, from offices in Thrissur and Kochi. Most short-stay applications are decided within 2 to 6 weeks of the appointment, though queues can add months.',
+    lede: 'Visitor visa consultants in Kerala should do more than fill in a form. They should tell you which visa fits your trip, what the embassy will look for and how early to apply. Mount Bell plans tourist, business and family trips to Europe, the UK, North America, Australia and the Gulf, from offices in Thrissur and Kochi. Most short-stay applications are decided within 2 to 6 weeks of the appointment, though queues can add months.',
     acts: { check: 'Plan my trip visa', wa: 'WhatsApp an adviser' },
     blocks: [
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell for Visitor Visas',
+        h2: 'Why Choose Mount Bell for Visitor Visas',
         items: [
           { title: 'Licensed Recruiting Agent', text: `Licensed by the Ministry of External Affairs (${site.licence.number}) on eMigrate` },
           { title: 'Offices in Thrissur & Kochi', text: 'Offices in Thrissur and Kochi, plus online consultations across India' },
@@ -1111,7 +1111,7 @@ const pagesRaw: Page[] = [
       {
         type: 'steps',
         h2: 'Visitor Visa Process: 7 Steps and Timeline',
-        intro: 'This is how a typical trip is planned with Mountbell\'s visitor visa consultants in Kerala:',
+        intro: 'This is how a typical trip is planned with Mount Bell\'s visitor visa consultants in Kerala:',
         items: [
           { title: 'Free trip check (day 1)', text: 'Your purpose, dates, destination and the right visa type.' },
           { title: 'Written plan (within 2 working days)', text: 'Checklist, fees and latest date to apply.' },
@@ -1152,8 +1152,8 @@ const pagesRaw: Page[] = [
       },
       contactBlock(
         'Book Your Free Trip Check',
-        'Speak to Mountbell\'s visitor visa consultants in Kerala about your trip, your dates and the right visa. The first check is free.',
-        'Hi Mountbell, I would like to plan a tourist or visitor visa application.',
+        'Speak to Mount Bell\'s visitor visa consultants in Kerala about your trip, your dates and the right visa. The first check is free.',
+        'Hi Mount Bell, I would like to plan a tourist or visitor visa application.',
         'Plan my trip visa',
       ),
     ],
@@ -1165,15 +1165,15 @@ const pagesRaw: Page[] = [
     path: '/services/language-test-preparation/',
     crumb: 'Language & test preparation',
     label: 'Service',
-    title: 'OET and IELTS Coaching in Thrissur | Mountbell',
+    title: 'OET and IELTS Coaching in Thrissur | Mount Bell',
     description: 'OET and IELTS coaching in Thrissur with mock tests, speaking practice and study plans, plus PTE coaching and German classes A1 to B2. Book a free level check.',
     h1: 'OET and IELTS Coaching in Thrissur — OET, IELTS, PTE and German Classes',
-    lede: 'OET and IELTS coaching in Thrissur works best when it is tied to a clear goal: the score your nursing board, university or visa needs, and the date you need it by. Mountbell coaches nurses, students and skilled workers for OET, IELTS, PTE and German exams at our Thrissur centre and online. Most learners reach their target score in 6 to 12 weeks of regular classes, depending on their starting level.',
+    lede: 'OET and IELTS coaching in Thrissur works best when it is tied to a clear goal: the score your nursing board, university or visa needs, and the date you need it by. Mount Bell coaches nurses, students and skilled workers for OET, IELTS, PTE and German exams at our Thrissur centre and online. Most learners reach their target score in 6 to 12 weeks of regular classes, depending on their starting level.',
     acts: { check: 'Book a free level check', wa: 'WhatsApp a trainer' },
     blocks: [
       {
         type: 'checks',
-        h2: 'Why Mountbell Language Coaching',
+        h2: 'Why Mount Bell Language Coaching',
         items: [
           { title: 'Licensed Recruiting Agent', text: `Licensed by the Ministry of External Affairs (${site.licence.number}) on eMigrate` },
           { title: 'Classroom & Online Options', text: 'Coaching at our Thrissur centre, plus interactive online classes across Kerala' },
@@ -1249,7 +1249,7 @@ const pagesRaw: Page[] = [
       {
         type: 'steps',
         h2: 'How Our Coaching Works: 6 Steps',
-        intro: 'OET and IELTS coaching in Thrissur at Mountbell follows a structured pathway for every learner:',
+        intro: 'OET and IELTS coaching in Thrissur at Mount Bell follows a structured pathway for every learner:',
         items: [
           { title: 'Free level check (day 1)', text: 'A short test of your four skills to determine your starting level and score gap.' },
           { title: 'Personal study plan (within 2 working days)', text: 'Your target score, test date, and weekly timetable built around your shifts.' },
@@ -1282,7 +1282,7 @@ const pagesRaw: Page[] = [
         type: 'faq',
         h2: 'Frequently Asked Questions',
         items: [
-          { q: 'What does OET and IELTS coaching in Thrissur at Mountbell include?', a: 'It includes a free level check, a study plan for your target, classes in every skill, marked writing, speaking practice, mock tests and help booking your test.' },
+          { q: 'What does OET and IELTS coaching in Thrissur at Mount Bell include?', a: 'It includes a free level check, a study plan for your target, classes in every skill, marked writing, speaking practice, mock tests and help booking your test.' },
           { q: 'Which is better for nurses, OET or IELTS?', a: 'Many nurses find OET easier because its tasks use healthcare situations. IELTS is accepted more widely outside healthcare. Check the score your board accepts first; our advisers can explain the differences.' },
           { q: 'How long does it take to prepare?', a: 'Most learners need 6 to 12 weeks of OET classes. If you are close to your target, 4 to 6 weeks may be enough.' },
           { q: 'Do you offer online classes?', a: 'Yes. Online IELTS classes and OET sessions follow the same plan, with live sessions, marked homework and mock tests.' },
@@ -1292,8 +1292,8 @@ const pagesRaw: Page[] = [
       },
       contactBlock(
         'Book Your Free Level Check',
-        'Speak to Mountbell about OET and IELTS coaching in Thrissur, or about PTE and German classes. Your first level check is free.',
-        'Hi Mountbell, I would like to book a free language level check.',
+        'Speak to Mount Bell about OET and IELTS coaching in Thrissur, or about PTE and German classes. Your first level check is free.',
+        'Hi Mount Bell, I would like to book a free language level check.',
         'Book a free level check',
       ),
     ],
@@ -1305,11 +1305,11 @@ const pagesRaw: Page[] = [
     path: '/free-immigration-assessment/',
     parent: '/services/',
     crumb: 'Free immigration consultation',
-    title: 'Book a Free Immigration Consultation | Mountbell Kerala',
-    description: 'Book a free immigration consultation with Mountbell: a free profile evaluation, country advice and a written next-step plan. Thrissur, Kochi or online.',
+    title: 'Book a Free Immigration Consultation | Mount Bell Kerala',
+    description: 'Book a free immigration consultation with Mount Bell: a free profile evaluation, country advice and a written next-step plan. Thrissur, Kochi or online.',
     label: 'Free Immigration Assessment',
     h1: 'Book a Free Immigration Consultation — Speak to an Adviser About Your Next Move',
-    lede: 'Book a free immigration consultation with Mountbell and get a straight answer to the question that matters most: which country and visa route fits your profile, and what will it take? In 30 to 45 minutes, an adviser reviews your education, experience and goals, explains your realistic options and tells you what to do first. You get a written summary within 2 working days. There is no charge and no obligation.',
+    lede: 'Book a free immigration consultation with Mount Bell and get a straight answer to the question that matters most: which country and visa route fits your profile, and what will it take? In 30 to 45 minutes, an adviser reviews your education, experience and goals, explains your realistic options and tells you what to do first. You get a written summary within 2 working days. There is no charge and no obligation.',
     acts: { check: 'Book my free consultation', wa: 'Request a call-back' },
     blocks: [
       {
@@ -1417,7 +1417,7 @@ const pagesRaw: Page[] = [
       {
         type: 'steps',
         h2: 'How to Book: 5 Steps and Timeline',
-        intro: 'This is how it works when you book a free immigration consultation with Mountbell.',
+        intro: 'This is how it works when you book a free immigration consultation with Mount Bell.',
         items: [
           { title: '1. Request (2 minutes)', text: 'Fill in the consultation booking form, call us or request a call-back.' },
           { title: '2. Confirmation (within 1 working day)', text: 'We confirm your consultation slot and the format you chose.' },
@@ -1513,7 +1513,7 @@ const pagesRaw: Page[] = [
         type: 'prose',
         h2: 'Questions to Ask Any Consultant',
         body: [
-          'Whether you choose Mountbell or another firm, these questions protect you from bad advice:',
+          'Whether you choose Mount Bell or another firm, these questions protect you from bad advice:',
         ],
         list: [
           'Are you licensed, and can I check the licence myself?',
@@ -1541,8 +1541,8 @@ const pagesRaw: Page[] = [
       },
       {
         type: 'checks',
-        h2: 'Why Choose Mountbell',
-        intro: 'Many people talk to several firms before they book a free immigration consultation. Here is what Mountbell does differently:',
+        h2: 'Why Choose Mount Bell',
+        intro: 'Many people talk to several firms before they book a free immigration consultation. Here is what Mount Bell does differently:',
         items: [
           { title: 'Direct expert access', text: 'You talk to an adviser who explains the rules, not a salesperson.' },
           { title: 'Comprehensive coverage', text: 'Advice across work, PR, nursing, family and visitor routes in one meeting.' },
