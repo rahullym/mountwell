@@ -357,6 +357,7 @@ export const menu: { label: string; href: string; id: string; items?: { label: s
   { label: 'Countries', id: 'countries', href: '/countries/' },
   { label: 'Overseas Jobs', id: 'jobs', href: '/overseas-jobs/', items: [
     { label: 'All overseas jobs', href: '/overseas-jobs/' },
+    { label: 'Current openings', href: '/overseas-jobs/openings/' },
     ...professionGroups.map((g) => ({ label: g.name, href: `/overseas-jobs/#${g.id}` })),
   ] },
   { label: 'Training', id: 'training', href: '/training/' },
@@ -368,6 +369,7 @@ export const menu: { label: string; href: string; id: string; items?: { label: s
   ] },
   { label: 'Resources', id: 'resources', href: '/resources/', items: [
     { label: 'Immigration guides', href: '/resources/' },
+    { label: 'Blog and updates', href: '/blog/' },
     { label: 'FAQs', href: '/resources/faqs/' },
     { label: 'Avoid visa fraud', href: '/resources/avoid-visa-fraud/' },
     { label: 'Success stories', href: '/success-stories/' },

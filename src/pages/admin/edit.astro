@@ -1,0 +1,150 @@
+---
+import Admin from '../../layouts/Admin.astro';
+import { collectionAt, slugify, type Field } from '../../lib/collections';
+import { requireDb } from '../../lib/db';
+import { hashPassword, passwordProblem } from '../../lib/auth';
+import { revalidate } from '../../lib/revalidate';
+
+export const prerender = false;
+
+const c = collectionAt(Astro.url.searchParams.get('c') ?? '');
+const idParam = Astro.url.searchParams.get('id') ?? 'new';
+if (!c || (idParam !== 'new' && !/^\d+$/.test(idParam))) return Astro.redirect('/admin/');
+const isNew = idParam === 'new';
+const id = isNew ? null : Number(idParam);
+const sql = requireDb();
+const listUrl = `/admin/list/?c=${c.key}`;
+
+const load = async () => (id ? (await sql.unsafe(`select * from "${c.table}" where id = $1`, [id]))[0] : null);
+let before = await load();
+if (!isNew && !before) return Astro.redirect(listUrl);
+
+let values: Record<string, any> = before ?? Object.fromEntries(c.fields.map((f) => [f.name, f.default ?? '']));
+let error = '';
+let notice = Astro.url.searchParams.get('done') === 'saved' ? 'Saved. The site has been updated.' : '';
+const me = Astro.locals.user!;
+
+// Read the form into column values, checking required fields.
+function read(form: FormData) {
+  const out: Record<string, any> = {};
+  for (const f of c!.fields) {
+    const raw = form.get(f.name);
+    if (f.type === 'checkbox') out[f.name] = raw === 'on';
+    else if (f.type === 'number') out[f.name] = Number(raw) || 0;
+    else if (f.type === 'datetime') out[f.name] = raw ? new Date(`${raw}:00+05:30`) : null;
+    else if (f.type === 'select') out[f.name] = f.options!.some(([v]) => v === raw) ? raw : f.default;
+    else out[f.name] = String(raw ?? '').replace(/\r\n/g, '\n').trim();
+  }
+  return out;
+}
+
+if (Astro.request.method === 'POST') {
+  const form = await Astro.request.formData();
+  const action = form.get('action');
+  try {
+    if (action === 'delete' && id) {
+      if (c.key === 'users' && id === me.id) throw new Error('You cannot delete your own login.');
+      await sql.unsafe(`delete from "${c.table}" where id = $1`, [id]);
+      await revalidate(Astro.url.origin, c.revalidate(before!, before!));
+      return Astro.redirect(`${listUrl}&done=deleted`);
+    }
+
+    values = read(form);
+    const missing = c.fields.filter((f) => f.required && (values[f.name] === '' || values[f.name] == null));
+    if (missing.length) throw new Error(`Please fill in: ${missing.map((f) => f.label).join(', ')}.`);
+
+    if (c.key === 'posts') {
+      values.slug = slugify(values.slug || values.title);
+      if (!values.slug) throw new Error('The web address needs at least one letter or number.');
+      if (values.published && !values.published_at) values.published_at = new Date();
+    }
+    if (c.key === 'faqs' && values.href && !/^(\/|https?:\/\/)/.test(values.href)) throw new Error('The link address should start with / (a page on this site) or https://.');
+    if (c.key === 'users') {
+      values.email = values.email.toLowerCase();
+      const pw = values.password as string;
+      delete values.password;
+      if (isNew && !pw) throw new Error('Set a password for the new login.');
+      if (pw) {
+        const problem = passwordProblem(pw);
+        if (problem) throw new Error(problem);
+        values.password_hash = await hashPassword(pw);
+      }
+    }
+
+    const cols = Object.keys(values);
+    const hasUpdatedAt = c.key !== 'users';
+    let savedId = id;
+    if (isNew) {
+      const [row] = await sql.unsafe(
+        `insert into "${c.table}" (${cols.map((n) => `"${n}"`).join(', ')}) values (${cols.map((_, i) => `$${i + 1}`).join(', ')}) returning id`,
+        cols.map((n) => values[n]),
+      );
+      savedId = row.id;
+    } else {
+      await sql.unsafe(
+        `update "${c.table}" set ${cols.map((n, i) => `"${n}" = $${i + 1}`).join(', ')}${hasUpdatedAt ? ', updated_at = now()' : ''} where id = $${cols.length + 1}`,
+        [...cols.map((n) => values[n]), id],
+      );
+    }
+    const saved = (await sql.unsafe(`select * from "${c.table}" where id = $1`, [savedId]))[0];
+    await revalidate(Astro.url.origin, c.revalidate(saved, before ?? undefined));
+    return Astro.redirect(`/admin/edit/?c=${c.key}&id=${savedId}&done=saved`);
+  } catch (err: any) {
+    error = err?.code === '23505'
+      ? (c.key === 'users' ? 'Another login already uses that email.' : 'Another post already uses that web address. Change the title or the web address.')
+      : err?.message ?? 'Something went wrong while saving.';
+    if (err?.code) console.error('[cms] save failed', err);
+    notice = '';
+  }
+}
+
+const toLocal = (d: any) => {
+  if (!d) return '';
+  const ist = new Date(new Date(d).getTime() + 5.5 * 3600_000);
+  return ist.toISOString().slice(0, 16);
+};
+const val = (f: Field) => (f.type === 'password' ? '' : values[f.name] ?? '');
+const publicUrl = c.key === 'posts' && before?.published ? `/blog/${before.slug}/` : c.key === 'openings' ? '/overseas-jobs/openings/' : c.key === 'reviews' || c.key === 'faqs' ? '/' : null;
+---
+<Admin title={isNew ? `Add ${c.singular}` : `Edit ${c.singular}`} user={me} active={c.key}>
+  <p style="margin:0 0 10px"><a href={listUrl}>← {c.label}</a></p>
+  <div class="head">
+    <h1>{isNew ? `Add ${c.singular}` : `Edit ${c.singular}`}</h1>
+    {!isNew && publicUrl && <a class="btn ghost" href={publicUrl} target="_blank" rel="noopener">View on site</a>}
+  </div>
+  {notice && <p class="msg ok" role="status">{notice}</p>}
+  {error && <p class="msg err" role="alert">{error}</p>}
+
+  <form method="post" class="edit">
+    {c.fields.map((f) => (
+      f.type === 'checkbox' ? (
+        <label class="check"><input type="checkbox" name={f.name} checked={!!values[f.name]} /><span>{f.label}{f.help && <small> — {f.help}</small>}</span></label>
+      ) : (
+        <label>
+          {f.label}{f.required && <small>(required)</small>}
+          {f.type === 'textarea' || f.type === 'markdown' ? (
+            <textarea name={f.name} rows={f.rows ?? 4} class:list={[f.type === 'markdown' && 'md']} required={f.required}>{val(f)}</textarea>
+          ) : f.type === 'select' ? (
+            <select name={f.name}>{f.options!.map(([v, l]) => <option value={v} selected={values[f.name] === v}>{l}</option>)}</select>
+          ) : f.type === 'datetime' ? (
+            <input type="datetime-local" name={f.name} value={toLocal(values[f.name])} />
+          ) : (
+            <input type={f.type} name={f.name} value={val(f)} required={f.required || (f.type === 'password' && isNew)}
+              autocomplete={f.type === 'password' ? 'new-password' : 'off'} minlength={f.type === 'password' ? 10 : undefined} />
+          )}
+          {f.help && <small>{f.help}</small>}
+        </label>
+      )
+    ))}
+    <div class="acts">
+      <button class="btn" name="action" value="save">{isNew ? 'Save' : 'Save changes'}</button>
+      <a href={listUrl}>Cancel</a>
+    </div>
+  </form>
+
+  {!isNew && !(c.key === 'users' && id === me.id) && (
+    <form method="post" style="margin-top:48px;padding-top:20px;border-top:1px solid var(--line)" onsubmit="return confirm('Delete this permanently? This cannot be undone.')">
+      <button class="btn danger" name="action" value="delete">Delete this {c.singular}</button>
+    </form>
+  )}
+</Admin>

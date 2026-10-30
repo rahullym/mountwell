@@ -3,7 +3,8 @@ import Base from '../layouts/Base.astro';
 import Icon from './Icon.astro';
 import Hero from './Hero.astro';
 import FinalCta from './FinalCta.astro';
-import { site, countries, goals, professionGroups, homeServices, supportChips, nursing, training, steps, reasons, reviews, updates, faqs, waLink, photoAlt, teamPhotos, processPhoto, nursingPhoto, galleryPhotos } from '../data/site';
+import { getReviews, getFaqs, getUpdateCards } from '../lib/content';
+import { site, countries, goals, professionGroups, homeServices, supportChips, nursing, training, steps, reasons, waLink, photoAlt, teamPhotos, processPhoto, nursingPhoto, galleryPhotos } from '../data/site';
 
 const title = 'Immigration Consultancy in Kerala – PR & Visas | Mountbell';
 const description = 'Established in 2017, Mountbell is an MEA-licensed immigration consultancy for PR, work visas and nursing careers abroad. Main branch in Kochi, Kerala.';
@@ -12,6 +13,10 @@ const wa = waLink('Hi Mountbell, I would like to talk to an expert about working
 const accent: Record<string, string> = { australia: 'var(--coral)', canada: 'var(--err)', germany: 'var(--amber-deep)', denmark: 'var(--sky)', malta: 'var(--teal)', maldives: 'var(--green-deep)', netherlands: 'var(--blue)', europe: 'var(--plum)' };
 const places = countries.map((c) => ({ ...c, slug: c.name.toLowerCase() }));
 const officeName: Record<string, string> = { Kochi: 'Kochi Main Branch', Thrissur: 'Thrissur Branch' };
+
+const [allReviews, faqs, updates] = await Promise.all([getReviews(), getFaqs(), getUpdateCards()]);
+const reviews = allReviews.slice(0, 3);
+const hasPosts = updates.some((u) => u.href.startsWith('/blog/'));
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -361,7 +366,7 @@ const videoSchema = site.heroVideoId
         {reviews.map((r) => (
           <figure class="story" style="margin:0">
             <blockquote>{r.text}</blockquote>
-            <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mountbell client</span></div></figcaption>
+            <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('').slice(0, 3)}</i><div><strong>{r.name}</strong><span>{r.role}</span></div></figcaption>
           </figure>
         ))}
       </div>
@@ -423,7 +428,9 @@ const videoSchema = site.heroVideoId
           </article>
         ))}
       </div>
-      <p style="margin:32px 0 0"><a class="arrow-link" href="/resources/">All Resources <Icon name="arrow" size={17} /></a></p>
+      <p style="margin:32px 0 0">{hasPosts
+        ? <a class="arrow-link" href="/blog/">All Updates <Icon name="arrow" size={17} /></a>
+        : <a class="arrow-link" href="/resources/">All Resources <Icon name="arrow" size={17} /></a>}</p>
     </div>
   </section>
 

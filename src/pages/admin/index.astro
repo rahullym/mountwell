@@ -1,0 +1,22 @@
+---
+import Admin from '../../layouts/Admin.astro';
+import { collections } from '../../lib/collections';
+import { requireDb } from '../../lib/db';
+
+export const prerender = false;
+
+const sql = requireDb();
+const counts = await Promise.all(collections.map(async (c) => {
+  const [{ n }] = await sql<{ n: number }[]>`select count(*)::int as n from ${sql(c.table)}`;
+  return n;
+}));
+---
+<Admin title="Dashboard" user={Astro.locals.user}>
+  <h1>Hello, {Astro.locals.user!.name.split(' ')[0]}</h1>
+  <p class="intro">Choose what to edit. Changes appear on mountbell.com a few seconds after you save.</p>
+  <div class="cards">
+    {collections.map((c, i) => (
+      <a class="card" href={`/admin/list/?c=${c.key}`}><strong>{c.label}</strong><span>{c.intro.split('. ')[0]}.</span><b>{counts[i]}</b></a>
+    ))}
+  </div>
+</Admin>

@@ -1,0 +1,27 @@
+---
+import { marked } from 'marked';
+import Page from '../../components/Page.astro';
+import { getPost, formatDate } from '../../lib/content';
+import type { Page as PageData } from '../../data/pages/types';
+
+export const prerender = false;
+
+const post = await getPost(Astro.params.slug ?? '');
+if (!post) return new Response(null, { status: 404 });
+
+const page: PageData = {
+  path: `/blog/${post.slug}/`,
+  parent: '/blog/',
+  crumb: post.title,
+  title: `${post.title} | Mountbell`,
+  description: post.excerpt,
+  label: post.tag,
+  h1: post.title,
+  lede: post.excerpt.replace(/</g, '&lt;'),
+  img: post.img,
+  wa: `Hi Mountbell, I read "${post.title}" and have a question.`,
+  blocks: [{ type: 'html', html: await marked.parse(post.body), date: `Published ${formatDate(post.published_at)}` }],
+  related: ['/blog/', '/free-immigration-assessment/'],
+};
+---
+<Page page={page} />

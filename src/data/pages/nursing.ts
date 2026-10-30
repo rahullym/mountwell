@@ -68,6 +68,7 @@ const pagesRaw: Page[] = [
       ] },
       // Trust strip. The Google rating joins this line once site.googleRating is set.
       { type: 'note', text: `MEA Recruiting Agent Licence ${licence} (<a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">verify on eMigrate</a>) &nbsp;·&nbsp; Offices in Thrissur and Kochi` },
+      { type: 'openings', h2: 'Current nursing openings', category: 'nursing', more: true },
 
       { type: 'prose', h2: 'Nursing Jobs Abroad for Kerala Nurses: 5 Countries We Place Nurses In', body: [
         'Nursing jobs abroad differ more by country than most nurses expect. As a nurse recruitment agency in Kerala working with five countries, we answer the same five questions for each one. Open the country guide for the full detail.',

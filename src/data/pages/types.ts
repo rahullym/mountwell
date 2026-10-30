@@ -17,7 +17,11 @@ export type Block =
   | { type: 'reviews'; h2?: string }
   | { type: 'gallery'; h2?: string; caption?: string }
   | { type: 'team'; h2?: string }
-  | { type: 'form'; h2?: string };
+  | { type: 'form'; h2?: string }
+  // Filled from the CMS database at request time
+  | { type: 'openings'; h2?: string; intro?: string; category?: 'nursing' | 'jobs'; empty?: string; more?: boolean }
+  | { type: 'posts'; h2?: string; empty?: string }
+  | { type: 'html'; html: string; date?: string };
 
 export interface Page {
   path: string;          // '/services/pr-visa/'

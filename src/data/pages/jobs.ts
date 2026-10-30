@@ -11,6 +11,7 @@ export const jobs: Page[] = [
     wa: 'Hi Mountbell, I would like to know about overseas jobs for my profession.',
     blocks: [
       { type: 'note', text: 'Are you a nurse? Nursing has its own section, with a page for each country: <a href="/nursing-careers/">Nursing careers abroad</a>.' },
+      { type: 'openings', h2: 'Current openings', category: 'jobs', more: true },
       { type: 'links', h2: 'Healthcare and allied health', items: [
         { id: 'healthcare', title: 'Physiotherapists', meta: 'Germany · Malta', text: 'A regulated profession in both countries. Germany requires state recognition and German. Malta requires registration with the Council for the Professions Complementary to Medicine and works in English.' },
         { title: 'Occupational and speech therapists', meta: 'Malta · Maldives', text: 'Occupational therapists and assistant therapists for Malta, and occupational and speech therapists for hospitals and clinics in the Maldives.' },
@@ -46,5 +47,21 @@ export const jobs: Page[] = [
       ] },
     ],
     related: ['/services/work-visa/', '/countries/', '/tools/immigration-eligibility-checker/'],
+  },
+  {
+    path: '/overseas-jobs/openings/', crumb: 'Current openings', wide: true,
+    title: 'Current Overseas Job Openings for Nurses and Skilled Workers | Mountbell',
+    description: 'Current overseas job openings from Mountbell, an MEA-licensed recruiting agent in Kerala: nursing, healthcare, skilled trades and other roles abroad.',
+    h1: 'Current Overseas Job Openings',
+    lede: 'Vacancies we are recruiting for right now. Openings are removed as soon as they are filled, so if you see one that fits, contact us the same week.',
+    img: 'europe',
+    wa: 'Hi Mountbell, I saw your current openings and would like to apply.',
+    blocks: [
+      { type: 'openings', empty: 'There are no openings listed at the moment. Employers send new vacancies every month, so send us your CV on WhatsApp and we will contact you when one matches your profile.' },
+      { type: 'prose', h2: 'Before you apply', body: [
+        'You see the employer, salary and contract terms in writing before any fee is paid. Our recruiting agent licence number is on <a href="/about-us/licences/">this page</a>, and <a href="/resources/avoid-visa-fraud/">this guide</a> explains how to check any job offer you receive.',
+      ] },
+    ],
+    related: ['/overseas-jobs/', '/nursing-careers/', '/services/work-visa/'],
   },
 ];

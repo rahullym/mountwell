@@ -1,0 +1,51 @@
+---
+import Admin from '../../layouts/Admin.astro';
+import { collectionAt } from '../../lib/collections';
+import { requireDb } from '../../lib/db';
+
+export const prerender = false;
+
+const c = collectionAt(Astro.url.searchParams.get('c') ?? '');
+if (!c) return Astro.redirect('/admin/');
+const sql = requireDb();
+const cols = ['id', ...c.list.map((l) => l.name)];
+const rows = await sql.unsafe(`select ${cols.map((n) => `"${n}"`).join(', ')} from "${c.table}" order by ${c.order}`);
+const notice = Astro.url.searchParams.get('done');
+
+function show(name: string, v: any) {
+  const opts = c!.fields.find((f) => f.name === name)?.options;
+  if (opts) return (opts.find(([k]) => k === v)?.[1] ?? v).split(' (')[0];
+  if (v instanceof Date) return v.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Kolkata' });
+  if (typeof v === 'boolean') return v ? 'Live' : name === 'published' ? 'Hidden' : 'No';
+  if (v == null || v === '') return '—';
+  const s = String(v);
+  return s.length > 90 ? s.slice(0, 88) + '…' : s;
+}
+const isOn = (name: string, v: any) => (name === 'published' && v === true) || (name === 'status' && v === 'open');
+---
+<Admin title={c.label} user={Astro.locals.user} active={c.key}>
+  <div class="head">
+    <div><h1>{c.label}</h1><p class="intro">{c.intro}</p></div>
+    <a class="btn" href={`/admin/edit/?c=${c.key}&id=new`}>Add {c.singular}</a>
+  </div>
+  {notice === 'deleted' && <p class="msg ok" role="status">Deleted. The site has been updated.</p>}
+  {rows.length === 0 ? <p>Nothing here yet.</p> : (
+    <div class="wrap-table">
+      <table>
+        <thead><tr>{c.list.map((l) => <th scope="col">{l.label}</th>)}</tr></thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr>
+              {c.list.map((l, i) => (
+                <td>{i === 0
+                  ? <a href={`/admin/edit/?c=${c.key}&id=${r.id}`}>{show(l.name, r[l.name])}</a>
+                  : (l.name === 'published' || l.name === 'status') ? <span class:list={['pill', isOn(l.name, r[l.name]) && 'on']}>{show(l.name, r[l.name])}</span> : show(l.name, r[l.name])}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+</Admin>
