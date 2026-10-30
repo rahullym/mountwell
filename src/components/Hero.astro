@@ -2,7 +2,7 @@
 // Homepage banner: headline beside three columns of success-story photos scrolling downward.
 import Icon from './Icon.astro';
 import { site, storyReel, waLink } from '../data/site';
-const wa = waLink('Hi Mountbell, I would like to talk to an expert about working or migrating abroad.');
+const wa = waLink('Hi Mount Bell, I would like to talk to an expert about working or migrating abroad.');
 // Each column has its own photo order and start point (`o`, a fraction of one loop), worked out so that
 // the same photo does not sit side by side when the page opens. The middle column scrolls the other way.
 const columns = [
@@ -16,7 +16,7 @@ const columns = [
     <div class="hero-copy">
       <p class="hero-est mono">{site.foundedYear && <>Established {site.foundedYear} <i aria-hidden="true"></i> </>}{site.presence}</p>
       <h1 class="display">Immigration Consultancy in Kerala <em>for PR, Work Visas and Jobs Abroad</em></h1>
-      <p class="lede">{site.foundedYear && `Established in ${site.foundedYear}, `}Mountbell is a government-licensed immigration and overseas recruitment consultancy with a presence in {site.presence}. We help nurses, healthcare staff, tradespeople, IT professionals and teachers work or settle in Australia, Canada, Germany and five more countries.</p>
+      <p class="lede">{site.foundedYear && `Established in ${site.foundedYear}, `}Mount Bell is a government-licensed immigration and overseas recruitment consultancy with a presence in {site.presence}. We help nurses, healthcare staff, tradespeople, IT professionals and teachers work or settle in Australia, Canada, Germany and five more countries.</p>
       <p class="hero-lang">Free first consultation in Malayalam and English. <span class="ml" lang="ml">മലയാളത്തിൽ സംസാരിക്കാം</span></p>
       <div class="hero-actions">
         <a class="btn btn-light" href="#eligibility" data-focus-form>Check My Eligibility <Icon name="arrow" size={18} /></a>

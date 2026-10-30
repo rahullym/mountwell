@@ -3,12 +3,12 @@ import type { Page } from './types';
 export const jobs: Page[] = [
   {
     path: '/overseas-jobs/', crumb: 'Overseas jobs', wide: true,
-    title: 'Overseas Jobs from Kerala | Licensed Recruitment | Mountbell',
+    title: 'Overseas Jobs from Kerala | Licensed Recruitment | Mount Bell',
     description: 'Overseas jobs from Kerala through an MEA-licensed recruitment agency: healthcare, skilled trades, drivers, IT and teaching roles in Europe, Australia and the Maldives.',
     h1: 'Overseas Jobs from Kerala',
-    lede: 'Mountbell recruits for employers abroad under a licence from the Ministry of External Affairs. This page lists the professions we place, other than nursing, and the countries where each one is hired.',
+    lede: 'Mount Bell recruits for employers abroad under a licence from the Ministry of External Affairs. This page lists the professions we place, other than nursing, and the countries where each one is hired.',
     img: 'europe',
-    wa: 'Hi Mountbell, I would like to know about overseas jobs for my profession.',
+    wa: 'Hi Mount Bell, I would like to know about overseas jobs for my profession.',
     blocks: [
       { type: 'note', text: 'Are you a nurse? Nursing has its own section, with a page for each country: <a href="/nursing-careers/">Nursing careers abroad</a>.' },
       { type: 'links', h2: 'Healthcare and allied health', items: [
@@ -32,7 +32,7 @@ export const jobs: Page[] = [
         { id: 'it-teachers', title: 'IT professionals', meta: 'Australia', text: 'Software, network and data professionals, mainly through points-tested skilled migration after an Australian Computer Society assessment.', href: '/countries/australia/' },
         { title: 'Teachers', meta: 'Australia', text: 'Qualified school teachers, through an AITSL skills assessment and points-tested skilled migration.', href: '/countries/australia/' },
       ] },
-      { type: 'steps', h2: 'How recruitment through Mountbell works', items: [
+      { type: 'steps', h2: 'How recruitment through Mount Bell works', items: [
         { title: 'Register your profile', text: 'Send your CV, certificates and experience letters. The first assessment is free.' },
         { title: 'Match to a vacancy', text: 'We compare your profile with current openings and tell you if nothing suits yet.' },
         { title: 'Interview or trade test', text: 'With the employer, online or in person.' },

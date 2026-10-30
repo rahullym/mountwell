@@ -5,8 +5,8 @@ import { toolPages } from './tools';
 export const resources: Page[] = [
   {
     path: '/tools/', crumb: 'Tools', wide: true,
-    title: 'Free Immigration Calculators | Mountbell',
-    description: 'Free immigration calculators from Mountbell: an eligibility calculator, the Australia PR points calculator and the Germany Opportunity Card points calculator.',
+    title: 'Free Immigration Calculators | Mount Bell',
+    description: 'Free immigration calculators from Mount Bell: an eligibility calculator, the Australia PR points calculator and the Germany Opportunity Card points calculator.',
     h1: 'Free Immigration Calculators',
     lede: 'Three tools you can use without giving a name or a phone number. Each takes about two minutes and follows the published rules.',
     blocks: [
@@ -21,7 +21,7 @@ export const resources: Page[] = [
   },
   {
     path: '/resources/', crumb: 'Resources', wide: true,
-    title: 'Immigration Guides for Indians | Mountbell Resources',
+    title: 'Immigration Guides for Indians | Mount Bell Resources',
     description: 'Immigration guides for Indians planning to work or settle abroad: how to avoid visa fraud, answers to common questions, and guides to each route.',
     h1: 'Immigration Guides for Indians',
     lede: 'Plain-language guides to read before you choose a country, an agent or a visa.',
@@ -71,19 +71,19 @@ export const resources: Page[] = [
         { title: 'What documents do I need for a visa?', text: 'The documents most applicants need and how we check them.', href: '/services/visa-documentation/' },
         { title: 'How long does the process take?', text: 'The six stages and why timelines differ by route.', href: '/how-it-works/' },
         { title: 'How do I know an agent is genuine and licensed?', text: 'Eight checks, starting with eMigrate.', href: '/resources/avoid-visa-fraud/' },
-        { title: 'Is Mountbell licensed?', text: 'Our MEA licence number and how to verify it.', href: '/about-us/licences/' },
+        { title: 'Is Mount Bell licensed?', text: 'Our MEA licence number and how to verify it.', href: '/about-us/licences/' },
         { title: 'Is the first consultation free?', text: 'Yes. Book it here, in Thrissur, Kochi or online.', href: '/free-immigration-assessment/' },
       ] },
     ],
   },
   {
     path: '/resources/avoid-visa-fraud/', crumb: 'Avoid visa fraud', img: 'kerala',
-    title: 'How to Identify Fake Immigration Agents | Mountbell',
+    title: 'How to Identify Fake Immigration Agents | Mount Bell',
     description: 'How to identify fake immigration agents and overseas job scams: eight checks to run before you pay, including the eMigrate recruiting agent licence search.',
     label: 'Guide',
     h1: 'How to Identify Fake Immigration Agents',
     lede: 'Every year people in Kerala lose savings to agents who promise jobs and visas that do not exist. These eight checks cost nothing and take less than an hour. Run them on every agent, including us.',
-    wa: 'Hi Mountbell, I would like to verify a job offer or an agent.',
+    wa: 'Hi Mount Bell, I would like to verify a job offer or an agent.',
     blocks: [
       { type: 'steps', h2: 'Eight checks before you pay', items: [
         { title: 'Search the licence on eMigrate', text: `Recruiting for overseas jobs requires a Recruiting Agent licence from the Ministry of External Affairs. Ask for the number and look it up on <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">emigrate.gov.in</a>. No licence, or a licence in someone else’s name, means stop.` },
@@ -107,7 +107,7 @@ export const resources: Page[] = [
         'File a complaint at your local police station, with copies of payments and chats.',
         'If you are already abroad, contact the nearest Indian embassy or consulate.',
       ] },
-      { type: 'cert', h2: 'Check Mountbell the same way' },
+      { type: 'cert', h2: 'Check Mount Bell the same way' },
       { type: 'faq', h2: 'Questions about fraud', items: [
         { q: 'Is it legal for an agent without an MEA licence to recruit for jobs abroad?', a: 'No. Under the Emigration Act, 1983, only a registered Recruiting Agent may recruit Indian citizens for overseas employment. Sub-agents working for a licensed agent have no licence of their own, so check whose licence is being used.' },
         { q: 'I received a job offer letter by email. How can I check it?', a: 'Look up the employer independently and contact them through the details on their own website, not those in the email. Check that the role and salary are realistic, and that the visa described is a work visa. Bring the letter to us and we will tell you what we see.' },

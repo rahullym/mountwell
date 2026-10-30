@@ -4,12 +4,12 @@ import { training as courses } from '../site';
 export const training: Page[] = [
   {
     path: '/training/', crumb: 'Training',
-    title: 'Online Language Training | German, Danish, IELTS, OET | Mountbell',
-    description: 'Online language training from Mountbell: German, Danish, IELTS, OET and English courses for people preparing to work or migrate abroad.',
+    title: 'Online Language Training | German, Danish, IELTS, OET | Mount Bell',
+    description: 'Online language training from Mount Bell: German, Danish, IELTS, OET and English courses for people preparing to work or migrate abroad.',
     label: 'Training',
     h1: 'Online Language Training',
-    lede: 'German, Danish, IELTS, OET and English courses, taught online. Mountbell runs its language training as a dedicated educational service alongside its migration and recruitment work.',
-    wa: 'Hi Mountbell, I would like to know about your language training courses.',
+    lede: 'German, Danish, IELTS, OET and English courses, taught online. Mount Bell runs its language training as a dedicated educational service alongside its migration and recruitment work.',
+    wa: 'Hi Mount Bell, I would like to know about your language training courses.',
     blocks: [
       { type: 'prose', h2: 'Why we train as well as recruit', body: [
         'For most overseas jobs the language exam sits in the middle of the process. A nurse cannot be registered in Germany or authorised in Denmark without the language, and a skilled visa for Australia needs an English test score before an application can go in.',

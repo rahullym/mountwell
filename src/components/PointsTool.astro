@@ -102,7 +102,7 @@ const { mode, questions, pass, max, toolName } = Astro.props;
     bar.style.background = ok ? '#8fc267' : '#e2b25a';
     $('[data-verdict]').textContent = verdict;
     $('[data-detail]').textContent = detail;
-    const msg = `Hi Mountbell, I used the ${tool.dataset.name} and scored ${total} points. Could a consultant review my profile?`;
+    const msg = `Hi Mount Bell, I used the ${tool.dataset.name} and scored ${total} points. Could a consultant review my profile?`;
     tool.querySelector<HTMLAnchorElement>('[data-wa-score]')!.href = `https://wa.me/${tool.dataset.wa}?text=${encodeURIComponent(msg)}`;
   }
   form.addEventListener('change', update);

@@ -5,15 +5,15 @@ const founded = site.foundedYear ? [['Established', String(site.foundedYear)] as
 
 export const about: Page[] = [
   {
-    path: '/about-us/', crumb: 'About Mountbell', wide: true,
-    title: 'About Mountbell | Immigration Consultancy, Thrissur and Kochi',
-    description: 'About Mountbell: a licensed immigration and overseas recruitment consultancy with offices in Thrissur and Kochi, registered as Mount Bell Global Studies.',
-    h1: 'About Mountbell',
-    lede: 'Mountbell is an immigration and overseas recruitment consultancy established in 2017, with its main branch in Kochi and a branch in Thrissur. We help professionals move abroad for work, training and permanent residence.',
+    path: '/about-us/', crumb: 'About Mount Bell', wide: true,
+    title: 'About Mount Bell | Immigration Consultancy, Thrissur and Kochi',
+    description: 'About Mount Bell: a licensed immigration and overseas recruitment consultancy with offices in Thrissur and Kochi, registered as Mount Bell Global Studies.',
+    h1: 'About Mount Bell',
+    lede: 'Mount Bell is an immigration and overseas recruitment consultancy established in 2017, with its main branch in Kochi and a branch in Thrissur. We help professionals move abroad for work, training and permanent residence.',
     photo: teamPhotos[0],
     blocks: [
       { type: 'prose', h2: 'Who we are', body: [
-        `Mountbell is the trading name of ${site.legalName}. We hold a ${site.licence.type} from the ${site.licence.authority}, which is the licence the law requires before anyone in India may recruit for jobs overseas.`,
+        `Mount Bell is the trading name of ${site.legalName}. We hold a ${site.licence.type} from the ${site.licence.authority}, which is the licence the law requires before anyone in India may recruit for jobs overseas.`,
         'Most of the people we work with are nurses, therapists, technicians and tradespeople. Our programmes are built around them: registration with the professional body abroad, the language exam, the employer or visa application, and the journey itself. We also handle points-tested permanent residence for healthcare, trade, IT and teaching professionals.',
       ] },
       { type: 'facts', rows: [
@@ -25,7 +25,7 @@ export const about: Page[] = [
         ['Destinations', 'Australia, Canada, Germany, Denmark, Malta, the Maldives, the Netherlands, Latvia, Poland, Lithuania and Bulgaria'],
         ['Languages', 'Malayalam and English'],
       ] },
-      { type: 'checks', h2: 'Why choose Mountbell', items: reasons },
+      { type: 'checks', h2: 'Why choose Mount Bell', items: reasons },
       { type: 'links', h2: 'More about us', items: [
         { title: 'Our team', text: 'The consultants you meet in Thrissur and Kochi.', href: '/about-us/team/' },
         { title: 'Licences and accreditations', text: 'Our MEA licence number and how to verify it yourself on eMigrate.', href: '/about-us/licences/' },
@@ -37,11 +37,11 @@ export const about: Page[] = [
   },
   {
     path: '/about-us/team/', crumb: 'Our team',
-    title: 'Mountbell Immigration Team | Thrissur and Kochi',
-    description: 'Meet the Mountbell immigration team in Thrissur and Kochi: the consultants who assess your profile, prepare your file and stay with you until you travel.',
+    title: 'Mount Bell Immigration Team | Thrissur and Kochi',
+    description: 'Meet the Mount Bell immigration team in Thrissur and Kochi: the consultants who assess your profile, prepare your file and stay with you until you travel.',
     // Left out of search until named adviser profiles are added to site.team.
     noindex: site.team.length === 0,
-    h1: 'The Mountbell Immigration Team',
+    h1: 'The Mount Bell Immigration Team',
     lede: 'One consultant is responsible for your file from the first meeting to the day you travel. You know who they are, and you deal with them throughout.',
     blocks: [
       { type: 'team' },
@@ -59,9 +59,9 @@ export const about: Page[] = [
   },
   {
     path: '/about-us/licences/', crumb: 'Licences and accreditations',
-    title: 'Mountbell MEA Licence and Accreditations',
-    description: `Mountbell's MEA Recruiting Agent licence number is ${site.licence.number}. See what the licence covers and how to verify it on the eMigrate portal.`,
-    h1: 'Mountbell MEA Licence and Accreditations',
+    title: 'Mount Bell MEA Licence and Accreditations',
+    description: `Mount Bell's MEA Recruiting Agent licence number is ${site.licence.number}. See what the licence covers and how to verify it on the eMigrate portal.`,
+    h1: 'Mount Bell MEA Licence and Accreditations',
     lede: 'Recruiting for overseas jobs from India is legal only with a licence from the Ministry of External Affairs. This is ours, and this is how you check it.',
     blocks: [
       { type: 'cert' },
@@ -81,10 +81,10 @@ export const about: Page[] = [
   },
   {
     path: '/privacy-policy/', crumb: 'Privacy policy',
-    title: 'Privacy Policy | Mountbell',
-    description: `How ${site.legalName} (Mountbell) collects, uses and protects the personal details you share through this website, by phone, on WhatsApp and in our offices.`,
+    title: 'Privacy Policy | Mount Bell',
+    description: `How ${site.legalName} (Mount Bell) collects, uses and protects the personal details you share through this website, by phone, on WhatsApp and in our offices.`,
     h1: 'Privacy Policy',
-    lede: `This policy explains what personal details Mountbell (${site.legalName}) collects, why we need them, who we share them with and how you can ask us to change or delete them.`,
+    lede: `This policy explains what personal details Mount Bell (${site.legalName}) collects, why we need them, who we share them with and how you can ask us to change or delete them.`,
     // Review with the client before launch. If analytics, ad pixels or a CRM form endpoint are added, update the sections below.
     blocks: [
       { type: 'prose', h2: 'What we collect', body: [
@@ -131,10 +131,10 @@ export const about: Page[] = [
   },
   {
     path: '/how-it-works/', parent: '/about-us/', crumb: 'How it works',
-    title: 'Immigration Process from Kerala, Step by Step | Mountbell',
+    title: 'Immigration Process from Kerala, Step by Step | Mount Bell',
     description: 'The immigration process from Kerala in six stages: assessment, country matching, documents and recognition, language exams, visa filing and departure.',
     h1: 'The Immigration Process from Kerala, Step by Step',
-    lede: 'Every programme is different in its details, but the order of work is the same. These are the six stages, and what you and Mountbell each do in them.',
+    lede: 'Every programme is different in its details, but the order of work is the same. These are the six stages, and what you and Mount Bell each do in them.',
     photo: processPhoto,
     blocks: [
       { type: 'steps', h2: 'From assessment to departure', items: steps },
@@ -159,9 +159,9 @@ export const about: Page[] = [
   },
   {
     path: '/fees/', parent: '/about-us/', crumb: 'Fees',
-    title: 'Immigration Consultant Fees: How Mountbell Charges',
-    description: 'How immigration consultant fees work at Mountbell: a free first assessment, a written fee schedule per programme, staged payments and stated refund terms.',
-    h1: 'Immigration Consultant Fees at Mountbell',
+    title: 'Immigration Consultant Fees: How Mount Bell Charges',
+    description: 'How immigration consultant fees work at Mount Bell: a free first assessment, a written fee schedule per programme, staged payments and stated refund terms.',
+    h1: 'Immigration Consultant Fees at Mount Bell',
     lede: 'Our fees are set per programme, because a points-tested PR file and a hospital placement involve different work. This page explains how the fee is built and when you pay it.',
     blocks: [
       { type: 'checks', h2: 'What you can expect', items: [
@@ -186,14 +186,14 @@ export const about: Page[] = [
   },
   {
     path: '/success-stories/', crumb: 'Success stories', wide: true,
-    title: 'Immigration Success Stories from Kerala | Mountbell',
-    description: 'Immigration success stories from Kerala: Mountbell clients describe their visa process in their own words, with photos from their travel days.',
+    title: 'Immigration Success Stories from Kerala | Mount Bell',
+    description: 'Immigration success stories from Kerala: Mount Bell clients describe their visa process in their own words, with photos from their travel days.',
     h1: 'Immigration Success Stories from Kerala',
-    lede: 'What clients say about working with Mountbell, and a few photographs from the days they left.',
+    lede: 'What clients say about working with Mount Bell, and a few photographs from the days they left.',
     cta: { heading: 'Start Your Own Story', text: 'Tell us your profession and where you want to go. We will tell you plainly what is possible.' },
     blocks: [
       { type: 'reviews', h2: 'In their own words' },
-      { type: 'gallery', h2: 'Travel days', caption: 'Mountbell candidates on their way out and after arrival.' },
+      { type: 'gallery', h2: 'Travel days', caption: 'Mount Bell candidates on their way out and after arrival.' },
       { type: 'prose', h2: 'How to read a success story', body: [
         'A story on any consultant’s website shows that a route worked for one person. It does not tell you that it will work for you. Outcomes depend on your own qualification, experience, age and language scores, and the final decision always rests with the destination country.',
         'That is why the first thing we do is an honest eligibility assessment. If you would like to speak to a past client who took the route you are considering, ask your consultant.',

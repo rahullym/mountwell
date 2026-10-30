@@ -4,7 +4,7 @@ import Icon from '../../components/Icon.astro';
 import FinalCta from '../../components/FinalCta.astro';
 import { site, professions } from '../../data/site';
 
-const title = 'Immigration Eligibility Calculator | Mountbell';
+const title = 'Immigration Eligibility Calculator | Mount Bell';
 const description = 'Free immigration eligibility calculator. Answer five questions and see which countries and routes fit your profession, age, qualification and languages.';
 
 // qual: 0 below Plus Two, 1 Plus Two, 2 diploma or trade certificate, 3 degree.
@@ -47,7 +47,7 @@ const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', it
     <header class="page-head">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/tools/">Tools</a><span>/</span><span>Immigration eligibility calculator</span></nav>
       <h1 class="page-title">Immigration Eligibility Calculator</h1>
-      <p class="lede">Check your eligibility to migrate in two minutes. Tell us your profession and four other details, and see which of Mountbell’s routes are worth a conversation.</p>
+      <p class="lede">Check your eligibility to migrate in two minutes. Tell us your profession and four other details, and see which of Mount Bell’s routes are worth a conversation.</p>
     </header>
 
     <div class="calc" data-checker data-routes={JSON.stringify(routes)} data-wa={site.whatsapp}>
@@ -89,7 +89,7 @@ const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', it
 
     <div class="prose">
       <h2>How this calculator works</h2>
-      <p>It matches your answers against the entry conditions of the programmes Mountbell runs: the professions each one recruits, the minimum qualification, age limits where they exist, and the language each route depends on. It lists the routes that are open in principle and what each one would need from you next.</p>
+      <p>It matches your answers against the entry conditions of the programmes Mount Bell runs: the professions each one recruits, the minimum qualification, age limits where they exist, and the language each route depends on. It lists the routes that are open in principle and what each one would need from you next.</p>
       <ul>
         <li>For Australia, follow up with the <a class="tlink" href="/tools/australia-pr-points-calculator/">Australia PR points calculator</a>.</li>
         <li>For Germany’s job seeker route, use the <a class="tlink" href="/tools/opportunity-card-points-calculator/">Opportunity Card points calculator</a>.</li>
@@ -141,7 +141,7 @@ const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', it
     $('[data-note]').textContent = aged.length ? `Not shown because of age: ${aged.map((r) => r.name).join('; ')}.` : '';
 
     const msg = [
-      'Hi Mountbell, I used the immigration eligibility calculator.',
+      'Hi Mount Bell, I used the immigration eligibility calculator.',
       `Profession: ${a.prof}`, `Goal: ${label('goal')}`, `Age: ${label('age')}`, `Qualification: ${label('qual')}`,
       `English test: ${label('en')}`, `German: ${label('de')}`,
       `Routes shown: ${open.map((r) => r.name).join('; ') || 'none'}`,

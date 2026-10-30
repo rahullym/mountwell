@@ -28,7 +28,7 @@ function publish<T>(v: T): T {
   return v;
 }
 
-const nurseWa = (country: string) => `Hi Mountbell, I am a nurse and would like to know about working in ${country}.`;
+const nurseWa = (country: string) => `Hi Mount Bell, I am a nurse and would like to know about working in ${country}.`;
 const licence = 'B-1921/KER/PART/100/5/10348/2023';
 
 const contact = (h2: string, text: string, wa: string): Block => ({
@@ -46,17 +46,17 @@ const contact = (h2: string, text: string, wa: string): Block => ({
   ],
 });
 
-const hubWa = 'Hi Mountbell, I am a nurse and would like to know which country suits my profile.';
+const hubWa = 'Hi Mount Bell, I am a nurse and would like to know which country suits my profile.';
 
 const pagesRaw: Page[] = [
   {
     path: '/nursing-careers/', crumb: 'Nursing careers', accent: 'var(--coral)',
-    title: 'Nurse Recruitment Agency in Kerala | Mountbell',
+    title: 'Nurse Recruitment Agency in Kerala | Mount Bell',
     description: 'Nursing jobs abroad for Kerala nurses in Australia, Germany, Malta, Maldives and Denmark. MEA-licensed. Thrissur and Kochi offices. Free nurse eligibility check.',
     label: 'Nursing Careers',
     h1: 'Nurse Recruitment Agency in Kerala — Nursing Jobs Abroad',
     tagline: 'Your Nursing Career Starts Here.',
-    lede: 'Mountbell is an MEA-licensed nurse recruitment agency in Kerala. We help GNM, BSc, Post-basic and MSc nurses work as a nurse abroad in Australia, Germany, Malta, the Maldives and Denmark, from offices in Thrissur and Kochi.',
+    lede: 'Mount Bell is an MEA-licensed nurse recruitment agency in Kerala. We help GNM, BSc, Post-basic and MSc nurses work as a nurse abroad in Australia, Germany, Malta, the Maldives and Denmark, from offices in Thrissur and Kochi.',
     acts: { check: 'Check my nurse eligibility', wa: 'WhatsApp a nurse adviser' },
     photo: { src: '/img/dest/australia-wide.webp', alt: 'Sydney Opera House and Harbour Bridge at dusk, Australia', w: 1400, h: 820 },
     wa: hubWa,
@@ -137,7 +137,7 @@ const pagesRaw: Page[] = [
         'To work as a nurse abroad you also need Kerala Nurses and Midwives Council registration, an Indian Nursing Council-recognised qualification, a valid passport and usually one to two years of hospital experience [VERIFY per country].',
       ] },
 
-      { type: 'steps', h2: 'How Overseas Nurse Recruitment Works at Mountbell', intro: 'Overseas nurse recruitment involves a regulator, an employer, an embassy and sometimes Indian emigration clearance. Our nurse migration consultants coordinate all four in seven written steps.', items: [
+      { type: 'steps', h2: 'How Overseas Nurse Recruitment Works at Mount Bell', intro: 'Overseas nurse recruitment involves a regulator, an employer, an embassy and sometimes Indian emigration clearance. Our nurse migration consultants coordinate all four in seven written steps.', items: [
         { title: 'Free assessment', text: 'a nurse adviser reviews your file and shortlists one or two countries' },
         { title: 'Documents', text: 'certificates, experience letters, council verification and attestation' },
         { title: 'Language', text: 'OET, IELTS or German classes at our Thrissur centre' },
@@ -164,14 +164,14 @@ const pagesRaw: Page[] = [
       { type: 'prose', h2: 'What Nurse Recruitment Costs', body: [
         'The cost to work as a nurse abroad comes in two parts, and both are written down before you sign anything.',
       ], list: [
-        'Mountbell fee stages: [INSERT real stages and amounts]',
+        'Mount Bell fee stages: [INSERT real stages and amounts]',
         'Third-party costs, paid directly to exam bodies, regulators and embassies: exams, verification, translation, registration, visa fees and medicals',
         'Costs and timelines vary by country, with Germany and Denmark usually the longest because of language training',
-        'Any charge not on your written schedule is not a Mountbell fee',
+        'Any charge not on your written schedule is not a Mount Bell fee',
       ], after: [go(['Full fee breakdown', '/fees/'])] },
 
-      { type: 'prose', h2: 'Is Mountbell a Licensed Nurse Recruitment Agency in Kerala?', body: [
-        `Yes. Mountbell holds MEA Recruiting Agent Licence ${licence}. Search it on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay any agency, including us.`,
+      { type: 'prose', h2: 'Is Mount Bell a Licensed Nurse Recruitment Agency in Kerala?', body: [
+        `Yes. Mount Bell holds MEA Recruiting Agent Licence ${licence}. Search it on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay any agency, including us.`,
       ], list: [
         'We never promise a guaranteed job or visa',
         'We give a receipt for every payment [CONFIRM practice]',
@@ -190,7 +190,7 @@ const pagesRaw: Page[] = [
       ] },
 
       { type: 'prose', h2: 'Nurse Success Stories and Your Adviser', body: [], list: [
-        'Each story shows a nurse who moved into nursing jobs abroad with Mountbell, published with written consent',
+        'Each story shows a nurse who moved into nursing jobs abroad with Mount Bell, published with written consent',
         'One named adviser handles your file from first call to departure, so you never repeat your story to someone new',
         'Our nurse migration consultants work only on nursing and healthcare files [CONFIRM], so your adviser knows each regulator’s process',
       ] },
@@ -202,12 +202,12 @@ const pagesRaw: Page[] = [
       { type: 'faq', h2: 'Frequently Asked Questions', items: [
         { q: 'Which is the best country for Indian nurses from Kerala?', a: 'It depends on your language score, experience and family plans. Australia suits strong English scorers who want PR, Germany has the most openings for German learners, Malta offers Europe in English, the Maldives is the quickest move and Denmark suits long-term planners.' },
         { q: 'Can GNM nurses work abroad?', a: 'Yes, in several countries, though some regulators ask for extra experience or an adaptation course. BSc nurses are accepted more widely. Our GNM vs BSc guide lists which countries accept each qualification.' },
-        { q: 'Do nurses need German for Germany?', a: 'Yes. Most nurses need B1 German to start the process and B2 for full recognition [VERIFY]. Mountbell runs German classes in Thrissur, so you can study while your documents are processed.' },
+        { q: 'Do nurses need German for Germany?', a: 'Yes. Most nurses need B1 German to start the process and B2 for full recognition [VERIFY]. Mount Bell runs German classes in Thrissur, so you can study while your documents are processed.' },
         { q: 'How do I know a nurse recruitment agency in Kerala is genuine?', a: 'Search its recruiting agent licence number on eMigrate and check the name and address match. Avoid visit-visa job offers, cash-only payments and guaranteed placements.' },
         { q: 'Can I take my family with me?', a: 'In most of our destinations, a spouse and children can join once you hold a work permit, subject to income and housing rules. Our Dependent and Family Visa page explains each country.' },
         { q: 'How long does the process take?', a: 'Most nurses take six to eighteen months from assessment to departure [VERIFY]. Language preparation is usually the longest stage, especially for Germany and Denmark. Your adviser gives you a written timeline after the first assessment.' },
         { q: 'How much experience do I need for nursing jobs abroad?', a: 'Most employers ask for one to two years of recent hospital experience [VERIFY]. Freshers can start language training and collect documents now, so they are ready when they qualify.' },
-        { q: 'Do I have to visit a Mountbell office?', a: 'No. You can consult a nurse adviser online from anywhere in Kerala. Many nurses still visit our Thrissur or Kochi office to hand over original documents. Both routes follow the same overseas nurse recruitment process at our nurse recruitment agency in Kerala.' },
+        { q: 'Do I have to visit a Mount Bell office?', a: 'No. You can consult a nurse adviser online from anywhere in Kerala. Many nurses still visit our Thrissur or Kochi office to hand over original documents. Both routes follow the same overseas nurse recruitment process at our nurse recruitment agency in Kerala.' },
       ] },
 
       contact('Start Your Nursing Career Abroad', 'Talk to an MEA-licensed nurse recruitment agency in Kerala before you pay anyone. A free assessment tells you which countries you qualify for, what it costs and how long it takes.', hubWa),
@@ -217,11 +217,11 @@ const pagesRaw: Page[] = [
 
   {
     path: '/nursing-careers/australia/', crumb: 'Nurses in Australia', img: 'australia', accent: 'var(--coral)',
-    title: 'Australia Nurse Migration from Kerala | Mountbell',
+    title: 'Australia Nurse Migration from Kerala | Mount Bell',
     description: 'Australia nurse migration from Kerala, step by step: NMBA registration, OET or IELTS scores, nurse visa options and PR for nurses. Free nurse eligibility check.',
     label: 'Nursing Careers › Australia',
     h1: 'Australia Nurse Migration from Kerala — Register, Get a Visa and Build a Career',
-    lede: 'Australia nurse migration from Kerala follows three tracks that run side by side: NMBA registration through Ahpra, an English test at the board’s standard, and a nurse visa Australia employers or states will support. Mountbell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, plans all three for GNM, BSc and Post-basic nurses.',
+    lede: 'Australia nurse migration from Kerala follows three tracks that run side by side: NMBA registration through Ahpra, an English test at the board’s standard, and a nurse visa Australia employers or states will support. Mount Bell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, plans all three for GNM, BSc and Post-basic nurses.',
     acts: { check: 'Check my Australia eligibility', wa: 'WhatsApp a nurse adviser' },
     wa: nurseWa('Australia'),
     blocks: [
@@ -233,7 +233,7 @@ const pagesRaw: Page[] = [
         ['Visa options', 'employer-sponsored and skilled visas set by the Department of Home Affairs'],
         ['Family', 'partner and dependent children can usually be included on the visa'],
         ['Route to permanent residence', 'yes, through employer nomination or skilled visas'],
-        ['Typical time from first assessment to departure', '12 to 24 months [VERIFY with Mountbell case data]'],
+        ['Typical time from first assessment to departure', '12 to 24 months [VERIFY with Mount Bell case data]'],
       ] },
 
       { type: 'prose', h2: 'Can Kerala Nurses Work as a Nurse in Australia?', body: [
@@ -247,7 +247,7 @@ const pagesRaw: Page[] = [
         'Experience: recent clinical practice, usually at least one year [VERIFY NMBA recency of practice rules]',
       ], after: [go(['Quick check', '/tools/nurse-pathway-finder/'])] },
 
-      { type: 'steps', h2: 'Australia Nurse Migration from Kerala: 7 Steps', intro: 'Australia nurse migration from Kerala works best when registration, language and visa planning start together. Mountbell runs it in seven steps, and you get each one in writing.', items: [
+      { type: 'steps', h2: 'Australia Nurse Migration from Kerala: 7 Steps', intro: 'Australia nurse migration from Kerala works best when registration, language and visa planning start together. Mount Bell runs it in seven steps, and you get each one in writing.', items: [
         { title: 'Free nurse assessment', text: 'a nurse adviser checks your qualification, experience and English level, then confirms whether Australia fits' },
         { title: 'NMBA self-check', text: 'you complete the board’s online self-check, which tells you which assessment stream applies' },
         { title: 'English test', text: 'you sit OET, IELTS or PTE and reach the NMBA score in every component' },
@@ -266,7 +266,7 @@ const pagesRaw: Page[] = [
         'TOEFL iBT: the NMBA total and per-section scores [VERIFY]',
         'Validity: results must be recent when you apply, and the NMBA sets rules on combining test sittings [VERIFY]',
       ], after: [
-        'Many Kerala nurses choose OET because its tasks are built around clinical situations. Mountbell runs OET and IELTS classes in Thrissur.',
+        'Many Kerala nurses choose OET because its tasks are built around clinical situations. Mount Bell runs OET and IELTS classes in Thrissur.',
         go(['Compare the two tests', '/resources/oet-vs-ielts-for-nurses/'], ['Coaching', '/services/language-test-preparation/']),
       ] },
 
@@ -316,7 +316,7 @@ const pagesRaw: Page[] = [
         'Specialties in demand: aged care, ICU, emergency, operating theatre, mental health and medical-surgical wards',
         'Settings: metropolitan hospitals, regional and rural health services, residential aged care',
         'Regional areas often offer more nursing jobs in Australia and extra visa options through the 491 pathway',
-        'Your Mountbell adviser shortlists nursing jobs in Australia that match your registration stage and specialty',
+        'Your Mount Bell adviser shortlists nursing jobs in Australia that match your registration stage and specialty',
       ], after: [
         'Malayali communities are well established across Australia, and Onmanorama reported in 2023 that Malayalam was the second most spoken foreign language in Townsville, Queensland.',
       ] },
@@ -329,11 +329,11 @@ const pagesRaw: Page[] = [
         'Travel and stay in Australia for the OSCE',
         'ANMAC skills assessment fee, for skilled visas',
         'Nurse visa Australia application fees, medicals and police clearance',
-        'Mountbell service fee stages: [INSERT real stages and amounts]',
-      ], after: [`Every Mountbell fee is written down before you start. ${a('Full breakdown', '/fees/')}.`] },
+        'Mount Bell service fee stages: [INSERT real stages and amounts]',
+      ], after: [`Every Mount Bell fee is written down before you start. ${a('Full breakdown', '/fees/')}.`] },
 
-      { type: 'prose', h2: 'How Mountbell Supports Your Move', body: [
-        `Mountbell holds Ministry of External Affairs Recruiting Agent Licence ${licence}. You can check it on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay anything. [Confirm the licence is current before publishing]`,
+      { type: 'prose', h2: 'How Mount Bell Supports Your Move', body: [
+        `Mount Bell holds Ministry of External Affairs Recruiting Agent Licence ${licence}. You can check it on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay anything. [Confirm the licence is current before publishing]`,
         'For Australia nurse migration from Kerala, our support covers every stage:',
       ], list: [
         'One nurse adviser handles your file from assessment to departure',
@@ -357,7 +357,7 @@ const pagesRaw: Page[] = [
         { q: 'Where do I take the NMBA OSCE?', a: 'The OSCE is held in Australia, so you travel there for the clinical exam once you pass the computer-based exam [VERIFY location and current process]. Plan the trip into your budget and timeline from the start of your Australia nurse migration from Kerala.' },
       ] },
 
-      contact('Start Your Australia Nursing Career', 'Speak to a Mountbell nurse adviser about Australia nurse migration from Kerala. A free assessment tells you which registration stream applies, which English score you need, which nurse visa Australia route fits and what it will cost.', nurseWa('Australia')),
+      contact('Start Your Australia Nursing Career', 'Speak to a Mount Bell nurse adviser about Australia nurse migration from Kerala. A free assessment tells you which registration stream applies, which English score you need, which nurse visa Australia route fits and what it will cost.', nurseWa('Australia')),
     ],
     related: ['/nursing-careers/', '/nursing-careers/germany/', '/nursing-careers/malta/', '/countries/australia/'],
     cta: false,
@@ -365,11 +365,11 @@ const pagesRaw: Page[] = [
 
   {
     path: '/nursing-careers/germany/', crumb: 'Nurses in Germany', img: 'germany', accent: 'var(--amber-deep)',
-    title: 'Germany Nurse Recruitment from Kerala | Mountbell',
+    title: 'Germany Nurse Recruitment from Kerala | Mount Bell',
     description: 'Germany nurse recruitment from Kerala: learn German, get recognition, secure a nurse visa Germany and Pflegefachkraft jobs. Free eligibility check.',
     label: 'Nursing Careers › Germany',
     h1: 'Germany Nurse Recruitment from Kerala — Language, Recognition, Visa and Jobs',
-    lede: 'Germany nurse recruitment from Kerala follows one clear path: learn German, get your nursing qualification recognised, secure a job offer and apply for the nurse visa Germany issues to skilled workers. Mountbell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, guides GNM, BSc and Post-basic nurses through every stage, usually in 12 to 18 months [VERIFY].',
+    lede: 'Germany nurse recruitment from Kerala follows one clear path: learn German, get your nursing qualification recognised, secure a job offer and apply for the nurse visa Germany issues to skilled workers. Mount Bell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, guides GNM, BSc and Post-basic nurses through every stage, usually in 12 to 18 months [VERIFY].',
     acts: { check: 'Check my Germany eligibility', wa: 'WhatsApp a nurse adviser' },
     wa: nurseWa('Germany'),
     blocks: [
@@ -396,7 +396,7 @@ const pagesRaw: Page[] = [
         'Experience: most employers prefer one to two years, though Germany nursing jobs for freshers exist, especially in elderly care [VERIFY]',
       ], after: [go(['Quick eligibility check', '/tools/nurse-pathway-finder/'])] },
 
-      { type: 'steps', h2: 'Germany Nurse Recruitment from Kerala: 7 Steps and Timeline', intro: 'This is how to become a nurse in Germany from Kerala, with the time each step usually takes [VERIFY with Mountbell case data].', items: [
+      { type: 'steps', h2: 'Germany Nurse Recruitment from Kerala: 7 Steps and Timeline', intro: 'This is how to become a nurse in Germany from Kerala, with the time each step usually takes [VERIFY with Mount Bell case data].', items: [
         { title: 'Free assessment (week 1)', text: 'a nurse adviser checks your qualification, experience and German level' },
         { title: 'German classes (6 to 12 months)', text: 'A1 to B1, then B2, with Goethe, telc or ÖSD exams' },
         { title: 'Documents (4 to 8 weeks, alongside language)', text: 'we give you the full list of documents for nursing recognition in Germany, including syllabus, transcripts, registration and certified translations' },
@@ -417,7 +417,7 @@ const pagesRaw: Page[] = [
         'B2: about 3 more months; B2 German for nurses is usually needed for full recognition [VERIFY]',
         'Exams: Goethe-Institut, telc (including the telc nursing exam) or ÖSD',
       ], after: [
-        'Mountbell runs German classes at our Thrissur centre, so you can study while your documents are prepared.',
+        'Mount Bell runs German classes at our Thrissur centre, so you can study while your documents are prepared.',
         go(['Language and test preparation', '/services/language-test-preparation/'], ['German level needed for jobs', '/resources/german-level-for-jobs-in-germany/']),
       ] },
 
@@ -434,7 +434,7 @@ const pagesRaw: Page[] = [
       ] },
 
       { type: 'prose', h2: 'Nurse Visa Germany Options', body: [
-        'Mountbell plans your nurse visa Germany route around where you stand in recognition.',
+        'Mount Bell plans your nurse visa Germany route around where you stand in recognition.',
       ], list: [
         'Skilled worker visa: for nurses whose qualification is fully recognised and who hold a job offer',
         'Recognition visa: for nurses completing an adaptation course or knowledge test in Germany [VERIFY]',
@@ -468,14 +468,14 @@ const pagesRaw: Page[] = [
         'German courses and Goethe, telc or ÖSD exam fees',
         'Translation, attestation and recognition fees',
         'Visa fee, health insurance and travel',
-        'Mountbell service fee stages: [INSERT real stages and amounts]',
+        'Mount Bell service fee stages: [INSERT real stages and amounts]',
       ], after: [
         'Government programmes such as Triple Win, run by NORKA Roots with the German Federal Employment Agency, are another route, and we will tell you honestly if one suits you better.',
         go(['Full fee breakdown', '/fees/']),
       ] },
 
-      { type: 'prose', h2: 'How Mountbell Supports Your Move', body: [
-        `Mountbell holds Ministry of External Affairs Recruiting Agent Licence ${licence}, which you can check on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay anything. For Germany nurse recruitment from Kerala, our support covers every stage.`,
+      { type: 'prose', h2: 'How Mount Bell Supports Your Move', body: [
+        `Mount Bell holds Ministry of External Affairs Recruiting Agent Licence ${licence}, which you can check on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay anything. For Germany nurse recruitment from Kerala, our support covers every stage.`,
       ], list: [
         'One nurse adviser handles your file from assessment to arrival',
         'German classes and exam preparation at our Thrissur centre',
@@ -499,7 +499,7 @@ const pagesRaw: Page[] = [
         { q: 'Can my family join me in Germany?', a: 'Yes, in most cases. Spouses and children can join through family reunification once you meet income and housing rules [VERIFY]. Our Dependent and Family Visa page explains the details.' },
       ] },
 
-      contact('Start Your Germany Nursing Career', 'Speak to a Mountbell nurse adviser about Germany nurse recruitment from Kerala. A free assessment tells you which German level you need, how recognition works for your qualification, which nurse visa Germany route fits and what it will cost.', nurseWa('Germany')),
+      contact('Start Your Germany Nursing Career', 'Speak to a Mount Bell nurse adviser about Germany nurse recruitment from Kerala. A free assessment tells you which German level you need, how recognition works for your qualification, which nurse visa Germany route fits and what it will cost.', nurseWa('Germany')),
     ],
     related: ['/nursing-careers/', '/nursing-careers/australia/', '/nursing-careers/malta/', '/countries/germany/'],
     cta: false,
@@ -507,11 +507,11 @@ const pagesRaw: Page[] = [
 
   {
     path: '/nursing-careers/malta/', crumb: 'Nurses in Malta', img: 'malta', accent: 'var(--teal)',
-    title: 'Malta Nurse Jobs for Indians | Mountbell',
+    title: 'Malta Nurse Jobs for Indians | Mount Bell',
     description: 'Malta nurse jobs for Indians: registration, bridging programme, nurse salary Malta and work permit for Kerala nurses. MEA-licensed. Free eligibility check.',
     label: 'Nursing Careers › Malta',
     h1: 'Malta Nurse Jobs for Indians — Registration, Bridging Programme, Permit and Pay',
-    lede: 'Malta nurse jobs for Indians offer something rare in Europe: hospital and elderly care roles where you work in English from day one. To get there, you register with the Malta Council for Nursing and Midwifery, complete a bridging programme and receive a work and residence permit through your employer. Mountbell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, guides Kerala nurses through each stage, usually in 6 to 12 months [VERIFY].',
+    lede: 'Malta nurse jobs for Indians offer something rare in Europe: hospital and elderly care roles where you work in English from day one. To get there, you register with the Malta Council for Nursing and Midwifery, complete a bridging programme and receive a work and residence permit through your employer. Mount Bell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, guides Kerala nurses through each stage, usually in 6 to 12 months [VERIFY].',
     acts: { check: 'Check my Malta eligibility', wa: 'WhatsApp a nurse adviser' },
     wa: nurseWa('Malta'),
     blocks: [
@@ -538,7 +538,7 @@ const pagesRaw: Page[] = [
         'Experience: most employers prefer one to two years, though Malta nursing jobs for freshers appear in elderly care [VERIFY]',
       ], after: [go(['Quick eligibility check', '/tools/nurse-pathway-finder/'])] },
 
-      { type: 'steps', h2: 'Malta Nurse Jobs for Indians: 7 Steps and Timeline', intro: 'This is how to become a nurse in Malta from Kerala, with the time each step usually takes [VERIFY with Mountbell case data].', items: [
+      { type: 'steps', h2: 'Malta Nurse Jobs for Indians: 7 Steps and Timeline', intro: 'This is how to become a nurse in Malta from Kerala, with the time each step usually takes [VERIFY with Mount Bell case data].', items: [
         { title: 'Free assessment (week 1)', text: 'a nurse adviser checks your qualification, experience and English level' },
         { title: 'English test (1 to 3 months)', text: 'IELTS or OET, if your employer or the council asks for it [VERIFY]' },
         { title: 'Documents (3 to 6 weeks)', text: 'we give you the full list of documents for Malta nursing registration, including transcripts, syllabus, registration proof and experience letters' },
@@ -569,7 +569,7 @@ const pagesRaw: Page[] = [
         'OET for Malta nurses: accepted by many employers as an alternative [VERIFY]',
         'Maltese: not required for registration',
       ], after: [
-        'Mountbell runs OET and IELTS preparation at our Thrissur centre.',
+        'Mount Bell runs OET and IELTS preparation at our Thrissur centre.',
         go(['Language and test preparation', '/services/language-test-preparation/'], ['OET vs IELTS for nurses', '/resources/oet-vs-ielts-for-nurses/']),
       ] },
 
@@ -607,14 +607,14 @@ const pagesRaw: Page[] = [
         'Translation, attestation and registration fees',
         'Fees for the Malta bridging programme for nurses, if your employer does not cover them [VERIFY]',
         'Permit, visa fees, medicals and travel',
-        'Mountbell service fee stages: [INSERT real stages and amounts]',
+        'Mount Bell service fee stages: [INSERT real stages and amounts]',
       ], after: [
-        'Every Mountbell fee is written down before you start, so Malta nurse jobs for Indians never come with hidden charges from us.',
+        'Every Mount Bell fee is written down before you start, so Malta nurse jobs for Indians never come with hidden charges from us.',
         go(['Full fee breakdown', '/fees/']),
       ] },
 
-      { type: 'prose', h2: 'How Mountbell Supports Your Move', body: [
-        `Mountbell holds Ministry of External Affairs Recruiting Agent Licence ${licence}, which you can check on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay anything. For Malta nurse jobs for Indians, our support covers every stage.`,
+      { type: 'prose', h2: 'How Mount Bell Supports Your Move', body: [
+        `Mount Bell holds Ministry of External Affairs Recruiting Agent Licence ${licence}, which you can check on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay anything. For Malta nurse jobs for Indians, our support covers every stage.`,
       ], list: [
         'One nurse adviser handles your file from assessment to arrival',
         'A shortlist of Malta nursing jobs for Kerala nurses that matches your experience',
@@ -639,7 +639,7 @@ const pagesRaw: Page[] = [
         { q: 'Can my family join me in Malta?', a: 'Usually yes, after a period of residence and with stable income and housing [VERIFY]. Our Dependent and Family Visa page explains the details.' },
       ] },
 
-      contact('Start Your Malta Nursing Career', 'Speak to a Mountbell nurse adviser about Malta nurse jobs for Indians. A free assessment tells you whether you qualify, which English score you need, how the bridging programme works, what nurse salary Malta employers offer and what it will cost.', nurseWa('Malta')),
+      contact('Start Your Malta Nursing Career', 'Speak to a Mount Bell nurse adviser about Malta nurse jobs for Indians. A free assessment tells you whether you qualify, which English score you need, how the bridging programme works, what nurse salary Malta employers offer and what it will cost.', nurseWa('Malta')),
     ],
     related: ['/nursing-careers/', '/nursing-careers/australia/', '/nursing-careers/germany/'],
     cta: false,
@@ -647,11 +647,11 @@ const pagesRaw: Page[] = [
 
   {
     path: '/nursing-careers/maldives/', crumb: 'Nurses in the Maldives', img: 'maldives', accent: 'var(--green-deep)',
-    title: 'Registered Nurse Jobs in Maldives | Mountbell',
+    title: 'Registered Nurse Jobs in Maldives | Mount Bell',
     description: 'Registered nurse jobs in Maldives for Kerala nurses: licence exam, nurse visa Maldives, hospital contracts and timelines. MEA-licensed. Free eligibility check.',
     label: 'Nursing Careers › Maldives',
     h1: 'Registered Nurse Jobs in Maldives — Licence, Contract, Visa and Timeline',
-    lede: 'Registered nurse jobs in Maldives are the quickest overseas nursing move for many Kerala nurses: an English-speaking health system about an hour’s flight from Kerala, fixed hospital contracts and a short process. You pass the Maldives nursing licence exam, sign a contract with a hospital or health centre and travel on an employer-sponsored permit. Mountbell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, guides nurses through each stage, usually in 3 to 6 months [VERIFY].',
+    lede: 'Registered nurse jobs in Maldives are the quickest overseas nursing move for many Kerala nurses: an English-speaking health system about an hour’s flight from Kerala, fixed hospital contracts and a short process. You pass the Maldives nursing licence exam, sign a contract with a hospital or health centre and travel on an employer-sponsored permit. Mount Bell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, guides nurses through each stage, usually in 3 to 6 months [VERIFY].',
     acts: { check: 'Check my Maldives eligibility', wa: 'WhatsApp a nurse adviser' },
     wa: nurseWa('the Maldives'),
     blocks: [
@@ -677,7 +677,7 @@ const pagesRaw: Page[] = [
         'Maldives nurse experience requirements: most employers ask for one to two years; Maldives nursing jobs for freshers are fewer but do appear [VERIFY]',
       ], after: [go(['Quick eligibility check', '/tools/nurse-pathway-finder/'])] },
 
-      { type: 'steps', h2: 'Registered Nurse Jobs in Maldives: 7 Steps and Timeline', intro: 'This is how to become a nurse in Maldives from Kerala, with the time each step usually takes [VERIFY with Mountbell case data].', items: [
+      { type: 'steps', h2: 'Registered Nurse Jobs in Maldives: 7 Steps and Timeline', intro: 'This is how to become a nurse in Maldives from Kerala, with the time each step usually takes [VERIFY with Mount Bell case data].', items: [
         { title: 'Free assessment (week 1)', text: 'a nurse adviser checks your qualification, experience and specialty' },
         { title: 'Documents (2 to 4 weeks)', text: 'we give you the full list of documents for Maldives nurse licence applications, including transcripts, registration proof and experience letters' },
         { title: 'Licensing exam (4 to 8 weeks)', text: 'you prepare for and sit the council’s exam [VERIFY where the exam is held]' },
@@ -730,7 +730,7 @@ const pagesRaw: Page[] = [
       { type: 'prose', h2: 'Pay, Costs and Family', body: [], list: [
         'Pay: the nurse salary in Maldives depends on the employer, location and specialty; our salary guide covers current ranges [VERIFY]',
         'Costs: the cost of nurse migration to Maldives is low compared with Europe, because there is no new language to learn and no long training period',
-        'Costs to plan for: licensing exam and verification fees, medicals, document attestation and Mountbell service fee stages [INSERT real amounts]',
+        'Costs to plan for: licensing exam and verification fees, medicals, document attestation and Mount Bell service fee stages [INSERT real amounts]',
         'Family visa for nurses in Maldives: dependants may be possible on some contracts, but many nurses go alone at first [VERIFY]',
       ], after: [go(['Maldives healthcare salaries and contracts', '/resources/maldives-healthcare-salaries/'], ['Full fee breakdown', '/fees/'])] },
 
@@ -746,8 +746,8 @@ const pagesRaw: Page[] = [
         'Life in Maldives for Indian nurses is quieter than city life, especially on the atolls.',
       ] },
 
-      { type: 'prose', h2: 'How Mountbell Supports Your Move', body: [
-        `Mountbell holds Ministry of External Affairs Recruiting Agent Licence ${licence}, which you can check on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay anything. For registered nurse jobs in Maldives, our support covers every stage.`,
+      { type: 'prose', h2: 'How Mount Bell Supports Your Move', body: [
+        `Mount Bell holds Ministry of External Affairs Recruiting Agent Licence ${licence}, which you can check on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay anything. For registered nurse jobs in Maldives, our support covers every stage.`,
       ], list: [
         'One nurse adviser handles your file from assessment to joining',
         'A shortlist of Maldives nursing jobs for Kerala nurses that matches your specialty',
@@ -771,7 +771,7 @@ const pagesRaw: Page[] = [
         { q: 'Can my family join me?', a: 'Some contracts allow dependants, but rules and housing vary by employer [VERIFY].' },
       ] },
 
-      contact('Start Your Maldives Nursing Career', 'Speak to a Mountbell nurse adviser about registered nurse jobs in Maldives. A free assessment tells you whether you qualify, how the licence exam works, which hospitals are hiring, which nurse visa Maldives steps apply and how long it will take.', nurseWa('the Maldives')),
+      contact('Start Your Maldives Nursing Career', 'Speak to a Mount Bell nurse adviser about registered nurse jobs in Maldives. A free assessment tells you whether you qualify, how the licence exam works, which hospitals are hiring, which nurse visa Maldives steps apply and how long it will take.', nurseWa('the Maldives')),
     ],
     related: ['/nursing-careers/', '/nursing-careers/australia/', '/nursing-careers/malta/'],
     cta: false,
@@ -779,11 +779,11 @@ const pagesRaw: Page[] = [
 
   {
     path: '/nursing-careers/denmark/', crumb: 'Nurses in Denmark', img: 'denmark', accent: 'var(--blue)',
-    title: 'Nurse Jobs in Denmark for Indians: 2026 Rules | Mountbell',
+    title: 'Nurse Jobs in Denmark for Indians: 2026 Rules | Mount Bell',
     description: 'Nurse jobs in Denmark for Indians are paused until 31 Dec 2026. See the quota rules, who is exempt, how to prepare and the best alternatives. Free advice.',
     label: 'Nursing Careers › Denmark',
     h1: 'Nurse Jobs in Denmark for Indians — 2026 Status, Rules and What to Do Now',
-    lede: 'Nurse jobs in Denmark for Indians are on hold for most applicants right now. Denmark set its quota for non-EU nurse authorisation applications at zero from 7 October 2025 to 31 December 2026, so new applications from Indian-trained nurses are generally not accepted. Mountbell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, explains what the pause means, who is exempt, how to prepare for a possible reopening and which countries are open today.',
+    lede: 'Nurse jobs in Denmark for Indians are on hold for most applicants right now. Denmark set its quota for non-EU nurse authorisation applications at zero from 7 October 2025 to 31 December 2026, so new applications from Indian-trained nurses are generally not accepted. Mount Bell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, explains what the pause means, who is exempt, how to prepare for a possible reopening and which countries are open today.',
     acts: { check: 'Get free Denmark advice', wa: 'WhatsApp a nurse adviser' },
     wa: nurseWa('Denmark'),
     blocks: [
@@ -862,8 +862,8 @@ const pagesRaw: Page[] = [
         'Permanent residence for nurses in Denmark: possible after several years of legal residence and work under Danish rules [VERIFY]',
       ], after: [go(['Dependent and Family Visa', '/services/dependent-visa/'], ['Denmark work visa hub', '/countries/denmark/'])] },
 
-      { type: 'prose', h2: 'How Mountbell Supports You', body: [
-        `Mountbell holds Ministry of External Affairs Recruiting Agent Licence ${licence}, which you can check on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a>. For nurse jobs in Denmark for Indians, our role during the pause is advice, not applications.`,
+      { type: 'prose', h2: 'How Mount Bell Supports You', body: [
+        `Mount Bell holds Ministry of External Affairs Recruiting Agent Licence ${licence}, which you can check on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a>. For nurse jobs in Denmark for Indians, our role during the pause is advice, not applications.`,
       ], list: [
         'Free Denmark nurse eligibility for Indians check, including the exceptions',
         'A Denmark nurse application status update whenever the official rules for nursing jobs in Denmark change',
@@ -882,7 +882,7 @@ const pagesRaw: Page[] = [
         { q: 'Which country should I choose instead?', a: 'Until nursing jobs in Denmark reopen, Germany is the closest European alternative and offers permanent residence. Malta works in English, Australia suits strong English scorers, and the Maldives is the fastest move.' },
       ] },
 
-      contact('Talk to a Nurse Adviser About Denmark', 'Speak to a Mountbell nurse adviser about nurse jobs in Denmark for Indians. A free call tells you whether any exception applies to you, how to prepare for a possible reopening and which open country fits your profile today.', nurseWa('Denmark')),
+      contact('Talk to a Nurse Adviser About Denmark', 'Speak to a Mount Bell nurse adviser about nurse jobs in Denmark for Indians. A free call tells you whether any exception applies to you, how to prepare for a possible reopening and which open country fits your profile today.', nurseWa('Denmark')),
     ],
     related: ['/nursing-careers/', '/nursing-careers/germany/', '/nursing-careers/malta/'],
     cta: false,
@@ -891,11 +891,11 @@ const pagesRaw: Page[] = [
     path: '/nursing-careers/uk/',
     crumb: 'Nurses in the UK',
     accent: 'var(--blue)',
-    title: 'UK Nurse Jobs for Indian Nurses | Mountbell',
+    title: 'UK Nurse Jobs for Indian Nurses | Mount Bell',
     description: 'UK nurse jobs for Indian nurses: NMC registration, CBT, OSCE and the Health and Care Worker visa, with timelines and pay. MEA-licensed. Free eligibility check.',
     label: 'Nursing Careers › United Kingdom',
     h1: 'UK Nurse Jobs for Indian Nurses — NMC Registration, Visa, Pay and Timeline',
-    lede: 'UK nurse jobs for Indian nurses follow a clear route: pass an English test and the NMC computer-based test (CBT), secure a sponsored job offer, travel on the Health and Care Worker visa for nurses and pass the OSCE clinical exam in the UK. Mountbell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, guides registered nurses through each stage, usually in 6 to 12 months from first assessment to arrival [VERIFY].',
+    lede: 'UK nurse jobs for Indian nurses follow a clear route: pass an English test and the NMC computer-based test (CBT), secure a sponsored job offer, travel on the Health and Care Worker visa for nurses and pass the OSCE clinical exam in the UK. Mount Bell, an MEA-licensed recruiting agent with offices in Thrissur and Kochi, guides registered nurses through each stage, usually in 6 to 12 months from first assessment to arrival [VERIFY].',
     acts: { check: 'Check my UK eligibility', wa: 'WhatsApp a nurse adviser' },
     photo: { src: '/img/stories/london.webp', alt: 'London city view, United Kingdom', w: 1200, h: 800 },
     wa: nurseWa('the UK'),
@@ -932,7 +932,7 @@ const pagesRaw: Page[] = [
       {
         type: 'steps',
         h2: 'UK Nurse Jobs for Indian Nurses: 7 Steps and Timeline',
-        intro: 'This is how to become a nurse in the UK from Kerala, with the time each step usually takes [VERIFY with Mountbell case data].',
+        intro: 'This is how to become a nurse in the UK from Kerala, with the time each step usually takes [VERIFY with Mount Bell case data].',
         items: [
           { title: 'Free assessment (week 1)', text: 'a nurse adviser checks your qualification, experience and English level' },
           { title: 'English test (1 to 3 months)', text: 'IELTS or OET; NMC lets you combine test results taken within 12 months' },
@@ -1025,15 +1025,15 @@ const pagesRaw: Page[] = [
           'English test fees and any retakes',
           'NMC CBT, OSCE and registration fees; many NHS employers reimburse the OSCE fee [VERIFY]',
           'Visa fee and travel, which some employers cover',
-          'Mountbell service fee stages: [INSERT real stages and amounts]',
+          'Mount Bell service fee stages: [INSERT real stages and amounts]',
         ],
         after: [go(['Full fee breakdown', '/fees/'])],
       },
       {
         type: 'prose',
-        h2: 'How Mountbell Supports Your Move',
+        h2: 'How Mount Bell Supports Your Move',
         body: [
-          `Mountbell holds Ministry of External Affairs Recruiting Agent Licence ${licence}, which you can check on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay anything. For UK nurse jobs for Indian nurses, our support covers every stage.`,
+          `Mount Bell holds Ministry of External Affairs Recruiting Agent Licence ${licence}, which you can check on the <a href="${site.licence.verifyUrl}" target="_blank" rel="noopener">eMigrate portal</a> before you pay anything. For UK nurse jobs for Indian nurses, our support covers every stage.`,
         ],
         list: [
           'One nurse adviser handles your file from assessment to your NMC PIN',
@@ -1082,7 +1082,7 @@ const pagesRaw: Page[] = [
       },
       contact(
         'Start Your UK Nursing Career',
-        'Speak to a Mountbell nurse adviser about UK nurse jobs for Indian nurses. A free assessment tells you which English score you need, how NMC registration for Indian nurses works and how long it will take before you work as a nurse in the UK.',
+        'Speak to a Mount Bell nurse adviser about UK nurse jobs for Indian nurses. A free assessment tells you which English score you need, how NMC registration for Indian nurses works and how long it will take before you work as a nurse in the UK.',
         nurseWa('the UK')
       ),
     ],

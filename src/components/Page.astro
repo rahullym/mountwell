@@ -11,7 +11,7 @@ import type { Page } from '../data/pages/types';
 interface Props { page: Page }
 const { page } = Astro.props;
 const crumbs = trail(page);
-const wa = waLink(page.wa ?? `Hi Mountbell, I have a question about ${page.crumb.toLowerCase()}.`);
+const wa = waLink(page.wa ?? `Hi Mount Bell, I have a question about ${page.crumb.toLowerCase()}.`);
 const photo = page.photo ?? (page.img ? { src: `/img/dest/${page.img}-wide.webp`, alt: photoAlt[page.img], w: 1400, h: 820 } : null);
 const related = (page.related ?? []).map(pageAt);
 const hasForm = page.blocks.some((b) => b.type === 'form');
@@ -137,7 +137,7 @@ if (faqItems.length) schema.push({ '@context': 'https://schema.org', '@type': 'F
               <div class="offices" style={b.city ? 'grid-template-columns:1fr' : undefined}>
                 {site.offices.filter((o) => !b.city || o.city === b.city).map((o) => (
                   <article class="office">
-                    <iframe title={`Map of Mountbell ${o.city} office`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" src={`https://www.google.com/maps?q=${encodeURIComponent(o.mapQuery)}&z=15&output=embed`}></iframe>
+                    <iframe title={`Map of Mount Bell ${o.city} office`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" src={`https://www.google.com/maps?q=${encodeURIComponent(o.mapQuery)}&z=15&output=embed`}></iframe>
                     <div class="office-body">
                       <div class="top"><h3 class="h3" style="font-size:1.6rem">{o.city}</h3><span class="label">{o.label}</span></div>
                       <address>{o.lines.map((l) => <>{l}<br /></>)}</address>
@@ -158,7 +158,7 @@ if (faqItems.length) schema.push({ '@context': 'https://schema.org', '@type': 'F
                 {reviews.map((r) => (
                   <figure class="story" style="margin:0">
                     <blockquote>{r.text}</blockquote>
-                    <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mountbell client</span></div></figcaption>
+                    <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mount Bell client</span></div></figcaption>
                   </figure>
                 ))}
               </div>
@@ -176,7 +176,7 @@ if (faqItems.length) schema.push({ '@context': 'https://schema.org', '@type': 'F
                 <ul class="expert-grid">
                   {site.team.map((m) => (
                     <li class="expert">
-                      <img src={m.photo} alt={`${m.name}, ${m.role} at Mountbell`} loading="lazy" width="400" height="500" />
+                      <img src={m.photo} alt={`${m.name}, ${m.role} at Mount Bell`} loading="lazy" width="400" height="500" />
                       <strong>{m.name}</strong>
                       <span>{m.role} · {m.years}</span>
                       <span>{m.credentials}</span>
