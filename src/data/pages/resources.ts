@@ -116,4 +116,15 @@ export const resources: Page[] = [
     ],
     related: ['/about-us/licences/', '/services/work-visa/', '/fees/'],
   },
+  {
+    path: '/blog/', crumb: 'Blog', wide: true,
+    title: 'Immigration and Overseas Job Updates from Kerala | Mount Bell Blog',
+    description: 'Dated updates from Mount Bell on visa rules, nursing registration and overseas jobs, written for applicants from Kerala.',
+    h1: 'Visa, Migration and Overseas Job Updates',
+    lede: 'Visa rules change often. Each post is dated, so you can see how recent the information is before you rely on it.',
+    blocks: [
+      { type: 'posts', empty: 'New posts are on the way. Until then, our <a href="/resources/">immigration guides</a> cover the main routes.' },
+    ],
+    related: ['/resources/', '/resources/faqs/', '/resources/avoid-visa-fraud/'],
+  },
 ];

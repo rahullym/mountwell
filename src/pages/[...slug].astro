@@ -1,10 +1,12 @@
 ---
+// Rendered on request and cached on Vercel's edge (ISR), so CMS edits show up without a rebuild.
 import Page from '../components/Page.astro';
 import { pages } from '../data/pages';
 
-export function getStaticPaths() {
-  return pages.map((page) => ({ params: { slug: page.path.replace(/^\/|\/$/g, '') }, props: { page } }));
-}
-const { page } = Astro.props;
+export const prerender = false;
+
+const path = `/${Astro.params.slug ?? ''}/`.replace(/\/+/g, '/');
+const page = pages.find((p) => p.path === path);
+if (!page) return new Response(null, { status: 404 });
 ---
 <Page page={page} />

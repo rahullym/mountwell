@@ -4,7 +4,8 @@ import Base from '../layouts/Base.astro';
 import Icon from './Icon.astro';
 import LeadForm from './LeadForm.astro';
 import FinalCta from './FinalCta.astro';
-import { site, waLink, photoAlt, reviews, teamPhotos, galleryPhotos } from '../data/site';
+import { site, waLink, photoAlt, teamPhotos, galleryPhotos } from '../data/site';
+import { getReviews, getOpenings, getPosts, formatDate, openingCategories } from '../lib/content';
 import { pageAt, trail } from '../data/pages';
 import type { Page } from '../data/pages/types';
 
@@ -15,6 +16,17 @@ const wa = waLink(page.wa ?? `Hi Mount Bell, I have a question about ${page.crum
 const photo = page.photo ?? (page.img ? { src: `/img/dest/${page.img}-wide.webp`, alt: photoAlt[page.img], w: 1400, h: 820 } : null);
 const related = (page.related ?? []).map(pageAt);
 const hasForm = page.blocks.some((b) => b.type === 'form');
+
+// Blocks filled from the CMS. Only queried when the page uses them.
+const uses = (t: string) => page.blocks.some((b) => b.type === t);
+const reviews = uses('reviews') ? await getReviews() : [];
+const openingSets = new Map(await Promise.all(page.blocks.flatMap((b) => (b.type === 'openings' ? [b.category ?? 'all'] : []))
+  .map(async (c) => [c, await getOpenings(c === 'all' ? undefined : c)] as const)));
+const posts = uses('posts') ? await getPosts() : [];
+const categoryName = Object.fromEntries(openingCategories);
+const waApply = (title: string, country: string) => waLink(`Hi Mount Bell, I would like to apply for the ${title} opening in ${country}.`);
+// Openings blocks on hub pages disappear when there is nothing open; the openings page shows its empty message.
+const visible = page.blocks.filter((b) => b.type !== 'openings' || b.empty || (openingSets.get(b.category ?? 'all')?.length ?? 0) > 0);
 
 const schema: object[] = [{
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
@@ -50,7 +62,7 @@ if (faqItems.length) schema.push({ '@context': 'https://schema.org', '@type': 'F
 
     <div class:list={['doc', page.wide && 'wide']}>
       <div class="doc-main">
-        {page.blocks.map((b) => (
+        {visible.map((b) => (
           <section class:list={['blk', b.type === 'prose' && b.h3 && !b.h2 && 'blk-sub']}>
             {'h2' in b && b.h2 && <h2>{b.h2}</h2>}
             {'intro' in b && b.intro && <p class="intro" set:html={b.intro} />}
@@ -158,9 +170,60 @@ if (faqItems.length) schema.push({ '@context': 'https://schema.org', '@type': 'F
                 {reviews.map((r) => (
                   <figure class="story" style="margin:0">
                     <blockquote>{r.text}</blockquote>
-                    <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('')}</i><div><strong>{r.name}</strong><span>Mount Bell client</span></div></figcaption>
+                    <figcaption><i aria-hidden="true">{r.name.split(' ').map((w) => w[0]).join('').slice(0, 3)}</i><div><strong>{r.name}</strong><span>{r.role}</span></div></figcaption>
                   </figure>
                 ))}
+              </div>
+            )}
+
+            {b.type === 'openings' && (() => {
+              const list = openingSets.get(b.category ?? 'all') ?? [];
+              return list.length === 0 ? (
+                b.empty && <div class="blk-note"><p set:html={b.empty} /></div>
+              ) : (
+                <>
+                  <ul class="openings">
+                    {list.map((o) => (
+                      <li class="opening" id={`opening-${o.id}`}>
+                        <p class="opening-meta"><span class="label">{categoryName[o.category] ?? o.category}</span><span>{[o.location, o.country].filter(Boolean).join(', ')}</span></p>
+                        <h3>{o.title}</h3>
+                        {o.salary && <p class="opening-salary">{o.salary}</p>}
+                        <p>{o.summary}</p>
+                        {o.requirements.trim() && <ul class="dots">{o.requirements.split('\n').map((r) => r.trim()).filter(Boolean).map((r) => <li>{r}</li>)}</ul>}
+                        <div class="opening-foot">
+                          <a class="btn btn-wa btn-sm" href={waApply(o.title, o.country)} target="_blank" rel="noopener"><Icon name="whatsapp" size={18} /> Apply on WhatsApp</a>
+                          <span class="small muted">Listed {formatDate(o.created_at)}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                  {b.more && <p style="margin:20px 0 0"><a class="arrow-link" href="/overseas-jobs/openings/">All current openings <Icon name="arrow" size={17} /></a></p>}
+                </>
+              );
+            })()}
+
+            {b.type === 'posts' && (
+              posts.length === 0 ? (
+                b.empty && <div class="blk-note"><p set:html={b.empty} /></div>
+              ) : (
+                <div class="updates">
+                  {posts.map((p) => (
+                    <article class="update">
+                      <img src={`/img/dest/${p.img}-mid.webp`} alt="" width="640" height="440" loading="lazy" decoding="async" />
+                      <span class="label">{p.tag}</span>
+                      <h3><a href={`/blog/${p.slug}/`}>{p.title}</a></h3>
+                      <p>{p.excerpt}</p>
+                      <p class="update-date">{formatDate(p.published_at)}</p>
+                    </article>
+                  ))}
+                </div>
+              )
+            )}
+
+            {b.type === 'html' && (
+              <div class="article">
+                {b.date && <p class="article-date">{b.date}</p>}
+                <Fragment set:html={b.html} />
               </div>
             )}
 

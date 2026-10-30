@@ -1,0 +1,36 @@
+---
+import Admin from '../../layouts/Admin.astro';
+import { login, startSession } from '../../lib/auth';
+
+export const prerender = false;
+
+const next = Astro.url.searchParams.get('next');
+const safeNext = next && next.startsWith('/admin/') && !next.startsWith('//') ? next : '/admin/';
+if (Astro.locals.user) return Astro.redirect(safeNext);
+
+let error = '';
+let email = '';
+if (Astro.request.method === 'POST') {
+  const form = await Astro.request.formData();
+  email = String(form.get('email') ?? '');
+  const result = await login(email, String(form.get('password') ?? ''));
+  if (typeof result === 'string') error = result;
+  else {
+    await startSession(result.id, Astro.cookies, Astro.url.protocol === 'https:');
+    return Astro.redirect(safeNext);
+  }
+}
+---
+<Admin title="Sign in">
+  <div style="max-width:380px;margin:8vh auto 0">
+    <img src="/logo.png" alt="Mount Bell" style="height:48px;width:auto;margin-bottom:24px" />
+    <h1>Sign in to the admin</h1>
+    <p class="intro">For Mount Bell staff. Ask an existing admin to add you if you do not have a login.</p>
+    {error && <p class="msg err" role="alert">{error}</p>}
+    <form method="post" class="edit">
+      <label>Email<input type="email" name="email" value={email} required autocomplete="username" autofocus /></label>
+      <label>Password<input type="password" name="password" required autocomplete="current-password" /></label>
+      <div class="acts"><button class="btn">Sign in</button></div>
+    </form>
+  </div>
+</Admin>
