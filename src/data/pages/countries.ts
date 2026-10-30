@@ -728,7 +728,7 @@ export const countries: Page[] = [
           { title: 'Zero visa fraud', text: 'We never sell jobs or make deceptive visa guarantees.' },
           { title: 'Local Kerala presence', text: 'Offices in Thrissur and Kochi with dedicated Australian immigration specialists.' },
         ],
-        after: ['<a href="/about/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
+        after: ['<a href="/about-us/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
       },
       {
         type: 'faq',
@@ -974,7 +974,7 @@ export const countries: Page[] = [
           { title: 'Ethical recruitment licence', text: 'MEA-licensed agency with no hidden fees or bogus job charges.' },
           { title: 'Full family visa support', text: 'Partner and dependent children included seamlessly on your file.' },
         ],
-        after: ['<a href="/about/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
+        after: ['<a href="/about-us/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
       },
       {
         type: 'faq',
@@ -1223,7 +1223,7 @@ export const countries: Page[] = [
           { title: 'Employer & points pathways', text: 'Objective comparison between Skills in Demand employer sponsorship and points PR.' },
           { title: 'Clear fee stages', text: 'All government fees, skills assessment charges, and agency costs quoted upfront.' },
         ],
-        after: ['<a href="/about/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
+        after: ['<a href="/about-us/">About Mountbell &rarr;</a> &nbsp;·&nbsp; <a href="/countries/australia/">Australia hub &rarr;</a>'],
       },
       {
         type: 'faq',

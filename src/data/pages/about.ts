@@ -5,7 +5,7 @@ const founded = site.foundedYear ? [['Established', String(site.foundedYear)] as
 
 export const about: Page[] = [
   {
-    path: '/about/', crumb: 'About Mountbell', wide: true,
+    path: '/about-us/', crumb: 'About Mountbell', wide: true,
     title: 'About Mountbell | Immigration Consultancy, Thrissur and Kochi',
     description: 'About Mountbell: a licensed immigration and overseas recruitment consultancy with offices in Thrissur and Kochi, registered as Mount Bell Global Studies.',
     h1: 'About Mountbell',
@@ -27,8 +27,8 @@ export const about: Page[] = [
       ] },
       { type: 'checks', h2: 'Why choose Mountbell', items: reasons },
       { type: 'links', h2: 'More about us', items: [
-        { title: 'Our team', text: 'The consultants you meet in Thrissur and Kochi.', href: '/about/team/' },
-        { title: 'Licences and accreditations', text: 'Our MEA licence number and how to verify it yourself on eMigrate.', href: '/about/licences/' },
+        { title: 'Our team', text: 'The consultants you meet in Thrissur and Kochi.', href: '/about-us/team/' },
+        { title: 'Licences and accreditations', text: 'Our MEA licence number and how to verify it yourself on eMigrate.', href: '/about-us/licences/' },
         { title: 'How it works', text: 'The six stages from your first assessment to your first week abroad.', href: '/how-it-works/' },
         { title: 'Fees', text: 'What we charge for, what is paid to others, and when each payment falls due.', href: '/fees/' },
         { title: 'Success stories', text: 'Clients in their own words, and photos from travel days.', href: '/success-stories/' },
@@ -36,7 +36,7 @@ export const about: Page[] = [
     ],
   },
   {
-    path: '/about/team/', crumb: 'Our team',
+    path: '/about-us/team/', crumb: 'Our team',
     title: 'Mountbell Immigration Team | Thrissur and Kochi',
     description: 'Meet the Mountbell immigration team in Thrissur and Kochi: the consultants who assess your profile, prepare your file and stay with you until you travel.',
     // Left out of search until named adviser profiles are added to site.team.
@@ -55,10 +55,10 @@ export const about: Page[] = [
         ['Meetings', 'In person, by phone or by video call'],
       ] },
     ],
-    related: ['/about/', '/about/licences/', '/how-it-works/'],
+    related: ['/about-us/', '/about-us/licences/', '/how-it-works/'],
   },
   {
-    path: '/about/licences/', crumb: 'Licences and accreditations',
+    path: '/about-us/licences/', crumb: 'Licences and accreditations',
     title: 'Mountbell MEA Licence and Accreditations',
     description: `Mountbell's MEA Recruiting Agent licence number is ${site.licence.number}. See what the licence covers and how to verify it on the eMigrate portal.`,
     h1: 'Mountbell MEA Licence and Accreditations',
@@ -77,10 +77,60 @@ export const about: Page[] = [
       ] },
       { type: 'note', text: 'Run the same check on every agent you speak to. Our guide on <a href="/resources/avoid-visa-fraud/">how to identify fake immigration agents</a> lists the other warning signs.' },
     ],
-    related: ['/resources/avoid-visa-fraud/', '/about/', '/fees/'],
+    related: ['/resources/avoid-visa-fraud/', '/about-us/', '/fees/'],
   },
   {
-    path: '/how-it-works/', parent: '/about/', crumb: 'How it works',
+    path: '/privacy-policy/', crumb: 'Privacy policy',
+    title: 'Privacy Policy | Mountbell',
+    description: `How ${site.legalName} (Mountbell) collects, uses and protects the personal details you share through this website, by phone, on WhatsApp and in our offices.`,
+    h1: 'Privacy Policy',
+    lede: `This policy explains what personal details Mountbell (${site.legalName}) collects, why we need them, who we share them with and how you can ask us to change or delete them.`,
+    // Review with the client before launch. If analytics, ad pixels or a CRM form endpoint are added, update the sections below.
+    blocks: [
+      { type: 'prose', h2: 'What we collect', body: [
+        'When you fill in a form on this website we ask for your name, mobile number, profession, preferred country and years of experience. The eligibility tools and points calculators work in your browser, and the answers stay on your device unless you choose to send them to us.',
+        'If you go ahead with a programme, we ask for the documents that the application needs. These usually include:',
+      ], list: [
+        'Your passport and other identity documents',
+        'Educational certificates, mark sheets and professional registrations',
+        'Employment letters, payslips and references',
+        'Language test results',
+        'Other documents a visa office, employer or assessing body asks for',
+      ] },
+      { type: 'prose', h2: 'How we use your details', body: [
+        'We use your details to assess your profile, contact you about the routes open to you, prepare and submit your applications, and keep you updated on their progress. We do not sell your details or share them for marketing by anyone else.',
+      ] },
+      { type: 'prose', h2: 'Who we share them with', body: [
+        'We share your details only where your application needs it, with:',
+      ], list: [
+        'Embassies, visa offices and immigration authorities',
+        'Employers and recruiters overseas',
+        'Skills assessment, credential and professional registration bodies',
+        'Universities and training providers',
+        'Indian government portals such as eMigrate, where the law requires it',
+      ], after: [
+        'Each of these organisations handles your data under its own policies and the laws of its country.',
+      ] },
+      { type: 'prose', h2: 'WhatsApp, maps and other services', body: [
+        'When you send a form, it opens WhatsApp with your details filled in, and nothing is sent until you press send. Messages on WhatsApp are covered by WhatsApp’s own privacy policy as well as this one.',
+        'Our office maps are shown through Google Maps, and Google may set cookies when a map loads. This website does not use advertising cookies.',
+      ] },
+      { type: 'prose', h2: 'How long we keep your details', body: [
+        'We keep your details for as long as we need them to work on your application, and after that only as long as the law requires us to keep records.',
+      ] },
+      { type: 'prose', h2: 'Your rights', body: [
+        'Under India’s Digital Personal Data Protection Act, 2023, you can ask us for a summary of the personal details we hold about you, ask us to correct or update them, ask us to delete them, and withdraw your consent at any time. Deleting your details may stop an application that is still in progress.',
+        `To make a request or raise a concern, email <a href="mailto:${site.email}">${site.email}</a>, call <a href="tel:${site.phone.tel}">${site.phone.display}</a>, or visit our Kochi or Thrissur office.`,
+      ] },
+      { type: 'prose', h2: 'Changes to this policy', body: [
+        'We will update this page if the way we handle your details changes. The date at the foot of each page shows when the site was last updated.',
+      ] },
+      { type: 'offices', h2: 'Contact us' },
+    ],
+    cta: false,
+  },
+  {
+    path: '/how-it-works/', parent: '/about-us/', crumb: 'How it works',
     title: 'Immigration Process from Kerala, Step by Step | Mountbell',
     description: 'The immigration process from Kerala in six stages: assessment, country matching, documents and recognition, language exams, visa filing and departure.',
     h1: 'The Immigration Process from Kerala, Step by Step',
@@ -108,7 +158,7 @@ export const about: Page[] = [
     related: ['/free-immigration-assessment/', '/fees/', '/services/visa-documentation/'],
   },
   {
-    path: '/fees/', parent: '/about/', crumb: 'Fees',
+    path: '/fees/', parent: '/about-us/', crumb: 'Fees',
     title: 'Immigration Consultant Fees: How Mountbell Charges',
     description: 'How immigration consultant fees work at Mountbell: a free first assessment, a written fee schedule per programme, staged payments and stated refund terms.',
     h1: 'Immigration Consultant Fees at Mountbell',
@@ -132,7 +182,7 @@ export const about: Page[] = [
         { q: 'What happens if my visa is refused?', a: 'Visa decisions are made by the destination country, and no consultant can guarantee one. Your agreement sets out which parts of our fee are refundable in that case. Fees already paid to governments, exam bodies and assessing authorities are generally not returned by those bodies.' },
       ] },
     ],
-    related: ['/free-immigration-assessment/', '/how-it-works/', '/about/licences/'],
+    related: ['/free-immigration-assessment/', '/how-it-works/', '/about-us/licences/'],
   },
   {
     path: '/success-stories/', crumb: 'Success stories', wide: true,
@@ -149,6 +199,6 @@ export const about: Page[] = [
         'That is why the first thing we do is an honest eligibility assessment. If you would like to speak to a past client who took the route you are considering, ask your consultant.',
       ] },
     ],
-    related: ['/free-immigration-assessment/', '/nursing-careers/', '/about/'],
+    related: ['/free-immigration-assessment/', '/nursing-careers/', '/about-us/'],
   },
 ];

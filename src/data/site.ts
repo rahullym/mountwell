@@ -323,7 +323,7 @@ export const faqs: { q: string; a: string; href?: string; link?: string }[] = [
   {
     q: 'Can I get an immigration consultation in Malayalam?',
     a: 'Yes. We are Malayalam-speaking immigration consultants, and you can choose Malayalam or English for your meeting. Parents and spouses are welcome to join, so the whole family understands the process, costs and timeline before deciding.',
-    href: '/contact/', link: 'Office addresses',
+    href: '/contact-us/', link: 'Office addresses',
   },
 ];
 
@@ -372,14 +372,14 @@ export const menu: { label: string; href: string; id: string; items?: { label: s
     { label: 'Avoid visa fraud', href: '/resources/avoid-visa-fraud/' },
     { label: 'Success stories', href: '/success-stories/' },
   ] },
-  { label: 'About', id: 'about', href: '/about/', items: [
-    { label: 'About Mountbell', href: '/about/' },
-    { label: 'Our team', href: '/about/team/' },
-    { label: 'Licences and accreditations', href: '/about/licences/' },
+  { label: 'About', id: 'about', href: '/about-us/', items: [
+    { label: 'About Mountbell', href: '/about-us/' },
+    { label: 'Our team', href: '/about-us/team/' },
+    { label: 'Licences and accreditations', href: '/about-us/licences/' },
     { label: 'How it works', href: '/how-it-works/' },
     { label: 'Fees', href: '/fees/' },
   ] },
-  { label: 'Contact', id: 'contact', href: '/contact/' },
+  { label: 'Contact', id: 'contact', href: '/contact-us/' },
 ];
 
 // City pages. Only cities with an office or local proof are listed.

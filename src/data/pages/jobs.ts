@@ -42,7 +42,7 @@ export const jobs: Page[] = [
       ] },
       { type: 'prose', h2: 'Vacancies change, the checks do not', body: [
         'Openings depend on what employers need at the time, so we do not publish a standing list of jobs that may already be filled. Ask a consultant what is open for your trade this month.',
-        'Whoever you apply through, check that the agent is licensed. Our licence number is on <a href="/about/licences/">this page</a>, and <a href="/resources/avoid-visa-fraud/">this guide</a> explains how to spot a fake job offer.',
+        'Whoever you apply through, check that the agent is licensed. Our licence number is on <a href="/about-us/licences/">this page</a>, and <a href="/resources/avoid-visa-fraud/">this guide</a> explains how to spot a fake job offer.',
       ] },
     ],
     related: ['/services/work-visa/', '/countries/', '/tools/immigration-eligibility-checker/'],

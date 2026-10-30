@@ -71,7 +71,7 @@ export const resources: Page[] = [
         { title: 'What documents do I need for a visa?', text: 'The documents most applicants need and how we check them.', href: '/services/visa-documentation/' },
         { title: 'How long does the process take?', text: 'The six stages and why timelines differ by route.', href: '/how-it-works/' },
         { title: 'How do I know an agent is genuine and licensed?', text: 'Eight checks, starting with eMigrate.', href: '/resources/avoid-visa-fraud/' },
-        { title: 'Is Mountbell licensed?', text: 'Our MEA licence number and how to verify it.', href: '/about/licences/' },
+        { title: 'Is Mountbell licensed?', text: 'Our MEA licence number and how to verify it.', href: '/about-us/licences/' },
         { title: 'Is the first consultation free?', text: 'Yes. Book it here, in Thrissur, Kochi or online.', href: '/free-immigration-assessment/' },
       ] },
     ],
@@ -114,6 +114,6 @@ export const resources: Page[] = [
         { q: 'Does a licence guarantee I will get the job or the visa?', a: 'No. A licence means the agent is registered and accountable. The employer still decides whom to hire, and the foreign government decides on the visa.' },
       ] },
     ],
-    related: ['/about/licences/', '/services/work-visa/', '/fees/'],
+    related: ['/about-us/licences/', '/services/work-visa/', '/fees/'],
   },
 ];
