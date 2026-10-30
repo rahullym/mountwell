@@ -1,0 +1,129 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/immigration/",
+      "destination": "/countries/",
+      "statusCode": 301
+    },
+    {
+      "source": "/assistance/",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/courses/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gallery/",
+      "destination": "/about-us/",
+      "statusCode": 301
+    },
+    {
+      "source": "/video-gallery/",
+      "destination": "/about-us/",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy-policy-2/",
+      "destination": "/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/10-key-things-to-remember-when-studying-in-finland/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/top-5-reasons-to-attend-study-abroad-education-fair/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/uk-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/canada-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/australia-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/newzealand-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ireland-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/france-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/germany-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/dubai-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sweden-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/netherlands-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/finland-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/latvia-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    },
+    {
+      "source": "/malta-study-abroad-agency/",
+      "destination": "/study-abroad/",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<host>.*)\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ]
+}
