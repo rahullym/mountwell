@@ -157,7 +157,8 @@
   .pw-photo { margin: 0 6px 6px 0; box-shadow: 6px 6px 0 var(--c, var(--green)); }
   .proc { grid-template-columns: 1fr; }
   .nurse { grid-template-columns: 1fr; grid-template-areas: 'copy' 'art' 'list' 'acts'; }
-  .nurse-art { margin-top: 28px; min-height: 0; aspect-ratio: 4 / 3.4; max-width: 560px; }
+  .nurse-art { align-self: start; width: calc(100% - 14px); margin-top: 28px; min-height: 0; max-width: 560px; }
+  .nurse-art img { position: relative; display: block; height: auto; aspect-ratio: 4 / 3.4; }
   .proc-art { position: relative; top: 0; max-width: 560px; }
   .proc-art img { aspect-ratio: 16 / 10; }
   .why-photo { max-width: 320px; }
@@ -165,7 +166,7 @@
 }
 @media (max-width: 560px) {
   .nurse-list li { grid-template-columns: 54px minmax(0, 1fr) auto; gap: 14px; }
-  .nurse-art { min-height: 0; aspect-ratio: 4 / 4.2; }
+  .nurse-art img { aspect-ratio: 4 / 4.2; }
   .nurse-list img { width: 54px; height: 54px; }
   .nurse-acts .btn { width: 100%; }
   .proc .steps { grid-template-columns: 1fr; }
