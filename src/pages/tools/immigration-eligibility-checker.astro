@@ -41,6 +41,8 @@ const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', it
   { '@type': 'ListItem', position: 2, name: 'Tools', item: site.url + '/tools/' },
   { '@type': 'ListItem', position: 3, name: 'Immigration eligibility calculator', item: site.url + '/tools/immigration-eligibility-checker/' },
 ] };
+
+export const prerender = false;
 ---
 <Base title={title} description={description} schema={[crumbs]}>
   <div class="wrap">

@@ -1,0 +1,65 @@
+---
+import Admin from '../../layouts/Admin.astro';
+import { requireDb } from '../../lib/db';
+import { settings, clean, savedSettings } from '../../lib/settings';
+import { revalidate } from '../../lib/revalidate';
+import { pages } from '../../data/pages';
+
+export const prerender = false;
+
+const sql = requireDb();
+let values = await savedSettings();
+let error = '';
+let notice = Astro.url.searchParams.get('done') === 'saved' ? 'Saved. Every page on the site now shows the new details.' : '';
+
+// Every public page shows some of these details (at least in the footer).
+const toolPaths = Object.keys(import.meta.glob('../tools/*.astro')).map((f) => `/tools/${f.split('/').pop()!.replace('.astro', '')}/`);
+async function allPaths() {
+  const posts = await sql<{ slug: string }[]>`select slug from posts where published`;
+  return ['/', '/blog/', '/image-credits/', ...pages.map((p) => p.path), ...toolPaths, ...posts.map((p) => `/blog/${p.slug}/`)];
+}
+
+if (Astro.request.method === 'POST') {
+  const form = await Astro.request.formData();
+  try {
+    const next: Record<string, string> = {};
+    for (const s of settings) next[s.key] = clean(s, String(form.get(s.key) ?? ''));
+    for (const s of settings) {
+      if (next[s.key] === s.builtIn) await sql`delete from settings where key = ${s.key}`;
+      else await sql`insert into settings (key, value) values (${s.key}, ${next[s.key]})
+        on conflict (key) do update set value = excluded.value, updated_at = now()`;
+    }
+    await revalidate(Astro.url.origin, await allPaths());
+    return Astro.redirect('/admin/settings/?done=saved');
+  } catch (err: any) {
+    error = err?.message ?? 'Something went wrong while saving.';
+    values = Object.fromEntries(settings.map((s) => [s.key, String(form.get(s.key) ?? '')]));
+    notice = '';
+  }
+}
+---
+<Admin title="Site details" user={Astro.locals.user} active="settings">
+  <h1>Site details</h1>
+  <p class="intro">Contact details shown across the whole website: header, footer, contact and city pages, WhatsApp buttons and the information Google reads. Change a value and save; every page updates within a minute.</p>
+  {notice && <p class="msg ok" role="status">{notice}</p>}
+  {error && <p class="msg err" role="alert">{error}</p>}
+  <form method="post" class="edit" data-edit>
+    {settings.map((s) => (
+      <label>
+        {s.label}
+        <input type={s.kind === 'email' ? 'email' : s.kind === 'url' ? 'url' : 'text'} name={s.key} value={values[s.key] ?? s.builtIn} required
+          inputmode={s.kind === 'phone' || s.kind === 'whatsapp' ? 'tel' : undefined} autocomplete="off" />
+        {s.help && <small>{s.help}</small>}
+      </label>
+    ))}
+    <p style="margin:0;color:var(--ink-3);font-size:0.9rem">Office addresses, the licence number and page text are changed by your web developer.</p>
+    <div class="acts save-bar">
+      <button class="btn">Save changes</button>
+      <a href="/admin/">Cancel</a>
+    </div>
+  </form>
+</Admin>
+
+<script>
+  import '../../scripts/admin-edit';
+</script>

@@ -18,5 +18,6 @@ const counts = await Promise.all(collections.map(async (c) => {
     {collections.map((c, i) => (
       <a class="card" href={`/admin/list/?c=${c.key}`}><strong>{c.label}</strong><span>{c.intro.split('. ')[0]}.</span><b>{counts[i]}</b></a>
     ))}
+    <a class="card" href="/admin/settings/"><strong>Site details</strong><span>Phone numbers, WhatsApp, email and social links shown on every page.</span></a>
   </div>
 </Admin>

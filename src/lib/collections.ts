@@ -96,6 +96,22 @@ export const collections: Collection[] = [
     revalidate: () => ['/'],
   },
   {
+    key: 'cards', table: 'cards', label: 'Home updates', singular: 'card',
+    intro: 'The "Latest updates" cards on the home page, each linking to a guide on this site. Your newest blog posts take the first places; these cards fill the rest (three cards in total).',
+    fields: [
+      { name: 'title', label: 'Title', type: 'text', required: true },
+      { name: 'excerpt', label: 'Summary', type: 'textarea', required: true, rows: 2, help: 'One short sentence.' },
+      { name: 'href', label: 'Link address', type: 'text', required: true, help: 'The page the card opens, for example: /resources/avoid-visa-fraud/' },
+      { name: 'img', label: 'Photo', type: 'photo', default: 'kerala' },
+      { name: 'tag', label: 'Tag', type: 'text', required: true, default: 'Guide', help: 'A short label such as Germany, Nursing or Guide.' },
+      { name: 'sort', label: 'Order', type: 'number', default: 0, help: 'Lower numbers come first.' },
+      { name: 'published', label: 'Show on the site', type: 'checkbox', default: true },
+    ],
+    list: [{ name: 'title', label: 'Title' }, { name: 'tag', label: 'Tag' }, { name: 'sort', label: 'Order' }, { name: 'published', label: 'Status' }],
+    order: 'sort, id',
+    revalidate: () => ['/'],
+  },
+  {
     key: 'users', table: 'users', label: 'Staff logins', singular: 'login',
     intro: 'People who can sign in to this admin.',
     fields: [

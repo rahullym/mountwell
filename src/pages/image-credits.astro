@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import credits from '../data/image-credits.json';
 const place: Record<string, string> = { hero: 'Homepage banner (Kochi)', kerala: 'Kerala', maldives: 'Maldives', malta: 'Malta', europe: 'Europe (Riga)', germany: 'Germany', netherlands: 'Netherlands', denmark: 'Denmark', canada: 'Canada', australia: 'Australia', nursing: 'Nursing Careers' };
+
+export const prerender = false;
 ---
 <Base title="Image credits | Mount Bell" description="Sources and licences for the photographs used on the Mount Bell website.">
   <div class="wrap">

@@ -60,7 +60,7 @@ if (Astro.request.method === 'POST') {
       if (!values.slug) throw new Error('The web address needs at least one letter or number.');
       if (values.published && !values.published_at) values.published_at = new Date();
     }
-    if (c.key === 'faqs' && values.href && !/^(\/|https?:\/\/)/.test(values.href)) throw new Error('The link address should start with / (a page on this site) or https://.');
+    if ((c.key === 'faqs' || c.key === 'cards') && values.href && !/^(\/|https?:\/\/)/.test(values.href)) throw new Error('The link address should start with / (a page on this site) or https://.');
     if (c.key === 'users') {
       values.email = values.email.toLowerCase();
       const pw = values.password as string;
@@ -110,7 +110,7 @@ const needsPhotos = c.fields.some((f) => f.type === 'photo');
 const uploads = needsPhotos ? (await sql<{ id: number; name: string }[]>`select id, name from media order by id desc limit 40`).map((m) => ({ value: `/media/${m.id}`, label: m.name || 'Uploaded photo' })) : [];
 const choices = [...uploads, ...presetPhotos.map((p) => ({ value: p, label: photoAltFor(p) }))];
 const val = (f: Field) => (f.type === 'password' ? '' : values[f.name] ?? '');
-const publicUrl = c.key === 'posts' && before?.published ? `/blog/${before.slug}/` : c.key === 'openings' ? '/overseas-jobs/openings/' : c.key === 'reviews' || c.key === 'faqs' ? '/' : null;
+const publicUrl = c.key === 'posts' && before?.published ? `/blog/${before.slug}/` : c.key === 'openings' ? '/overseas-jobs/openings/' : c.key === 'reviews' || c.key === 'faqs' || c.key === 'cards' ? '/' : null;
 ---
 <Admin title={isNew ? `Add ${c.singular}` : `Edit ${c.singular}`} user={me} active={c.key}>
   <p style="margin:0 0 10px"><a href={listUrl}>← {c.label}</a></p>

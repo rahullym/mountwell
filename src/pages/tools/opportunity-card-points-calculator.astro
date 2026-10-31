@@ -40,6 +40,8 @@ const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', it
   { '@type': 'ListItem', position: 2, name: 'Tools', item: site.url + '/tools/' },
   { '@type': 'ListItem', position: 3, name: 'Germany Opportunity Card points calculator', item: site.url + '/tools/opportunity-card-points-calculator/' },
 ] };
+
+export const prerender = false;
 ---
 <Base title={title} description={description} schema={[crumbs]}>
   <div class="wrap">

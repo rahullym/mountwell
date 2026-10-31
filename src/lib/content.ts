@@ -68,11 +68,18 @@ export function getOpenings(category?: 'nursing' | 'jobs'): Promise<Opening[]> {
   }, []);
 }
 
-// Home page "Latest updates": newest blog posts first, topped up with the built-in guides.
+// Home page "Latest updates": newest blog posts first, topped up with the cards from Home updates.
 export async function getUpdateCards(): Promise<UpdateCard[]> {
-  const posts = await getPosts(3);
-  const cards = posts.map((p) => ({ tag: p.tag, img: p.img, title: p.title, excerpt: p.excerpt, href: `/blog/${p.slug}/` }));
-  return [...cards, ...staticUpdates].slice(0, 3);
+  const [posts, cards] = await Promise.all([getPosts(3), getCards()]);
+  const fromPosts = posts.map((p) => ({ tag: p.tag, img: p.img, title: p.title, excerpt: p.excerpt, href: `/blog/${p.slug}/` }));
+  return [...fromPosts, ...cards].slice(0, 3);
+}
+
+function getCards(): Promise<UpdateCard[]> {
+  return safe('cards', async () => {
+    const rows = await db()!<UpdateCard[]>`select tag, img, title, excerpt, href from cards where published order by sort, id`;
+    return rows.length ? [...rows] : staticUpdates;
+  }, staticUpdates);
 }
 
 export const formatDate = (d: Date) => new Date(d).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' });
