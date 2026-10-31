@@ -19,9 +19,9 @@ export const site = {
 
   phone: { display: '+91 92070 14777', tel: '+919207014777' },
   whatsapp: '919207014777',
-  // Leave empty to hand the lead to WhatsApp. Set to a form endpoint (CRM, Formspree,
-  // a serverless function) to POST the lead as JSON as well.
-  formEndpoint: '',
+  // Leads are always handed to WhatsApp. They are also POSTed as JSON here, which emails
+  // them to the office through Resend (src/pages/api/lead.ts). Leave empty to turn that off.
+  formEndpoint: '/api/lead/',
 
   // Verified figures only. null = not shown.
   foundedYear: 2017 as number | null,

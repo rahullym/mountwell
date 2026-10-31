@@ -13,7 +13,7 @@ const apacheRedirects = {
   },
 };
 
-// Admin pages must never be cached. The adapter writes their routes without the trailing slash this
+// Admin pages and /api/ routes must never be cached. The adapter writes their routes without the trailing slash this
 // site uses (^/admin/edit$), so /admin/edit/ would fall through to the cached catch-all route.
 // This rewrites them to accept the slash. It fails the build if the routes are not where expected.
 const adminRoutesFix = {
@@ -23,13 +23,16 @@ const adminRoutesFix = {
       const file = new URL('./.vercel/output/config.json', import.meta.url);
       const config = JSON.parse(await readFile(file, 'utf8'));
       let fixed = 0;
+      let api = 0;
       for (const r of config.routes) {
-        if (typeof r.src === 'string' && /^\^\/admin(\/[a-z]+)?\$$/.test(r.src) && r.dest === '_render') {
-          r.src = r.src.replace(/\$$/, '/?$');
-          fixed++;
-        }
+        if (typeof r.src !== 'string' || r.dest !== '_render') continue;
+        if (/^\^\/admin(\/[a-z]+)?\$$/.test(r.src)) fixed++;
+        else if (/^\^\/api\/[a-z]+\$$/.test(r.src)) api++;
+        else continue;
+        r.src = r.src.replace(/\$$/, '/?$');
       }
       if (fixed < 5) throw new Error(`admin-routes-fix: expected 5 admin routes in .vercel/output/config.json, found ${fixed}`);
+      if (api < 1) throw new Error('admin-routes-fix: expected the /api/lead route in .vercel/output/config.json');
       await writeFile(file, JSON.stringify(config, null, '\t'));
     },
   },
@@ -39,7 +42,7 @@ const adminRoutesFix = {
 // a page the moment it is saved; without it, cached pages refresh at most a minute later.
 const bypassToken = process.env.ISR_BYPASS_TOKEN;
 const isr = {
-  exclude: [/^\/admin(\/.*)?$/],
+  exclude: [/^\/admin(\/.*)?$/, /^\/api(\/.*)?$/],
   ...(bypassToken ? { bypassToken, expiration: false } : { expiration: 60 }),
 };
 
