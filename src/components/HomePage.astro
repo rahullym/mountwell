@@ -4,6 +4,7 @@ import Icon from './Icon.astro';
 import Hero from './Hero.astro';
 import FinalCta from './FinalCta.astro';
 import { getReviews, getFaqs, getUpdateCards } from '../lib/content';
+import { photoSrc } from '../lib/photos';
 import { site, countries, goals, professionGroups, homeServices, supportChips, nursing, training, steps, reasons, waLink, photoAlt, teamPhotos, processPhoto, nursingPhoto, galleryPhotos } from '../data/site';
 
 const title = 'Immigration Consultancy in Kerala – PR & Visas | Mount Bell';
@@ -421,7 +422,7 @@ const videoSchema = site.heroVideoId
       <div class="updates" data-reveal-group>
         {updates.map((u) => (
           <article class="update">
-            <img src={`/img/dest/${u.img}-mid.webp`} alt="" width="640" height="440" loading="lazy" decoding="async" />
+            <img src={photoSrc(u.img, 'mid')} alt="" width="640" height="440" loading="lazy" decoding="async" />
             <span class="label">{u.tag}</span>
             <h3><a href={u.href}>{u.title}</a></h3>
             <p>{u.excerpt}</p>

@@ -3,7 +3,7 @@
 import { pages } from '../data/pages';
 import { openingCategories } from './content';
 
-export type FieldType = 'text' | 'textarea' | 'markdown' | 'select' | 'checkbox' | 'number' | 'datetime' | 'email' | 'password';
+export type FieldType = 'text' | 'textarea' | 'markdown' | 'select' | 'checkbox' | 'number' | 'datetime' | 'email' | 'password' | 'photo';
 
 export interface Field {
   name: string;
@@ -28,9 +28,6 @@ export interface Collection {
   revalidate: (row: Record<string, any>, before?: Record<string, any>) => string[];
 }
 
-const images: [string, string][] = ['kerala', 'australia', 'canada', 'germany', 'denmark', 'malta', 'maldives', 'netherlands', 'europe']
-  .map((s) => [s, s[0].toUpperCase() + s.slice(1)]);
-
 const reviewPaths = ['/', ...pages.filter((p) => p.blocks.some((b) => b.type === 'reviews')).map((p) => p.path)];
 const openingPaths = ['/overseas-jobs/openings/', ...pages.filter((p) => p.blocks.some((b) => b.type === 'openings')).map((p) => p.path)];
 
@@ -40,13 +37,13 @@ export const collections: Collection[] = [
     intro: 'Guides and news. The three newest published posts appear in "Latest updates" on the home page.',
     fields: [
       { name: 'title', label: 'Title', type: 'text', required: true },
-      { name: 'slug', label: 'Web address', type: 'text', help: 'Becomes mountbell.com/blog/<this>/. Leave empty to make one from the title. Changing it later breaks old links.' },
       { name: 'excerpt', label: 'Summary', type: 'textarea', required: true, rows: 2, help: 'One or two sentences. Shown on cards and in Google results.' },
-      { name: 'body', label: 'Article', type: 'markdown', required: true, rows: 22, help: 'Markdown: ## for a heading, - for a bullet, [text](https://link) for a link, **bold**.' },
+      { name: 'img', label: 'Cover photo', type: 'photo', default: 'kerala', help: 'Shown at the top of the article and on its card. Upload your own or pick one of ours. Landscape photos work best.' },
+      { name: 'body', label: 'Article', type: 'markdown', required: true, rows: 22, help: 'Use the buttons above the box for headings, bold text, lists, links and photos. Press Preview to see how it will look.' },
       { name: 'tag', label: 'Tag', type: 'text', required: true, default: 'Update', help: 'A short label such as Germany, Nursing or Guide.' },
-      { name: 'img', label: 'Card photo', type: 'select', options: images, default: 'kerala' },
       { name: 'published', label: 'Published', type: 'checkbox', default: false, help: 'Leave unticked to save a draft that is not on the site.' },
       { name: 'published_at', label: 'Publish date', type: 'datetime', help: 'Filled in automatically the first time you publish. A future date schedules the post, but it only appears after the next save or deploy.' },
+      { name: 'slug', label: 'Web address', type: 'text', help: 'Becomes mountbell.com/blog/<this>/. Leave empty to make one from the title. Changing it later breaks old links.' },
     ],
     list: [{ name: 'title', label: 'Title' }, { name: 'tag', label: 'Tag' }, { name: 'published', label: 'Status' }, { name: 'published_at', label: 'Date' }],
     order: 'published_at desc nulls first, id desc',

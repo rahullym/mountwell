@@ -4,16 +4,17 @@ import Base from '../layouts/Base.astro';
 import Icon from './Icon.astro';
 import LeadForm from './LeadForm.astro';
 import FinalCta from './FinalCta.astro';
-import { site, waLink, photoAlt, teamPhotos, galleryPhotos } from '../data/site';
+import { site, waLink, teamPhotos, galleryPhotos } from '../data/site';
 import { getReviews, getOpenings, getPosts, formatDate, openingCategories } from '../lib/content';
 import { pageAt, trail } from '../data/pages';
+import { photoSrc, photoAltFor } from '../lib/photos';
 import type { Page } from '../data/pages/types';
 
 interface Props { page: Page }
 const { page } = Astro.props;
 const crumbs = trail(page);
 const wa = waLink(page.wa ?? `Hi Mount Bell, I have a question about ${page.crumb.toLowerCase()}.`);
-const photo = page.photo ?? (page.img ? { src: `/img/dest/${page.img}-wide.webp`, alt: photoAlt[page.img], w: 1400, h: 820 } : null);
+const photo = page.photo ?? (page.img ? { src: photoSrc(page.img, 'wide'), alt: photoAltFor(page.img), w: 1400, h: 820 } : null);
 const related = (page.related ?? []).map(pageAt);
 const hasForm = page.blocks.some((b) => b.type === 'form');
 
@@ -209,7 +210,7 @@ if (faqItems.length) schema.push({ '@context': 'https://schema.org', '@type': 'F
                 <div class="updates">
                   {posts.map((p) => (
                     <article class="update">
-                      <img src={`/img/dest/${p.img}-mid.webp`} alt="" width="640" height="440" loading="lazy" decoding="async" />
+                      <img src={photoSrc(p.img, 'mid')} alt="" width="640" height="440" loading="lazy" decoding="async" />
                       <span class="label">{p.tag}</span>
                       <h3><a href={`/blog/${p.slug}/`}>{p.title}</a></h3>
                       <p>{p.excerpt}</p>

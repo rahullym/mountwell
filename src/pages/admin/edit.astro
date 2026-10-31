@@ -4,6 +4,7 @@ import { collectionAt, slugify, type Field } from '../../lib/collections';
 import { requireDb } from '../../lib/db';
 import { hashPassword, passwordProblem } from '../../lib/auth';
 import { revalidate } from '../../lib/revalidate';
+import { presetPhotos, isValidPhoto, photoSrc, photoAltFor } from '../../lib/photos';
 
 export const prerender = false;
 
@@ -33,6 +34,7 @@ function read(form: FormData) {
     else if (f.type === 'number') out[f.name] = Number(raw) || 0;
     else if (f.type === 'datetime') out[f.name] = raw ? new Date(`${raw}:00+05:30`) : null;
     else if (f.type === 'select') out[f.name] = f.options!.some(([v]) => v === raw) ? raw : f.default;
+    else if (f.type === 'photo') out[f.name] = isValidPhoto(String(raw ?? '')) ? raw : f.default;
     else out[f.name] = String(raw ?? '').replace(/\r\n/g, '\n').trim();
   }
   return out;
@@ -103,6 +105,10 @@ const toLocal = (d: any) => {
   const ist = new Date(new Date(d).getTime() + 5.5 * 3600_000);
   return ist.toISOString().slice(0, 16);
 };
+// Photos already uploaded, offered in the photo picker so staff can reuse them.
+const needsPhotos = c.fields.some((f) => f.type === 'photo');
+const uploads = needsPhotos ? (await sql<{ id: number; name: string }[]>`select id, name from media order by id desc limit 40`).map((m) => ({ value: `/media/${m.id}`, label: m.name || 'Uploaded photo' })) : [];
+const choices = [...uploads, ...presetPhotos.map((p) => ({ value: p, label: photoAltFor(p) }))];
 const val = (f: Field) => (f.type === 'password' ? '' : values[f.name] ?? '');
 const publicUrl = c.key === 'posts' && before?.published ? `/blog/${before.slug}/` : c.key === 'openings' ? '/overseas-jobs/openings/' : c.key === 'reviews' || c.key === 'faqs' ? '/' : null;
 ---
@@ -115,15 +121,54 @@ const publicUrl = c.key === 'posts' && before?.published ? `/blog/${before.slug}
   {notice && <p class="msg ok" role="status">{notice}</p>}
   {error && <p class="msg err" role="alert">{error}</p>}
 
-  <form method="post" class="edit">
+  <form method="post" class="edit" data-edit>
     {c.fields.map((f) => (
       f.type === 'checkbox' ? (
         <label class="check"><input type="checkbox" name={f.name} checked={!!values[f.name]} /><span>{f.label}{f.help && <small> — {f.help}</small>}</span></label>
+      ) : f.type === 'photo' ? (
+        <fieldset class="photo-field" data-photo>
+          <legend>{f.label}</legend>
+          <input type="hidden" name={f.name} value={values[f.name] || f.default} />
+          <div class="photo-row">
+            <img class="photo-now" src={photoSrc(values[f.name] || String(f.default), 'mid')} alt="Current cover photo" width="320" height="180" />
+            <div class="photo-acts">
+              <button type="button" class="btn" data-photo-pick>Upload a photo</button>
+              <input type="file" accept="image/*" hidden data-photo-file />
+              <button type="button" class="btn ghost" data-photo-browse>Choose from library</button>
+              <p class="up-status" role="status" aria-live="polite"></p>
+              {f.help && <small>{f.help}</small>}
+            </div>
+          </div>
+          <div class="photo-grid" hidden data-photo-grid>
+            {choices.map((p) => (
+              <button type="button" data-value={p.value} aria-pressed={String(values[f.name] === p.value)} title={p.label}>
+                <img src={photoSrc(p.value, 'thumb')} alt={p.label} loading="lazy" width="160" height="110" />
+              </button>
+            ))}
+          </div>
+        </fieldset>
+      ) : f.type === 'markdown' ? (
+        <div class="field md-field">
+          <label for={`f-${f.name}`}>{f.label} {f.required && <small>(required)</small>}</label>
+          <div class="md-tools" role="toolbar" aria-label="Formatting">
+            <button type="button" data-md="h2">Heading</button>
+            <button type="button" data-md="bold"><b>Bold</b></button>
+            <button type="button" data-md="ul">• List</button>
+            <button type="button" data-md="ol">1. List</button>
+            <button type="button" data-md="link">Link</button>
+            <button type="button" data-md="photo">Add photo</button>
+            <input type="file" accept="image/*" hidden data-md-file />
+            <button type="button" class="md-preview-btn" data-md="preview" aria-pressed="false">Preview</button>
+          </div>
+          <textarea id={`f-${f.name}`} name={f.name} rows={f.rows ?? 4} class="md" required={f.required}>{val(f)}</textarea>
+          <div class="md-preview article" hidden></div>
+          {f.help && <small>{f.help}</small>}
+        </div>
       ) : (
         <label>
           {f.label}{f.required && <small>(required)</small>}
-          {f.type === 'textarea' || f.type === 'markdown' ? (
-            <textarea name={f.name} rows={f.rows ?? 4} class:list={[f.type === 'markdown' && 'md']} required={f.required}>{val(f)}</textarea>
+          {f.type === 'textarea' ? (
+            <textarea name={f.name} rows={f.rows ?? 4} required={f.required}>{val(f)}</textarea>
           ) : f.type === 'select' ? (
             <select name={f.name}>{f.options!.map(([v, l]) => <option value={v} selected={values[f.name] === v}>{l}</option>)}</select>
           ) : f.type === 'datetime' ? (
@@ -136,7 +181,7 @@ const publicUrl = c.key === 'posts' && before?.published ? `/blog/${before.slug}
         </label>
       )
     ))}
-    <div class="acts">
+    <div class="acts save-bar">
       <button class="btn" name="action" value="save">{isNew ? 'Save' : 'Save changes'}</button>
       <a href={listUrl}>Cancel</a>
     </div>
@@ -148,3 +193,7 @@ const publicUrl = c.key === 'posts' && before?.published ? `/blog/${before.slug}
     </form>
   )}
 </Admin>
+
+<script>
+  import '../../scripts/admin-edit';
+</script>

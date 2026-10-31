@@ -20,7 +20,7 @@ const page: PageData = {
   lede: post.excerpt.replace(/</g, '&lt;'),
   img: post.img,
   wa: `Hi Mount Bell, I read "${post.title}" and have a question.`,
-  blocks: [{ type: 'html', html: await marked.parse(post.body), date: `Published ${formatDate(post.published_at)}` }],
+  blocks: [{ type: 'html', html: (await marked.parse(post.body)).replace(/<img /g, '<img loading="lazy" decoding="async" '), date: `Published ${formatDate(post.published_at)}` }],
   related: ['/blog/', '/free-immigration-assessment/'],
 };
 ---

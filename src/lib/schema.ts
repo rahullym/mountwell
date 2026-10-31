@@ -64,4 +64,16 @@ export const schema = [
     created_at timestamptz not null default now(),
     updated_at timestamptz not null default now()
   )`,
+  // Photos uploaded in the admin, stored as WebP in two sizes: wide (up to 1600px) and mid (up to 800px).
+  `create table if not exists media (
+    id serial primary key,
+    name text not null default '',
+    width integer not null,
+    height integer not null,
+    wide bytea not null,
+    mid bytea not null,
+    bytes integer not null,
+    uploaded_by integer references users(id) on delete set null,
+    created_at timestamptz not null default now()
+  )`,
 ];

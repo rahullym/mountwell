@@ -42,7 +42,7 @@ const adminRoutesFix = {
 // a page the moment it is saved; without it, cached pages refresh at most a minute later.
 const bypassToken = process.env.ISR_BYPASS_TOKEN;
 const isr = {
-  exclude: [/^\/admin(\/.*)?$/, /^\/api(\/.*)?$/],
+  exclude: [/^\/admin(\/.*)?$/, /^\/api(\/.*)?$/, /^\/media\/.*$/],
   ...(bypassToken ? { bypassToken, expiration: false } : { expiration: 60 }),
 };
 

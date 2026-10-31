@@ -8,7 +8,8 @@ export const onRequest = defineMiddleware(async (ctx, next) => {
   if (!path.startsWith('/admin') || ctx.isPrerendered) return next();
   if (!db()) return new Response('The CMS database is not connected. Add the Neon database in Vercel → Storage, then redeploy.', { status: 503 });
   ctx.locals.user = await currentUser(ctx.cookies);
-  if (!ctx.locals.user && path !== '/admin/login/') {
+  // The upload endpoint answers in JSON, so it reports "signed out" itself instead of redirecting.
+  if (!ctx.locals.user && path !== '/admin/login/' && path !== '/admin/upload/') {
     return ctx.redirect(`/admin/login/?next=${encodeURIComponent(path + ctx.url.search)}`);
   }
   return next();
