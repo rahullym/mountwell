@@ -6,7 +6,8 @@
 .nav-link::after { left: 8px; right: 8px; }
 .mega-all { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line-soft); display: flex; }
 .mega ul:empty { display: none; }
-.has-drop:nth-last-child(-n + 3) .drop { left: auto; right: 0; }
+/* Dropdown aligns directly underneath its trigger */
+.has-drop:nth-last-child(-n + 3) .drop { left: 0; right: auto; }
 
 /* ---------- Page head ---------- */
 .page-head { --c: var(--green); }
