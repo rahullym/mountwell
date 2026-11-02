@@ -51,7 +51,7 @@ export const site = {
       postalCode: '682025',
       phones: [
         { display: '+91 92070 14777', tel: '+919207014777' },
-        { display: '+91 97785 72690', tel: '+919778572690' },
+        { display: '+91 4842340500', tel: '+914842340500' },
       ],
       hours: null as string | null,
       mapQuery: 'Mathewsons Centre Point, Metro Pillar No. 485, Edapally Road, Mamangalam, Kochi, Kerala 682025',
