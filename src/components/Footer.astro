@@ -19,7 +19,7 @@ const wa = waLink('Hi Mount Bell, I have a question about working or migrating a
         <p>Immigration and overseas recruitment consultants{site.foundedYear && `, established in ${site.foundedYear}`}. Main branch in Kochi, with a branch in Thrissur.</p>
         <p class="footer-lic"><Icon name="shield" size={18} /><span>Licensed by the {site.licence.authority}<span class="mono">{site.licence.number}</span></span></p>
         <ul class="footer-social">
-          {socials.map(([icon, label, href]) => <li><a href={href} rel="noopener" aria-label={label}><Icon name={icon} size={19} /></a></li>)}
+          {socials.map(([icon, label, href]) => <li><a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Follow Mount Bell on ${label}`}><Icon name={icon} size={19} /></a></li>)}
         </ul>
       </div>
 
