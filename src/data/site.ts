@@ -32,7 +32,7 @@ export const site = {
 
   social: {
     facebook: 'https://www.facebook.com/share/1Fhm8Y4NeM/',
-    instagram: 'https://www.instagram.com/mountbellglobalstudies',
+    instagram: 'https://www.instagram.com/mountbellglobal/',
     linkedin: 'https://www.linkedin.com/company/mountbell/',
     youtube: 'https://www.youtube.com/@MountBellGlobalStudies',
   },
