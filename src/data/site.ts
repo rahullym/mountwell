@@ -31,7 +31,7 @@ export const site = {
   heroVideoId: null as string | null, // YouTube ID of the 60–90 second founder video
 
   social: {
-    facebook: 'https://www.facebook.com/share/1Fhm8Y4NeM/',
+    facebook: 'https://www.facebook.com/mountbell',
     instagram: 'https://www.instagram.com/mountbellglobal/',
     linkedin: 'https://www.linkedin.com/company/mountbell/',
     youtube: 'https://www.youtube.com/@MountBellGlobalStudies',
